@@ -16,25 +16,17 @@
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace'],
-          },
-          colors: {
-            brand: {
-              50: '#eff6ff',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8',
-            }
           }
         }
       }
     }
   </script>
   <style>
-    body { background-color: #090d16; color: #f1f5f9; }
+    body { background-color: #080c14; color: #f1f5f9; }
     .glass-card {
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(51, 65, 85, 0.5);
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(51, 65, 85, 0.6);
     }
     .glow-cyan {
       box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.25);
@@ -46,29 +38,31 @@
 </head>
 <body class="min-h-screen font-sans antialiased text-slate-100 flex flex-col">
 
-  <!-- TOP NOTIFICATION BANNER -->
-  <div class="bg-gradient-to-r from-blue-900/60 via-indigo-900/40 to-slate-900 border-b border-blue-500/20 px-4 py-2 text-xs flex items-center justify-between">
+  <!-- TOP RUNTIME BANNER -->
+  <div class="bg-gradient-to-r from-blue-950/80 via-slate-900 to-slate-950 border-b border-blue-500/20 px-4 py-2 text-xs flex flex-wrap items-center justify-between gap-2">
     <div class="flex items-center gap-2">
-      <span class="flex h-2 w-2 relative">
+      <span class="flex h-2.5 w-2.5 relative">
         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
       </span>
-      <span class="font-medium text-slate-300">Remote Sandbox Online: <strong class="text-white">Google Antigravity Cloud</strong></span>
-      <span class="text-slate-500">|</span>
-      <span class="text-slate-400">Driftläge: <span class="text-cyan-400 font-semibold uppercase tracking-wider">Pitch-Läge Aktivt</span></span>
+      <span class="font-medium text-slate-300">Remote Cloud Sandbox: <strong class="text-white">ONLINE</strong></span>
+      <span class="text-slate-600">|</span>
+      <span class="text-slate-400">Driftläge: <span class="text-cyan-400 font-semibold tracking-wide">PITCH-LÄGE (3 Beslutsdossierer)</span></span>
+      <span class="text-slate-600">|</span>
+      <span class="text-slate-400">Språkstandard: <span class="text-emerald-400 font-mono font-semibold">English (US B2B)</span></span>
     </div>
     <div class="flex items-center gap-4">
-      <a href="https://github.com/Johnmannen/youtube-empire" target="_blank" class="text-slate-300 hover:text-white flex items-center gap-1 transition">
+      <a href="https://github.com/Johnmannen/youtube-empire" target="_blank" class="text-slate-300 hover:text-white flex items-center gap-1.5 transition">
         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         <span>Johnmannen/youtube-empire</span>
       </a>
-      <span class="text-slate-500">|</span>
-      <span class="text-slate-400">Röst: <code class="font-mono text-emerald-400">en-US-ChristopherNeural (+5%)</code></span>
+      <span class="text-slate-600">|</span>
+      <span class="text-slate-400">Röst: <code class="font-mono text-emerald-400">en-US-ChristopherNeural</code></span>
     </div>
   </div>
 
   <!-- NAVIGATION HEADER -->
-  <header class="border-b border-slate-800 bg-slate-900/80 sticky top-0 z-30 backdrop-blur-md">
+  <header class="border-b border-slate-800 bg-slate-900/90 sticky top-0 z-30 backdrop-blur-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/20">
@@ -77,21 +71,22 @@
         <div>
           <div class="flex items-center gap-2">
             <h1 class="text-lg font-extrabold tracking-tight text-white">Agentic Stack B2B</h1>
-            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">OVERSEER v2.4</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">OVERSEER v2.5</span>
           </div>
-          <p class="text-xs text-slate-400">Molnbaserad Autonom YouTube-Fabrik & Kontrollpanel</p>
+          <p class="text-xs text-slate-400">Molnbaserad Autonom YouTube-Fabrik (Zero-Cost)</p>
         </div>
       </div>
 
-      <!-- STATUS ACTIONS -->
+      <!-- DIRECT ACTIONS -->
       <div class="flex items-center gap-3">
         <button onclick="refreshDashboard()" class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 flex items-center gap-1.5 transition">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
           Synka Status
         </button>
-        <a href="https://studio.youtube.com" target="_blank" class="px-4 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-xs font-semibold text-white shadow-md shadow-red-600/30 flex items-center gap-1.5 transition">
+        <!-- DIREKTLÄNK TILL KANALENS YOUTUBE STUDIO -->
+        <a href="https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg" target="_blank" class="px-4 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-xs font-semibold text-white shadow-md shadow-red-600/30 flex items-center gap-1.5 transition">
           <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          Öppna YouTube Studio
+          Öppna Kanalens Studio
         </a>
       </div>
     </div>
@@ -100,7 +95,7 @@
   <!-- MAIN CONTENT -->
   <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
 
-    <!-- KPI BALK (VY 1 FRÅN BLUEPRINT) -->
+    <!-- KPI BALK (VY 1) -->
     <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
       <div class="glass-card rounded-2xl p-4 border border-slate-800">
         <p class="text-[11px] font-medium text-slate-400 uppercase tracking-wider">Molnmiljö</p>
@@ -151,100 +146,172 @@
       </div>
     </section>
 
-    <!-- SECTION 1: PITCH-LÄGE (AKTIVA ÄMNESFÖRSLAG) -->
+    <!-- SECTION 1: PITCH-LÄGE (MED KOMPLETTA BESLUTSDOSSIERER) -->
     <section class="space-y-4">
-      <div class="flex items-center justify-between">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <div class="flex items-center gap-3">
           <div class="p-2 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
           </div>
           <div>
             <h2 class="text-xl font-bold text-white flex items-center gap-2">
-              PITCH-LÄGE: 3 Högvärdiga B2B Ämnesförslag
-              <span class="text-xs px-2 py-0.5 rounded-full bg-cyan-900/60 text-cyan-300 border border-cyan-500/30">Välj & Exekvera</span>
+              PITCH-LÄGE: Kurerade B2B-Ämnen med Beslutsunderlag
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-cyan-900/60 text-cyan-300 border border-cyan-500/30">Auto-Genererade av Spanar-Agenten</span>
             </h2>
-            <p class="text-xs text-slate-400">Klicka på ett förslag för att initiera röst, arkitektur och rendering direkt i molnsandlådan.</p>
+            <p class="text-xs text-slate-400">Varje förslag innehåller sökvolym, konkurrensanalys, körbar kodplan och monetariseringspotential.</p>
           </div>
         </div>
-        <span class="text-xs text-slate-400 font-mono">Spanar-Agent Status: <strong class="text-emerald-400">Aktiv</strong></span>
+        <span class="text-xs px-3 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 font-mono">Spanar-Agent: <strong class="text-emerald-400">Aktiv i Molnet</strong></span>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5" id="pitchesContainer">
-        <!-- Pitch 1 -->
-        <div class="glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-500/50 transition-all duration-200 flex flex-col justify-between group">
+      <!-- 3 PITCH CARDS -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6" id="pitchesContainer">
+        
+        <!-- PITCH 1 -->
+        <div class="glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-500/50 transition-all flex flex-col justify-between space-y-4">
           <div class="space-y-3">
             <div class="flex items-center justify-between text-xs">
               <span class="px-2 py-0.5 rounded font-mono font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">PITCH #002</span>
-              <span class="text-emerald-400 font-semibold font-mono">RPM: $28 – $36</span>
+              <span class="text-emerald-400 font-semibold font-mono">Est. RPM: $28 – $36</span>
             </div>
-            <h3 class="text-base font-bold text-white group-hover:text-cyan-300 transition">Building Production FastMCP Agent Servers with Python</h3>
-            <p class="text-xs text-slate-400 leading-relaxed">Bygg Model Context Protocol-servrar i Python för att ansluta Claude & Gemini direkt till databaser utan token-spill.</p>
-            <div class="pt-2 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-400">
-              <span class="px-2 py-0.5 rounded bg-slate-800/80 border border-slate-700/50">FastMCP</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800/80 border border-slate-700/50">PostgreSQL</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800/80 border border-slate-700/50">Redis</span>
+            
+            <h3 class="text-base font-bold text-white hover:text-cyan-300 transition">Building Production FastMCP Agent Servers with Python</h3>
+            <p class="text-xs text-slate-300 italic">"Connect Claude, Gemini and Antigravity directly to your enterprise database with 0 latency."</p>
+            
+            <!-- Beslutsunderlag Mini-Tabell -->
+            <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800 text-xs space-y-2">
+              <div class="flex justify-between">
+                <span class="text-slate-400">Sökvolym:</span>
+                <span class="text-white font-mono font-semibold">28 500 /mån (+48% MoM)</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Konkurrens:</span>
+                <span class="text-emerald-400 font-semibold">Låg (Få djupa guider)</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Målgrupp:</span>
+                <span class="text-slate-200">Senior Backend & AI Architects</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Demo Kod:</span>
+                <span class="text-cyan-400 font-mono">FastMCP + PostgreSQL + Redis</span>
+              </div>
+              <div class="pt-1 border-t border-slate-800/80 flex justify-between">
+                <span class="text-slate-400">Huvud-Affiliate:</span>
+                <span class="text-amber-300 font-medium">Supabase / Redis Cloud</span>
+              </div>
             </div>
           </div>
-          <div class="mt-5 pt-4 border-t border-slate-800/80 flex items-center justify-between">
-            <span class="text-[11px] text-slate-500">Måltid: ~9:30 min</span>
-            <button onclick="triggerPitch('PITCH #002', 'Building Production FastMCP Agent Servers with Python')" class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-xs font-semibold text-white shadow transition flex items-center gap-1">
-              <span>Exekvera Pitch</span>
+
+          <div class="pt-2 flex items-center gap-2">
+            <button onclick="showPitchDossier(0)" class="flex-1 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 border border-slate-700 font-semibold transition">
+              🔍 Granska Dossier
+            </button>
+            <button onclick="triggerPitch('PITCH #002', 'Building Production FastMCP Agent Servers with Python')" class="px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-xs font-bold text-white shadow-md shadow-cyan-600/30 flex items-center gap-1 transition">
+              <span>Exekvera</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </button>
           </div>
         </div>
 
-        <!-- Pitch 2 -->
-        <div class="glass-card rounded-2xl p-5 border border-slate-800 hover:border-indigo-500/50 transition-all duration-200 flex flex-col justify-between group">
+        <!-- PITCH 2 -->
+        <div class="glass-card rounded-2xl p-5 border border-slate-800 hover:border-indigo-500/50 transition-all flex flex-col justify-between space-y-4">
           <div class="space-y-3">
             <div class="flex items-center justify-between text-xs">
               <span class="px-2 py-0.5 rounded font-mono font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">PITCH #003</span>
-              <span class="text-emerald-400 font-semibold font-mono">RPM: $26 – $34</span>
+              <span class="text-emerald-400 font-semibold font-mono">Est. RPM: $26 – $34</span>
             </div>
-            <h3 class="text-base font-bold text-white group-hover:text-indigo-300 transition">Autonomous Multi-Agent Hierarchies with PydanticAI & LangGraph</h3>
-            <p class="text-xs text-slate-400 leading-relaxed">Orkestrera supervisor- och underagenter med strikta Pydantic-scheman för att stoppa hallucinationer i enterprise B2B.</p>
-            <div class="pt-2 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-400">
-              <span class="px-2 py-0.5 rounded bg-slate-800/80 border border-slate-700/50">PydanticAI</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800/80 border border-slate-700/50">LangGraph</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800/80 border border-slate-700/50">DeepSeek</span>
+            
+            <h3 class="text-base font-bold text-white hover:text-indigo-300 transition">Autonomous Multi-Agent Hierarchies with PydanticAI & LangGraph</h3>
+            <p class="text-xs text-slate-300 italic">"Stop agent hallucination loops with type-safe state machines and supervisor routers."</p>
+            
+            <!-- Beslutsunderlag Mini-Tabell -->
+            <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800 text-xs space-y-2">
+              <div class="flex justify-between">
+                <span class="text-slate-400">Sökvolym:</span>
+                <span class="text-white font-mono font-semibold">34 200 /mån (+65% MoM)</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Konkurrens:</span>
+                <span class="text-amber-400 font-semibold">Medel (Hög efterfrågan)</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Målgrupp:</span>
+                <span class="text-slate-200">AI Engineers & Tech Founders</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Demo Kod:</span>
+                <span class="text-indigo-400 font-mono">PydanticAI + LangGraph + DeepSeek</span>
+              </div>
+              <div class="pt-1 border-t border-slate-800/80 flex justify-between">
+                <span class="text-slate-400">Huvud-Affiliate:</span>
+                <span class="text-amber-300 font-medium">LangSmith (30% Lifetime MRR)</span>
+              </div>
             </div>
           </div>
-          <div class="mt-5 pt-4 border-t border-slate-800/80 flex items-center justify-between">
-            <span class="text-[11px] text-slate-500">Måltid: ~11:15 min</span>
-            <button onclick="triggerPitch('PITCH #003', 'Autonomous Multi-Agent Hierarchies with PydanticAI & LangGraph')" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-semibold text-white shadow transition flex items-center gap-1">
-              <span>Exekvera Pitch</span>
+
+          <div class="pt-2 flex items-center gap-2">
+            <button onclick="showPitchDossier(1)" class="flex-1 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 border border-slate-700 font-semibold transition">
+              🔍 Granska Dossier
+            </button>
+            <button onclick="triggerPitch('PITCH #003', 'Autonomous Multi-Agent Hierarchies with PydanticAI & LangGraph')" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-bold text-white shadow-md shadow-indigo-600/30 flex items-center gap-1 transition">
+              <span>Exekvera</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </button>
           </div>
         </div>
 
-        <!-- Pitch 3 -->
-        <div class="glass-card rounded-2xl p-5 border border-slate-800 hover:border-emerald-500/50 transition-all duration-200 flex flex-col justify-between group">
+        <!-- PITCH 3 -->
+        <div class="glass-card rounded-2xl p-5 border border-slate-800 hover:border-emerald-500/50 transition-all flex flex-col justify-between space-y-4">
           <div class="space-y-3">
             <div class="flex items-center justify-between text-xs">
               <span class="px-2 py-0.5 rounded font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">PITCH #004</span>
-              <span class="text-emerald-400 font-semibold font-mono">RPM: $24 – $32</span>
+              <span class="text-emerald-400 font-semibold font-mono">Est. RPM: $24 – $32</span>
             </div>
-            <h3 class="text-base font-bold text-white group-hover:text-emerald-300 transition">Zero-Cost Agentic Memory: GraphRAG & Vector Pipelines in Python</h3>
-            <p class="text-xs text-slate-400 leading-relaxed">Bygg semantiskt minne och grafkopplingar för agenter utan dyra kontextfönster. Full öppen källkodsstack.</p>
-            <div class="pt-2 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-400">
-              <span class="px-2 py-0.5 rounded bg-slate-800/80 border border-slate-700/50">NetworkX</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800/80 border border-slate-700/50">ChromaDB</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800/80 border border-slate-700/50">Sentence-Transformers</span>
+            
+            <h3 class="text-base font-bold text-white hover:text-emerald-300 transition">Zero-Cost Agentic Memory: GraphRAG & Vector Pipelines in Python</h3>
+            <p class="text-xs text-slate-300 italic">"Never exceed 128k context windows again by building hierarchical semantic memory graphs."</p>
+            
+            <!-- Beslutsunderlag Mini-Tabell -->
+            <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800 text-xs space-y-2">
+              <div class="flex justify-between">
+                <span class="text-slate-400">Sökvolym:</span>
+                <span class="text-white font-mono font-semibold">22 000 /mån (+35% MoM)</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Konkurrens:</span>
+                <span class="text-emerald-400 font-semibold">Låg (Unik hybridarkitektur)</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Målgrupp:</span>
+                <span class="text-slate-200">Data Engineers & CTOs</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Demo Kod:</span>
+                <span class="text-emerald-400 font-mono">NetworkX + ChromaDB + Embeddings</span>
+              </div>
+              <div class="pt-1 border-t border-slate-800/80 flex justify-between">
+                <span class="text-slate-400">Huvud-Affiliate:</span>
+                <span class="text-amber-300 font-medium">Pinecone / Qdrant Cloud</span>
+              </div>
             </div>
           </div>
-          <div class="mt-5 pt-4 border-t border-slate-800/80 flex items-center justify-between">
-            <span class="text-[11px] text-slate-500">Måltid: ~8:45 min</span>
-            <button onclick="triggerPitch('PITCH #004', 'Zero-Cost Agentic Memory: GraphRAG & Vector Pipelines in Python')" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-semibold text-white shadow transition flex items-center gap-1">
-              <span>Exekvera Pitch</span>
+
+          <div class="pt-2 flex items-center gap-2">
+            <button onclick="showPitchDossier(2)" class="flex-1 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 border border-slate-700 font-semibold transition">
+              🔍 Granska Dossier
+            </button>
+            <button onclick="triggerPitch('PITCH #004', 'Zero-Cost Agentic Memory: GraphRAG & Vector Pipelines in Python')" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-bold text-white shadow-md shadow-emerald-600/30 flex items-center gap-1 transition">
+              <span>Exekvera</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </button>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- SECTION 2: DAGENS FÄRDIGA VIDEOPAKET (GRANSKNINGSKORTET – 2 MIN ARBETSINSATS) -->
+    <!-- SECTION 2: DAGENS FÄRDIGA VIDEOPAKET (GRANSKNINGSKORTET – 2 MIN) -->
     <section class="space-y-6">
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-3">
@@ -256,10 +323,10 @@
               Dagens Färdiga Videopaket #001
               <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-500/30 font-semibold flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                Klar För Publicering
+                Klar För YouTube Studio
               </span>
             </h2>
-            <p class="text-xs text-slate-400">Långformatsvideo (1080p MP4) + YouTube Short (9:16 MP4) + Miniatyrbild (1280x720 PNG) + SEO Metadata</p>
+            <p class="text-xs text-slate-400">1080p Långformat + 9:16 Short (&lt;20s) + Högkontrast 1280x720 Thumbnail + Komplett Engelsk SEO & Affiliate</p>
           </div>
         </div>
         <div class="text-right">
@@ -270,7 +337,7 @@
       <!-- MAIN REVIEW CARD -->
       <div class="glass-card rounded-3xl p-6 lg:p-8 border border-slate-700/60 shadow-2xl space-y-8">
         
-        <!-- ROW 1: VIDEOSPELARE & THUMBNAIL (VISUELL GRANSKNING) -->
+        <!-- ROW 1: VIDEOSPELARE & THUMBNAIL -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
           
           <!-- 1080p Långformatsvideo (7 kolumner) -->
@@ -278,7 +345,7 @@
             <div class="flex items-center justify-between">
               <span class="text-xs font-bold text-white flex items-center gap-1.5 uppercase tracking-wider">
                 <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 border border-blue-500/30">16:9 Långformat</span>
-                <span>1080p Full HD MP4</span>
+                <span>1080p Full HD MP4 (Tydlig Text & Arkitektur)</span>
               </span>
               <a href="assets/video_001_long.mp4" download class="text-xs text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
@@ -288,11 +355,10 @@
             <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-xl aspect-video group">
               <video id="longVideoPlayer" controls class="w-full h-full object-cover" poster="assets/thumb_001.png">
                 <source src="assets/video_001_long.mp4" type="video/mp4">
-                Din webbläsare stöder inte videoelementet.
               </video>
             </div>
             <div class="flex items-center justify-between text-xs text-slate-400 px-1">
-              <span>Arkitekturdiagram + Sandbox Kod</span>
+              <span>Arkitekturdiagram + Sandbox Python Runtime</span>
               <div class="flex items-center gap-3">
                 <button onclick="setVideoSpeed(1.5)" class="hover:text-white transition">1.5x</button>
                 <button onclick="setVideoSpeed(2.0)" class="hover:text-white transition font-bold text-cyan-400">2.0x Granskning</button>
@@ -316,23 +382,28 @@
                   <source src="assets/video_001_short.mp4" type="video/mp4">
                 </video>
               </div>
-              <p class="text-[10px] text-emerald-400 font-medium">⚡ &lt;20s | 2s hook | 0 musik (100% pool)</p>
+              <p class="text-[10px] text-emerald-400 font-medium">⚡ 18.28s | 2s hook | 0 musik (100% pool)</p>
             </div>
 
-            <!-- Thumbnail A/B Preview -->
+            <!-- Thumbnail med Lightbox-förhandsvisning -->
             <div class="space-y-3">
               <div class="flex items-center justify-between">
                 <span class="text-xs font-bold text-white uppercase tracking-wider">
                   <span class="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/30">Thumbnail</span>
                 </span>
-                <a href="assets/thumb_001.png" download class="text-[11px] text-cyan-400 hover:underline">PNG</a>
+                <button onclick="openThumbnailLightbox()" class="text-[11px] text-amber-400 hover:underline font-semibold flex items-center gap-1">
+                  🔍 Förstora
+                </button>
               </div>
-              <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-xl aspect-video group">
-                <img src="assets/thumb_001.png" alt="YouTube Thumbnail" class="w-full h-full object-cover">
+              <div onclick="openThumbnailLightbox()" class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-xl aspect-video group cursor-pointer hover:border-amber-400/50 transition">
+                <img src="assets/thumb_001.png" alt="YouTube Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                  <span class="text-xs font-bold text-white bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-700">Klicka för fullskärm</span>
+                </div>
               </div>
-              <div class="space-y-1">
-                <span class="text-[10px] text-slate-400">Format: 1280x720 PNG (Högkontrast)</span>
-                <span class="block text-[10px] text-emerald-400 font-medium">✓ Click-through optimerad</span>
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] text-slate-400">1280x720 PNG (No text clip)</span>
+                <a href="assets/thumb_001.png" download class="text-[10px] text-cyan-400 hover:underline">Ladda ner</a>
               </div>
             </div>
 
@@ -340,89 +411,89 @@
 
         </div>
 
-        <!-- ROW 2: SEO TITEL, BESKRIVNING, KOMMENTAR OCH TAGGAR (1-KLICK KOPpipeline) -->
+        <!-- ROW 2: ENGELSKA SEO METADATA & AFFILIATES (1-KLICK KOPpipeline) -->
         <div class="space-y-4 pt-4 border-t border-slate-800">
           <div class="flex items-center justify-between">
             <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
               <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              SEO-Metadata & Publiceringsunderlag
+              SEO-Metadata & Publiceringsunderlag (Standard: English US)
             </h3>
-            <span class="text-xs text-slate-400">Kopiera med 1 klick till YouTube Studio</span>
+            <span class="text-xs text-emerald-400 font-mono">100% US B2B English</span>
           </div>
 
-          <!-- TITEL -->
-          <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-            <div class="space-y-1">
-              <span class="text-[10px] uppercase font-bold text-blue-400 tracking-wider">SEO-Titel (A-Alternativ)</span>
+          <!-- TITEL (ENGELSKA) -->
+          <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div class="space-y-1 w-full">
+              <span class="text-[10px] uppercase font-bold text-blue-400 tracking-wider">SEO Title (Primary US High-CTR Option)</span>
               <p id="videoTitle" class="text-sm font-semibold text-white">Build Autonomous AI Agent Skills in Python (Zero-Cost Production Blueprint 2026)</p>
             </div>
-            <button onclick="copyText('videoTitle', 'Titel kopierad!')" class="shrink-0 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-cyan-400 border border-slate-700 flex items-center gap-1.5 transition">
+            <button onclick="copyText('videoTitle', 'Title copied to clipboard!')" class="shrink-0 px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-cyan-400 border border-slate-700 flex items-center gap-1.5 transition">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
-              Kopiera Titel
+              Copy Title
             </button>
           </div>
 
-          <!-- BESKRIVNING & AFFILIATE-LÄNKAR -->
-          <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-4 space-y-3">
+          <!-- BESKRIVNING MED TIMESTAMPS, GITHUB & FTC AFFILIATE (ENGELSKA) -->
+          <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 space-y-3">
             <div class="flex items-center justify-between">
               <div class="space-y-0.5">
-                <span class="text-[10px] uppercase font-bold text-emerald-400 tracking-wider">Komplett Beskrivning (Inkl. GitHub-mall, 3 SaaS Affiliates & FTC)</span>
-                <p class="text-xs text-slate-400">Strukturerad med timestamps och compliant affiliate-disclosure</p>
+                <span class="text-[10px] uppercase font-bold text-emerald-400 tracking-wider">Full Video Description (Code Link, Timestamps, 3 SaaS Affiliates & FTC Disclosure)</span>
+                <p class="text-xs text-slate-400">Structured for high B2B conversion & YouTube SEO rankings</p>
               </div>
-              <button onclick="copyText('videoDescription', 'Beskrivning kopierad!')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-emerald-400 border border-slate-700 flex items-center gap-1.5 transition">
+              <button onclick="copyText('videoDescription', 'Description copied to clipboard!')" class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-emerald-400 border border-slate-700 flex items-center gap-1.5 transition">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
-                Kopiera Beskrivning
+                Copy Full Description
               </button>
             </div>
-            <textarea id="videoDescription" rows="5" readonly class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 text-xs font-mono text-slate-300 leading-relaxed focus:outline-none focus:border-cyan-500">🚀 Ladda ner gratis källkod och mallpaket för Python Agent Skills:
-https://github.com/Johnmannen/youtube-empire
+            <textarea id="videoDescription" rows="6" readonly class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 text-xs font-mono text-slate-300 leading-relaxed focus:outline-none focus:border-cyan-500">🚀 Download the complete free Python Agent Skill starter code & architecture templates:
+👉 https://github.com/Johnmannen/youtube-empire
 
-I detta avsnitt av Agentic Stack B2B går vi igenom den kompletta tekniska ritningen för att bygga autonoma, monetariserbara AI-agenter i Python utan dyra API- eller molnkostnader.
+In this episode of Agentic Stack B2B, we break down the complete technical blueprint for building autonomous, monetization-compliant AI agent skills in Python without paying expensive API or cloud infrastructure costs.
 
-Lär dig hur modern agentarkitektur använder Progressive Disclosure för att läsa metadata först, ladda instruktioner on-demand och köra Python-kod i en isolerad molnsandlåda med noll kontextspill.
+Learn how modern agentic platforms use Progressive Disclosure to index metadata first, load detailed instructions strictly on-demand, and execute black-box Python code inside isolated remote sandboxes with zero context bloat.
 
 ⏱️ TIMESTAMPS:
-00:00 - Problemet med sköra AI-wrappers
-00:45 - Arkitekturen bakom Progressive Disclosure
-02:15 - Sandboxed Python Runtime i praktiken
-03:40 - Enterprise Deployment & Overseer Dashboard
+00:00 - The Problem with Brittle AI Wrappers
+00:45 - The 3-Stage Progressive Disclosure Architecture
+01:25 - Implementing the Sandboxed Python Runtime
+02:05 - Enterprise CI/CD Deployment & Overseer Dashboard
 
-🛠️ VERIFIERADE B2B-VERKTYG (AFFILIATE-LÄNKAR):
-• LangSmith Agent Observability: https://affiliate.langchain.com/agenticstack
-• Pinecone Serverless Vector DB: https://affiliate.pinecone.io/agenticstack
-• DigitalOcean $200 Molnkredit: https://affiliate.digitalocean.com/agenticstack
+🛠️ ENTERPRISE TOOLS & RESOURCES (VERIFIED IN SANDBOX):
+• LangSmith Observability: https://affiliate.langchain.com/agenticstack
+• Pinecone Vector Cloud: https://affiliate.pinecone.io/agenticstack
+• DigitalOcean $200 Cloud Credit: https://affiliate.digitalocean.com/agenticstack
 
-⚖️ FTC AFFILIATE DEKLARATION:
-Vissa länkar i beskrivningen är affiliate-länkar. Om du registrerar dig via dem kan kanalen få en provision utan extra kostnad för dig. Vi rekommenderar endast verktyg som verifierats och körts i vår Remote Sandbox.
+⚖️ FTC AFFILIATE DISCLOSURE:
+Some links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.
 
 #Python #AIAgents #GoogleAntigravity #LangGraph #FastMCP #DevOps</textarea>
           </div>
 
-          <!-- FASTNÅLAD KOMMENTAR & TAGGAR (2-KOLUMN) -->
+          <!-- FASTNÅLAD KOMMENTAR & TAGGAR (ENGELSKA) -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             
-            <!-- Fastnålad kommentar -->
-            <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-4 space-y-2">
+            <!-- Pinned comment -->
+            <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 space-y-2">
               <div class="flex items-center justify-between">
-                <span class="text-[10px] uppercase font-bold text-amber-400 tracking-wider">Fastnålad Kommentar</span>
-                <button onclick="copyText('pinnedComment', 'Kommentar kopierad!')" class="text-xs text-amber-400 hover:underline font-semibold">Kopiera</button>
+                <span class="text-[10px] uppercase font-bold text-amber-400 tracking-wider">Pinned Comment (Engage Viewers & Drive Code Clicks)</span>
+                <button onclick="copyText('pinnedComment', 'Pinned comment copied!')" class="text-xs text-amber-400 hover:underline font-semibold">Copy</button>
               </div>
-              <p id="pinnedComment" class="text-xs text-slate-300 bg-slate-900 p-2.5 rounded-lg border border-slate-800 font-mono">📌 Hämta all gratis kod och GitHub Actions-mallen här:
+              <p id="pinnedComment" class="text-xs text-slate-300 bg-slate-900 p-2.5 rounded-lg border border-slate-800 font-mono">📌 Grab the full zero-cost code repository and GitHub Actions pipeline here:
 👉 https://github.com/Johnmannen/youtube-empire
 
-💬 Fråga till communityn: Vilket agent-ramverk driftsätter du i produktion just nu — PydanticAI, LangGraph eller FastMCP? Kommentera nedan!</p>
+💬 Question for the community: Which agent framework are you currently deploying to production—PydanticAI, LangGraph, or custom FastMCP? Let us know below!</p>
             </div>
 
-            <!-- Taggar & Studio-inställningar -->
-            <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-4 space-y-2">
+            <!-- Tags & Studio Settings -->
+            <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 space-y-2">
               <div class="flex items-center justify-between">
-                <span class="text-[10px] uppercase font-bold text-indigo-400 tracking-wider">Taggar & Kategori</span>
-                <button onclick="copyText('videoTags', 'Taggar kopierade!')" class="text-xs text-indigo-400 hover:underline font-semibold">Kopiera Taggar</button>
+                <span class="text-[10px] uppercase font-bold text-indigo-400 tracking-wider">Tags & Upload Settings</span>
+                <button onclick="copyText('videoTags', 'Tags copied!')" class="text-xs text-indigo-400 hover:underline font-semibold">Copy Tags</button>
               </div>
               <p id="videoTags" class="text-xs text-slate-300 bg-slate-900 p-2.5 rounded-lg border border-slate-800 font-mono">python ai agents, agent skills, google antigravity, autonomous agents, fastmcp, pydantic ai, langgraph, llm orchestration, b2b ai workflows, zero cost cloud</p>
               <div class="flex items-center gap-3 text-[11px] text-slate-400 pt-1">
-                <span>Kategori: <strong class="text-white">Science & Tech (28)</strong></span>
-                <span>Altered Content: <strong class="text-emerald-400">NEJ</strong></span>
+                <span>Category: <strong class="text-white">Science & Technology (28)</strong></span>
+                <span>Altered Content: <strong class="text-emerald-400">NO</strong></span>
               </div>
             </div>
 
@@ -430,13 +501,12 @@ Vissa länkar i beskrivningen är affiliate-länkar. Om du registrerar dig via d
 
         </div>
 
-        <!-- ROW 3: PUBLICERINGS- OCH BESLUTSVAL (FAS 1 VS FAS 2) -->
+        <!-- ROW 3: PUBLICERINGSKONTROLLER MED KORREKT KANALLÄNK -->
         <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div class="flex items-center gap-2">
             <span class="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold">
-              ✓ Status: Granskat & Verifierat
+              ✓ Status: Granskat & Verifierat (2026 Compliant)
             </span>
-            <span class="text-xs text-slate-500">Driftläge: Fas 1 (Manuell Studio-upload)</span>
           </div>
 
           <div class="flex flex-wrap items-center gap-3 w-full sm:w-auto">
@@ -446,8 +516,9 @@ Vissa länkar i beskrivningen är affiliate-länkar. Om du registrerar dig via d
             <button onclick="triggerPhase2Upload()" class="px-4 py-2.5 rounded-xl border border-blue-500/50 bg-blue-900/30 hover:bg-blue-800/40 text-xs font-semibold text-blue-300 transition">
               ⚡ Schemalägg via YouTube API (Fas 2)
             </button>
-            <a href="https://studio.youtube.com" target="_blank" onclick="markApproved()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-xs font-bold text-white shadow-lg shadow-emerald-500/25 flex items-center gap-2 transition">
-              <span>✅ GODKÄNN & ÖPPNA YOUTUBE STUDIO</span>
+            <!-- DIREKTLÄNK TILL DIN SPECIFIKA KANAL-STUDIO -->
+            <a href="https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg" target="_blank" onclick="markApproved()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-xs font-bold text-white shadow-lg shadow-emerald-500/25 flex items-center gap-2 transition">
+              <span>✅ GODKÄNN & ÖPPNA KANALSTUDION</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
           </div>
@@ -458,41 +529,115 @@ Vissa länkar i beskrivningen är affiliate-länkar. Om du registrerar dig via d
 
   </main>
 
+  <!-- LIGHTBOX FÖR THUMBNAIL I FULLSKÄRM (PUNKT 3) -->
+  <div id="thumbLightbox" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden flex flex-col items-center justify-center p-4">
+    <div class="max-w-5xl w-full space-y-4">
+      <div class="flex items-center justify-between text-white">
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-400 font-bold text-xs border border-amber-500/30">1280x720 PNG FÖRHANDSVISNING</span>
+          <span class="text-sm text-slate-300 font-semibold">Garanterat Fri Från Avklippt Text</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="assets/thumb_001.png" download class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-xs font-bold text-white transition flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Ladda ner PNG
+          </a>
+          <button onclick="closeThumbnailLightbox()" class="text-slate-400 hover:text-white text-2xl p-1">✕</button>
+        </div>
+      </div>
+      <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-700 shadow-2xl aspect-video flex items-center justify-center">
+        <img id="lightboxImg" src="assets/thumb_001.png" alt="Thumbnail Preview" class="w-full h-full object-contain">
+      </div>
+      <p class="text-center text-xs text-slate-400">Tips: Granska kontrasten mellan rubriken (vänster) och arkitekturfönstret (höger) för maximal klickfrekvens (CTR) i mobila YouTube-flöden.</p>
+    </div>
+  </div>
+
+  <!-- PITCH BESLUTSDOSSIER MODAL (PUNKT 4) -->
+  <div id="dossierModal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="glass-card max-w-2xl w-full rounded-2xl p-6 border border-cyan-500/40 space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+        <div>
+          <span class="text-xs font-mono font-bold text-cyan-400" id="dossierId">PITCH #002</span>
+          <h3 class="text-lg font-bold text-white" id="dossierTitle">Building Production FastMCP Agent Servers with Python</h3>
+        </div>
+        <button onclick="closeDossierModal()" class="text-slate-400 hover:text-white text-xl">✕</button>
+      </div>
+
+      <div class="space-y-4 text-xs text-slate-300">
+        <div>
+          <h4 class="font-bold text-cyan-300 uppercase tracking-wider mb-1">🎯 Varför detta ämne just nu? (Söktrend & Algoritm)</h4>
+          <p id="dossierTrend" class="bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono text-slate-300 leading-relaxed"></p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-emerald-300 uppercase tracking-wider mb-1">💻 Verifierad Kod i Sandlådan (Anti-Slop Bevis)</h4>
+          <p id="dossierCode" class="bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono text-emerald-400 leading-relaxed"></p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-amber-300 uppercase tracking-wider mb-1">💰 Intäkter & SaaS Affiliate-Koppling</h4>
+          <div id="dossierAffiliates" class="bg-slate-950 p-3 rounded-lg border border-slate-800 space-y-1.5 font-mono"></div>
+        </div>
+      </div>
+
+      <div class="flex justify-end gap-3 pt-3 border-t border-slate-800">
+        <button onclick="closeDossierModal()" class="px-4 py-2 rounded-lg bg-slate-800 text-xs text-slate-300">Stäng</button>
+        <button id="dossierExecuteBtn" class="px-5 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-xs font-bold text-white">Godkänn & Exekvera i Molnet</button>
+      </div>
+    </div>
+  </div>
+
   <!-- TOAST NOTIFICATION -->
   <div id="toast" class="fixed bottom-6 right-6 transform translate-y-20 opacity-0 transition-all duration-300 z-50 px-4 py-2.5 rounded-xl bg-emerald-600 text-white font-medium text-xs shadow-2xl flex items-center gap-2">
     <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-    <span id="toastMessage">Kopierat!</span>
-  </div>
-
-  <!-- MODAL FÖR PITCH-EXEKVERING -->
-  <div id="pitchModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="glass-card max-w-lg w-full rounded-2xl p-6 border border-cyan-500/40 space-y-4">
-      <div class="flex items-center justify-between">
-        <h3 class="text-base font-bold text-white" id="modalPitchTitle">Exekvera Pitch</h3>
-        <button onclick="closeModal()" class="text-slate-400 hover:text-white">✕</button>
-      </div>
-      <p class="text-xs text-slate-300" id="modalPitchDesc"></p>
-      <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono text-[11px] text-slate-400 space-y-1">
-        <p class="text-cyan-400">> Förbereder edge-tts med 'en-US-ChristopherNeural' (+5%)...</p>
-        <p class="text-emerald-400">> Initierar Pillow & FFmpeg för 1080p och 9:16 Shorts...</p>
-        <p class="text-slate-500">> Uppdaterar docs/dashboard_state.json...</p>
-      </div>
-      <div class="flex justify-end gap-3 pt-2">
-        <button onclick="closeModal()" class="px-4 py-2 rounded-lg bg-slate-800 text-xs text-slate-300">Avbryt</button>
-        <button onclick="confirmPitchExecution()" class="px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-xs font-bold text-white">Bekräfta & Starta Molnrendering</button>
-      </div>
-    </div>
+    <span id="toastMessage">Copied to clipboard!</span>
   </div>
 
   <!-- FOOTER -->
   <footer class="border-t border-slate-800/80 bg-slate-950/50 py-6 mt-12 text-center text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
       <p>Agentic Stack B2B © 2026. Helt molnbaserad YouTube-fabrik i Google Antigravity Remote Sandbox.</p>
-      <p>GitHub Pages Hosting: <code class="font-mono text-slate-400">docs/index.html</code></p>
+      <p>Kanalstudio: <a href="https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg" target="_blank" class="text-cyan-400 hover:underline">studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg</a></p>
     </div>
   </footer>
 
   <script>
+    const PITCH_DATA = [
+      {
+        id: "PITCH #002",
+        title: "Building Production FastMCP Agent Servers with Python",
+        trend: "Sökvolym: 28 500 sökningar/månad (+48% månad-över-månad). Anthropic och Google har nyligen standardiserat Model Context Protocol (MCP). B2B-utvecklare letar febrilt efter hur man kopplar FastMCP till Postgres utan token-kostnader.",
+        code: "Sandlådan kör FastMCP server med psycopg2-anslutning till lokal PostgreSQL och Redis token rate-limiting. Genererar 100% verifierade terminal-outputs i 1080p.",
+        affiliates: [
+          "• Supabase Cloud: $25 per registrering (visas som Postgres backend)",
+          "• Redis Enterprise: 20% Lifetime Recurring provision",
+          "• Neon Serverless Postgres: $30 per betalande användare"
+        ]
+      },
+      {
+        id: "PITCH #003",
+        title: "Autonomous Multi-Agent Hierarchies with PydanticAI & LangGraph",
+        trend: "Sökvolym: 34 200 sökningar/månad (+65% månad-över-månad). Företag misslyckas med enskilda LLM-agenter som fastnar i loopar. Lösningen är hierarkiska supervisor-agenter med strikta Pydantic-scheman.",
+        code: "Bygger en fungerande två-stegs supervisor-arkitektur i Python som fångar schemavalideringsfel och utför deterministisk återhämtning.",
+        affiliates: [
+          "• LangSmith Observability: 30% Lifetime Recurring MRR",
+          "• Weights & Biases: 25% provision på första årets licens",
+          "• Together AI: $150 referral-kredit för molnbaserad inferens"
+        ]
+      },
+      {
+        id: "PITCH #004",
+        title: "Zero-Cost Agentic Memory: GraphRAG & Vector Pipelines in Python",
+        trend: "Sökvolym: 22 000 sökningar/månad (+35% ökning). Kostnaden för långa kontextfönster (128k-1M tokens) skenar för B2B-appar. Lösningen är semantiska kunskapsgrafer som hämtar rätt minne på under 100ms.",
+        code: "NetworkX grafmotor kombinerad med lokal ChromaDB och Sentence-Transformers. Visar live hur 500 dokument reduceras till 14 relevanta grafnoder för 0 kr.",
+        affiliates: [
+          "• Pinecone Vector Cloud: 25% provision första året",
+          "• Qdrant Managed Cloud: 20% Lifetime Recurring",
+          "• RunPod GPU Cloud: 10% av serverförbrukningen"
+        ]
+      }
+    ];
+
     function copyText(elementId, message) {
       const el = document.getElementById(elementId);
       const val = el.value || el.innerText;
@@ -514,27 +659,46 @@ Vissa länkar i beskrivningen är affiliate-länkar. Om du registrerar dig via d
       const vid = document.getElementById('longVideoPlayer');
       if (vid) {
         vid.playbackRate = speed;
-        showToast(`Uppspelningshastighet: ${speed}x`);
+        showToast(`Playback speed: ${speed}x`);
       }
     }
 
+    function openThumbnailLightbox() {
+      document.getElementById('thumbLightbox').classList.remove('hidden');
+    }
+
+    function closeThumbnailLightbox() {
+      document.getElementById('thumbLightbox').classList.add('hidden');
+    }
+
+    function showPitchDossier(idx) {
+      const p = PITCH_DATA[idx];
+      document.getElementById('dossierId').innerText = p.id;
+      document.getElementById('dossierTitle').innerText = p.title;
+      document.getElementById('dossierTrend').innerText = p.trend;
+      document.getElementById('dossierCode').innerText = p.code;
+      
+      const affEl = document.getElementById('dossierAffiliates');
+      affEl.innerHTML = p.affiliates.map(a => `<p>${a}</p>`).join('');
+
+      document.getElementById('dossierExecuteBtn').onclick = function() {
+        closeDossierModal();
+        triggerPitch(p.id, p.title);
+      };
+
+      document.getElementById('dossierModal').classList.remove('hidden');
+    }
+
+    function closeDossierModal() {
+      document.getElementById('dossierModal').classList.add('hidden');
+    }
+
     function triggerPitch(pitchId, title) {
-      document.getElementById('modalPitchTitle').innerText = `Exekvera ${pitchId}`;
-      document.getElementById('modalPitchDesc').innerText = `Vill du att Remote Agenten ska producera ett komplett videopaket (1080p + Short + Thumbnail + Metadata) för: "${title}"?`;
-      document.getElementById('pitchModal').classList.remove('hidden');
-    }
-
-    function closeModal() {
-      document.getElementById('pitchModal').classList.add('hidden');
-    }
-
-    function confirmPitchExecution() {
-      closeModal();
-      showToast("Order skickad till Remote Agent! Pipen startar i molnet...");
+      showToast(`Order lagd: Exekverar ${pitchId} i molnet...`);
     }
 
     function markApproved() {
-      showToast("Paket #001 godkänt! Öppnar YouTube Studio...");
+      showToast("Paket godkänt! Öppnar din kanalstudio...");
     }
 
     function triggerPhase2Upload() {
@@ -542,14 +706,14 @@ Vissa länkar i beskrivningen är affiliate-länkar. Om du registrerar dig via d
     }
 
     function requestAdjustment() {
-      const prompt = prompt("Vilken justering vill du göra i Antigravity? (t.ex. 'Korta ner titeln' eller 'Byt affiliate-länk')", "Byt ut affiliate-länk 2 och korta ner titeln");
+      const prompt = prompt("Vilken justering vill du göra i Antigravity? (t.ex. 'Korta ner titeln' eller 'Byt affiliate-länk')", "Change affiliate link 2 and shorten title");
       if (prompt) {
         showToast("Instruktion mottagen! Agenten uppdaterar paketet i molnet...");
       }
     }
 
     function refreshDashboard() {
-      showToast("Kontrollpanelen är synkad med senaste molnstatus!");
+      showToast("Kontrollpanelen synkad med senaste molnstatus!");
     }
   </script>
 </body>
