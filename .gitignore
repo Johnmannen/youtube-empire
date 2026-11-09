@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+*$py.class
+build_temp/
+concat_list.txt
+*.log
+.vscode/
+.idea/
+client_secret.json
