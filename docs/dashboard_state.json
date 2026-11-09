@@ -12,13 +12,16 @@
     "altered_content_declaration": "No"
   },
   "kpis": {
-    "views_30d": "84,500",
-    "views_growth": "+24%",
-    "affiliate_clicks": "1,420",
-    "active_saas_conversions": "38",
-    "estimated_net_profit_usd": "$1,485.00",
-    "estimated_net_profit_sek": "15,590 kr",
-    "cloud_running_cost": "$0.00"
+    "channel_age": "Day 1 (Launch)",
+    "videos_produced": "1 (Package #001 Ready)",
+    "views_30d": "0 (New Launch)",
+    "views_growth": "Initial Launch",
+    "affiliate_clicks": "0",
+    "active_saas_conversions": "0",
+    "estimated_net_profit_usd": ".00",
+    "estimated_net_profit_sek": "0 kr",
+    "cloud_running_cost": ".00",
+    "target_month_1": "2,500 views / 12 videos"
   },
   "current_package": {
     "package_id": "001",
