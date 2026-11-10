@@ -544,22 +544,10 @@ async def build_package(output_dir: str):
         ],
         "affiliate_placeholders": [
             {
-                "tool": "LangSmith / LangChain Enterprise Monitoring",
-                "benefit": "Full observability, evaluation & token tracking for agentic workflows",
-                "placeholder_url": "https://affiliate.langchain.com/agenticstack",
-                "commission_rate": "30% Lifetime Recurring"
-            },
-            {
-                "tool": "Pinecone Serverless Vector Database",
-                "benefit": "Zero-cold start embeddings for RAG & agent memory",
-                "placeholder_url": "https://affiliate.pinecone.io/agenticstack",
-                "commission_rate": "25% First Year"
-            },
-            {
-                "tool": "DigitalOcean Cloud Droplets ($200 Free Credit)",
-                "benefit": "Production cloud sandboxes & background worker hosting",
-                "placeholder_url": "https://affiliate.digitalocean.com/agenticstack",
-                "commission_rate": "$25 per conversion"
+                "tool": "ElevenLabs AI Voice & Conversational AI API",
+                "benefit": "Industry-leading neural voices, streaming TTS & Conversational AI SDK for Python agents",
+                "live_url": "https://try.elevenlabs.io/l7jlmg96e3lb",
+                "commission_rate": "22% Recurring Commission (PartnerStack)"
             }
         ],
         "github_code_url": "https://github.com/Johnmannen/youtube-empire",
@@ -577,9 +565,7 @@ async def build_package(output_dir: str):
             "01:25 - Implementing the Sandboxed Python Runtime\n"
             "02:05 - Enterprise CI/CD Deployment & Overseer Dashboard\n\n"
             "🛠️ ENTERPRISE TOOLS & RESOURCES (VERIFIED IN SANDBOX):\n"
-            "• LangSmith Observability: https://affiliate.langchain.com/agenticstack\n"
-            "• Pinecone Vector Cloud: https://affiliate.pinecone.io/agenticstack\n"
-            "• DigitalOcean $200 Cloud Credit: https://affiliate.digitalocean.com/agenticstack\n\n"
+            "• ElevenLabs AI Voice & Agent SDK: https://try.elevenlabs.io/l7jlmg96e3lb\n\n"
             "⚖️ FTC AFFILIATE DISCLOSURE:\n"
             "Some links in this description are affiliate links. If you sign up or purchase through them, we may receive "
             "a commission at no additional cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n"

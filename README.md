@@ -22,7 +22,7 @@
 - **Driftläge:** **PITCH-LÄGE** (3 kurerade högvärdiga B2B ämnesförslag med 1-klicks exekvering i molnet)
 - **Frekvens:** 3 videopaket per vecka (Måndag, Onsdag, Fredag)
 - **Hosting:** GitHub Pages (`docs/`-mapp i repot)
-- **Affiliate-intäkter:** Standardiserade B2B SaaS platshållarlänkar (LangSmith, Pinecone, DigitalOcean)
+- **Affiliate-intäkter:** Verifierad PartnerStack referral-länk (ElevenLabs AI Voice & Conversational AI API: 22% recurring commission)
 
 ---
 

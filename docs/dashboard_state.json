@@ -73,23 +73,11 @@
         "benefit": "Industry-leading neural voices, streaming TTS & Conversational AI SDK for Python agents",
         "live_url": "https://try.elevenlabs.io/l7jlmg96e3lb",
         "commission_rate": "22% Recurring Commission (PartnerStack)"
-      },
-      {
-        "tool": "LangSmith / LangChain Enterprise Monitoring",
-        "benefit": "Full observability, evaluation & token tracking for agentic workflows",
-        "placeholder_url": "https://affiliate.langchain.com/agenticstack",
-        "commission_rate": "30% Lifetime Recurring"
-      },
-      {
-        "tool": "Pinecone Serverless Vector Database",
-        "benefit": "Zero-cold start embeddings for RAG & agent memory",
-        "placeholder_url": "https://affiliate.pinecone.io/agenticstack",
-        "commission_rate": "25% First Year"
       }
     ],
     "github_code_url": "https://github.com/Johnmannen/youtube-empire",
     "studio_upload_url": "https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg",
-    "description": "\ud83d\ude80 Download the complete free Python Agent Skill starter code & architecture templates:\n\ud83d\udc49 https://github.com/Johnmannen/youtube-empire\n\nIn this episode of Agentic Stack B2B, we break down the complete technical blueprint for building autonomous, monetization-compliant AI agent skills in Python without paying expensive API or cloud infrastructure costs.\n\nLearn how modern agentic platforms use Progressive Disclosure to index metadata first, load detailed instructions strictly on-demand, and execute black-box Python code inside isolated remote sandboxes with zero context bloat.\n\n\u23f1\ufe0f TIMESTAMPS:\n00:00 - The Problem with Brittle AI Wrappers\n00:45 - The 3-Stage Progressive Disclosure Architecture\n01:25 - Implementing the Sandboxed Python Runtime\n02:05 - Enterprise CI/CD Deployment & Overseer Dashboard\n\n\ud83d\udee0\ufe0f ENTERPRISE TOOLS & RESOURCES (VERIFIED IN SANDBOX):\n\u2022 ElevenLabs AI Voice & Agent SDK: https://try.elevenlabs.io/l7jlmg96e3lb\n\u2022 LangSmith Observability: https://affiliate.langchain.com/agenticstack\n\u2022 Pinecone Vector Cloud: https://affiliate.pinecone.io/agenticstack\n\u2022 DigitalOcean $200 Cloud Credit: https://affiliate.digitalocean.com/agenticstack\n\n\u2696\ufe0f FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no additional cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n#Python #AIAgents #GoogleAntigravity #LangGraph #FastMCP #DevOps",
+    "description": "\ud83d\ude80 Download the complete free Python Agent Skill starter code & architecture templates:\n\ud83d\udc49 https://github.com/Johnmannen/youtube-empire\n\nIn this episode of Agentic Stack B2B, we break down the complete technical blueprint for building autonomous, monetization-compliant AI agent skills in Python without paying expensive API or cloud infrastructure costs.\n\nLearn how modern agentic platforms use Progressive Disclosure to index metadata first, load detailed instructions strictly on-demand, and execute black-box Python code inside isolated remote sandboxes with zero context bloat.\n\n\u23f1\ufe0f TIMESTAMPS:\n00:00 - The Problem with Brittle AI Wrappers\n00:45 - The 3-Stage Progressive Disclosure Architecture\n01:25 - Implementing the Sandboxed Python Runtime\n02:05 - Enterprise CI/CD Deployment & Overseer Dashboard\n\n\ud83d\udee0\ufe0f ENTERPRISE TOOLS & RESOURCES (VERIFIED IN SANDBOX):\n\u2022 ElevenLabs AI Voice & Agent SDK: https://try.elevenlabs.io/l7jlmg96e3lb\n\n\u2696\ufe0f FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no additional cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n#Python #AIAgents #GoogleAntigravity #LangGraph #FastMCP #DevOps",
     "pinned_comment": "\ud83d\udccc Grab the full zero-cost code repository and GitHub Actions pipeline here:\n\ud83d\udc49 https://github.com/Johnmannen/youtube-empire\n\n\ud83d\udcac Question for the community: Which agent framework are you currently deploying to production\u2014PydanticAI, LangGraph, or custom FastMCP? Let us know below!",
     "long_video_file": "assets/video_001_long.mp4",
     "short_video_file": "assets/video_001_short.mp4",
