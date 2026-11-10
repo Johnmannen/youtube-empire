@@ -227,7 +227,7 @@
           <div class="space-y-3">
             <div class="flex items-center justify-between text-xs">
               <span class="px-2 py-0.5 rounded font-mono font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">PITCH #003</span>
-              <span class="text-emerald-400 font-semibold font-mono">Est. RPM: $26 – $34</span>
+              <span class="text-indigo-300 font-semibold font-mono">⏱️ Längd: 9–11 min</span>
             </div>
             
             <h3 class="text-base font-bold text-white hover:text-indigo-300 transition">Autonomous Multi-Agent Hierarchies with PydanticAI & LangGraph</h3>
@@ -236,12 +236,12 @@
             <!-- Beslutsunderlag Mini-Tabell -->
             <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800 text-xs space-y-2">
               <div class="flex justify-between">
-                <span class="text-slate-400">Sökvolym:</span>
-                <span class="text-white font-mono font-semibold">34 200 /mån (+65% MoM)</span>
+                <span class="text-slate-400">Pedagogiskt Mål:</span>
+                <span class="text-indigo-300 font-semibold text-right">Bygga supervisor-router som bryter loopar</span>
               </div>
               <div class="flex justify-between">
-                <span class="text-slate-400">Konkurrens:</span>
-                <span class="text-amber-400 font-semibold">Medel (Hög efterfrågan)</span>
+                <span class="text-slate-400">Sökvolym:</span>
+                <span class="text-white font-mono font-semibold">34 200 /mån (+65% MoM)</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-slate-400">Målgrupp:</span>
@@ -260,9 +260,9 @@
 
           <div class="pt-2 flex items-center gap-2">
             <button onclick="showPitchDossier(0)" class="flex-1 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 border border-slate-700 font-semibold transition">
-              🔍 Granska Dossier
+              🔍 Granska Manus & Dossier
             </button>
-            <button onclick="triggerPitch('PITCH #003', 'Autonomous Multi-Agent Hierarchies with PydanticAI & LangGraph')" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-bold text-white shadow-md shadow-indigo-600/30 flex items-center gap-1 transition">
+            <button id="pitchBtn0" onclick="triggerPitch('PITCH #003', 'Autonomous Multi-Agent Hierarchies with PydanticAI & LangGraph', this)" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-bold text-white shadow-md shadow-indigo-600/30 flex items-center gap-1 transition">
               <span>Exekvera</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </button>
@@ -274,7 +274,7 @@
           <div class="space-y-3">
             <div class="flex items-center justify-between text-xs">
               <span class="px-2 py-0.5 rounded font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">PITCH #004</span>
-              <span class="text-emerald-400 font-semibold font-mono">Est. RPM: $24 – $32</span>
+              <span class="text-emerald-400 font-semibold font-mono">⏱️ Längd: 8–10 min</span>
             </div>
             
             <h3 class="text-base font-bold text-white hover:text-emerald-300 transition">Zero-Cost Agentic Memory: GraphRAG & Vector Pipelines in Python</h3>
@@ -283,12 +283,12 @@
             <!-- Beslutsunderlag Mini-Tabell -->
             <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800 text-xs space-y-2">
               <div class="flex justify-between">
-                <span class="text-slate-400">Sökvolym:</span>
-                <span class="text-white font-mono font-semibold">22 000 /mån (+35% MoM)</span>
+                <span class="text-slate-400">Pedagogiskt Mål:</span>
+                <span class="text-emerald-300 font-semibold text-right">Spara 90% tokens via semantisk graf</span>
               </div>
               <div class="flex justify-between">
-                <span class="text-slate-400">Konkurrens:</span>
-                <span class="text-emerald-400 font-semibold">Låg (Unik hybridarkitektur)</span>
+                <span class="text-slate-400">Sökvolym:</span>
+                <span class="text-white font-mono font-semibold">22 000 /mån (+35% MoM)</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-slate-400">Målgrupp:</span>
@@ -307,9 +307,9 @@
 
           <div class="pt-2 flex items-center gap-2">
             <button onclick="showPitchDossier(1)" class="flex-1 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 border border-slate-700 font-semibold transition">
-              🔍 Granska Dossier
+              🔍 Granska Manus & Dossier
             </button>
-            <button onclick="triggerPitch('PITCH #004', 'Zero-Cost Agentic Memory: GraphRAG & Vector Pipelines in Python')" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-bold text-white shadow-md shadow-emerald-600/30 flex items-center gap-1 transition">
+            <button id="pitchBtn1" onclick="triggerPitch('PITCH #004', 'Zero-Cost Agentic Memory: GraphRAG & Vector Pipelines in Python', this)" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-bold text-white shadow-md shadow-emerald-600/30 flex items-center gap-1 transition">
               <span>Exekvera</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </button>
@@ -321,7 +321,7 @@
           <div class="space-y-3">
             <div class="flex items-center justify-between text-xs">
               <span class="px-2 py-0.5 rounded font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">PITCH #005</span>
-              <span class="text-emerald-400 font-semibold font-mono">Est. RPM: $28 – $36</span>
+              <span class="text-cyan-400 font-semibold font-mono">⏱️ Längd: 9–12 min</span>
             </div>
             
             <h3 class="text-base font-bold text-white hover:text-cyan-300 transition">Building Production FastMCP Agent Servers with Python & PostgreSQL</h3>
@@ -330,12 +330,12 @@
             <!-- Beslutsunderlag Mini-Tabell -->
             <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800 text-xs space-y-2">
               <div class="flex justify-between">
-                <span class="text-slate-400">Sökvolym:</span>
-                <span class="text-white font-mono font-semibold">28 500 /mån (+48% MoM)</span>
+                <span class="text-slate-400">Pedagogiskt Mål:</span>
+                <span class="text-cyan-300 font-semibold text-right">Koppla LLM till skarp Postgres utan risk</span>
               </div>
               <div class="flex justify-between">
-                <span class="text-slate-400">Konkurrens:</span>
-                <span class="text-emerald-400 font-semibold">Låg (Få strukturerade MCP-guider)</span>
+                <span class="text-slate-400">Sökvolym:</span>
+                <span class="text-white font-mono font-semibold">28 500 /mån (+48% MoM)</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-slate-400">Målgrupp:</span>
@@ -354,9 +354,9 @@
 
           <div class="pt-2 flex items-center gap-2">
             <button onclick="showPitchDossier(2)" class="flex-1 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 border border-slate-700 font-semibold transition">
-              🔍 Granska Dossier
+              🔍 Granska Manus & Dossier
             </button>
-            <button onclick="triggerPitch('PITCH #005', 'Building Production FastMCP Agent Servers with Python & PostgreSQL')" class="px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-xs font-bold text-white shadow-md shadow-cyan-600/30 flex items-center gap-1 transition">
+            <button id="pitchBtn2" onclick="triggerPitch('PITCH #005', 'Building Production FastMCP Agent Servers with Python & PostgreSQL', this)" class="px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-xs font-bold text-white shadow-md shadow-cyan-600/30 flex items-center gap-1 transition">
               <span>Exekvera</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </button>
@@ -400,7 +400,7 @@
             <div class="flex items-center justify-between">
               <span class="text-xs font-bold text-white flex items-center gap-1.5 uppercase tracking-wider">
                 <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">16:9 Långformat</span>
-                <span>1080p Full HD MP4 (ElevenLabs WebSockets)</span>
+                <span>1080p Full HD (03:57 min, 7 Scener + Audiovisuell CTA)</span>
               </span>
               <a href="assets/video_002_long.mp4" download class="text-xs text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
@@ -413,7 +413,7 @@
               </video>
             </div>
             <div class="flex items-center justify-between text-xs text-slate-400 px-1">
-              <span>Arkitekturdiagram + Sub-Second Neural Voice Sandbox</span>
+              <span>Arkitekturdiagram + Sub-Second Neural Voice Sandbox (7 Scener)</span>
               <div class="flex items-center gap-3">
                 <button onclick="setVideoSpeed(1.5)" class="hover:text-white transition">1.5x</button>
                 <button onclick="setVideoSpeed(2.0)" class="hover:text-white transition font-bold text-cyan-400">2.0x Granskning</button>
@@ -521,7 +521,7 @@
                 Copy Full Description
               </button>
             </div>
-            <textarea id="videoDescription" rows="14" readonly class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 text-xs font-mono text-slate-300 leading-relaxed focus:outline-none focus:border-cyan-500">🚀 [SOURCE CODE] Grab Episode 002 ElevenLabs Voice Agent Blueprint:
+            <textarea id="videoDescription" rows="16" readonly class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 text-xs font-mono text-slate-300 leading-relaxed focus:outline-none focus:border-cyan-500">🚀 [SOURCE CODE] Grab Episode 002 ElevenLabs Voice Agent Blueprint:
 👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent
 
 🎙️ [EXCLUSIVE FREE TRIAL] Try ElevenLabs Conversational Voice AI SDK:
@@ -530,15 +530,18 @@
 📚 [OPEN SOURCE REPO] All Channel Episodes & Star the Library:
 👉 https://github.com/Johnmannen/Agentic-Stack-Library
 
-Text chatbots are dead in B2B. In this episode of Agentic Stack B2B, we break down how to build sub-second real-time conversational voice agents in Python using ElevenLabs Conversational AI and full-duplex WebSockets.
+Text chatbots are dead in B2B. In this comprehensive technical breakdown, we show you how to build sub-second real-time conversational voice agents in Python using ElevenLabs Conversational AI and full-duplex WebSockets.
 
-Learn how to bypass slow STT-LLM-TTS sequential chains, handle native human interruption and barge-in, and execute typed backend Python functions live during a voice call.
+Learn why legacy STT-LLM-TTS sequential chains fail with 4-second delays, how to implement native human interruption and barge-in, and how to execute typed enterprise Python tools and database queries mid-call.
 
 ⏱️ TIMESTAMPS:
-00:00 - The Death of Text Chatbots & Shift to Voice
-00:42 - Sub-Second Latency & Full-Duplex WebSockets
-01:22 - Live Python SDK Implementation in Sandbox
-02:02 - Deploying Enterprise Voice Agents & Free Trial
+00:00 - Voice AI vs Text Chatbots: The 2026 Shift
+00:35 - The Sequential Bottleneck: 4.5s vs 380ms
+01:11 - Native Barge-In: Zero-Latency Interruption
+01:44 - Enterprise Tool Calling Mid-Conversation
+02:15 - Complete Python Agent Implementation
+02:42 - Production Hardening: Auth, Docker & Edge
+03:11 - Deploy Today & Get the Complete Code
 
 🛠️ ENTERPRISE TOOLS (VERIFIED IN SANDBOX):
 👉 Try ElevenLabs Voice & Conversational SDK (Free Trial): https://try.elevenlabs.io/agentic-voice
@@ -757,26 +760,48 @@ Some links in this description are affiliate links. If you sign up or purchase t
 
   <!-- PITCH BESLUTSDOSSIER MODAL (PUNKT 4) -->
   <div id="dossierModal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="glass-card max-w-2xl w-full rounded-2xl p-6 border border-cyan-500/40 space-y-4 max-h-[90vh] overflow-y-auto">
+    <div class="glass-card max-w-3xl w-full rounded-2xl p-6 border border-cyan-500/40 space-y-4 max-h-[92vh] overflow-y-auto">
       <div class="flex items-center justify-between pb-2 border-b border-slate-800">
         <div>
-          <span class="text-xs font-mono font-bold text-cyan-400" id="dossierId">PITCH #002</span>
-          <h3 class="text-lg font-bold text-white" id="dossierTitle">Building Production FastMCP Agent Servers with Python</h3>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-mono font-bold text-cyan-400" id="dossierId">PITCH #003</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-500/30 font-semibold" id="dossierDuration">⏱️ Längd: 9–11 min</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mt-1" id="dossierTitle">Autonomous Multi-Agent Hierarchies with PydanticAI & LangGraph</h3>
         </div>
-        <button onclick="closeDossierModal()" class="text-slate-400 hover:text-white text-xl">✕</button>
+        <button onclick="closeDossierModal()" class="text-slate-400 hover:text-white text-xl p-1">✕</button>
       </div>
 
       <div class="space-y-4 text-xs text-slate-300">
+        <!-- Idé & Mål -->
+        <div class="bg-indigo-950/20 border border-indigo-500/30 rounded-xl p-3.5 space-y-1.5">
+          <h4 class="font-bold text-indigo-300 uppercase tracking-wider flex items-center gap-1.5">
+            <span>🎯</span> Videons Idé & Pedagogiska Mål
+          </h4>
+          <p id="dossierGoal" class="text-slate-200 leading-relaxed font-sans"></p>
+        </div>
+
+        <!-- Förenklat Manus & Scenstruktur -->
+        <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800 space-y-2">
+          <h4 class="font-bold text-cyan-300 uppercase tracking-wider flex items-center gap-1.5">
+            <span>📋</span> Förenklat Manus & Pedagogisk Struktur (Steg-för-Steg)
+          </h4>
+          <div id="dossierScript" class="space-y-1.5 text-slate-300 font-mono"></div>
+        </div>
+
+        <!-- Söktrend & Algoritm -->
         <div>
-          <h4 class="font-bold text-cyan-300 uppercase tracking-wider mb-1">🎯 Varför detta ämne just nu? (Söktrend & Algoritm)</h4>
+          <h4 class="font-bold text-cyan-300 uppercase tracking-wider mb-1">📈 Söktrend & Marknadsunderlag</h4>
           <p id="dossierTrend" class="bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono text-slate-300 leading-relaxed"></p>
         </div>
 
+        <!-- Kod i Sandlådan -->
         <div>
-          <h4 class="font-bold text-emerald-300 uppercase tracking-wider mb-1">💻 Verifierad Kod i Sandlådan (Anti-Slop Bevis)</h4>
+          <h4 class="font-bold text-emerald-300 uppercase tracking-wider mb-1">💻 Verifierad Kod i Sandlådan</h4>
           <p id="dossierCode" class="bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono text-emerald-400 leading-relaxed"></p>
         </div>
 
+        <!-- Intäkter & Affiliate -->
         <div>
           <h4 class="font-bold text-amber-300 uppercase tracking-wider mb-1">💰 Intäkter & SaaS Affiliate-Koppling</h4>
           <div id="dossierAffiliates" class="bg-slate-950 p-3 rounded-lg border border-slate-800 space-y-1.5 font-mono"></div>
@@ -785,7 +810,7 @@ Some links in this description are affiliate links. If you sign up or purchase t
 
       <div class="flex justify-end gap-3 pt-3 border-t border-slate-800">
         <button onclick="closeDossierModal()" class="px-4 py-2 rounded-lg bg-slate-800 text-xs text-slate-300">Stäng</button>
-        <button id="dossierExecuteBtn" class="px-5 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-xs font-bold text-white">Godkänn & Exekvera i Molnet</button>
+        <button id="dossierExecuteBtn" class="px-5 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-xs font-bold text-white shadow-md shadow-cyan-600/30">Godkänn & Exekvera i Molnet</button>
       </div>
     </div>
   </div>
@@ -808,7 +833,16 @@ Some links in this description are affiliate links. If you sign up or purchase t
     const PITCH_DATA = [
       {
         id: "PITCH #003",
+        duration: "⏱️ Längd: 9–11 minuter",
         title: "Autonomous Multi-Agent Hierarchies with PydanticAI & LangGraph",
+        goal: "Idén med videon är att visa varför enskilda AI-agenter havererar i oändliga hallucinationsloopar när de möter oförutsedda fel, och pedagogiskt lära ut hur man bygger en supervisor-agent med strikt typade Pydantic-tillstånd och deterministiska state machines. Tittaren ska kunna ta med sig ett komplett produktionsfärdigt mönster för att köra 3 samarbetande agenter felfritt.",
+        script_steps: [
+          "• Scen 1 (00:00 - 01:30): Problemet: Se en ensam LLM-agent fastna i 20 loopar och bränna tokens för 500 kr.",
+          "• Scen 2 (01:30 - 03:00): Arkitekturen: Supervisor-mönstret förklarat med tydliga boxar och tillståndsövergångar.",
+          "• Scen 3 (03:00 - 06:00): Hands-on Kodning: PydanticAI-modeller för input/output-validering och LangGraph router.",
+          "• Scen 4 (06:00 - 08:30): Live Körning i Sandlådan: Demonstrera hur supervisor fångar felet och korrigerar sub-agenten.",
+          "• Scen 5 (08:30 - 10:00): DevOps, Tracing i LangSmith & GitHub-källkod med direktlänk till repot."
+        ],
         trend: "Sökvolym: 34 200 sökningar/månad (+65% MoM). Företag misslyckas med enskilda LLM-agenter som fastnar i loopar. Lösningen är hierarkiska supervisor-agenter med strikta Pydantic-scheman.",
         code: "Bygger en fungerande två-stegs supervisor-arkitektur i Python som fångar schemavalideringsfel och utför deterministisk återhämtning.",
         affiliates: [
@@ -819,7 +853,16 @@ Some links in this description are affiliate links. If you sign up or purchase t
       },
       {
         id: "PITCH #004",
+        duration: "⏱️ Längd: 8–10 minuter",
         title: "Zero-Cost Agentic Memory: GraphRAG & Vector Pipelines in Python",
+        goal: "Idén med videon är att lösa problemet med skenande kostnader för 128k-kontextfönster i B2B-applikationer. Det pedagogiska målet är att lära tittaren bygga en hybrid av semantisk kunskapsgraf (NetworkX) och lokal vektordatabas (ChromaDB), som minskar tokenförbrukningen med 90% och ger blixtsnabba svar under 100 millisekunder utan dyra molndatabaser.",
+        script_steps: [
+          "• Scen 1 (00:00 - 01:20): Varför 128k kontextfönster ruinerar SaaS-bolag: Matematiken bakom token-kostnader.",
+          "• Scen 2 (01:20 - 03:00): GraphRAG vs Platt Vektorsökning: Hur hierarkiska relationer sparar minne.",
+          "• Scen 3 (03:00 - 05:30): Skapa kunskapsgrafen med Python & NetworkX helt lokalt utan licenser.",
+          "• Scen 4 (05:30 - 07:30): Koppla ihop grafen med ChromaDB för hybrid semantisk + relationell återkallning.",
+          "• Scen 5 (07:30 - 09:00): Benchmark & Resultat: 500 dokument reducerade till 14 relevanta noder för 0 kr."
+        ],
         trend: "Sökvolym: 22 000 sökningar/månad (+35% ökning). Kostnaden för långa kontextfönster (128k-1M tokens) skenar för B2B-appar. Lösningen är semantiska kunskapsgrafer som hämtar rätt minne på under 100ms.",
         code: "NetworkX grafmotor kombinerad med lokal ChromaDB och Sentence-Transformers. Visar live hur 500 dokument reduceras till 14 relevanta grafnoder för 0 kr.",
         affiliates: [
@@ -830,7 +873,16 @@ Some links in this description are affiliate links. If you sign up or purchase t
       },
       {
         id: "PITCH #005",
+        duration: "⏱️ Längd: 9–12 minuter",
         title: "Building Production FastMCP Agent Servers with Python & PostgreSQL",
+        goal: "Idén med videon är att avmystifiera Anthropic/Model Context Protocol (MCP) för backend-ingenjörer. Målet är att pedagogiskt demonstrera hur man exponerar en riktig PostgreSQL-databas och Redis rate-limiter som säkra, typade agent-verktyg för Claude, Gemini och Antigravity utan att öppna säkerhetshål i produktion.",
+        script_steps: [
+          "• Scen 1 (00:00 - 01:45): Vad är MCP och varför ersätter det alla spagetti-API-integrationer?",
+          "• Scen 2 (01:45 - 03:30): Arkitektur: FastMCP SDK, SSE (Server-Sent Events) och säker token-autentisering.",
+          "• Scen 3 (03:30 - 06:30): Skriva FastMCP-servern i Python: Typade dekoratorer (@mcp.tool) mot PostgreSQL.",
+          "• Scen 4 (06:30 - 08:30): Lägga till Redis rate-limiting så att agenter inte kan överbelasta databasen.",
+          "• Scen 5 (08:30 - 10:30): Live Demonstration: Claude och Antigravity utför analytiska SQL-frågor direkt över MCP."
+        ],
         trend: "Sökvolym: 28 500 sökningar/månad (+48% MoM). B2B-utvecklare vill koppla AI-assistenter till sina riktiga databaser utan latens eller säkerhetsrisker.",
         code: "Bygger en komplett FastMCP-server i Python med typade PostgreSQL-frågor och Redis token-bucket rate limiting.",
         affiliates: [
@@ -877,7 +929,13 @@ Some links in this description are affiliate links. If you sign up or purchase t
     function showPitchDossier(idx) {
       const p = PITCH_DATA[idx];
       document.getElementById('dossierId').innerText = p.id;
+      document.getElementById('dossierDuration').innerText = p.duration;
       document.getElementById('dossierTitle').innerText = p.title;
+      document.getElementById('dossierGoal').innerText = p.goal;
+      
+      const scriptEl = document.getElementById('dossierScript');
+      scriptEl.innerHTML = p.script_steps.map(s => `<p class="leading-relaxed">${s}</p>`).join('');
+
       document.getElementById('dossierTrend').innerText = p.trend;
       document.getElementById('dossierCode').innerText = p.code;
       
@@ -886,7 +944,8 @@ Some links in this description are affiliate links. If you sign up or purchase t
 
       document.getElementById('dossierExecuteBtn').onclick = function() {
         closeDossierModal();
-        triggerPitch(p.id, p.title);
+        const btn = document.getElementById(`pitchBtn${idx}`);
+        triggerPitch(p.id, p.title, btn);
       };
 
       document.getElementById('dossierModal').classList.remove('hidden');
@@ -896,8 +955,17 @@ Some links in this description are affiliate links. If you sign up or purchase t
       document.getElementById('dossierModal').classList.add('hidden');
     }
 
-    function triggerPitch(pitchId, title) {
-      showToast(`Order lagd: Exekverar ${pitchId} i molnet...`);
+    function triggerPitch(pitchId, title, btnElement) {
+      if (btnElement) {
+        btnElement.innerHTML = `<span>⏳ Startar produktion...</span>`;
+        btnElement.classList.add('opacity-80', 'animate-pulse');
+      }
+      showToast(`🚀 Molnorder startad: Exekverar ${pitchId} i sandlådan...`);
+      setTimeout(() => {
+        if (btnElement) {
+          btnElement.innerHTML = `<span>🔄 Renderar i molnet</span>`;
+        }
+      }, 2000);
     }
 
     function markApproved() {
