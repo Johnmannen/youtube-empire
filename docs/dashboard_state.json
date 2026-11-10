@@ -165,23 +165,29 @@
     },
     {
       "id": "PITCH-006",
-      "title": "Autonomous Multi-Speaker Voice Agent Triage with ElevenLabs & FastAPI",
-      "hook": "Deploy multi-agent phone triage that intelligently transfers callers between specialized voice agents.",
-      "search_volume": "24,800/mo (+78% MoM)",
-      "competition": "Low (Pioneering multi-agent voice architectures)",
-      "buyer_intent": "Very High (B2B Contact Centers & Enterprise SaaS)",
-      "target_audience": "AI Engineers, B2B SaaS Architects, Contact Center Automation Leads",
-      "demo_code": "FastAPI WebSocket router orchestrating dynamic state handoffs between specialized ElevenLabs agents with custom voice IDs.",
-      "expected_rpm": "$28.00 - $38.00",
+      "title": "Autonomous Multi-Agent Hierarchies with PydanticAI & LangGraph",
+      "hook": "Stop agent hallucination loops with type-safe state machines and supervisor routers.",
+      "search_volume": "34,200/mo (+65% MoM)",
+      "competition": "Medium (High demand for production architectures)",
+      "buyer_intent": "Extremely High (Enterprises struggling with agent reliability)",
+      "target_audience": "AI Engineers, Lead Developers, Tech Founders",
+      "demo_code": "Hierarchical multi-agent supervisor using PydanticAI structured validation and LangGraph checkpoints.",
+      "expected_rpm": "$26.00 - $34.00",
       "target_duration": "9–11 mins",
-      "tech_stack": "ElevenLabs Conversational AI, FastAPI, WebSockets, Python 3.11",
+      "tech_stack": "PydanticAI, LangGraph, Python 3.11, DeepSeek",
       "status": "READY_TO_GENERATE",
       "affiliate_targets": [
         {
-          "name": "ElevenLabs Conversational AI Platform",
-          "commission": "22% Recurring Commission (PartnerStack)",
-          "role": "Conversational agent platform & dynamic voice switching",
-          "link": "https://try.elevenlabs.io/agentic-telephony"
+          "name": "LangSmith Observability",
+          "commission": "30% Lifetime Recurring",
+          "role": "Agent tracing & prompt evaluation",
+          "link": "https://smith.langchain.com"
+        },
+        {
+          "name": "Weights & Biases",
+          "commission": "25% First Year",
+          "role": "LLM evaluation & dataset tracking",
+          "link": "https://wandb.ai"
         }
       ]
     }
