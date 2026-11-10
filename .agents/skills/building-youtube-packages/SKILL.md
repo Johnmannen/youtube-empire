@@ -20,6 +20,8 @@ Executes an end-to-end, zero-cost cloud production pipeline that creates complet
   - Strict Anti-Slop Protocol: All Python scripts must be executed and verified in the sandbox before script writing.
   - Transparent Metadata: Category `28` (Science & Technology), `altered_content: false` (no synthetic humans or simulated real-world news).
   - FTC Affiliate Disclosures included in descriptions and pinned comments.
+  - **Muntlig Hänvisning till Affiliate (Default):** När en video täcker ett affiliate-verktyg (t.ex. ElevenLabs) MÅSTE speakern hänvisa muntligt till testlänk/provperiod i videobeskrivningen och den fastnålade kommentaren (en gång kort i introduktionen och en gång i avslutningen).
+  - **Ren visuell layout (Inga grafiska CTA-boxar):** Uppmaningar om Like & Subscribe ska uteslutande ske muntligt och kortfattat. Inga grafiska CTA-boxar eller klickpilar på videon.
 
 ## Workflow Checklist
 - [ ] Step 1: Environment & Dependency Verification (`edge-tts`, `ffmpeg`, `pillow`, `matplotlib`)

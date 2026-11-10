@@ -379,6 +379,7 @@ async def main():
                 "Welcome back to Agentic Stack B2B. In 2026, text-only chatbots are losing user engagement fast. "
                 "Enterprise customers expect instant, natural voice interfaces with human-level cadence and sub-second latency. "
                 "Today, we are building a production-grade conversational voice agent in Python powered by ElevenLabs' WebSocket API. "
+                "If you want to test and follow along, you'll find the official ElevenLabs developer trial link in the description. "
                 "Remember to like and subscribe for daily enterprise tutorials. Let's dive in."
             ),
             "code_lines": [
@@ -597,9 +598,9 @@ async def main():
             "narration": (
                 "To wrap up: Conversational voice AI is the most effective way to upgrade your customer experience in 2026. "
                 "You get sub-second responses, native barge-in handling, and full Python tool calling without managing heavy GPU models. "
-                "The entire source code, requirements, and step-by-step setup guide for Episode 2 are available right now on our "
-                "open-source GitHub repository linked in the description. Also make sure to grab your free developer trial of ElevenLabs "
-                "using the official partner link below. Make sure to like, subscribe, and drop your questions in the comments. See you in the next episode!"
+                "The entire source code, requirements, and step-by-step setup guide for Episode 2 are available on our GitHub repository. "
+                "To build this yourself, grab your free developer trial via the ElevenLabs partner link in the description and pinned comment below. "
+                "Make sure to like, subscribe, and drop your questions in the comments. See you in the next episode!"
             ),
             "code_lines": [
                 "# 1. Clone the complete Episode 002 source code:",
