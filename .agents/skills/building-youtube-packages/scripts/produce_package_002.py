@@ -128,31 +128,21 @@ def render_scene_1080p(scene_data: dict, output_path: str):
         draw.text((180, card_y + 40), sdesc, fill=(148, 163, 184) if is_active else (100, 116, 139), font=get_font(14))
         card_y += 88
 
-    # GRAPHICAL CTA BANNER (LIKE & SUBSCRIBE WITH POINTER)
-    if scene_data.get("cta_banner"):
-        cta_y1 = 660
-        cta_y2 = 780
-        draw_rounded_rect(draw, (100, cta_y1, 960, cta_y2), fill=(26, 16, 48), outline=(236, 72, 153), width=2, radius=14)
-        
-        # Like Button Pill
-        draw_rounded_rect(draw, (120, cta_y1 + 18, 260, cta_y1 + 68), fill=(225, 29, 72), radius=8)
-        draw.text((140, cta_y1 + 28), "👍 LIKE", fill=(255, 255, 255), font=get_font(20, bold=True))
-        
-        # Subscribe Button Pill
-        draw_rounded_rect(draw, (280, cta_y1 + 18, 500, cta_y1 + 68), fill=(220, 38, 38), radius=8)
-        draw.text((300, cta_y1 + 28), "🔔 SUBSCRIBE", fill=(255, 255, 255), font=get_font(20, bold=True))
-        
-        # Pointer Callout
-        draw.text((520, cta_y1 + 20), "👉 LIKE & SUBSCRIBE!", fill=(56, 189, 248), font=get_font(20, bold=True))
-        draw.text((520, cta_y1 + 48), "Daily B2B Production Code & Blueprints", fill=(244, 244, 245), font=get_font(14))
-        draw.text((120, cta_y1 + 82), "💬 Join the Agentic Stack Community & Drop a Comment Below", fill=(168, 85, 247), font=get_font(14, bold=True))
-
     # Value Metric Box
-    metric_y = 800 if scene_data.get("cta_banner") else 665
-    draw_rounded_rect(draw, (100, metric_y, 960, metric_y + 120), fill=(15, 23, 42), outline=(56, 189, 248), width=1, radius=12)
-    draw.text((125, metric_y + 15), "ENTERPRISE SPECIFICATION // METRICS", fill=(56, 189, 248), font=get_font(13, bold=True, mono=True))
-    draw.text((125, metric_y + 42), scene_data.get("metric_headline", "LATENCY BENCHMARK: 380ms Turn-Taking"), fill=(255, 255, 255), font=get_font(18, bold=True))
-    draw.text((125, metric_y + 75), scene_data.get("metric_detail", "Full-duplex WebSocket stream with dynamic backend Python tool calling"), fill=(148, 163, 184), font=get_font(14))
+    metric_y = 665
+    draw_rounded_rect(draw, (100, metric_y, 960, 930), fill=(15, 23, 42), outline=(56, 189, 248), width=1, radius=12)
+    draw.text((125, metric_y + 20), "ENTERPRISE SPECIFICATION // METRICS", fill=(56, 189, 248), font=get_font(13, bold=True, mono=True))
+    draw.text((125, metric_y + 55), scene_data.get("metric_headline", "LATENCY BENCHMARK: 380ms Turn-Taking"), fill=(255, 255, 255), font=get_font(20, bold=True))
+    draw.text((125, metric_y + 95), scene_data.get("metric_detail", "Full-duplex WebSocket stream with dynamic backend Python tool calling"), fill=(148, 163, 184), font=get_font(15))
+    
+    # Sub-metric badges inside the box
+    draw_rounded_rect(draw, (125, metric_y + 140, 480, metric_y + 210), fill=(30, 41, 59), radius=8)
+    draw.text((140, metric_y + 150), "AUDIO STREAMING PROTOCOL", fill=(148, 163, 184), font=get_font(11, bold=True, mono=True))
+    draw.text((140, metric_y + 172), "16kHz PCM / Bidirectional WS", fill=(56, 189, 248), font=get_font(14, bold=True))
+
+    draw_rounded_rect(draw, (500, metric_y + 140, 935, metric_y + 210), fill=(30, 41, 59), radius=8)
+    draw.text((515, metric_y + 150), "CLOUD INFRASTRUCTURE", fill=(148, 163, 184), font=get_font(11, bold=True, mono=True))
+    draw.text((515, metric_y + 172), "Stateless Python / Zero GPU Overhead", fill=(74, 222, 128), font=get_font(14, bold=True))
 
     # Right Column: Terminal Window (width: 840px)
     draw_rounded_rect(draw, (1000, 130, 1840, 930), fill=(10, 14, 26), outline=(51, 65, 85), width=2, radius=16)
@@ -389,8 +379,7 @@ async def main():
                 "Welcome back to Agentic Stack B2B. In 2026, text-only chatbots are losing user engagement fast. "
                 "Enterprise customers expect instant, natural voice interfaces with human-level cadence and sub-second latency. "
                 "Today, we are building a production-grade conversational voice agent in Python powered by ElevenLabs' WebSocket API. "
-                "Before we jump into the architecture, make sure to drop a like on this video, subscribe to Agentic Stack B2B, and ring "
-                "the bell so you never miss our daily enterprise code releases. Let's dive in."
+                "Remember to like and subscribe for daily enterprise tutorials. Let's dive in."
             ),
             "code_lines": [
                 "# The Problem with Traditional Text Wrappers",
@@ -610,8 +599,7 @@ async def main():
                 "You get sub-second responses, native barge-in handling, and full Python tool calling without managing heavy GPU models. "
                 "The entire source code, requirements, and step-by-step setup guide for Episode 2 are available right now on our "
                 "open-source GitHub repository linked in the description. Also make sure to grab your free developer trial of ElevenLabs "
-                "using the official partner link below. If you found this walkthrough valuable, smash that like button, subscribe to "
-                "Agentic Stack B2B, and drop your thoughts in the comments. We read and reply to every developer question. See you in the next episode!"
+                "using the official partner link below. Make sure to like, subscribe, and drop your questions in the comments. See you in the next episode!"
             ),
             "code_lines": [
                 "# 1. Clone the complete Episode 002 source code:",

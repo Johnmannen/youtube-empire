@@ -111,89 +111,67 @@
   "pitches": [
     {
       "id": "PITCH-003",
-      "title": "Autonomous Multi-Agent Hierarchies with PydanticAI & LangGraph",
-      "hook": "Stop agent hallucination loops with type-safe state machines and supervisor routers.",
-      "search_volume": "34,200/mo (+65% MoM)",
-      "competition": "Medium (High demand for production architectures)",
-      "buyer_intent": "Extremely High (Enterprises struggling with agent reliability)",
-      "target_audience": "AI Engineers, Lead Developers, Tech Founders",
-      "demo_code": "Hierarchical multi-agent supervisor using PydanticAI structured validation and LangGraph checkpoints.",
-      "expected_rpm": "$26.00 - $34.00",
-      "target_duration": "11:15 mins",
-      "tech_stack": "PydanticAI, LangGraph, Python 3.11, DeepSeek",
+      "title": "Build Automated Multilingual AI Video Dubbing in Python (ElevenLabs Dubbing API)",
+      "hook": "Scale B2B video content globally in minutes: Auto-translate and voice-clone tutorials into 29 languages.",
+      "search_volume": "29,400/mo (+82% MoM)",
+      "competition": "Low (Under-served technical query in video translation pipelines)",
+      "buyer_intent": "Very High (EdTech, SaaS global expansion teams)",
+      "target_audience": "B2B SaaS Creators, Growth Engineers, Global Marketing Leads",
+      "demo_code": "Python pipeline using ElevenLabs Dubbing SDK and FFmpeg to auto-dub MP4 technical tutorials into Spanish, German, and French.",
+      "expected_rpm": "$28.00 - $35.00",
+      "target_duration": "8–10 mins",
+      "tech_stack": "ElevenLabs Dubbing API, Python 3.11, FFmpeg, MoviePy",
       "status": "READY_TO_GENERATE",
       "affiliate_targets": [
         {
-          "name": "LangSmith",
-          "commission": "30% Lifetime Recurring",
-          "role": "Agent tracing & prompt evaluation"
-        },
-        {
-          "name": "Weights & Biases",
-          "commission": "25% First Year",
-          "role": "LLM evaluation & dataset tracking"
-        },
-        {
-          "name": "Together AI Cloud",
-          "commission": "$150 credit referral",
-          "role": "Fast open-weights model inference"
+          "name": "ElevenLabs AI Dubbing",
+          "commission": "22% Recurring Commission (PartnerStack)",
+          "role": "Multilingual dubbing & voice cloning SDK",
+          "link": "https://try.elevenlabs.io/agentic-dubbing"
         }
       ]
     },
     {
       "id": "PITCH-004",
-      "title": "Zero-Cost Agentic Memory: GraphRAG & Vector Pipelines in Python",
-      "hook": "Never exceed 128k context windows again by building hierarchical semantic memory graphs.",
-      "search_volume": "22,000/mo (+35% MoM)",
-      "competition": "Low (Most creators only cover basic vector search)",
-      "buyer_intent": "High (Cost optimization for high-volume LLM apps)",
-      "target_audience": "Data Engineers, Machine Learning Specialists, CTOs",
-      "demo_code": "Hybrid graph + vector store using NetworkX and ChromaDB to perform sub-100ms semantic memory lookups.",
-      "expected_rpm": "$24.00 - $31.00",
-      "target_duration": "10:00 mins",
-      "tech_stack": "ChromaDB, NetworkX, Sentence-Transformers, Python 3.11",
+      "title": "Replace Legacy IVR: Build an Intelligent Voice AI Phone Agent (ElevenLabs + Twilio)",
+      "hook": "Kill 'Press 1 for Sales' forever. Build a sub-500ms conversational phone agent with live CRM tool calling.",
+      "search_volume": "38,700/mo (+94% MoM)",
+      "competition": "Medium (High enterprise interest, lack of complete code walkthroughs)",
+      "buyer_intent": "Extremely High (Customer Support & Sales operations)",
+      "target_audience": "Voice AI Engineers, Enterprise Architects, Support Automation Leads",
+      "demo_code": "Twilio SIP Media Streams connected to ElevenLabs Conversational AI WebSockets with live HubSpot CRM lookups.",
+      "expected_rpm": "$32.00 - $42.00",
+      "target_duration": "10–12 mins",
+      "tech_stack": "ElevenLabs Conversational AI, Twilio SIP, FastAPI, WebSockets",
       "status": "READY_TO_GENERATE",
       "affiliate_targets": [
         {
-          "name": "Pinecone Vector Cloud",
-          "commission": "25% First Year",
-          "role": "Vector store scale-out"
-        },
-        {
-          "name": "Qdrant Cloud",
-          "commission": "20% Lifetime Recurring",
-          "role": "Open-source vector engine hosting"
-        },
-        {
-          "name": "RunPod GPU",
-          "commission": "10% Server Spend",
-          "role": "Embeddings acceleration instance"
+          "name": "ElevenLabs Telephony & Conversational AI",
+          "commission": "22% Recurring Commission (PartnerStack)",
+          "role": "Sub-second bidirectional conversational agent platform",
+          "link": "https://try.elevenlabs.io/agentic-telephony"
         }
       ]
     },
     {
       "id": "PITCH-005",
-      "title": "Building Production FastMCP Agent Servers with Python & PostgreSQL",
-      "hook": "Connect Claude, Gemini and Antigravity directly to your enterprise database with 0 latency.",
-      "search_volume": "28,500/mo (+48% MoM)",
-      "competition": "Low (Under-served technical queries)",
-      "buyer_intent": "Very High (B2B SaaS teams migrating to MCP)",
-      "target_audience": "Senior Backend Engineers, AI Systems Architects, DevOps Leads",
-      "demo_code": "FastMCP server exposing PostgreSQL queries and Redis token rate limiting as typed agent tools.",
-      "expected_rpm": "$28.00 - $36.00",
-      "target_duration": "9:30 mins",
-      "tech_stack": "FastMCP, Python 3.11, PostgreSQL, Redis",
+      "title": "Turn Technical Docs into Audio Podcasts with ElevenLabs Audio Native API",
+      "hook": "Skyrocket dev doc retention: Build automated 'Listen to this guide' pipelines directly into your CI/CD.",
+      "search_volume": "19,800/mo (+55% MoM)",
+      "competition": "Low (Unsaturated niche in developer documentation)",
+      "buyer_intent": "High (Developer Relations & Product Documentation teams)",
+      "target_audience": "DevRel Leads, Technical Writers, Frontend Developers",
+      "demo_code": "GitHub Action script in Python that extracts Markdown AST headings, generates Audio Native player embeds, and updates documentation sites.",
+      "expected_rpm": "$22.00 - $28.00",
+      "target_duration": "6–8 mins",
+      "tech_stack": "ElevenLabs Audio Native API, Python 3.11, Markdown-it, GitHub Actions",
       "status": "READY_TO_GENERATE",
       "affiliate_targets": [
         {
-          "name": "Supabase Cloud",
-          "commission": "$25 per conversion",
-          "role": "Postgres database demonstration"
-        },
-        {
-          "name": "Redis Enterprise",
-          "commission": "20% Lifetime Recurring",
-          "role": "Distributed caching & rate limiter"
+          "name": "ElevenLabs Audio Native & Reader",
+          "commission": "22% Recurring Commission (PartnerStack)",
+          "role": "Automated embeddable audio player and text-to-speech API",
+          "link": "https://try.elevenlabs.io/agentic-reader"
         }
       ]
     }

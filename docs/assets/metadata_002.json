@@ -7,7 +7,7 @@
     "ElevenLabs Python SDK Tutorial: Sub-Second Bidirectional Voice Agents"
   ],
   "hook_2s": "Text chatbots are dead in B2B. Here is how to build sub-second real-time conversational voice agents in Python using ElevenLabs.",
-  "duration": "03:57",
+  "duration": "03:43",
   "category_id": "28",
   "category_name": "Science & Technology",
   "altered_content": false,
@@ -31,27 +31,27 @@
       "title": "Voice AI vs Text Chatbots: The 2026 Shift"
     },
     {
-      "time": "00:35",
+      "time": "00:29",
       "title": "The Sequential Bottleneck: 4.5s vs 380ms"
     },
     {
-      "time": "01:11",
+      "time": "01:04",
       "title": "Native Barge-In: Zero-Latency Interruption"
     },
     {
-      "time": "01:44",
+      "time": "01:37",
       "title": "Enterprise Tool Calling Mid-Conversation"
     },
     {
-      "time": "02:15",
+      "time": "02:08",
       "title": "Complete Python Agent Implementation"
     },
     {
-      "time": "02:42",
+      "time": "02:35",
       "title": "Production Hardening: Auth, Docker & Edge"
     },
     {
-      "time": "03:11",
+      "time": "03:04",
       "title": "Deploy Today & Get the Complete Code"
     }
   ],
@@ -65,7 +65,7 @@
   ],
   "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent",
   "studio_upload_url": "https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg",
-  "description": "🚀 [SOURCE CODE] Grab Episode 002 ElevenLabs Voice Agent Blueprint:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent\n\n🎙️ [EXCLUSIVE FREE TRIAL] Try ElevenLabs Conversational Voice AI SDK:\n👉 https://try.elevenlabs.io/agentic-voice\n\n📚 [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\nText chatbots are dead in B2B. In this comprehensive technical breakdown, we show you how to build sub-second real-time conversational voice agents in Python using ElevenLabs Conversational AI and full-duplex WebSockets.\n\nLearn why legacy STT-LLM-TTS sequential chains fail with 4-second delays, how to implement native human interruption and barge-in, and how to execute typed enterprise Python tools and database queries mid-call.\n\n⏱️ TIMESTAMPS:\n00:00 - Voice AI vs Text Chatbots: The 2026 Shift\n00:35 - The Sequential Bottleneck: 4.5s vs 380ms\n01:11 - Native Barge-In: Zero-Latency Interruption\n01:44 - Enterprise Tool Calling Mid-Conversation\n02:15 - Complete Python Agent Implementation\n02:42 - Production Hardening: Auth, Docker & Edge\n03:11 - Deploy Today & Get the Complete Code\n\n🛠️ ENTERPRISE TOOLS (VERIFIED IN SANDBOX):\n👉 Try ElevenLabs Voice & Conversational SDK (Free Trial): https://try.elevenlabs.io/agentic-voice\n\n⚖️ FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n#ElevenLabs #VoiceAI #Python #AIAgents #WebSockets #AgenticStack",
+  "description": "🚀 [SOURCE CODE] Grab Episode 002 ElevenLabs Voice Agent Blueprint:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent\n\n🎙️ [EXCLUSIVE FREE TRIAL] Try ElevenLabs Conversational Voice AI SDK:\n👉 https://try.elevenlabs.io/agentic-voice\n\n📚 [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\nText chatbots are dead in B2B. In this comprehensive technical breakdown, we show you how to build sub-second real-time conversational voice agents in Python using ElevenLabs Conversational AI and full-duplex WebSockets.\n\nLearn why legacy STT-LLM-TTS sequential chains fail with 4-second delays, how to implement native human interruption and barge-in, and how to execute typed enterprise Python tools and database queries mid-call.\n\n⏱️ TIMESTAMPS:\n00:00 - Voice AI vs Text Chatbots: The 2026 Shift\n00:29 - The Sequential Bottleneck: 4.5s vs 380ms\n01:04 - Native Barge-In: Zero-Latency Interruption\n01:37 - Enterprise Tool Calling Mid-Conversation\n02:08 - Complete Python Agent Implementation\n02:35 - Production Hardening: Auth, Docker & Edge\n03:04 - Deploy Today & Get the Complete Code\n\n🛠️ ENTERPRISE TOOLS (VERIFIED IN SANDBOX):\n👉 Try ElevenLabs Voice & Conversational SDK (Free Trial): https://try.elevenlabs.io/agentic-voice\n\n⚖️ FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n#ElevenLabs #VoiceAI #Python #AIAgents #WebSockets #AgenticStack",
   "pinned_comment": "📌 Grab the Episode 002 ElevenLabs voice agent code and complete blueprint here:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent\n\n🎙️ Try ElevenLabs Conversational Voice AI SDK (Free Trial):\n👉 https://try.elevenlabs.io/agentic-voice\n\n💬 Question: What voice AI use-case are you currently building—customer support, automated sales triage, or internal voice assistants? Let us know below!",
   "long_video_file": "assets/video_002_long.mp4",
   "short_video_file": "assets/video_002_short.mp4",
