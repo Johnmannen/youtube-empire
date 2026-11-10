@@ -601,13 +601,10 @@ async def build_package(output_dir: str):
             "affiliate_targets": [
                 {
                     "name": "ElevenLabs Conversational AI",
+                    "url": "https://try.elevenlabs.io/agentic-voice",
                     "commission": "22% Recurring Commission (PartnerStack)",
                     "role": "Primary tool demonstrated in code: Real-time neural voice streaming & conversational agent SDK"
                 }
-            ]
-        },
-                {"name": "Redis Enterprise", "commission": "20% Lifetime Recurring", "role": "Distributed caching & rate limiter"},
-                {"name": "Neon Serverless Postgres", "commission": "$30 bounty", "role": "Zero-cold-start DB branch testing"}
             ]
         },
         {
