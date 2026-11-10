@@ -550,11 +550,11 @@ async def build_package(output_dir: str):
                 "commission_rate": "22% Recurring Commission (PartnerStack)"
             }
         ],
-        "github_code_url": "https://github.com/Johnmannen/youtube-empire",
+        "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library",
         "studio_upload_url": "https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg",
         "description": (
             "🚀 Download the complete free Python Agent Skill starter code & architecture templates:\n"
-            "👉 https://github.com/Johnmannen/youtube-empire\n\n"
+            "👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\n"
             "In this episode of Agentic Stack B2B, we break down the complete technical blueprint for building autonomous, "
             "monetization-compliant AI agent skills in Python without paying expensive API or cloud infrastructure costs.\n\n"
             "Learn how modern agentic platforms use Progressive Disclosure to index metadata first, load detailed instructions "
@@ -573,7 +573,7 @@ async def build_package(output_dir: str):
         ),
         "pinned_comment": (
             "📌 Grab the full zero-cost code repository and GitHub Actions pipeline here:\n"
-            "👉 https://github.com/Johnmannen/youtube-empire\n\n"
+            "👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\n"
             "💬 Question for the community: Which agent framework are you currently deploying to production—PydanticAI, LangGraph, or custom FastMCP? Let us know below!"
         ),
         "long_video_file": "assets/video_001_long.mp4",
