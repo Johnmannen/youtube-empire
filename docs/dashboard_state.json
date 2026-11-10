@@ -13,8 +13,8 @@
   },
   "kpis": {
     "channel_age": "Day 1 (Launch)",
-    "videos_produced": "2 (Episode #001 Live, #002 Ready)",
-    "views_30d": "Live",
+    "videos_produced": "3 (Episode #001 & #002 Live, #003 Ready)",
+    "views_30d": "Live (2 Episodes)",
     "views_growth": "Active Launch",
     "affiliate_clicks": "Active",
     "active_saas_conversions": "0",
@@ -33,104 +33,92 @@
       "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/001-autonomous-agent-skills",
       "affiliate": "ElevenLabs",
       "thumbnail": "assets/thumb_001.png"
+    },
+    {
+      "package_id": "002",
+      "title": "Build Real-Time Conversational Voice AI Agents in Python (ElevenLabs WebSockets 2026)",
+      "youtube_url": "https://www.youtube.com/watch?v=3B178ZvPS_s",
+      "status": "PUBLISHED_LIVE",
+      "published_date": "2026-11-10",
+      "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent",
+      "affiliate": "ElevenLabs (https://try.elevenlabs.io/agentic-voice)",
+      "thumbnail": "assets/thumb_002.png"
     }
   ],
   "current_package": {
-    "package_id": "002",
-    "title": "Build Real-Time Conversational Voice AI Agents in Python (ElevenLabs WebSockets 2026)",
+    "package_id": "003",
+    "title": "Build Automated Multilingual AI Video Dubbing in Python (ElevenLabs Dubbing API)",
     "alternative_titles": [
-      "How to Build Real-Time Voice AI in Python with ElevenLabs",
-      "Stop Building Text Chatbots: Real-Time Conversational Voice AI (2026)",
-      "ElevenLabs Python SDK Tutorial: Sub-Second Bidirectional Voice Agents"
+      "How to Auto-Dub Videos in Python with ElevenLabs (29 Languages)",
+      "Stop Translating Manually: Autonomous AI Video Dubbing in Python",
+      "ElevenLabs Dubbing API Tutorial: Clone Voices and Translate MP4 Videos"
     ],
-    "hook_2s": "Text chatbots are dead in B2B. Here is how to build sub-second real-time conversational voice agents in Python using ElevenLabs.",
-    "duration": "03:57",
+    "hook_2s": "Manual video translation is dead in B2B. Here is how to auto-dub and voice-clone tutorials into 29 languages with Python.",
+    "duration": "03:49",
     "category_id": "28",
     "category_name": "Science & Technology",
     "altered_content": false,
     "c2pa_status": "VERIFIED_COMPLIANT_2026",
-    "target_audience": "B2B SaaS Founders, AI Engineers, Full-Stack Python Developers",
+    "target_audience": "B2B SaaS Creators, Growth Engineers, Global Marketing Leads, AI Developers",
     "tags": [
       "elevenlabs",
-      "voice ai agents",
-      "conversational ai",
-      "python voice agent",
-      "real time websockets",
-      "sub second latency",
-      "elevenlabs python sdk",
+      "ai dubbing",
+      "video localization",
+      "python video dubbing",
+      "voice cloning",
+      "elevenlabs dubbing api",
+      "ffmpeg python",
+      "multilingual video",
       "b2b ai workflows",
-      "ai audio streaming",
       "agentic stack b2b"
     ],
     "timestamps": [
       {
         "time": "00:00",
-        "title": "Voice AI vs Text Chatbots: The 2026 Shift"
+        "title": "Global Video Localization: The B2B Bottleneck"
       },
       {
-        "time": "00:35",
-        "title": "The Sequential Bottleneck: 4.5s vs 380ms"
+        "time": "00:36",
+        "title": "The AI Dubbing Pipeline: Diarization to Voice Match"
       },
       {
-        "time": "01:11",
-        "title": "Native Barge-In: Zero-Latency Interruption"
+        "time": "01:14",
+        "title": "Initiating Dubbing Jobs with the Python SDK"
       },
       {
-        "time": "01:44",
-        "title": "Enterprise Tool Calling Mid-Conversation"
+        "time": "01:48",
+        "title": "Async Webhooks & Polling Architecture"
       },
       {
-        "time": "02:15",
-        "title": "Complete Python Agent Implementation"
+        "time": "02:19",
+        "title": "Automated Video Stitching with FFmpeg & Python"
       },
       {
-        "time": "02:42",
-        "title": "Production Hardening: Auth, Docker & Edge"
+        "time": "02:49",
+        "title": "Batch Processing: Fan-Out to 29 Languages"
       },
       {
-        "time": "03:11",
-        "title": "Deploy Today & Get the Complete Code"
+        "time": "03:19",
+        "title": "Deploy Today & Grab the Complete Source Code"
       }
     ],
     "affiliate_placeholders": [
       {
-        "tool": "ElevenLabs AI Voice & Conversational AI API",
-        "benefit": "Sub-second neural voice streaming & conversational agent SDK",
-        "live_url": "https://try.elevenlabs.io/agentic-voice",
+        "tool": "ElevenLabs AI Dubbing & Voice Cloning API",
+        "benefit": "Automated multilingual video dubbing and voice cloning SDK",
+        "live_url": "https://try.elevenlabs.io/agentic-dubbing",
         "commission_rate": "22% Recurring Commission (PartnerStack)"
       }
     ],
-    "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent",
+    "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/003-elevenlabs-video-dubbing",
     "studio_upload_url": "https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg",
-    "description": "🚀 [SOURCE CODE] Grab Episode 002 ElevenLabs Voice Agent Blueprint:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent\n\n🎙️ [EXCLUSIVE FREE TRIAL] Try ElevenLabs Conversational Voice AI SDK:\n👉 https://try.elevenlabs.io/agentic-voice\n\n📚 [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\nText chatbots are dead in B2B. In this comprehensive technical breakdown, we show you how to build sub-second real-time conversational voice agents in Python using ElevenLabs Conversational AI and full-duplex WebSockets.\n\nLearn why legacy STT-LLM-TTS sequential chains fail with 4-second delays, how to implement native human interruption and barge-in, and how to execute typed enterprise Python tools and database queries mid-call.\n\n⏱️ TIMESTAMPS:\n00:00 - Voice AI vs Text Chatbots: The 2026 Shift\n00:35 - The Sequential Bottleneck: 4.5s vs 380ms\n01:11 - Native Barge-In: Zero-Latency Interruption\n01:44 - Enterprise Tool Calling Mid-Conversation\n02:15 - Complete Python Agent Implementation\n02:42 - Production Hardening: Auth, Docker & Edge\n03:11 - Deploy Today & Get the Complete Code\n\n🛠️ ENTERPRISE TOOLS (VERIFIED IN SANDBOX):\n👉 Try ElevenLabs Voice & Conversational SDK (Free Trial): https://try.elevenlabs.io/agentic-voice\n\n⚖️ FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n#ElevenLabs #VoiceAI #Python #AIAgents #WebSockets #AgenticStack",
-    "pinned_comment": "📌 Grab the Episode 002 ElevenLabs voice agent code and complete blueprint here:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent\n\n🎙️ Try ElevenLabs Conversational Voice AI SDK (Free Trial):\n👉 https://try.elevenlabs.io/agentic-voice\n\n💬 Question: What voice AI use-case are you currently building—customer support, automated sales triage, or internal voice assistants? Let us know below!",
-    "long_video_file": "assets/video_002_long.mp4",
-    "short_video_file": "assets/video_002_short.mp4",
-    "thumbnail_file": "assets/thumb_002.png"
+    "description": "🚀 [SOURCE CODE] Grab Episode 003 AI Video Dubbing Blueprint in Python:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/003-elevenlabs-video-dubbing\n\n🎙️ [EXCLUSIVE FREE TRIAL] Try ElevenLabs AI Dubbing & Voice Cloning SDK:\n👉 https://try.elevenlabs.io/agentic-dubbing\n\n📚 [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\nManual video translation is dead in B2B. In this comprehensive technical breakdown, we show you how to build a production-ready automated multi-lingual video dubbing pipeline in Python using the ElevenLabs Dubbing API and FFmpeg.\n\nLearn how neural speaker diarization separates voices, how contextual LLMs translate while matching syllable cadence, and how zero-shot voice cloning preserves the exact vocal timbre of your original presenter across 29 languages.\n\n⏱️ TIMESTAMPS:\n00:00 - Global Video Localization: The B2B Bottleneck\n00:36 - The AI Dubbing Pipeline: Diarization to Voice Match\n01:14 - Initiating Dubbing Jobs with the Python SDK\n01:48 - Async Webhooks & Polling Architecture\n02:19 - Automated Video Stitching with FFmpeg & Python\n02:49 - Batch Processing: Fan-Out to 29 Languages\n03:19 - Deploy Today & Grab the Complete Source Code\n\n🛠️ ENTERPRISE TOOLS (VERIFIED IN SANDBOX):\n👉 Try ElevenLabs AI Dubbing API (Free Trial): https://try.elevenlabs.io/agentic-dubbing\n\n⚖️ FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n#ElevenLabs #AIDubbing #Python #VideoLocalization #AIAgents #AgenticStack",
+    "pinned_comment": "📌 Grab the Episode 003 AI video dubbing code and complete blueprint here:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/003-elevenlabs-video-dubbing\n\n🎙️ Try ElevenLabs AI Dubbing SDK (Free Trial):\n👉 https://try.elevenlabs.io/agentic-dubbing\n\n💬 Question: What languages are you looking to expand your technical tutorials and software demos into first? Let us know below!",
+    "long_video_file": "assets/video_003_long.mp4",
+    "short_video_file": "assets/video_003_short.mp4",
+    "thumbnail_file": "assets/thumb_003.png"
   },
   "pitches": [
-    {
-      "id": "PITCH-003",
-      "title": "Build Automated Multilingual AI Video Dubbing in Python (ElevenLabs Dubbing API)",
-      "hook": "Scale B2B video content globally in minutes: Auto-translate and voice-clone tutorials into 29 languages.",
-      "search_volume": "29,400/mo (+82% MoM)",
-      "competition": "Low (Under-served technical query in video translation pipelines)",
-      "buyer_intent": "Very High (EdTech, SaaS global expansion teams)",
-      "target_audience": "B2B SaaS Creators, Growth Engineers, Global Marketing Leads",
-      "demo_code": "Python pipeline using ElevenLabs Dubbing SDK and FFmpeg to auto-dub MP4 technical tutorials into Spanish, German, and French.",
-      "expected_rpm": "$28.00 - $35.00",
-      "target_duration": "8–10 mins",
-      "tech_stack": "ElevenLabs Dubbing API, Python 3.11, FFmpeg, MoviePy",
-      "status": "READY_TO_GENERATE",
-      "affiliate_targets": [
-        {
-          "name": "ElevenLabs AI Dubbing",
-          "commission": "22% Recurring Commission (PartnerStack)",
-          "role": "Multilingual dubbing & voice cloning SDK",
-          "link": "https://try.elevenlabs.io/agentic-dubbing"
-        }
-      ]
-    },
     {
       "id": "PITCH-004",
       "title": "Replace Legacy IVR: Build an Intelligent Voice AI Phone Agent (ElevenLabs + Twilio)",
@@ -172,6 +160,28 @@
           "commission": "22% Recurring Commission (PartnerStack)",
           "role": "Automated embeddable audio player and text-to-speech API",
           "link": "https://try.elevenlabs.io/agentic-reader"
+        }
+      ]
+    },
+    {
+      "id": "PITCH-006",
+      "title": "Autonomous Multi-Speaker Voice Agent Triage with ElevenLabs & FastAPI",
+      "hook": "Deploy multi-agent phone triage that intelligently transfers callers between specialized voice agents.",
+      "search_volume": "24,800/mo (+78% MoM)",
+      "competition": "Low (Pioneering multi-agent voice architectures)",
+      "buyer_intent": "Very High (B2B Contact Centers & Enterprise SaaS)",
+      "target_audience": "AI Engineers, B2B SaaS Architects, Contact Center Automation Leads",
+      "demo_code": "FastAPI WebSocket router orchestrating dynamic state handoffs between specialized ElevenLabs agents with custom voice IDs.",
+      "expected_rpm": "$28.00 - $38.00",
+      "target_duration": "9–11 mins",
+      "tech_stack": "ElevenLabs Conversational AI, FastAPI, WebSockets, Python 3.11",
+      "status": "READY_TO_GENERATE",
+      "affiliate_targets": [
+        {
+          "name": "ElevenLabs Conversational AI Platform",
+          "commission": "22% Recurring Commission (PartnerStack)",
+          "role": "Conversational agent platform & dynamic voice switching",
+          "link": "https://try.elevenlabs.io/agentic-telephony"
         }
       ]
     }
