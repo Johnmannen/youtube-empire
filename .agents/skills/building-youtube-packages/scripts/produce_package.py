@@ -550,10 +550,12 @@ async def build_package(output_dir: str):
                 "commission_rate": "22% Recurring Commission (PartnerStack)"
             }
         ],
-        "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library",
+        "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/001-autonomous-agent-skills",
         "studio_upload_url": "https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg",
         "description": (
-            "🚀 Download the complete free Python Agent Skill starter code & architecture templates:\n"
+            "🚀 Download the Episode 001 code & architecture blueprint:\n"
+            "👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/001-autonomous-agent-skills\n\n"
+            "📚 Complete Channel Open-Source Library:\n"
             "👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\n"
             "In this episode of Agentic Stack B2B, we break down the complete technical blueprint for building autonomous, "
             "monetization-compliant AI agent skills in Python without paying expensive API or cloud infrastructure costs.\n\n"
@@ -572,8 +574,8 @@ async def build_package(output_dir: str):
             "#Python #AIAgents #GoogleAntigravity #LangGraph #FastMCP #DevOps"
         ),
         "pinned_comment": (
-            "📌 Grab the full zero-cost code repository and GitHub Actions pipeline here:\n"
-            "👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\n"
+            "📌 Grab the Episode 001 code and complete blueprint here:\n"
+            "👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/001-autonomous-agent-skills\n\n"
             "💬 Question for the community: Which agent framework are you currently deploying to production—PydanticAI, LangGraph, or custom FastMCP? Let us know below!"
         ),
         "long_video_file": "assets/video_001_long.mp4",
@@ -585,19 +587,25 @@ async def build_package(output_dir: str):
     pitches = [
         {
             "id": "PITCH-002",
-            "title": "Building Production FastMCP Agent Servers with Python",
-            "hook": "Connect Claude, Gemini and Antigravity directly to your enterprise database with 0 latency.",
-            "search_volume": "28,500/mo (+48% MoM)",
-            "competition": "Low (Under-served technical queries)",
-            "buyer_intent": "Very High (B2B SaaS teams migrating to MCP)",
-            "target_audience": "Senior Backend Engineers, AI Systems Architects, DevOps Leads",
-            "demo_code": "FastMCP server exposing PostgreSQL queries and Redis token rate limiting as typed agent tools.",
-            "expected_rpm": "$28.00 - $36.00",
-            "target_duration": "9:30 mins",
-            "tech_stack": "FastMCP, Python 3.11, PostgreSQL, Redis",
+            "title": "Build Real-Time Conversational Voice AI Agents in Python with ElevenLabs",
+            "hook": "Text chatbots are dead in B2B. Here is how to build sub-second real-time conversational voice agents in Python using ElevenLabs.",
+            "search_volume": "41,800/mo (+88% MoM)",
+            "competition": "Low (Under-served technical Python WebSocket tutorials)",
+            "buyer_intent": "Maximum (Founders and enterprise developers building customer-facing voice agents)",
+            "target_audience": "B2B SaaS Founders, AI Engineers, Full-Stack Python Developers",
+            "demo_code": "Bidirectional Python WebSocket runtime connecting live microphone/speaker to ElevenLabs Conversational AI API.",
+            "expected_rpm": "$32.00 - $44.00",
+            "target_duration": "8:45 mins",
+            "tech_stack": "ElevenLabs SDK, Python WebSockets, asyncio, edge-tts fallback",
             "status": "READY_TO_GENERATE",
             "affiliate_targets": [
-                {"name": "Supabase Cloud", "commission": "$25 per conversion", "role": "Postgres database demonstration"},
+                {
+                    "name": "ElevenLabs Conversational AI",
+                    "commission": "22% Recurring Commission (PartnerStack)",
+                    "role": "Primary tool demonstrated in code: Real-time neural voice streaming & conversational agent SDK"
+                }
+            ]
+        },
                 {"name": "Redis Enterprise", "commission": "20% Lifetime Recurring", "role": "Distributed caching & rate limiter"},
                 {"name": "Neon Serverless Postgres", "commission": "$30 bounty", "role": "Zero-cold-start DB branch testing"}
             ]
