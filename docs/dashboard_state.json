@@ -163,5 +163,10 @@
       "code_demo": "ElevenLabs Audio Native API + Python Markdown Parser",
       "status": "PITCH_READY_REVIEW"
     }
-  ]
+  ],
+  "channel_metrics": {
+    "total_views": 12,
+    "video_count": 4,
+    "last_synced": ""
+  }
 }
