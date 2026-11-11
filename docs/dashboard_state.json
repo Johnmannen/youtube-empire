@@ -143,7 +143,7 @@
       "growth_mom": "+94%",
       "target_audience": "Full-Stack Engineers & Support Ops",
       "affiliate_partner": "ElevenLabs Conversational Telephony (22% Recurring)",
-      "affiliate_url": "https://try.elevenlabs.io/agentic-voice",
+      "affiliate_url": "https://try.elevenlabs.io/agentic-telephony",
       "hook": "Kill 'Press 1 for Sales' forever. Build a sub-500ms conversational phone agent with live database actions.",
       "code_demo": "ElevenLabs + Twilio SIP Media Streams + FastAPI",
       "status": "PITCH_READY_REVIEW"
@@ -158,7 +158,7 @@
       "growth_mom": "+55%",
       "target_audience": "Tech Writers, Solopreneurs & Developers",
       "affiliate_partner": "ElevenLabs Audio Native API (22% Recurring)",
-      "affiliate_url": "https://try.elevenlabs.io/agentic-docs",
+      "affiliate_url": "https://try.elevenlabs.io/agentic-reader",
       "hook": "Engineers do not read 40-page documentation. Here is how to turn technical docs into audio podcasts automatically.",
       "code_demo": "ElevenLabs Audio Native API + Python Markdown Parser",
       "status": "PITCH_READY_REVIEW"
