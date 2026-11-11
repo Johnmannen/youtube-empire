@@ -1,0 +1,48 @@
+{
+  "report_id": "audit_20261111",
+  "timestamp": "2026-11-11 17:39 UTC",
+  "channel_name": "@agenticstackb2b",
+  "channel_id": "UCkphdiVQvc1vvNlcrAorMOg",
+  "total_channel_views": 1842,
+  "total_impressions": 28400,
+  "channel_avg_ctr": 6.8,
+  "channel_avg_apv": 51.2,
+  "videos": [
+    {
+      "episode": "002.1",
+      "title": "Build Voice AI Agents in Python (ElevenLabs Conversational AI)",
+      "video_id": "3B178ZvPS_s",
+      "published_at": "2026-11-11",
+      "status": "HEALTHY 🟢",
+      "delta_views": "+840",
+      "total_views": 840,
+      "delta_impressions": "+11800",
+      "total_impressions": 11800,
+      "ctr": "7.1%",
+      "retention_30s": "68.4%",
+      "apv_percent": "52.8%",
+      "avg_duration": "2m 24s",
+      "affiliate_clicks": 31,
+      "end_screen_ctr": "8.5%",
+      "action": "Behåll titel och miniatyrbild. Utmärkt initial tillväxt."
+    },
+    {
+      "episode": "001",
+      "title": "Build Autonomous AI Agent Skills in Python (Zero-Cost Production Blueprint)",
+      "video_id": "NEoqC7BxBqE",
+      "published_at": "2026-11-10",
+      "status": "STABLE 🟢",
+      "delta_views": "+210",
+      "total_views": 1002,
+      "delta_impressions": "+3400",
+      "total_impressions": 16600,
+      "ctr": "6.6%",
+      "retention_30s": "71.2%",
+      "apv_percent": "50.4%",
+      "avg_duration": "2m 08s",
+      "affiliate_clicks": 11,
+      "end_screen_ctr": "6.2%",
+      "action": "Stabil organisk ranking i sök. Fortsätt driva trafik från Ep 002."
+    }
+  ]
+}
