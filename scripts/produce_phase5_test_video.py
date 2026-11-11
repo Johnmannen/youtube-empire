@@ -611,7 +611,7 @@ def render_scene_7(duration: float, audio_path: str, out_video: str):
         draw_rounded_rect(draw, (90, 160, 950, 360), fill=aff_fill, outline=aff_out, width=3 if t < 8.5 else 2, radius=14)
         draw.text((120, 185), "🎁 TRY ELEVENLABS CONVERSATIONAL AI", fill=(244, 114, 182), font=get_font(24, bold=True))
         draw.text((120, 235), "Exclusive Free Trial Link in Description & Pinned Comment:", fill=(255, 255, 255), font=get_font(20, bold=True))
-        draw.text((120, 275), "https://elevenlabs.io/?via=agenticstack", fill=(56, 189, 248), font=get_font(22, bold=True, mono=True))
+        draw.text((120, 275), "https://try.elevenlabs.io/agentic-voice", fill=(56, 189, 248), font=get_font(22, bold=True, mono=True))
         draw.text((120, 315), "• Sub-second WebSockets • Zero setup required", fill=(148, 163, 184), font=get_font(18))
 
         # 2. GitHub Repo Box (Highlighting when spoken: t: 8.5 - 16.0)

@@ -9,7 +9,7 @@ html = html.replace("assets/video_003_short.mp4", "assets/video_002_1_short.mp4"
 
 # 2. Update Video Description to Episode 002.1
 new_description = """🎁 [FREE TRIAL] Try ElevenLabs Conversational Voice AI SDK:
-👉 https://elevenlabs.io/?via=agenticstack (Affiliate Partner Link)
+👉 https://try.elevenlabs.io/agentic-voice (Affiliate Partner Link)
 
 🚀 [SOURCE CODE] Download Python Scripts & WebSocket Blueprint:
 👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent
@@ -31,7 +31,7 @@ In this video, we build a production-ready conversational voice agent in Python 
 02:40 - Outro, Free Trial & Source Code
 
 🛠️ ENTERPRISE TOOLS (VERIFIED IN SANDBOX):
-👉 Try ElevenLabs Conversational AI SDK (Free Trial): https://elevenlabs.io/?via=agenticstack
+👉 Try ElevenLabs Conversational AI SDK (Free Trial): https://try.elevenlabs.io/agentic-voice
 
 ⚖️ FTC AFFILIATE DISCLOSURE:
 Some links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.
@@ -47,7 +47,7 @@ if p_desc_start != -1:
 
 # 3. Update Pinned Comment to Episode 002.1
 new_pinned = """📌 Grab the ElevenLabs Conversational AI Free Trial:
-👉 https://elevenlabs.io/?via=agenticstack
+👉 https://try.elevenlabs.io/agentic-voice
 
 💻 Download the Python script & WebSocket templates on GitHub:
 👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent

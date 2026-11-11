@@ -146,7 +146,7 @@ def render_shorts_video(duration: float, audio_path: str, out_video: str):
         # 6. Bottom CTA & Free Trial Link
         draw_rounded_rect(draw, (60, 1640, 1020, 1830), fill=(30, 20, 48), outline=(168, 85, 247), width=3, radius=18)
         draw.text((90, 1665), "🎁 FREE TRIAL & FULL PYTHON CODE:", fill=(244, 114, 182), font=get_font(24, bold=True))
-        draw.text((90, 1710), "👉 elevenlabs.io/?via=agenticstack", fill=(56, 189, 248), font=get_font(26, bold=True, mono=True))
+        draw.text((90, 1710), "👉 try.elevenlabs.io/agentic-voice", fill=(56, 189, 248), font=get_font(26, bold=True, mono=True))
         draw.text((90, 1760), "Check the description and pinned comment below!", fill=(226, 232, 240), font=get_font(20))
 
         img.save(fdir / f"f_{f:04d}.png")

@@ -39,7 +39,7 @@ DEFAULT_PITCHES = [
         "growth_mom": "+94%",
         "target_audience": "Full-Stack Engineers & Support Ops",
         "affiliate_partner": "ElevenLabs Conversational Telephony (22% Recurring)",
-        "affiliate_url": "https://elevenlabs.io/?via=agenticstack",
+        "affiliate_url": "https://try.elevenlabs.io/agentic-voice",
         "hook": "Kill 'Press 1 for Sales' forever. Build a sub-500ms conversational phone agent with live database actions.",
         "code_demo": "ElevenLabs + Twilio SIP Media Streams + FastAPI",
         "status": "PITCH_READY_REVIEW"
