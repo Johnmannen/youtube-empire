@@ -46,76 +46,76 @@
     }
   ],
   "current_package": {
-    "package_id": "002.1",
-    "title": "Build Real-Time Voice AI Agents in Python (Sub-400ms WebSockets 2026)",
+    "package_id": "003",
+    "title": "How to Clone Voices and Dub Videos in Python (ElevenLabs API 2026) [EPISODE 003]",
     "alternative_titles": [
-      "How to Build Voice AI Agents with Sub-Second Latency in Python",
-      "Stop Using Slow Text Bots: Real-Time Voice AI in Python",
-      "Build Production Voice AI Agents in Python with ElevenLabs"
+      "Translate Any Video into 29 Languages with Python",
+      "Auto-Dub Videos & Clone Voices with ElevenLabs API",
+      "Stop Paying Localization Agencies: Python Video Dubbing Engine"
     ],
-    "hook_2s": "Text chatbots with four-second response lags are dead. Build conversational voice AI in Python with sub-400ms latency.",
-    "duration": "03:12",
+    "hook_2s": "Manual video localization is dead. Clone your exact voice and dub videos into 29 languages in Python.",
+    "duration": "06:32",
     "category_id": "28",
     "category_name": "Science & Technology",
     "altered_content": false,
     "c2pa_status": "VERIFIED_COMPLIANT_2026",
-    "target_audience": "AI Engineers, Full-Stack Developers, SaaS Founders, Tech Leads",
+    "target_audience": "Developers, AI Engineers, Content Creators, Global SaaS Teams",
     "tags": [
       "elevenlabs",
-      "voice ai",
-      "python voice agent",
-      "conversational ai",
-      "websockets python",
-      "real time ai",
-      "sub second latency",
-      "barge in vad",
+      "voice cloning",
+      "video dubbing",
+      "python ai",
+      "ai dubbing",
+      "localization",
+      "zero shot voice clone",
+      "speech synthesis",
       "agentic stack"
     ],
     "timestamps": [
       {
         "time": "00:00",
-        "title": "The Death of High-Latency Chatbots"
+        "title": "MANUAL LOCALIZATION IS DEAD"
       },
       {
-        "time": "00:27",
-        "title": "System Architecture: Bi-Directional WebSockets"
+        "time": "00:59",
+        "title": "SYSTEM ARCHITECTURE: 3-STAGE PIPELINE"
       },
       {
-        "time": "00:58",
-        "title": "Python Setup: Persistent Client & API Key"
+        "time": "02:11",
+        "title": "PYTHON SDK SETUP & JOB SUBMISSION"
       },
       {
-        "time": "01:23",
-        "title": "42ms Hardware Barge-In Configuration"
+        "time": "03:26",
+        "title": "ASYNC STATUS POLLING & CHUNKED STREAMING"
       },
       {
-        "time": "01:47",
-        "title": "Split-Screen Tool Calling: Mid-Call Stripe Refund"
+        "time": "04:25",
+        "title": "AUDIO ANALYSIS & ZERO-SHOT TIMBRE MATCH"
       },
       {
-        "time": "02:15",
-        "title": "Latency Benchmarks: HTTP vs WebSockets"
+        "time": "05:09",
+        "title": "ENTERPRISE BENCHMARKS & OPERATIONAL ROI"
       },
       {
-        "time": "02:40",
-        "title": "Outro, Free Trial & Source Code"
+        "time": "05:47",
+        "title": "GITHUB BLUEPRINT, FREE TRIAL & NEXT EPISODE"
       }
     ],
     "affiliate_placeholders": [
       {
-        "tool": "ElevenLabs Conversational Voice AI",
-        "benefit": "Sub-400ms low-latency WebSocket Conversational AI SDK",
+        "tool": "ElevenLabs AI Dubbing & Voice Cloning SDK",
+        "benefit": "Studio-grade automated dubbing & zero-shot voice cloning in 29 languages",
         "live_url": "https://elevenlabs.io/?via=agenticstack",
         "commission_rate": "22% Recurring Commission (PartnerStack)"
       }
     ],
-    "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent",
+    "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/003-voice-cloning-video-dubbing",
     "studio_upload_url": "https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg",
-    "description": "🎁 [FREE TRIAL] Try ElevenLabs Conversational Voice AI SDK:\n👉 https://elevenlabs.io/?via=agenticstack (Affiliate Partner Link)\n\n🚀 [SOURCE CODE] Download Python Scripts & WebSocket Blueprint:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent\n\n📚 [OPEN SOURCE REPO] Star the Agentic Stack Library:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\nText chatbots with four-second response lags are dead. When users speak, they expect an immediate, fluid conversation, not dead silence. \n\nIn this video, we build a production-ready conversational voice agent in Python using ElevenLabs full-duplex WebSockets with sub-400ms round-trip latency and 42ms hardware barge-in interruption.\n\n⏱️ TIMESTAMPS:\n00:00 - The Death of High-Latency Chatbots\n00:27 - System Architecture: Bi-Directional WebSockets\n00:58 - Python Setup: Persistent Client & API Key\n01:23 - 42ms Hardware Barge-In Configuration\n01:47 - Split-Screen Tool Calling: Mid-Call Stripe Refund\n02:15 - Latency Benchmarks: HTTP vs WebSockets\n02:40 - Outro, Free Trial & Source Code\n\n🛠️ VERIFIED TECH STACK:\n👉 ElevenLabs Conversational AI SDK: https://elevenlabs.io/?via=agenticstack\n\n⚖️ FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you. Every architecture is verified in our local sandbox.\n\n#VoiceAI #ElevenLabs #Python #ConversationalAI #WebSockets #AIAgents #AgenticStack",
-    "pinned_comment": "📌 Grab the ElevenLabs Conversational AI Free Trial:\n👉 https://elevenlabs.io/?via=agenticstack\n\n💻 Download the Python script & WebSocket templates on GitHub above!\n💬 Question: What latency are you getting on your voice pipelines today? Let us know below!",
-    "long_video_file": "assets/video_002_1_long.mp4",
-    "short_video_file": "assets/video_002_short.mp4",
-    "thumbnail_file": "assets/thumb_002_1.png"
+    "description": "🎁 [FREE TRIAL] Try ElevenLabs AI Dubbing & Voice Cloning SDK:\n👉 https://elevenlabs.io/?via=agenticstack (Affiliate Partner Link)\n\n🚀 [SOURCE CODE] Download Python Dubbing Scripts & Blueprint:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/003-voice-cloning-video-dubbing\n\n📚 [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\nManual video localization is dead. Paying $500 per language and waiting weeks for human studios does not scale.\n\nIn this video, we build an automated video dubbing pipeline in Python using the ElevenLabs Dubbing API. We extract speaker audio, run multi-speaker diarization, clone exact vocal timbres, and synthesize matching Spanish audio in under 3 minutes.\n\n⏱️ TIMESTAMPS:\n00:00 - MANUAL LOCALIZATION IS DEAD\n00:59 - SYSTEM ARCHITECTURE: 3-STAGE PIPELINE\n02:11 - PYTHON SDK SETUP & JOB SUBMISSION\n03:26 - ASYNC STATUS POLLING & CHUNKED STREAMING\n04:25 - AUDIO ANALYSIS & ZERO-SHOT TIMBRE MATCH\n05:09 - ENTERPRISE BENCHMARKS & OPERATIONAL ROI\n05:47 - GITHUB BLUEPRINT, FREE TRIAL & NEXT EPISODE\n\n🛠️ ENTERPRISE TOOLS (VERIFIED IN SANDBOX):\n👉 Try ElevenLabs Dubbing API (Free Trial): https://elevenlabs.io/?via=agenticstack\n\n⚖️ FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n#VoiceCloning #ElevenLabs #Python #VideoDubbing #AIVoice #Localization #AgenticStack",
+    "pinned_comment": "📌 Grab the ElevenLabs Dubbing & Voice Cloning Free Trial:\n👉 https://elevenlabs.io/?via=agenticstack\n\n💻 Download the complete Python dubbing script & demo templates on GitHub above!\n💬 Question: Which languages are you localizing your technical content into first? Drop them below!",
+    "long_video_file": "assets/video_003_long.mp4",
+    "short_video_file": "assets/video_003_short.mp4",
+    "thumbnail_file": "assets/thumb_003.png"
   },
   "pitches": [
     {
