@@ -8,20 +8,23 @@ description: Researches high-RPM B2B software topics, writes verified technical 
 ## Purpose
 Executes an end-to-end, zero-cost cloud production pipeline that creates complete, monetization-compliant YouTube video packages for the **Agentic Stack B2B** channel. Produces Long-form 1080p MP4, 9:16 Short MP4 (<20s), PNG Thumbnails, SEO Metadata with affiliate links, and synchronizes the Overseer Dashboard.
 
-## Channel & Production Specifications
+## Channel & Production Specifications (Master Framework 2026)
 - **Channel Name:** Agentic Stack B2B
 - **Niche:** AI & Agentic Stack B2B (Python, Agentic Workflows, LLM & API Integrations)
-- **Voice Actor:** `edge-tts` with voice `en-US-ChristopherNeural` (Rate: `+5%`)
-- **Operational Mode:** PITCH-MODE (3 curated high-RPM topic proposals displayed on the dashboard for one-click production approval)
+- **Official Voice Actor:** `edge-tts` with voice `en-US-AndrewMultilingualNeural` (Rate: `+0%` default)
+- **Visual Production Engine:** Concept 4 Hybrid (24-26pt mobile code, sliding neon arrow pointers, floating concept badges, progressive architecture pulses, and smooth split-screen live terminal sync)
+- **Thumbnail Standard:** Hybrid Concept 1+3 (Split-screen contrast pain on left, 3-node connected network architecture on right, terminal status in bottom, max 2-3 words headline following Gycklarregeln)
+- **Title Length Limit:** Strict limit `< 60 characters` for primary mobile CTR title
+- **Target Video Duration:** 3:00 to 5:00 minutes for technical tutorials (combining depth with zero fluff)
 - **Weekly Cadence:** 3 packages/week (Monday, Wednesday, Friday)
 - **Target Long-form RPM:** $18.00 – $35.00
-- **Shorts Strategy:** Duration < 20 seconds, aggressive 2-second visual & audio hook, exactly 0 commercial music tracks to retain 100% Creator Pool allocation (45% net).
+- **Shorts Strategy:** Duration < 20 seconds, aggressive 2-second visual & audio hook, exactly 0 commercial music tracks to retain 100% Creator Pool allocation.
 - **Compliance Rules (YouTube 2026):**
   - Strict Anti-Slop Protocol: All Python scripts must be executed and verified in the sandbox before script writing.
-  - Transparent Metadata: Category `28` (Science & Technology), `altered_content: false` (no synthetic humans or simulated real-world news).
+  - Transparent Metadata: Category `28` (Science & Technology), `altered_content: false`.
   - FTC Affiliate Disclosures included in descriptions and pinned comments.
-  - **Muntlig Hänvisning till Affiliate (Default):** När en video täcker ett affiliate-verktyg (t.ex. ElevenLabs) MÅSTE speakern hänvisa muntligt till testlänk/provperiod i videobeskrivningen och den fastnålade kommentaren (en gång kort i introduktionen och en gång i avslutningen).
-  - **Ren visuell layout (Inga grafiska CTA-boxar):** Uppmaningar om Like & Subscribe ska uteslutande ske muntligt och kortfattat. Inga grafiska CTA-boxar eller klickpilar på videon.
+  - **Muntlig Hänvisning till Affiliate & Like/Subscribe:** Muntligt och organiskt integrerat i speakern vid delsegrar och outrot. Inga störande grafiska CTA-boxar.
+  - **Post-Launch Review:** Granskningsagent körs vid 24h/48h för att mäta CTR och 0:30-retention med automatisk A/B-titelväxling vid behov.
 
 ## Workflow Checklist
 - [ ] Step 1: Environment & Dependency Verification (`edge-tts`, `ffmpeg`, `pillow`, `matplotlib`)
