@@ -225,16 +225,63 @@
       <!-- 3 PITCH CARDS -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6" id="pitchesContainer">
         
-        <!-- PITCH 1 (PITCH #004) -->
+        <!-- PITCH 1: PITCH #003 (TIDIGARE VIDEO 3 OMARBETAD ENLIGT NYA MALLEN) -->
+        <div class="glass-card rounded-2xl p-5 border border-purple-500/40 hover:border-purple-400/60 transition-all flex flex-col justify-between space-y-4 bg-purple-950/10">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="px-2 py-0.5 rounded font-mono font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">PITCH #003</span>
+              <span class="text-purple-300 font-semibold font-mono">⏱️ Längd: 3:30–4:30 min</span>
+            </div>
+            
+            <h3 class="text-base font-bold text-white hover:text-purple-300 transition">How to Clone Voices and Dub Videos in Python</h3>
+            <p class="text-xs text-slate-300 italic">"Translate any video into 29 languages with matching lip cadence and cloned voices in Python."</p>
+            
+            <!-- Beslutsunderlag Mini-Tabell -->
+            <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800 text-xs space-y-2">
+              <div class="flex justify-between">
+                <span class="text-slate-400">Pedagogiskt Mål:</span>
+                <span class="text-purple-300 font-semibold text-right">Automatiserad röstkloning & videodubbning</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Sökvolym:</span>
+                <span class="text-white font-mono font-semibold">24 500 /mån (+82% MoM)</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Målgrupp:</span>
+                <span class="text-slate-200">Utvecklare, Skapare & Globala SaaS-team</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Demo Kod:</span>
+                <span class="text-purple-400 font-mono">ElevenLabs Dubbing API + FFmpeg</span>
+              </div>
+              <div class="pt-1 border-t border-slate-800/80 flex justify-between">
+                <span class="text-slate-400">Huvud-Affiliate:</span>
+                <span class="text-amber-300 font-medium">ElevenLabs Dubbing SDK (22% Recurring)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 flex items-center gap-2">
+            <button onclick="showPitchDossier(0)" class="flex-1 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 border border-slate-700 font-semibold transition">
+              🔍 Granska Manus & Dossier
+            </button>
+            <button id="pitchBtn0" onclick="triggerPitch('PITCH #003', 'How to Clone Voices and Dub Videos in Python', this)" class="px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-500 text-xs font-bold text-white shadow-md shadow-purple-600/30 flex items-center gap-1 transition">
+              <span>Exekvera</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- PITCH 2: PITCH #004 (TELEFONAGENT) -->
         <div class="glass-card rounded-2xl p-5 border border-emerald-500/30 hover:border-emerald-400/60 transition-all flex flex-col justify-between space-y-4 bg-emerald-950/10">
           <div class="space-y-3">
             <div class="flex items-center justify-between text-xs">
               <span class="px-2 py-0.5 rounded font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">PITCH #004</span>
-              <span class="text-emerald-300 font-semibold font-mono">⏱️ Längd: 10–12 min</span>
+              <span class="text-emerald-300 font-semibold font-mono">⏱️ Längd: 3:30–4:30 min</span>
             </div>
             
-            <h3 class="text-base font-bold text-white hover:text-emerald-300 transition">Replace Legacy IVR: Build an Intelligent Voice AI Phone Agent (ElevenLabs + Twilio)</h3>
-            <p class="text-xs text-slate-300 italic">"Kill 'Press 1 for Sales' forever. Build a sub-500ms conversational phone agent with live CRM tool calling."</p>
+            <h3 class="text-base font-bold text-white hover:text-emerald-300 transition">Build an AI Voice Phone Agent in Python</h3>
+            <p class="text-xs text-slate-300 italic">"Kill 'Press 1 for Sales'. Build a sub-500ms conversational phone agent with live database actions."</p>
             
             <!-- Beslutsunderlag Mini-Tabell -->
             <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800 text-xs space-y-2">
@@ -248,11 +295,11 @@
               </div>
               <div class="flex justify-between">
                 <span class="text-slate-400">Målgrupp:</span>
-                <span class="text-slate-200">Enterprise Architects & Support Ops</span>
+                <span class="text-slate-200">Full-Stack Utvecklare & Supportingenjörer</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-slate-400">Demo Kod:</span>
-                <span class="text-emerald-400 font-mono">ElevenLabs + Twilio SIP + FastAPI</span>
+                <span class="text-emerald-400 font-mono">ElevenLabs + Twilio SIP + Python</span>
               </div>
               <div class="pt-1 border-t border-slate-800/80 flex justify-between">
                 <span class="text-slate-400">Huvud-Affiliate:</span>
@@ -262,32 +309,32 @@
           </div>
 
           <div class="pt-2 flex items-center gap-2">
-            <button onclick="showPitchDossier(0)" class="flex-1 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 border border-slate-700 font-semibold transition">
+            <button onclick="showPitchDossier(1)" class="flex-1 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 border border-slate-700 font-semibold transition">
               🔍 Granska Manus & Dossier
             </button>
-            <button id="pitchBtn0" onclick="triggerPitch('PITCH #004', 'Replace Legacy IVR: Build an Intelligent Voice AI Phone Agent (ElevenLabs + Twilio)', this)" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-bold text-white shadow-md shadow-emerald-600/30 flex items-center gap-1 transition">
+            <button id="pitchBtn1" onclick="triggerPitch('PITCH #004', 'Build an AI Voice Phone Agent in Python', this)" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-bold text-white shadow-md shadow-emerald-600/30 flex items-center gap-1 transition">
               <span>Exekvera</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </button>
           </div>
         </div>
 
-        <!-- PITCH 2 (PITCH #005) -->
+        <!-- PITCH 3: PITCH #005 (AUDIO PODCASTAR) -->
         <div class="glass-card rounded-2xl p-5 border border-cyan-500/30 hover:border-cyan-400/60 transition-all flex flex-col justify-between space-y-4 bg-cyan-950/10">
           <div class="space-y-3">
             <div class="flex items-center justify-between text-xs">
               <span class="px-2 py-0.5 rounded font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">PITCH #005</span>
-              <span class="text-cyan-300 font-semibold font-mono">⏱️ Längd: 6–8 min</span>
+              <span class="text-cyan-300 font-semibold font-mono">⏱️ Längd: 3:30–4:30 min</span>
             </div>
             
-            <h3 class="text-base font-bold text-white hover:text-cyan-300 transition">Turn Technical Docs into Audio Podcasts with ElevenLabs Audio Native API</h3>
-            <p class="text-xs text-slate-300 italic">"Skyrocket dev doc retention: Build automated 'Listen to this guide' pipelines directly into your CI/CD."</p>
+            <h3 class="text-base font-bold text-white hover:text-cyan-300 transition">Turn Any Text Document into Audio Podcasts in Python</h3>
+            <p class="text-xs text-slate-300 italic">"Stop reading 40-page manuals. Build an automated dual-speaker podcast pipeline in Python."</p>
             
             <!-- Beslutsunderlag Mini-Tabell -->
             <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800 text-xs space-y-2">
               <div class="flex justify-between">
                 <span class="text-slate-400">Pedagogiskt Mål:</span>
-                <span class="text-cyan-300 font-semibold text-right">Gör teknisk B2B-dokumentation lyssningsbar</span>
+                <span class="text-cyan-300 font-semibold text-right">Skapa ljudpoddar från textdokument</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-slate-400">Sökvolym:</span>
@@ -295,62 +342,15 @@
               </div>
               <div class="flex justify-between">
                 <span class="text-slate-400">Målgrupp:</span>
-                <span class="text-slate-200">DevRel Leads & Technical Writers</span>
+                <span class="text-slate-200">Tekniker, Skribenter & Utvecklare</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-slate-400">Demo Kod:</span>
-                <span class="text-cyan-400 font-mono">ElevenLabs Audio Native + Markdown AST</span>
+                <span class="text-cyan-400 font-mono">ElevenLabs Audio Native API + Python</span>
               </div>
               <div class="pt-1 border-t border-slate-800/80 flex justify-between">
                 <span class="text-slate-400">Huvud-Affiliate:</span>
-                <span class="text-amber-300 font-medium">ElevenLabs Audio Native (22% Recurring)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="pt-2 flex items-center gap-2">
-            <button onclick="showPitchDossier(1)" class="flex-1 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 border border-slate-700 font-semibold transition">
-              🔍 Granska Manus & Dossier
-            </button>
-            <button id="pitchBtn1" onclick="triggerPitch('PITCH #005', 'Turn Technical Docs into Audio Podcasts with ElevenLabs Audio Native API', this)" class="px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-xs font-bold text-white shadow-md shadow-cyan-600/30 flex items-center gap-1 transition">
-              <span>Exekvera</span>
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- PITCH 3 (PITCH #006) -->
-        <div class="glass-card rounded-2xl p-5 border border-indigo-500/30 hover:border-indigo-400/60 transition-all flex flex-col justify-between space-y-4 bg-indigo-950/10">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-xs">
-              <span class="px-2 py-0.5 rounded font-mono font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">PITCH #006</span>
-              <span class="text-indigo-300 font-semibold font-mono">⏱️ Längd: 9–11 min</span>
-            </div>
-            
-            <h3 class="text-base font-bold text-white hover:text-indigo-300 transition">Autonomous Multi-Agent Hierarchies with PydanticAI & LangGraph</h3>
-            <p class="text-xs text-slate-300 italic">"Stop agent hallucination loops with type-safe state machines and supervisor routers."</p>
-            
-            <!-- Beslutsunderlag Mini-Tabell -->
-            <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800 text-xs space-y-2">
-              <div class="flex justify-between">
-                <span class="text-slate-400">Pedagogiskt Mål:</span>
-                <span class="text-indigo-300 font-semibold text-right">Bygga supervisor-router som bryter loopar</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-slate-400">Sökvolym:</span>
-                <span class="text-white font-mono font-semibold">34 200 /mån (+65% MoM)</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-slate-400">Målgrupp:</span>
-                <span class="text-slate-200">AI Engineers & Tech Founders</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-slate-400">Demo Kod:</span>
-                <span class="text-indigo-400 font-mono">PydanticAI + LangGraph + DeepSeek</span>
-              </div>
-              <div class="pt-1 border-t border-slate-800/80 flex justify-between">
-                <span class="text-slate-400">Huvud-Affiliate:</span>
-                <span class="text-amber-300 font-medium">LangSmith (30% Lifetime MRR)</span>
+                <span class="text-amber-300 font-medium">ElevenLabs Creator Tier (22% Recurring)</span>
               </div>
             </div>
           </div>
@@ -359,7 +359,7 @@
             <button onclick="showPitchDossier(2)" class="flex-1 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 border border-slate-700 font-semibold transition">
               🔍 Granska Manus & Dossier
             </button>
-            <button id="pitchBtn2" onclick="triggerPitch('PITCH #006', 'Autonomous Multi-Agent Hierarchies with PydanticAI & LangGraph', this)" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-bold text-white shadow-md shadow-indigo-600/30 flex items-center gap-1 transition">
+            <button id="pitchBtn2" onclick="triggerPitch('PITCH #005', 'Turn Any Text Document into Audio Podcasts in Python', this)" class="px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-xs font-bold text-white shadow-md shadow-cyan-600/30 flex items-center gap-1 transition">
               <span>Exekvera</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </button>
