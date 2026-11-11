@@ -1182,6 +1182,64 @@ Some links in this description are affiliate links. If you sign up or purchase t
     }
 
     // ==========================================
+    // KLIPPBOARDSKOPIERING & TOAST-NOTISER
+    // ==========================================
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const msgEl = document.getElementById('toastMessage');
+      if (!toast) return;
+      if (msgEl && message) msgEl.textContent = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3000);
+    }
+
+    function copyText(elementId, successMessage) {
+      const el = document.getElementById(elementId);
+      if (!el) {
+        showToast('Kunde inte hitta textfältet');
+        return;
+      }
+
+      const text = el.value !== undefined ? el.value : el.innerText;
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(successMessage || 'Kopierat till urklipp!');
+        }).catch(() => {
+          fallbackCopyText(text, successMessage);
+        });
+      } else {
+        fallbackCopyText(text, successMessage);
+      }
+    }
+
+    function fallbackCopyText(text, successMessage) {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-9999px';
+      textArea.style.top = '-9999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showToast(successMessage || 'Kopierat till urklipp!');
+        } else {
+          showToast('Kunde inte kopiera automatiskt');
+        }
+      } catch (err) {
+        showToast('Kunde inte kopiera text');
+      }
+      document.body.removeChild(textArea);
+    }
+
+    // ==========================================
     // AUTENTISERING & LÖSENORDSSKYDD (CLIENT-SIDE)
     // ==========================================
     const AUTH_KEY = 'overseer_access_token_v1';
