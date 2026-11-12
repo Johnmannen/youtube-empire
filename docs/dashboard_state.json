@@ -13,8 +13,8 @@
   },
   "kpis": {
     "channel_age": "Day 1 (Launch)",
-    "videos_produced": "4 (4 publicerade live p\u00e5 kanalen)",
-    "views_30d": "464 visningar (4 videor totalt)",
+    "videos_produced": "4 (6 publicerade live på kanalen)",
+    "views_30d": "579 visningar (6 videor totalt)",
     "views_growth": "Active Launch",
     "affiliate_clicks": "Active",
     "active_saas_conversions": "0",
@@ -145,12 +145,12 @@
     ],
     "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/004-voice-phone-agent",
     "studio_upload_url": "https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg",
-    "description": "\ud83c\udf81 [FREE TRIAL] Try ElevenLabs Conversational Voice AI:\n\ud83d\udc49 https://try.elevenlabs.io/agentic-telephony (Affiliate Partner Link)\n\n\ud83d\ude80 [SOURCE CODE] Download Python Telephony Scripts & FastAPI Blueprint:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/004-voice-phone-agent\n\n\ud83d\udcda [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library\n\nLegacy IVR phone menus are dead in enterprise B2B. Forcing high-value customers to dial through press one for sales and press two for support destroys retention and bleeds thousands of dollars on human tier-one call centers.\n\nIn this video, we build an autonomous AI voice phone agent in Python using ElevenLabs Conversational AI and Twilio SIP Media Streams. Our agent answers real inbound telephone calls with sub-400ms full-duplex latency, looks up live customer records in PostgreSQL, and schedules appointments on the fly.\n\n\u23f1\ufe0f TIMESTAMPS:\n00:00 - KILL LEGACY IVR PHONE MENUS FOREVER\n00:58 - SYSTEM ARCHITECTURE: FULL-DUPLEX PHONE BRIDGE\n02:18 - TWILIO WEBHOOK & FASTAPI WEBSOCKET BRIDGE\n03:28 - LIVE DATABASE TOOL CALLING & CRM ACTIONS\n04:22 - LATENCY PROFILING & PACKET BENCHMARKS\n05:08 - ENTERPRISE CALL CENTER ECONOMICS & ROI\n05:48 - GITHUB BLUEPRINT, FREE TRIAL & NEXT EPISODE\n\n\ud83d\udee0\ufe0f ENTERPRISE TOOLS (VERIFIED IN SANDBOX):\n\ud83d\udc49 Try ElevenLabs Conversational Telephony: https://try.elevenlabs.io/agentic-telephony\n\n\u2696\ufe0f FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n#VoiceAI #ElevenLabs #Twilio #Python #FastAPI #Telephony #ConversationalAI #AIAgents",
-    "pinned_comment": "\ud83d\udccc Try ElevenLabs Conversational Telephony & Voice AI Free:\n\ud83d\udc49 https://try.elevenlabs.io/agentic-telephony\n\n\ud83d\udcbb Download the complete FastAPI WebSocket script & database schemas on GitHub above!\n\ud83d\udcac Question: What phone workflows or call center tasks do you want your AI agents to handle first? Drop them below!",
+    "description": "🎁 [FREE TRIAL] Try ElevenLabs Conversational Voice AI:\n👉 https://try.elevenlabs.io/agentic-telephony (Affiliate Partner Link)\n\n🚀 [SOURCE CODE] Download Python Telephony Scripts & FastAPI Blueprint:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/004-voice-phone-agent\n\n📚 [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\nLegacy IVR phone menus are dead in enterprise B2B. Forcing high-value customers to dial through press one for sales and press two for support destroys retention and bleeds thousands of dollars on human tier-one call centers.\n\nIn this video, we build an autonomous AI voice phone agent in Python using ElevenLabs Conversational AI and Twilio SIP Media Streams. Our agent answers real inbound telephone calls with sub-400ms full-duplex latency, looks up live customer records in PostgreSQL, and schedules appointments on the fly.\n\n⏱️ TIMESTAMPS:\n00:00 - KILL LEGACY IVR PHONE MENUS FOREVER\n00:58 - SYSTEM ARCHITECTURE: FULL-DUPLEX PHONE BRIDGE\n02:18 - TWILIO WEBHOOK & FASTAPI WEBSOCKET BRIDGE\n03:28 - LIVE DATABASE TOOL CALLING & CRM ACTIONS\n04:22 - LATENCY PROFILING & PACKET BENCHMARKS\n05:08 - ENTERPRISE CALL CENTER ECONOMICS & ROI\n05:48 - GITHUB BLUEPRINT, FREE TRIAL & NEXT EPISODE\n\n🛠️ ENTERPRISE TOOLS (VERIFIED IN SANDBOX):\n👉 Try ElevenLabs Conversational Telephony: https://try.elevenlabs.io/agentic-telephony\n\n⚖️ FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n#VoiceAI #ElevenLabs #Twilio #Python #FastAPI #Telephony #ConversationalAI #AIAgents",
+    "pinned_comment": "📌 Try ElevenLabs Conversational Telephony & Voice AI Free:\n👉 https://try.elevenlabs.io/agentic-telephony\n\n💻 Download the complete FastAPI WebSocket script & database schemas on GitHub above!\n💬 Question: What phone workflows or call center tasks do you want your AI agents to handle first? Drop them below!",
     "shorts_metadata": {
-      "title": "Sub-400ms AI Phone Agent in Python \ud83e\udd2f #Shorts",
-      "description": "Replace legacy 'press 1' phone trees with sub-400ms conversational voice AI in Python! \ud83d\ude80\n\n\ud83c\udf81 [FREE TRIAL] Try ElevenLabs Conversational Voice:\n\ud83d\udc49 https://try.elevenlabs.io/agentic-telephony\n\n\ud83d\udcfa Full 6-Min In-Depth Architecture Tutorial:\n\ud83d\udc49 Watch Episode #004 on our channel!\n\n\ud83d\udcbb Source Code & Telephony Scripts:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library\n\n#Shorts #VoiceAI #ElevenLabs #Twilio #Python #FastAPI #AI",
-      "pinned_comment": "\ud83d\udccc Try ElevenLabs Conversational Voice Free:\n\ud83d\udc49 https://try.elevenlabs.io/agentic-telephony\n\n\ud83d\udcfa Watch the full 6-minute deep dive tutorial on our channel for complete architecture & code!",
+      "title": "Sub-400ms AI Phone Agent in Python 🤯 #Shorts",
+      "description": "Replace legacy 'press 1' phone trees with sub-400ms conversational voice AI in Python! 🚀\n\n🎁 [FREE TRIAL] Try ElevenLabs Conversational Voice:\n👉 https://try.elevenlabs.io/agentic-telephony\n\n📺 Full 6-Min In-Depth Architecture Tutorial:\n👉 Watch Episode #004 on our channel!\n\n💻 Source Code & Telephony Scripts:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\n#Shorts #VoiceAI #ElevenLabs #Twilio #Python #FastAPI #AI",
+      "pinned_comment": "📌 Try ElevenLabs Conversational Voice Free:\n👉 https://try.elevenlabs.io/agentic-telephony\n\n📺 Watch the full 6-minute deep dive tutorial on our channel for complete architecture & code!",
       "tags": "shorts, voice ai python, elevenlabs telephony, twilio media streams, python tutorial, conversational ai, agentic stack"
     },
     "long_video_file": "assets/video_004_long.mp4",
@@ -205,11 +205,11 @@
     }
   ],
   "channel_metrics": {
-    "total_views": 464,
-    "video_count": 4,
-    "last_synced": "2026-11-12 05:52 UTC",
-    "total_comments": 4,
-    "total_likes": 6,
+    "total_views": 579,
+    "video_count": 6,
+    "last_synced": "2026-11-12 14:40 UTC",
+    "total_comments": 6,
+    "total_likes": 8,
     "subscribers": 1,
     "top_video": {
       "video_id": "GTzZWe9nQaE",
@@ -217,13 +217,13 @@
       "category": "Short / Reel",
       "title": "Build Real-Time Voice AI Agents in Python",
       "published_at": "2026-11-11",
-      "views": 444,
+      "views": 538,
       "comments": 0,
-      "likes": 6,
+      "likes": 7,
       "duration_sec": 17,
       "is_short": true
     },
-    "video_breakdown": "Short #002.1 (444 visn) | Ep #001 (9 visn) | Ep #002.1 (8 visn) | Ep #002 (3 visn)",
+    "video_breakdown": "Short #002.1 (538 visn) | Ep #002.1 (26 visn) | Ep #001 (9 visn) | Ep #002 (3 visn) | Short (wjgj1w) (2 visn) | Video (XtEPck) (1 visn)",
     "videos": [
       {
         "video_id": "GTzZWe9nQaE",
@@ -231,11 +231,23 @@
         "category": "Short / Reel",
         "title": "Build Real-Time Voice AI Agents in Python",
         "published_at": "2026-11-11",
-        "views": 444,
+        "views": 538,
         "comments": 0,
-        "likes": 6,
+        "likes": 7,
         "duration_sec": 17,
         "is_short": true
+      },
+      {
+        "video_id": "kdS-4Oqy6pM",
+        "label": "Ep #002.1",
+        "category": "Remake",
+        "title": "Build Real-Time Voice AI Agents in Python (Sub-400ms WebSockets 2026)",
+        "published_at": "2026-11-11",
+        "views": 26,
+        "comments": 2,
+        "likes": 0,
+        "duration_sec": 193,
+        "is_short": false
       },
       {
         "video_id": "NEoqC7BxBqE",
@@ -250,18 +262,6 @@
         "is_short": false
       },
       {
-        "video_id": "kdS-4Oqy6pM",
-        "label": "Ep #002.1",
-        "category": "Remake",
-        "title": "Build Real-Time Voice AI Agents in Python (Sub-400ms WebSockets 2026)",
-        "published_at": "2026-11-11",
-        "views": 8,
-        "comments": 2,
-        "likes": 0,
-        "duration_sec": 193,
-        "is_short": false
-      },
-      {
         "video_id": "3B178ZvPS_s",
         "label": "Ep #002",
         "category": "Long",
@@ -271,6 +271,30 @@
         "comments": 1,
         "likes": 0,
         "duration_sec": 244,
+        "is_short": false
+      },
+      {
+        "video_id": "wjgj1w1bTVs",
+        "label": "Short (wjgj1w)",
+        "category": "Short / Reel",
+        "title": "Dub ANY Video into 29 Languages in Python 🤯 #shorts",
+        "published_at": "2026-11-12",
+        "views": 2,
+        "comments": 1,
+        "likes": 0,
+        "duration_sec": 20,
+        "is_short": true
+      },
+      {
+        "video_id": "XtEPck0l3ZY",
+        "label": "Video (XtEPck)",
+        "category": "Long",
+        "title": "How to Clone Voices and Dub Videos in Python (ElevenLabs API 2026)",
+        "published_at": "2026-11-12",
+        "views": 1,
+        "comments": 1,
+        "likes": 1,
+        "duration_sec": 377,
         "is_short": false
       }
     ]
