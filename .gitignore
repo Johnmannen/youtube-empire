@@ -7,3 +7,4 @@ concat_list.txt
 .vscode/
 .idea/
 client_secret.json
+token.json

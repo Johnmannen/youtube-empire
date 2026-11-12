@@ -13,8 +13,8 @@
   },
   "kpis": {
     "channel_age": "Day 1 (Launch)",
-    "videos_produced": "3 (Episode #001 & #002 Live, #003 Ready)",
-    "views_30d": "Live (2 Episodes)",
+    "videos_produced": "4 (4 publicerade live på kanalen)",
+    "views_30d": "451 visningar (4 videor totalt)",
     "views_growth": "Active Launch",
     "affiliate_clicks": "Active",
     "active_saas_conversions": "0",
@@ -43,6 +43,29 @@
       "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent",
       "affiliate": "ElevenLabs (https://try.elevenlabs.io/agentic-voice)",
       "thumbnail": "assets/thumb_002.png"
+    },
+    {
+      "package_id": "002.1-short",
+      "title": "Build Real-Time Voice AI Agents in Python (Reel)",
+      "youtube_url": "https://www.youtube.com/shorts/GTzZWe9nQaE",
+      "status": "PUBLISHED_LIVE",
+      "published_date": "2026-11-11",
+      "format": "9:16 Short",
+      "views": 359,
+      "affiliate": "ElevenLabs (https://try.elevenlabs.io/agentic-voice)",
+      "thumbnail": "assets/remake_002_thumbnail.png"
+    },
+    {
+      "package_id": "002.1",
+      "title": "Build Real-Time Voice AI Agents in Python (Sub-400ms WebSockets 2026)",
+      "youtube_url": "https://www.youtube.com/watch?v=kdS-4Oqy6pM",
+      "status": "PUBLISHED_LIVE",
+      "published_date": "2026-11-11",
+      "format": "16:9 Long",
+      "views": 2,
+      "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/002-elevenlabs-voice-agent",
+      "affiliate": "ElevenLabs (https://try.elevenlabs.io/agentic-voice)",
+      "thumbnail": "assets/remake_002_thumbnail.png"
     }
   ],
   "current_package": {
@@ -113,6 +136,12 @@
     "studio_upload_url": "https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg",
     "description": "🎁 [FREE TRIAL] Try ElevenLabs AI Dubbing & Voice Cloning SDK:\n👉 https://try.elevenlabs.io/agentic-dubbing (Affiliate Partner Link)\n\n🚀 [SOURCE CODE] Download Python Dubbing Scripts & Blueprint:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/003-voice-cloning-video-dubbing\n\n📚 [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\nManual video localization is dead. Paying $500 per language and waiting weeks for human studios does not scale.\n\nIn this video, we build an automated video dubbing pipeline in Python using the ElevenLabs Dubbing API. We extract speaker audio, run multi-speaker diarization, clone exact vocal timbres, and synthesize matching Spanish audio in under 3 minutes.\n\n⏱️ TIMESTAMPS:\n00:00 - MANUAL LOCALIZATION IS DEAD\n00:59 - SYSTEM ARCHITECTURE: 3-STAGE PIPELINE\n02:11 - PYTHON SDK SETUP & JOB SUBMISSION\n03:26 - ASYNC STATUS POLLING & CHUNKED STREAMING\n04:25 - AUDIO ANALYSIS & ZERO-SHOT TIMBRE MATCH\n05:09 - ENTERPRISE BENCHMARKS & OPERATIONAL ROI\n05:47 - GITHUB BLUEPRINT, FREE TRIAL & NEXT EPISODE\n\n🛠️ ENTERPRISE TOOLS (VERIFIED IN SANDBOX):\n👉 Try ElevenLabs Dubbing API (Free Trial): https://try.elevenlabs.io/agentic-dubbing\n\n⚖️ FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n#VoiceCloning #ElevenLabs #Python #VideoDubbing #AIVoice #Localization #AgenticStack",
     "pinned_comment": "📌 Grab the ElevenLabs Dubbing & Voice Cloning Free Trial:\n👉 https://try.elevenlabs.io/agentic-dubbing\n\n💻 Download the complete Python dubbing script & demo templates on GitHub above!\n💬 Question: Which languages are you localizing your technical content into first? Drop them below!",
+    "shorts_metadata": {
+      "title": "Dub ANY Video into 29 Languages in Python 🤯 #Shorts",
+      "description": "Clone voices and dub any video into 29 languages in Python! 🚀\n\n🎁 [FREE TRIAL] Try ElevenLabs AI Dubbing SDK:\n👉 https://try.elevenlabs.io/agentic-dubbing\n\n📺 Full 6-Min In-Depth Architecture Tutorial:\n👉 Watch Episode #003 on our channel!\n\n💻 Source Code & Dubbing Scripts:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\n#Shorts #VoiceCloning #ElevenLabs #Python #VideoDubbing #AI",
+      "pinned_comment": "📌 Try ElevenLabs Voice Cloning & Dubbing Free:\n👉 https://try.elevenlabs.io/agentic-dubbing\n\n📺 Watch the full 6-minute deep dive tutorial on our channel for complete architecture & code!",
+      "tags": "shorts, voice cloning python, elevenlabs dubbing, ai video dubbing, python tutorial, ai voice clone, agentic stack"
+    },
     "long_video_file": "assets/video_003_long.mp4",
     "short_video_file": "assets/video_003_short.mp4",
     "thumbnail_file": "assets/thumb_003.png"
@@ -165,8 +194,74 @@
     }
   ],
   "channel_metrics": {
-    "total_views": 12,
+    "total_views": 451,
     "video_count": 4,
-    "last_synced": ""
+    "last_synced": "2026-11-12 03:17 UTC",
+    "total_comments": 4,
+    "total_likes": 6,
+    "subscribers": 1,
+    "top_video": {
+      "video_id": "GTzZWe9nQaE",
+      "label": "Short #002.1",
+      "category": "Short / Reel",
+      "title": "Build Real-Time Voice AI Agents in Python",
+      "published_at": "2026-11-11",
+      "views": 437,
+      "comments": 0,
+      "likes": 6,
+      "duration_sec": 17,
+      "is_short": true
+    },
+    "video_breakdown": "Short #002.1 (437 visn) | Ep #001 (9 visn) | Ep #002 (3 visn) | Ep #002.1 (2 visn)",
+    "videos": [
+      {
+        "video_id": "GTzZWe9nQaE",
+        "label": "Short #002.1",
+        "category": "Short / Reel",
+        "title": "Build Real-Time Voice AI Agents in Python",
+        "published_at": "2026-11-11",
+        "views": 437,
+        "comments": 0,
+        "likes": 6,
+        "duration_sec": 17,
+        "is_short": true
+      },
+      {
+        "video_id": "NEoqC7BxBqE",
+        "label": "Ep #001",
+        "category": "Long",
+        "title": "Build Autonomous AI Agent Skills in Python (Zero-Cost Production Blueprint 2026)",
+        "published_at": "2026-11-10",
+        "views": 9,
+        "comments": 1,
+        "likes": 0,
+        "duration_sec": 103,
+        "is_short": false
+      },
+      {
+        "video_id": "3B178ZvPS_s",
+        "label": "Ep #002",
+        "category": "Long",
+        "title": "Build Real-Time Conversational Voice AI Agents in Python (ElevenLabs WebSockets 2026)",
+        "published_at": "2026-11-10",
+        "views": 3,
+        "comments": 1,
+        "likes": 0,
+        "duration_sec": 244,
+        "is_short": false
+      },
+      {
+        "video_id": "kdS-4Oqy6pM",
+        "label": "Ep #002.1",
+        "category": "Remake",
+        "title": "Build Real-Time Voice AI Agents in Python (Sub-400ms WebSockets 2026)",
+        "published_at": "2026-11-11",
+        "views": 2,
+        "comments": 2,
+        "likes": 0,
+        "duration_sec": 193,
+        "is_short": false
+      }
+    ]
   }
 }
