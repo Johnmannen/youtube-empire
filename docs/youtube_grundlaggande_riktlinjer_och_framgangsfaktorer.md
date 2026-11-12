@@ -161,7 +161,7 @@ Dessa regler etablerades för att eliminera amatörmässig rendering och garante
 ### 10.1. Långvideo (16:9, 1080p)
 1. **Thumbnail-Start & Övergång (0.0 – 2.5s):** Videon startar alltid med den färdiga thumbnailen i helskärm under 2.5 sekunder för att omedelbart bekräfta klicket. Därefter sker en mjuk 0.5s crossfade/dissolve över till Scen 1.
 2. **Aggressiv Intro-Hook (0 – 15s):** Gå rakt på smärtpunkten och visa slutresultatet direkt utan fördröjning.
-3. **Visuell Dynamik & Highlighting:** Kodrader och arkitektursteg ska tidsstyrt belysas/highlightas i takt med berättarrösten.
+3. **Visuell Dynamik & Highlighting (Synkroniserad Blickledare):** Kodrader och arkitektursteg ska tidsstyrt belysas/highlightas i exakt takt med berättarrösten. När en specifik rad nämns (t.ex. rad 7) markeras den omedelbart med en mjuk glöd eller pil så att tittarens ögon inte behöver söka runt på skärmen. Balanserat och professionellt, utan överdrifter.
 4. **Mjuka Scenövergångar:** Alla scener sammanbinds med mjuka 0.4–0.5s övertoningar (crossfade/dissolve). Inga hårda bildklipp.
 5. **Muntliga CTAs:** Organisk hänvisning till Like & Subscribe i outro, hänvisning till GitHub-källkod och partnerlänk för provperiod i beskrivning och kommentar.
 

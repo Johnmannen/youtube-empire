@@ -44,8 +44,11 @@ Executes an end-to-end, zero-cost cloud production pipeline that creates complet
    - Börja omedelbart i problemets kärna eller enterprise-flaskhalsen. Inget småprat, artighetsfraser eller introloggor.
 3. **Arkitektur-teaser inom 15 sekunder:**
    - Visa snabbt terminalen, systemöversikten eller koden så att tittaren ser exakt vad de kommer att behärska vid videons slut.
-4. **Visuell dynamik och tidsstyrd highlighting:**
-   - Regelbundna in-/utzoomningar, rörliga neon-pilar, tidsstyrd highlighting av kodrader (t.ex. vid genomgång av API-anrop, polling eller streaming) och progressiva nätverkspulser för att förhindra blicktrötthet.
+4. **Visuell dynamik och tidsstyrd highlighting (Synkroniserad blickledare):**
+   - När berättarrösten nämner en specifik kodrad (t.ex. *"Look at line seven"* eller *"On line eighteen"*), ska den raden omedelbart framhävas med en distinkt, mjukt glödande fokusram eller en subtil vektor-pil.
+   - **Syfte:** Eliminera kognitiv söktid för tittaren så att ögat dras direkt till raden i samma ögonblick som den uttalas.
+   - Balans: Markeringen ska vara ren och distinkt, aldrig överdriven eller flimrig.
+   - Regelbundna in-/utzoomningar, rörliga neon-pilar och progressiva nätverkspulser för att förhindra blicktrötthet.
 5. **Mjuka övergångar mellan alla scener:**
    - 0.4–0.5 sekunders mjuk crossfade/dissolve mellan varje scen. Inga abrupta bildklipp.
 6. **Organiska muntliga hänvisningar (Oral CTA):**

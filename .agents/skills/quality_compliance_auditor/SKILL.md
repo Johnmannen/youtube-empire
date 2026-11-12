@@ -17,7 +17,7 @@ Denna skill ger agenten mandat och verktyg att agera som en **oberoende grindvak
 - [ ] **Mjuk Övergång (2.5 – 3.0s):** En mjuk 0.5s crossfade/dissolve över till Scen 1 (inga hårda klipp).
 - [ ] **Aggressiv Intro-Hook (0 – 15s):** Startar direkt i smärtpunkten/problemet utan långa hälsningsfraser eller logotyper.
 - [ ] **Spellängd:** Minst 4:00 minuter (typiskt 6:00 – 10:00+ minuter). Innehållet får aldrig kapas artificiellt på bekostnad av pedagogiken.
-- [ ] **Visuell Dynamik & Highlighting:** Kodrader och arkitekturboxar belyses/highlightas i takt med berättarrösten.
+- [ ] **Visuell Dynamik & Highlighting:** Kodrader och arkitekturboxar belyses/highlightas i takt med berättarrösten. När specifika rader nämns ska en synkroniserad blickledare (glödande fokusram eller pil) omedelbart leda tittarens fokus dit utan söktid.
 - [ ] **Scenövergångar:** 0.4–0.5s mjuk övertoning (crossfade) mellan alla scener.
 - [ ] **Muntliga CTAs:** Berättarrösten uppmanar organiskt till *Like & Subscribe*, hänvisar till källkoden på GitHub, och nämner gratis provperiod via partnerlänken.
 - [ ] **Grafisk Kvalitet:** Noll opaka färgblock över text, noll trasiga `□`-tecken (rena vektorpilar och ASCII), noll hackig 5-sekunders zoompan.
