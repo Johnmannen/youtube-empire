@@ -1,0 +1,23 @@
+{
+  "episode_id": "004",
+  "long_form": {
+    "title": "Build an AI Voice Phone Agent in Python (ElevenLabs + Twilio)",
+    "description": "Learn how to build a production-grade autonomous AI voice phone agent in Python using ElevenLabs Conversational AI and Twilio SIP Media Streams. Answer inbound calls with sub-400ms latency, query live CRM databases, and schedule appointments with zero hold queues.\n\n⭐ Try ElevenLabs Conversational Telephony & Voice AI (Free Trial):\nhttps://try.elevenlabs.io/agentic-telephony\n\n💻 Open-Source Python Code & Blueprints:\nhttps://github.com/Johnmannen/Agentic-Stack-Library\n\n⏱️ Timestamps:\n00:00 - Kill Legacy IVR Phone Menus Forever\n00:58 - System Architecture: Full-Duplex Phone Bridge\n02:18 - Twilio Webhook & FastAPI WebSocket Bridge\n03:28 - Live Database Tool Calling & CRM Actions\n04:22 - Latency Profiling & Packet Benchmarks\n05:08 - Enterprise Call Center Economics & ROI\n05:48 - GitHub Blueprint, Free Trial & Next Episode\n\nIf this walkthrough helped streamline your customer service workflows, hit like and subscribe for weekly production-ready B2B AI agent blueprints!\n\n#VoiceAI #ElevenLabs #Twilio #Python #FastAPI #Telephony #ConversationalAI #AIAgents",
+    "pinned_comment": "Grab the ElevenLabs Conversational Voice free trial here: https://try.elevenlabs.io/agentic-telephony\n\nDownload the complete FastAPI WebSocket script & database schemas on GitHub: https://github.com/Johnmannen/Agentic-Stack-Library",
+    "tags": ["AI Voice Agent", "ElevenLabs Python", "Twilio Media Streams", "Conversational AI", "Python FastApi WebSockets", "AI Telephony", "B2B Software", "Voice AI Agents"],
+    "upload_settings": {
+      "category_id": "28",
+      "category_name": "Science & Technology",
+      "default_language": "en",
+      "privacy_status": "public",
+      "made_for_kids": false,
+      "altered_content": false
+    }
+  },
+  "short_form": {
+    "title": "Sub-400ms AI Voice Phone Agent in Python #shorts #ai",
+    "description": "Replace legacy 'press 1' phone trees with sub-400ms conversational voice AI in Python!\n\n⚡ Full 6-min code breakdown & architecture on the channel!\n⭐ Free ElevenLabs trial: https://try.elevenlabs.io/agentic-telephony\n💻 Code on GitHub: https://github.com/Johnmannen/Agentic-Stack-Library\n\n#Shorts #VoiceAI #ElevenLabs #Twilio #Python #FastAPI #AI",
+    "pinned_comment": "Full 6-minute deep dive & complete Python source code available on our channel! Grab your ElevenLabs trial: https://try.elevenlabs.io/agentic-telephony",
+    "tags": ["Shorts", "Voice AI Python", "ElevenLabs Telephony", "Twilio Media Streams", "Python Tutorial"]
+  }
+}

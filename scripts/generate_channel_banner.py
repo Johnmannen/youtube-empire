@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-generate_channel_banner.py - Professional YouTube Channel Banner for Agentic Stack B2B
-Dimensions:
-- 2560 x 1440 px (YouTube Recommended Master)
-- 2048 x 1152 px (Exact Minimum Spec requested by User)
-File size: < 6 MB (optimized PNG/JPEG)
-Safe Zone: Centered area (1546 x 423 on 2560; 1236 x 338 on 2048) visible on all mobile, desktop & TV screens.
+generate_channel_banner.py - High-Impact YouTube Channel Banner for Agentic Stack B2B
+Dimensions: 2048 x 1152 px (and 2560 x 1440 px)
+Design: Cohesive full-bleed cyber-tech artwork. No "box-in-a-box" look.
+Features glowing radial gradients, circuit grid, high-contrast glowing typography,
+and guaranteed mobile safe-zone alignment.
 """
 
 import os
-from PIL import Image, ImageDraw, ImageFont
+import math
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 def get_font(size, bold=False, mono=False):
     win_fonts = "C:/Windows/Fonts"
@@ -24,135 +24,179 @@ def get_font(size, bold=False, mono=False):
         pass
     return ImageFont.load_default()
 
-def render_banner(width=2560, height=1440, out_path="docs/assets/youtube_channel_banner_2560x1440.png"):
-    img = Image.new("RGB", (width, height), (8, 12, 24))
+def render_popping_banner(width=2048, height=1152, out_path="docs/assets/youtube_channel_banner_2048x1152.png"):
+    scale = width / 2048.0
+    
+    # 1. Base Canvas & Radial Lighting Layer
+    img = Image.new("RGB", (width, height), (5, 8, 18))
+    
+    # Create radiant center glow layer
+    glow = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    g_draw = ImageDraw.Draw(glow)
+    
+    cx, cy = width // 2, height // 2
+    # Cyan center spotlight
+    for r in range(int(420 * scale), 0, -int(15 * scale)):
+        alpha = int(45 * (1.0 - (r / (420.0 * scale))))
+        g_draw.ellipse([(cx - r * 1.8, cy - r), (cx + r * 1.8, cy + r)], fill=(6, 182, 212, alpha))
+        
+    # Purple secondary accent glow
+    for r in range(int(320 * scale), 0, -int(15 * scale)):
+        alpha = int(35 * (1.0 - (r / (320.0 * scale))))
+        g_draw.ellipse([(cx - r * 1.4, cy - r * 0.8), (cx + r * 1.4, cy + r * 0.8)], fill=(168, 85, 247, alpha))
+
+    # Apply blur to make it completely smooth
+    glow = glow.filter(ImageFilter.GaussianBlur(int(40 * scale)))
+    img.paste(glow, (0, 0), glow)
+
     draw = ImageDraw.Draw(img)
 
-    scale = width / 2560.0
+    # 2. Dynamic Cyber Grid & Circuit Traces (Full-Bleed)
+    grid_gap = int(64 * scale)
+    for x in range(0, width, grid_gap):
+        opacity = 18 if abs(x - cx) > int(400 * scale) else 10
+        draw.line([(x, 0), (x, height)], fill=(16, 26, 48), width=1)
+    for y in range(0, height, grid_gap):
+        draw.line([(0, y), (width, y)], fill=(16, 26, 48), width=1)
 
-    # 1. Subtle Background Grid (TV & Wide Canvas)
-    grid_spacing = int(70 * scale)
-    for x in range(0, width, grid_spacing):
-        draw.line([(x, 0), (x, height)], fill=(13, 18, 32), width=1)
-    for y in range(0, height, grid_spacing):
-        draw.line([(0, y), (width, y)], fill=(13, 18, 32), width=1)
+    # Angled Circuit Lines spanning from sides towards center
+    circuit_color = (18, 38, 68)
+    draw.line([(0, int(150 * scale)), (int(450 * scale), cy)], fill=(6, 182, 212), width=int(2 * scale))
+    draw.line([(width, int(150 * scale)), (width - int(450 * scale), cy)], fill=(168, 85, 247), width=int(2 * scale))
+    draw.line([(0, height - int(150 * scale)), (int(450 * scale), cy)], fill=(16, 185, 129), width=int(2 * scale))
+    draw.line([(width, height - int(150 * scale)), (width - int(450 * scale), cy)], fill=(59, 130, 246), width=int(2 * scale))
 
-    # Top & Bottom Gradient Neon Strips
-    strip_h = max(6, int(8 * scale))
-    draw.rectangle([(0, 0), (width, strip_h)], fill=(6, 182, 212))
-    draw.rectangle([(0, height - strip_h), (width, height)], fill=(168, 85, 247))
+    # Pulsing Nodes on Circuit Ends
+    draw.ellipse([(int(440 * scale), cy - int(8 * scale)), (int(456 * scale), cy + int(8 * scale))], fill=(34, 211, 238))
+    draw.ellipse([(width - int(456 * scale), cy - int(8 * scale)), (width - int(440 * scale), cy + int(8 * scale))], fill=(216, 180, 254))
 
-    # Safe Area Coordinates:
-    # 2560 x 1440 -> 1546 x 423 px centered
-    safe_w = int(1546 * scale)
-    safe_h = int(423 * scale)
-    safe_x1 = (width - safe_w) // 2
-    safe_y1 = (height - safe_h) // 2
-    safe_x2 = safe_x1 + safe_w
-    safe_y2 = safe_y1 + safe_h
+    # Top & Bottom Glowing Laser Bars
+    draw.rectangle([(0, 0), (width, int(8 * scale))], fill=(6, 182, 212))
+    draw.rectangle([(0, height - int(8 * scale)), (width, height)], fill=(168, 85, 247))
 
-    # ==============================================================================
-    # 2. OUTER WINGS (DESKTOP & TV DISPLAY ONLY)
-    # ==============================================================================
-    wing_w = safe_x1 - int(60 * scale)
-    if wing_w > int(220 * scale):
-        f_mono_wing = get_font(int(17 * scale), mono=True)
-        f_head_wing = get_font(int(19 * scale), bold=True)
+    # Safe Area (Center Horizontal Band):
+    # In 2048 x 1152, safe height is ~338px centered: y from 407 to 745.
+    safe_y1 = int(cy - 169 * scale)
+    safe_y2 = int(cy + 169 * scale)
 
-        # Left Wing: Terminal Execution Box
-        lw_x1 = int(50 * scale)
-        lw_x2 = safe_x1 - int(40 * scale)
-        draw.rounded_rectangle([(lw_x1, safe_y1 + int(20 * scale)), (lw_x2, safe_y2 - int(20 * scale))], radius=int(12 * scale), fill=(11, 15, 25), outline=(59, 130, 246), width=int(2 * scale))
-        draw.rectangle([(lw_x1, safe_y1 + int(20 * scale)), (lw_x2, safe_y1 + int(60 * scale))], fill=(20, 27, 45))
-        
-        # Dots
-        dot_r = int(6 * scale)
-        draw.ellipse([(lw_x1 + int(20 * scale), safe_y1 + int(35 * scale)), (lw_x1 + int(20 * scale) + dot_r * 2, safe_y1 + int(35 * scale) + dot_r * 2)], fill=(239, 68, 68))
-        draw.ellipse([(lw_x1 + int(40 * scale), safe_y1 + int(35 * scale)), (lw_x1 + int(40 * scale) + dot_r * 2, safe_y1 + int(35 * scale) + dot_r * 2)], fill=(234, 179, 8))
-        draw.ellipse([(lw_x1 + int(60 * scale), safe_y1 + int(35 * scale)), (lw_x1 + int(60 * scale) + dot_r * 2, safe_y1 + int(35 * scale) + dot_r * 2)], fill=(34, 197, 94))
-        draw.text((lw_x1 + int(90 * scale), safe_y1 + int(32 * scale)), "agent_runner.py", fill=(148, 163, 184), font=f_head_wing)
+    # 3. Left Side Content (Desktop View: Terminal Snippet)
+    f_mono = get_font(int(17 * scale), mono=True)
+    f_tag = get_font(int(15 * scale), bold=True)
+    f_sub_side = get_font(int(18 * scale), bold=True)
 
-        lines = [
-            (">> $ python deploy_agent.py", (56, 189, 248)),
-            (">> [SYS]: Agent Mesh Online", (52, 211, 153)),
-            (">> [VOICE]: Sub-400ms Full-Duplex", (216, 180, 254)),
-            (">> [STATUS]: Zero Agency Overhead", (52, 211, 153)),
-            (">> [CODE]: GitHub Verified 2026", (251, 191, 36))
-        ]
-        ly = safe_y1 + int(75 * scale)
-        for t, c in lines:
-            draw.text((lw_x1 + int(20 * scale), ly), t, fill=c, font=f_mono_wing)
-            ly += int(34 * scale)
+    lx = int(70 * scale)
+    draw.rounded_rectangle([(lx, cy - int(130 * scale)), (lx + int(340 * scale), cy + int(130 * scale))], radius=int(12 * scale), fill=(10, 15, 28), outline=(6, 182, 212), width=int(2 * scale))
+    draw.rectangle([(lx, cy - int(130 * scale)), (lx + int(340 * scale), cy - int(92 * scale))], fill=(18, 26, 45))
+    draw.ellipse([(lx + int(15 * scale), cy - int(117 * scale)), (lx + int(27 * scale), cy - int(105 * scale))], fill=(239, 68, 68))
+    draw.ellipse([(lx + int(35 * scale), cy - int(117 * scale)), (lx + int(47 * scale), cy - int(105 * scale))], fill=(234, 179, 8))
+    draw.ellipse([(lx + int(55 * scale), cy - int(117 * scale)), (lx + int(67 * scale), cy - int(105 * scale))], fill=(34, 197, 94))
+    draw.text((lx + int(85 * scale), cy - int(120 * scale)), "agent_stack.py", fill=(148, 163, 184), font=f_tag)
 
-        # Right Wing: Architecture Nodes
-        rw_x1 = safe_x2 + int(40 * scale)
-        rw_x2 = width - int(50 * scale)
-        draw.rounded_rectangle([(rw_x1, safe_y1 + int(20 * scale)), (rw_x2, safe_y2 - int(20 * scale))], radius=int(12 * scale), fill=(11, 15, 25), outline=(168, 85, 247), width=int(2 * scale))
-        draw.text((rw_x1 + int(25 * scale), safe_y1 + int(40 * scale)), "SYSTEM ARCHITECTURE", fill=(168, 85, 247), font=f_head_wing)
+    code_lines = [
+        (">> $ python -m agentic_stack", (56, 189, 248)),
+        (">> [STATUS]: Full-Duplex Mesh", (52, 211, 153)),
+        (">> [VOICE]: Sub-400ms ElevenLabs", (216, 180, 254)),
+        (">> [OPEX]: 99.7% Agency Savings", (52, 211, 153)),
+        (">> [REPO]: GitHub Verified 2026", (251, 191, 36))
+    ]
+    term_y = cy - int(75 * scale)
+    for line, col in code_lines:
+        draw.text((lx + int(18 * scale), term_y), line, fill=col, font=f_mono)
+        term_y += int(38 * scale)
 
-        arch_nodes = [
-            ("1. LLM Orchestration", (6, 182, 212)),
-            ("2. Real-Time Voice AI", (168, 85, 247)),
-            ("3. Autonomous Execution", (16, 185, 129))
-        ]
-        ay = safe_y1 + int(85 * scale)
-        for label, col in arch_nodes:
-            draw.rounded_rectangle([(rw_x1 + int(20 * scale), ay), (rw_x2 - int(20 * scale), ay + int(45 * scale))], radius=int(8 * scale), fill=(18, 24, 40), outline=col, width=1)
-            draw.text((rw_x1 + int(35 * scale), ay + int(12 * scale)), label, fill=(226, 232, 240), font=f_mono_wing)
-            ay += int(60 * scale)
+    # 4. Right Side Content (Desktop View: 3-Stage Architecture)
+    rx = width - int(410 * scale)
+    draw.rounded_rectangle([(rx, cy - int(130 * scale)), (rx + int(340 * scale), cy + int(130 * scale))], radius=int(12 * scale), fill=(10, 15, 28), outline=(168, 85, 247), width=int(2 * scale))
+    draw.text((rx + int(25 * scale), cy - int(110 * scale)), "AGENT ARCHITECTURE", fill=(216, 180, 254), font=f_sub_side)
 
-    # ==============================================================================
-    # 3. CENTER SAFE ZONE (100% VISIBLE ACROSS ALL DEVICES: MOBILE, TABLET, DESKTOP)
-    # ==============================================================================
-    draw.rounded_rectangle([(safe_x1, safe_y1), (safe_x2, safe_y2)], radius=int(18 * scale), fill=(11, 16, 30), outline=(6, 182, 212), width=int(3 * scale))
+    arch_cards = [
+        ("1. LLM Tool Orchestration", (6, 182, 212)),
+        ("2. Real-Time Voice Synthesis", (168, 85, 247)),
+        ("3. Autonomous Production", (16, 185, 129))
+    ]
+    ay = cy - int(65 * scale)
+    for text, col in arch_cards:
+        draw.rounded_rectangle([(rx + int(20 * scale), ay), (rx + int(320 * scale), ay + int(50 * scale))], radius=int(8 * scale), fill=(18, 24, 42), outline=col, width=1)
+        draw.text((rx + int(35 * scale), ay + int(15 * scale)), text, fill=(226, 232, 240), font=f_mono)
+        ay += int(62 * scale)
 
+    # 5. CENTER HERO (100% VISIBLE ON MOBILE & ALL SCREENS)
     # Top Category Pill
-    f_badge = get_font(int(19 * scale), bold=True)
-    draw.rounded_rectangle([(safe_x1 + int(45 * scale), safe_y1 + int(32 * scale)), (safe_x1 + int(390 * scale), safe_y1 + int(72 * scale))], radius=int(8 * scale), fill=(18, 28, 48), outline=(6, 182, 212), width=1)
-    draw.text((safe_x1 + int(60 * scale), safe_y1 + int(40 * scale)), "// B2B PRODUCTION SYSTEMS", fill=(34, 211, 238), font=f_badge)
+    f_badge_top = get_font(int(20 * scale), bold=True)
+    cat_text = "// B2B PRODUCTION SYSTEMS • 3 BUILDS / WEEK: MON • WED • FRI"
+    # Measure width of cat_text
+    cat_bbox = draw.textbbox((0, 0), cat_text, font=f_badge_top)
+    cat_w = cat_bbox[2] - cat_bbox[0]
+    cat_x = cx - cat_w // 2
+    cat_y = cy - int(120 * scale)
+    draw.rounded_rectangle([(cat_x - int(24 * scale), cat_y - int(6 * scale)), (cat_x + cat_w + int(24 * scale), cat_y + int(32 * scale))], radius=int(8 * scale), fill=(16, 26, 46), outline=(6, 182, 212), width=int(2 * scale))
+    draw.text((cat_x, cat_y), cat_text, fill=(34, 211, 238), font=f_badge_top)
 
-    # Top Right Cadence Badge
-    f_sched = get_font(int(18 * scale), bold=True)
-    draw.rounded_rectangle([(safe_x2 - int(410 * scale), safe_y1 + int(32 * scale)), (safe_x2 - int(45 * scale), safe_y1 + int(72 * scale))], radius=int(8 * scale), fill=(30, 20, 45), outline=(168, 85, 247), width=1)
-    draw.text((safe_x2 - int(390 * scale), safe_y1 + int(40 * scale)), "NEW BUILDS: MON • WED • FRI", fill=(216, 180, 254), font=f_sched)
+    # Main Brand Name with Glowing Drop-Shadow
+    f_brand = get_font(int(78 * scale), bold=True)
+    brand_text = "AGENTIC STACK B2B"
+    b_bbox = draw.textbbox((0, 0), brand_text, font=f_brand)
+    b_w = b_bbox[2] - b_bbox[0]
+    bx = cx - b_w // 2
+    by = cy - int(65 * scale)
 
-    # Main Channel Headline
-    f_title = get_font(int(70 * scale), bold=True)
-    draw.text((safe_x1 + int(45 * scale), safe_y1 + int(92 * scale)), "AGENTIC STACK B2B", fill=(255, 255, 255), font=f_title)
+    # Glowing Shadow
+    for off in [4, 3, 2, 1]:
+        draw.text((bx - off, by), brand_text, fill=(6, 182, 212), font=f_brand)
+        draw.text((bx + off, by), brand_text, fill=(168, 85, 247), font=f_brand)
+        draw.text((bx, by + off), brand_text, fill=(16, 185, 129), font=f_brand)
+    # Bright White Foreground
+    draw.text((bx, by), brand_text, fill=(255, 255, 255), font=f_brand)
 
     # Sub-Headline
-    f_sub = get_font(int(27 * scale), bold=True)
-    draw.text((safe_x1 + int(45 * scale), safe_y1 + int(192 * scale)), "Autonomous AI Agents  •  Voice Engineering  •  Python Blueprints", fill=(52, 211, 153), font=f_sub)
+    f_sub = get_font(int(26 * scale), bold=True)
+    sub_text = "Autonomous AI Agents • Real-Time Voice AI • Python Blueprints"
+    s_bbox = draw.textbbox((0, 0), sub_text, font=f_sub)
+    s_w = s_bbox[2] - s_bbox[0]
+    sx = cx - s_w // 2
+    sy = cy + int(35 * scale)
+    draw.text((sx, sy), sub_text, fill=(52, 211, 153), font=f_sub)
 
-    # 4 Tech Pills
+    # Tech Pills (Centered)
     pills = [
         ("PYTHON 3.12", (6, 182, 212)),
         ("ELEVENLABS VOICE AI", (168, 85, 247)),
-        ("MULTI-AGENT WORKFLOWS", (16, 185, 129)),
-        ("OPEN-SOURCE GITHUB CODE", (251, 191, 36))
+        ("MULTI-AGENT ARCHITECTURES", (16, 185, 129)),
+        ("OPEN-SOURCE GITHUB BLUEPRINTS", (251, 191, 36))
     ]
-    f_pill = get_font(int(16 * scale), bold=True)
-    px = safe_x1 + int(45 * scale)
-    for text, col in pills:
-        pw = int(len(text) * 10.5 * scale) + int(36 * scale)
-        ph = int(40 * scale)
-        draw.rounded_rectangle([(px, safe_y1 + int(255 * scale)), (px + pw, safe_y1 + int(255 * scale) + ph)], radius=int(8 * scale), fill=(16, 22, 36), outline=col, width=1)
-        draw.text((px + int(16 * scale), safe_y1 + int(264 * scale)), text, fill=col, font=f_pill)
-        px += pw + int(14 * scale)
+    f_pill = get_font(int(15 * scale), bold=True)
+    
+    # Calculate total width of all pills
+    pill_widths = []
+    for p_text, _ in pills:
+        p_bbox = draw.textbbox((0, 0), p_text, font=f_pill)
+        pill_widths.append((p_bbox[2] - p_bbox[0]) + int(36 * scale))
+    
+    total_pills_w = sum(pill_widths) + (len(pills) - 1) * int(14 * scale)
+    cur_px = cx - total_pills_w // 2
+    pill_y = cy + int(85 * scale)
 
-    # Bottom Clarification Line
-    f_foot = get_font(int(17 * scale))
-    draw.text((safe_x1 + int(48 * scale), safe_y1 + int(342 * scale)), "Free open-source code & architecture blueprints provided in every video description.", fill=(148, 163, 184), font=f_foot)
+    for (p_text, col), pw in zip(pills, pill_widths):
+        draw.rounded_rectangle([(cur_px, pill_y), (cur_px + pw, pill_y + int(36 * scale))], radius=int(6 * scale), fill=(12, 18, 32), outline=col, width=int(1.5 * scale))
+        draw.text((cur_px + int(18 * scale), pill_y + int(9 * scale)), p_text, fill=col, font=f_pill)
+        cur_px += pw + int(14 * scale)
 
-    # Save
+    # Bottom Clarification Line (Inside Mobile Safe Area)
+    f_foot = get_font(int(16 * scale))
+    foot_text = "Free downloadable production code & architecture schematics in every video description."
+    ft_bbox = draw.textbbox((0, 0), foot_text, font=f_foot)
+    ft_w = ft_bbox[2] - ft_bbox[0]
+    draw.text((cx - ft_w // 2, cy + int(135 * scale)), foot_text, fill=(148, 163, 184), font=f_foot)
+
+    # Save Image
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     img.save(out_path, optimize=True)
     size_mb = os.path.getsize(out_path) / (1024 * 1024)
-    print(f"Generated: {out_path} ({width}x{height}, {size_mb:.2f} MB)")
+    print(f"Generated Popping Banner: {out_path} ({width}x{height}, {size_mb:.2f} MB)")
     return out_path
 
 if __name__ == "__main__":
-    # Render recommended standard
-    render_banner(2560, 1440, "docs/assets/youtube_channel_banner_2560x1440.png")
-    # Render exact user specification
-    render_banner(2048, 1152, "docs/assets/youtube_channel_banner_2048x1152.png")
+    # Render 2048 x 1152 (Exact user spec)
+    render_popping_banner(2048, 1152, "docs/assets/youtube_channel_banner_2048x1152.png")
+    # Render 2560 x 1440 (Official YouTube standard)
+    render_popping_banner(2560, 1440, "docs/assets/youtube_channel_banner_2560x1440.png")
