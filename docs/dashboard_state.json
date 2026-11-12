@@ -14,7 +14,7 @@
   "kpis": {
     "channel_age": "Day 1 (Launch)",
     "videos_produced": "4 (4 publicerade live på kanalen)",
-    "views_30d": "451 visningar (4 videor totalt)",
+    "views_30d": "445 visningar (4 videor totalt)",
     "views_growth": "Active Launch",
     "affiliate_clicks": "Active",
     "active_saas_conversions": "0",
@@ -194,9 +194,9 @@
     }
   ],
   "channel_metrics": {
-    "total_views": 451,
+    "total_views": 445,
     "video_count": 4,
-    "last_synced": "2026-11-12 03:17 UTC",
+    "last_synced": "2026-11-12 03:23 UTC",
     "total_comments": 4,
     "total_likes": 6,
     "subscribers": 1,
@@ -206,13 +206,13 @@
       "category": "Short / Reel",
       "title": "Build Real-Time Voice AI Agents in Python",
       "published_at": "2026-11-11",
-      "views": 437,
+      "views": 431,
       "comments": 0,
       "likes": 6,
       "duration_sec": 17,
       "is_short": true
     },
-    "video_breakdown": "Short #002.1 (437 visn) | Ep #001 (9 visn) | Ep #002 (3 visn) | Ep #002.1 (2 visn)",
+    "video_breakdown": "Short #002.1 (431 visn) | Ep #001 (9 visn) | Ep #002 (3 visn) | Ep #002.1 (2 visn)",
     "videos": [
       {
         "video_id": "GTzZWe9nQaE",
@@ -220,7 +220,7 @@
         "category": "Short / Reel",
         "title": "Build Real-Time Voice AI Agents in Python",
         "published_at": "2026-11-11",
-        "views": 437,
+        "views": 431,
         "comments": 0,
         "likes": 6,
         "duration_sec": 17,
