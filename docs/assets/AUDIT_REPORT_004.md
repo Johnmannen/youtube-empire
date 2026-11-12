@@ -22,6 +22,8 @@
 | Metadata | Chapter Timestamps (00:00) | **PASS** | Standard YouTube chapter markers present |
 | Metadata | Dedicated Shorts Metadata | **PASS** | Separate Shorts title, description & comment present |
 | Metadata | YouTube Category 28 | **PASS** | Category ID: 28 (Science & Technology) |
+| Metadata | No Duplicate Link Stacks | **PASS** | Zero duplicated links/callout stacks in description |
+| Dashboard | Description HTML No Slop | **PASS** | Affiliate link appears 2 times in textarea (<= 2 allowed) |
 
 ---
 *Audit executed by Autonomous Quality & Compliance Auditor Agent (Antigravity 2026).*
