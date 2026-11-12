@@ -14,7 +14,7 @@
   "kpis": {
     "channel_age": "Day 1 (Launch)",
     "videos_produced": "4 (4 publicerade live på kanalen)",
-    "views_30d": "445 visningar (4 videor totalt)",
+    "views_30d": "464 visningar (4 videor totalt)",
     "views_growth": "Active Launch",
     "affiliate_clicks": "Active",
     "active_saas_conversions": "0",
@@ -194,9 +194,9 @@
     }
   ],
   "channel_metrics": {
-    "total_views": 445,
+    "total_views": 464,
     "video_count": 4,
-    "last_synced": "2026-11-12 03:23 UTC",
+    "last_synced": "2026-11-12 05:52 UTC",
     "total_comments": 4,
     "total_likes": 6,
     "subscribers": 1,
@@ -206,13 +206,13 @@
       "category": "Short / Reel",
       "title": "Build Real-Time Voice AI Agents in Python",
       "published_at": "2026-11-11",
-      "views": 431,
+      "views": 444,
       "comments": 0,
       "likes": 6,
       "duration_sec": 17,
       "is_short": true
     },
-    "video_breakdown": "Short #002.1 (431 visn) | Ep #001 (9 visn) | Ep #002 (3 visn) | Ep #002.1 (2 visn)",
+    "video_breakdown": "Short #002.1 (444 visn) | Ep #001 (9 visn) | Ep #002.1 (8 visn) | Ep #002 (3 visn)",
     "videos": [
       {
         "video_id": "GTzZWe9nQaE",
@@ -220,7 +220,7 @@
         "category": "Short / Reel",
         "title": "Build Real-Time Voice AI Agents in Python",
         "published_at": "2026-11-11",
-        "views": 431,
+        "views": 444,
         "comments": 0,
         "likes": 6,
         "duration_sec": 17,
@@ -239,6 +239,18 @@
         "is_short": false
       },
       {
+        "video_id": "kdS-4Oqy6pM",
+        "label": "Ep #002.1",
+        "category": "Remake",
+        "title": "Build Real-Time Voice AI Agents in Python (Sub-400ms WebSockets 2026)",
+        "published_at": "2026-11-11",
+        "views": 8,
+        "comments": 2,
+        "likes": 0,
+        "duration_sec": 193,
+        "is_short": false
+      },
+      {
         "video_id": "3B178ZvPS_s",
         "label": "Ep #002",
         "category": "Long",
@@ -248,18 +260,6 @@
         "comments": 1,
         "likes": 0,
         "duration_sec": 244,
-        "is_short": false
-      },
-      {
-        "video_id": "kdS-4Oqy6pM",
-        "label": "Ep #002.1",
-        "category": "Remake",
-        "title": "Build Real-Time Voice AI Agents in Python (Sub-400ms WebSockets 2026)",
-        "published_at": "2026-11-11",
-        "views": 2,
-        "comments": 2,
-        "likes": 0,
-        "duration_sec": 193,
         "is_short": false
       }
     ]
