@@ -151,3 +151,31 @@ När du inte har ett ansikte som håller tittarens blick måste det visuella spr
 13. **Kriminaltekniska & haveriutredningar (Engineering Disasters):** 3D-rekonstruktioner och telemetridata.
 14. **Filosofiska, psykologiska eller idéhistoriska essäer:** Stillbilder med rörelse (Ken Burns) och typografi.
 15. **Sammanfattningar av fackböcker & mentalmodeller:** Whiteboard-animationer och enkla skisser.
+
+---
+
+## 10. Kanalstandarder 2026: Intron, Outron, Transitions och Shorts-loopar
+
+Dessa regler etablerades för att eliminera amatörmässig rendering och garantera en enhetlig hög B2B-standard:
+
+### 10.1. Långvideo (16:9, 1080p)
+1. **Thumbnail-Start & Övergång (0.0 – 2.5s):** Videon startar alltid med den färdiga thumbnailen i helskärm under 2.5 sekunder för att omedelbart bekräfta klicket. Därefter sker en mjuk 0.5s crossfade/dissolve över till Scen 1.
+2. **Aggressiv Intro-Hook (0 – 15s):** Gå rakt på smärtpunkten och visa slutresultatet direkt utan fördröjning.
+3. **Visuell Dynamik & Highlighting:** Kodrader och arkitektursteg ska tidsstyrt belysas/highlightas i takt med berättarrösten.
+4. **Mjuka Scenövergångar:** Alla scener sammanbinds med mjuka 0.4–0.5s övertoningar (crossfade/dissolve). Inga hårda bildklipp.
+5. **Muntliga CTAs:** Organisk hänvisning till Like & Subscribe i outro, hänvisning till GitHub-källkod och partnerlänk för provperiod i beskrivning och kommentar.
+
+### 10.2. Shorts / Reels (9:16, Vertikal)
+1. **Result-First Hook (0.0 – 2.0s):** Visa/uttala slutresultatet direkt i bildruta 1 för att stoppa swipe-away (mål: > 70% retention).
+2. **Sömlös Ljudloop:** Sista meningen avslutas så att den grammatiskt och rytmiskt flyter ihop med videons allra första ord.
+3. **Safe Zones:** All text, kod och grafik placeras inom mobilens säkra zoner så att YouTubes knappar och rubriker inte skymmer informationen.
+4. **Funnel-CTA:** Tydlig uppmaning att se den längre 6-minutersversionen på kanalen.
+5. **Dedikerad Metadata:** Egen anpassad kort rubrik, beskrivning och fäst kommentar för varje Short.
+
+### 10.3. Verifierade Partnerlänkar (Master-register)
+- Dubbing: `https://try.elevenlabs.io/agentic-dubbing`
+- Conversational Voice: `https://try.elevenlabs.io/agentic-voice`
+- Telephony: `https://try.elevenlabs.io/agentic-telephony`
+- Reader API: `https://try.elevenlabs.io/agentic-reader`
+- GitHub Blueprint: `https://github.com/Johnmannen/Agentic-Stack-Library`
+

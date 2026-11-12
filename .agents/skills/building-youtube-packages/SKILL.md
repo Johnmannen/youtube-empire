@@ -11,39 +11,68 @@ Executes an end-to-end, zero-cost cloud production pipeline that creates complet
 ## Channel & Production Specifications (Master Framework 2026)
 - **Channel Name:** Agentic Stack B2B
 - **Niche:** AI & Agentic Stack B2B (Python, Agentic Workflows, LLM & API Integrations)
-- **Official Voice Actor:** `edge-tts` with voice `en-US-AndrewMultilingualNeural` (Rate: `+0%` default)
+- **Official Voice Actor:** `edge-tts` with voice `en-US-AndrewMultilingualNeural` (fallback: `en-US-ChristopherNeural`, Rate: `+0%` default)
 - **Visual Production Engine:** Concept 4 Hybrid (24-26pt mobile code, sliding neon arrow pointers, floating concept badges, progressive architecture pulses, and smooth split-screen live terminal sync)
 - **Thumbnail Standard:** Hybrid Concept 1+3 (Split-screen contrast pain on left, 3-node connected network architecture on right, terminal status in bottom, max 2-3 words headline following Gycklarregeln)
 - **Title Length Limit:** Strict limit `< 60 characters` for primary mobile CTR title
-- **Target Video Duration:** 3:00 to 5:00 minutes for technical tutorials (combining depth with zero fluff)
+- **Target Video Duration:** 3:30 to 6:00+ minutes for technical tutorials (combining technical rigor with zero fluff)
 - **Weekly Cadence:** 3 packages/week (Monday, Wednesday, Friday)
 - **Target Long-form RPM:** $18.00 – $35.00
-- **Shorts Strategy:** Duration < 20 seconds, aggressive 2-second visual & audio hook, exactly 0 commercial music tracks to retain 100% Creator Pool allocation.
-- **Compliance Rules (YouTube 2026):**
-  - Strict Anti-Slop Protocol: All Python scripts must be executed and verified in the sandbox before script writing.
-  - Transparent Metadata: Category `28` (Science & Technology), `altered_content: false`.
-  - FTC Affiliate Disclosures included in descriptions and pinned comments.
-  - **Muntlig Hänvisning till Affiliate & Like/Subscribe:** Muntligt och organiskt integrerat i speakern vid delsegrar och outrot. Inga störande grafiska CTA-boxar.
-  - **Post-Launch Review:** Granskningsagent körs vid 24h/48h för att mäta CTR och 0:30-retention med automatisk A/B-titelväxling vid behov.
+
+### 9:16 Shorts Master Guidelines (Strict Channel Standard):
+1. **Result-First Hook (Sekund 0.0 – 1.5):**
+   - Aldrig inleda med hälsningar, logotyper eller tomma skärmar.
+   - Bildruta 1 måste visa **slutresultatet direkt** (t.ex. uppspelning av den dubbade rösten, terminalen som klarar jobbet, eller den chockerande siffran).
+2. **Högkontrast-rubrik i säker mobilzon:**
+   - Fast, högkontrast badge i övre 20–35% av skärmen (utanför YouTubes knappar och undertitlar).
+   - Format: Skarp färgkontrast (t.ex. svart bakgrund med neongul eller cyan text).
+3. **Sömlös loop (Seamless Loop Design):**
+   - Skriptet ska designas så att sista meningen grammatiskt och melodiskt flyter ihop med första meningen (driver APV > 100%).
+4. **Funnel-koppling till Långvideon:**
+   - Slutsekunderna har en tydlig visuell och auditiv hänvisning till kanalen och källkoden (*"Watch the full step-by-step breakdown & grab the GitHub code on our channel"*).
+5. **Shorts-längd & Musik:** Strikt mellan 15 och 20 sekunder för maximal retention. Inga kommersiella musikspår (100% Creator Pool).
+6. **Dedikerad Shorts-metadata:**
+   - Egen slagkraftig titel med `#shorts #ai`.
+   - Egen kort beskrivning anpassad för mobilflödet med funnel-länk och partnerlänk.
+   - Egen kort fäst kommentar.
+
+### 16:9 Långvideo Master Guidelines (Strict Channel Standard):
+1. **Thumbnail-Start & Transition (Sekund 0.0 – 2.5):**
+   - Videon *måste* inledas med den skarpa 1080p-thumbnailen i helskärm under 0.0 – 2.5 sekunder för att ge omedelbar visuell bekräftelse på att tittaren hamnat rätt.
+   - Mellan sekund 2.5 och 3.0 sker en mjuk övertoning (crossfade/dissolve) in till Scen 1. Inga hårda klipp.
+2. **Snabb smärtpunktskrok (< 5 sekunder):**
+   - Börja omedelbart i problemets kärna eller enterprise-flaskhalsen. Inget småprat, artighetsfraser eller introloggor.
+3. **Arkitektur-teaser inom 15 sekunder:**
+   - Visa snabbt terminalen, systemöversikten eller koden så att tittaren ser exakt vad de kommer att behärska vid videons slut.
+4. **Visuell dynamik och tidsstyrd highlighting:**
+   - Regelbundna in-/utzoomningar, rörliga neon-pilar, tidsstyrd highlighting av kodrader (t.ex. vid genomgång av API-anrop, polling eller streaming) och progressiva nätverkspulser för att förhindra blicktrötthet.
+5. **Mjuka övergångar mellan alla scener:**
+   - 0.4–0.5 sekunders mjuk crossfade/dissolve mellan varje scen. Inga abrupta bildklipp.
+6. **Organiska muntliga hänvisningar (Oral CTA):**
+   - Hänvisning till affiliate-verktyg och källkod vid delsegrar.
+   - Tydlig, organisk uppmaning att gilla och prenumerera (*Like & Subscribe*) under sista scenen och outrot.
+   - Hänvisning till ElevenLabs gratis provperiod via partnerlänken i beskrivningen och fästa kommentaren.
+7. **Spellängd och pedagogisk stringens:**
+   - Minst 4:00 minuter. Innehållet får ta den tid som krävs för maximal pedagogisk tydlighet (t.ex. 6–10+ minuter). Ingen artificiell komprimering.
+8. **Compliance & Kvalitetskontroll (YouTube 2026):**
+   - Anti-Slop: All kod körs och verifieras i sandboxen.
+   - Kategori `28` (Science & Technology), `altered_content: false`.
+   - Fullständiga FTC-disclaimers i beskrivning och fastnålad kommentar.
+   - Obligatorisk granskning av Informations- och Kvalitetskontrollanten innan uppladdning till kontrollpanelen.
 
 ## Workflow Checklist
 - [ ] Step 1: Environment & Dependency Verification (`edge-tts`, `ffmpeg`, `pillow`, `matplotlib`)
 - [ ] Step 2: Topic Scouting & Sandbox Code Verification (`demos/`)
-- [ ] Step 3: Script & Metadata Generation (Long-form scenes + Short script <20s)
-- [ ] Step 4: Neural Audio Synthesis (`edge-tts` with `en-US-ChristopherNeural`)
-- [ ] Step 5: Visual Asset Generation (Slide diagrams, code syntax cards, high-contrast 1280x720 PNG thumbnail)
+- [ ] Step 3: Script & Metadata Generation (Long-form scenes with dynamic visuals + Short script with seamless loop and result-first hook)
+- [ ] Step 4: Neural Audio Synthesis (`edge-tts` with `en-US-AndrewMultilingualNeural`)
+- [ ] Step 5: Visual Asset Generation (High-contrast 9:16 mobile badges, 1080p slide diagrams, code syntax cards, 1280x720 split-screen thumbnail)
 - [ ] Step 6: Video Assembly & Rendering via FFmpeg (1080p MP4 and 9:16 Short MP4)
-- [ ] Step 7: Overseer Dashboard Update (`docs/dashboard_state.json` & `docs/index.html`)
-- [ ] Step 8: Phase 2 Autonomous Upload (`scripts/upload_youtube.py`, optional)
+- [ ] Step 7: Local Verification & User Approval in Chat
+- [ ] Step 8: Overseer Dashboard Update (`docs/dashboard_state.json` & `docs/index.html`) upon approval
 
 ## Script Usage
 
 ### Producing a Complete Video Package:
 ```bash
-python .agents/skills/building-youtube-packages/scripts/produce_package.py --package-id 001 --output docs/assets/
-```
-
-### Direct Upload via YouTube Data API v3 (Phase 2):
-```bash
-python .agents/skills/building-youtube-packages/scripts/upload_youtube.py --package docs/dashboard_state.json --client-secret client_secret.json
+python .agents/skills/building-youtube-packages/scripts/produce_package.py --package-id 003 --output docs/assets/
 ```
