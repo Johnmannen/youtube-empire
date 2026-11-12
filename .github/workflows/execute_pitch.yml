@@ -1,0 +1,62 @@
+name: Execute Video Pitch From Dashboard
+
+on:
+  repository_dispatch:
+    types: [execute_pitch]
+  workflow_dispatch:
+    inputs:
+      pitch_id:
+        description: 'Pitch ID to produce (e.g. 005)'
+        required: true
+        default: '005'
+      pitch_title:
+        description: 'Title of the Pitch'
+        required: false
+        default: 'Turn Any Text Document into Audio Podcasts in Python'
+
+permissions:
+  contents: write
+
+jobs:
+  register-and-trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Register Pending Pitch Execution Order
+        run: |
+          PITCH_ID="${{ github.event.client_payload.pitch_id || github.event.inputs.pitch_id }}"
+          PITCH_TITLE="${{ github.event.client_payload.title || github.event.inputs.pitch_title }}"
+          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+
+          echo "Received order to execute pitch: $PITCH_ID - $PITCH_TITLE"
+
+          python -c "
+          import json, os
+
+          order = {
+              'pitch_id': '$PITCH_ID',
+              'title': '$PITCH_TITLE',
+              'status': 'PENDING_ANTIGRAVITY_BUILD',
+              'requested_at': '$TIMESTAMP'
+          }
+
+          with open('docs/pending_order.json', 'w', encoding='utf-8') as f:
+              json.dump(order, f, indent=2)
+
+          print('docs/pending_order.json created successfully!')
+          "
+
+      - name: Commit and Push Order State
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/pending_order.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "feat(order): registered pitch execution order for $PITCH_ID [skip ci]" && git push)
