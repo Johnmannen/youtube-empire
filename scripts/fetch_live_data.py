@@ -64,7 +64,10 @@ def fetch_live_channel_data():
             is_short = duration_sec > 0 and duration_sec <= 60
 
             # Determine recognizable friendly label
-            if vid == "GTzZWe9nQaE" or is_short:
+            ep_match = re.search(r'(?:Episode|Ep\.?|EPISODE)\s*#?(\d+)', title, re.IGNORECASE)
+            ep_num = f"#{int(ep_match.group(1)):03d}" if ep_match else ""
+
+            if vid == "GTzZWe9nQaE":
                 label = "Short #002.1"
                 category = "Short / Reel"
             elif vid == "kdS-4Oqy6pM":
@@ -76,9 +79,12 @@ def fetch_live_channel_data():
             elif vid == "NEoqC7BxBqE":
                 label = "Ep #001"
                 category = "Long"
+            elif is_short:
+                label = f"Short {ep_num}".strip() if ep_num else f"Short ({vid[:6]})"
+                category = "Short / Reel"
             else:
-                label = f"Video ({vid[:6]})"
-                category = "Short" if is_short else "Long"
+                label = f"Ep {ep_num}".strip() if ep_num else f"Video ({vid[:6]})"
+                category = "Long"
 
             videos.append({
                 "video_id": vid,
