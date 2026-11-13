@@ -14,7 +14,7 @@
   "kpis": {
     "channel_age": "Day 1 (Launch)",
     "videos_produced": "4 (6 publicerade live på kanalen)",
-    "views_30d": "640 visningar (6 videor totalt)",
+    "views_30d": "655 visningar (6 videor totalt)",
     "views_growth": "Active Launch",
     "affiliate_clicks": "Active",
     "active_saas_conversions": "0",
@@ -205,10 +205,10 @@
     }
   ],
   "channel_metrics": {
-    "total_views": 640,
+    "total_views": 655,
     "video_count": 6,
-    "last_synced": "2026-11-12 23:14 UTC",
-    "total_comments": 6,
+    "last_synced": "2026-11-13 05:12 UTC",
+    "total_comments": 7,
     "total_likes": 8,
     "subscribers": 1,
     "top_video": {
@@ -217,13 +217,13 @@
       "category": "Short / Reel",
       "title": "Build Real-Time Voice AI Agents in Python",
       "published_at": "2026-11-11",
-      "views": 560,
-      "comments": 0,
+      "views": 570,
+      "comments": 1,
       "likes": 7,
       "duration_sec": 17,
       "is_short": true
     },
-    "video_breakdown": "Short #002.1 (560 visn) | Ep #002.1 (38 visn) | Short (wjgj1w) (28 visn) | Ep #001 (9 visn) | Ep #002 (3 visn) | Video (XtEPck) (2 visn)",
+    "video_breakdown": "Short #002.1 (570 visn) | Ep #002.1 (39 visn) | Short (wjgj1w) (32 visn) | Ep #001 (9 visn) | Ep #002 (3 visn) | Video (XtEPck) (2 visn)",
     "videos": [
       {
         "video_id": "GTzZWe9nQaE",
@@ -231,8 +231,8 @@
         "category": "Short / Reel",
         "title": "Build Real-Time Voice AI Agents in Python",
         "published_at": "2026-11-11",
-        "views": 560,
-        "comments": 0,
+        "views": 570,
+        "comments": 1,
         "likes": 7,
         "duration_sec": 17,
         "is_short": true
@@ -243,7 +243,7 @@
         "category": "Remake",
         "title": "Build Real-Time Voice AI Agents in Python (Sub-400ms WebSockets 2026)",
         "published_at": "2026-11-11",
-        "views": 38,
+        "views": 39,
         "comments": 2,
         "likes": 0,
         "duration_sec": 193,
@@ -255,7 +255,7 @@
         "category": "Short / Reel",
         "title": "Dub ANY Video into 29 Languages in Python 🤯 #shorts",
         "published_at": "2026-11-12",
-        "views": 28,
+        "views": 32,
         "comments": 1,
         "likes": 0,
         "duration_sec": 20,
