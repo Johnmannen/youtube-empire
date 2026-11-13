@@ -18,7 +18,7 @@ permissions:
   contents: write
 
 jobs:
-  register-and-trigger:
+  produce-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,33 +30,72 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Register Pending Pitch Execution Order
+      - name: Install FFmpeg & Fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install edge-tts pillow
+
+      - name: Register Pending Order
+        id: order
         run: |
           PITCH_ID="${{ github.event.client_payload.pitch_id || github.event.inputs.pitch_id }}"
           PITCH_TITLE="${{ github.event.client_payload.title || github.event.inputs.pitch_title }}"
+          echo "pitch_id=$PITCH_ID" >> $GITHUB_OUTPUT
+          echo "pitch_title=$PITCH_TITLE" >> $GITHUB_OUTPUT
           TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-
-          echo "Received order to execute pitch: $PITCH_ID - $PITCH_TITLE"
-
           python -c "
-          import json, os
-
+          import json
           order = {
               'pitch_id': '$PITCH_ID',
               'title': '$PITCH_TITLE',
-              'status': 'PENDING_ANTIGRAVITY_BUILD',
+              'status': 'BUILDING_IN_CLOUD',
               'requested_at': '$TIMESTAMP'
           }
-
           with open('docs/pending_order.json', 'w', encoding='utf-8') as f:
               json.dump(order, f, indent=2)
-
-          print('docs/pending_order.json created successfully!')
           "
 
-      - name: Commit and Push Order State
+      - name: Execute Video Production Engine
         run: |
+          PITCH_ID="${{ steps.order.outputs.pitch_id }}"
+          SCRIPT="scripts/produce_master_package_${PITCH_ID}.py"
+          if [ -f "$SCRIPT" ]; then
+            echo "Running dedicated master producer: $SCRIPT"
+            python "$SCRIPT"
+          else
+            echo "Running fallback producer for $PITCH_ID"
+            python .agents/skills/building-youtube-packages/scripts/produce_package.py --output docs/assets/
+          fi
+
+      - name: Update Dashboard & Archive Previous Episode
+        run: |
+          PITCH_ID="${{ steps.order.outputs.pitch_id }}"
+          python scripts/auto_deploy_package.py --package-id "$PITCH_ID"
+
+      - name: Run 20-Point Quality & Compliance Audit
+        run: |
+          PITCH_ID="${{ steps.order.outputs.pitch_id }}"
+          python .agents/skills/quality_compliance_auditor/scripts/audit_package.py --package-id "$PITCH_ID" --dir docs/assets
+
+      - name: Mark Order Completed & Push to Main
+        run: |
+          PITCH_ID="${{ steps.order.outputs.pitch_id }}"
+          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          python -c "
+          import json
+          with open('docs/pending_order.json', 'r', encoding='utf-8') as f:
+              order = json.load(f)
+          order['status'] = 'COMPLETED'
+          order['completed_at'] = '$TIMESTAMP'
+          with open('docs/pending_order.json', 'w', encoding='utf-8') as f:
+              json.dump(order, f, indent=2)
+          "
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/pending_order.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "feat(order): registered pitch execution order for $PITCH_ID [skip ci]" && git push)
+          git add docs/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "feat(cloud-build): produced & audited Episode #${PITCH_ID} [skip ci]" && git push)

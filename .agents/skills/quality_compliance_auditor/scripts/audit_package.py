@@ -17,7 +17,9 @@ AFFILIATE_REGISTRY = {
     "002": "https://try.elevenlabs.io/agentic-voice",
     "003": "https://try.elevenlabs.io/agentic-dubbing",
     "004": "https://try.elevenlabs.io/agentic-telephony",
-    "005": "https://try.elevenlabs.io/agentic-reader"
+    "005": "https://try.elevenlabs.io/agentic-reader",
+    "006": "https://try.elevenlabs.io/agentic-voice",
+    "007": "https://try.elevenlabs.io/agentic-voice"
 }
 
 GITHUB_URL = "https://github.com/Johnmannen/Agentic-Stack-Library"

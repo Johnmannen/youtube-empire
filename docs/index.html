@@ -1392,8 +1392,9 @@ Some links in this description are affiliate links. If you sign up or purchase t
         const res = await fetch('https://api.github.com/repos/Johnmannen/youtube-empire/dispatches', {
           method: 'POST',
           headers: {
-            'Accept': 'application/vnd.github.v3+json',
-            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github+json',
+            'Authorization': `Bearer ${token}`,
+            'X-GitHub-Api-Version': '2022-11-28',
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
@@ -1407,17 +1408,24 @@ Some links in this description are affiliate links. If you sign up or purchase t
         });
 
         if (res.ok || res.status === 204) {
-          showToast(`✅ Molnorder mottagen! GitHub Action & Antigravity startar bygge av ${pitchId}...`);
+          showToast(`✅ Molnorder mottagen! GitHub Action bygger ${pitchId} (klar om ca 3–5 min)...`);
           if (btnElement) {
-            btnElement.innerHTML = `<span>⚡ Bygge i molnet påbörjat</span>`;
+            btnElement.innerHTML = `<span>⚡ Byggs i molnet...</span>`;
             btnElement.classList.remove('animate-pulse');
             btnElement.classList.add('bg-emerald-600');
           }
         } else {
           const errText = await res.text();
           console.error('GitHub API error:', res.status, errText);
-          showToast(`❌ GitHub API Fel (${res.status}): Kontrollera din Token behörighet`);
-          if (btnElement) btnElement.innerHTML = `<span>🚀 Exekvera</span>`;
+          if (res.status === 403) {
+            showToast(`❌ 403 Behörighet saknas: Aktivera "Contents: Read and write" på din GitHub Token!`);
+          } else {
+            showToast(`❌ GitHub API Fel (${res.status}): Kontrollera din Token`);
+          }
+          if (btnElement) {
+            btnElement.classList.remove('animate-pulse');
+            btnElement.innerHTML = `<span>🚀 Exekvera</span>`;
+          }
         }
       } catch (err) {
         console.error('Trigger fetch error:', err);
