@@ -20,7 +20,10 @@ AFFILIATE_REGISTRY = {
     "004": "https://try.elevenlabs.io/agentic-telephony",
     "005": "https://try.elevenlabs.io/agentic-reader",
     "006": "https://try.elevenlabs.io/agentic-voice",
-    "007": "https://try.elevenlabs.io/agentic-voice"
+    "007": "https://try.elevenlabs.io/agentic-voice",
+    "008": "https://try.elevenlabs.io/agentic-voice",
+    "009": "https://try.elevenlabs.io/agentic-reader",
+    "010": "https://try.elevenlabs.io/agentic-telephony"
 }
 
 GITHUB_URL = "https://github.com/Johnmannen/Agentic-Stack-Library"
@@ -349,6 +352,21 @@ def audit_package(pkg_id, base_dir):
                     len(mismatches) == 0,
                     "All 8 Long+Shorts HTML fields match metadata JSON" if not mismatches else f"Stale/mismatched HTML fields: {', '.join(mismatches)}"
                 )
+
+                # Check 28: Active Pitch Queue Rotated (produced pkg_id removed from pitches & replaced so 3 unproduced remain)
+                state_file = os.path.join(os.path.dirname(base_dir), "dashboard_state.json")
+                pitch_ok = False
+                pitch_msg = "dashboard_state.json missing"
+                if os.path.exists(state_file):
+                    with open(state_file, "r", encoding="utf-8") as sf:
+                        st = json.load(sf)
+                    active_ids = [p.get("episode_id") for p in st.get("pitches", [])]
+                    not_in_state = pkg_id not in active_ids
+                    not_in_html = f">PITCH #{pkg_id}<" not in html_content
+                    all_three_in_html = all(f">PITCH #{eid}<" in html_content for eid in active_ids)
+                    pitch_ok = not_in_state and not_in_html and len(active_ids) == 3 and all_three_in_html
+                    pitch_msg = f"Active queue={active_ids} (produced #{pkg_id} removed={not_in_state and not_in_html})"
+                add_check("Dashboard", "Active Pitch Queue Rotated", pitch_ok, pitch_msg)
 
             # Check 24: Thumbnail Visual Uniqueness vs Previous Episode
             curr_thumb = os.path.join(base_dir, f"thumb_{pkg_id}.png")

@@ -21,64 +21,37 @@
     "cloud_running_cost": "$0.00"
   },
   "current_package": {
-    "package_id": "001",
-    "title": "Build Autonomous AI Agent Skills in Python (Zero-Cost Production Blueprint 2026)",
-    "alternative_titles": [
-      "How to Build Production Agent Skills in Python (Zero Cloud Cost)",
-      "Stop Building Brittle AI Wrappers: The 2026 Agentic Architecture",
-      "Python Agent Skills from Scratch: Progressive Disclosure & Cloud Sandboxes"
-    ],
-    "hook_2s": "Stop building brittle AI wrappers. Here is how to build production Agent Skills in Python for 0 dollars.",
+    "package_id": "005",
+    "title": "Turn Any Text Document into Audio Podcasts in Python (ElevenLabs Audio Native) [EPISODE 005]",
     "category_id": "28",
     "category_name": "Science & Technology",
     "altered_content": false,
     "c2pa_status": "VERIFIED_COMPLIANT_2026",
-    "target_audience": "B2B Software Engineers, AI Builders & DevOps Teams",
     "tags": [
-      "python ai agents",
-      "agent skills",
-      "google antigravity",
-      "autonomous agents",
-      "fastmcp",
-      "pydantic ai",
-      "langgraph",
-      "llm orchestration",
-      "b2b ai workflows",
-      "zero cost cloud"
+      "ElevenLabs Audio Native",
+      "Python PDF to Podcast",
+      "PyMuPDF",
+      "AI Podcast Generator",
+      "Developer Documentation AI"
     ],
-    "timestamps": [
-      {
-        "time": "00:00",
-        "title": "The Problem with Brittle AI Wrappers"
-      },
-      {
-        "time": "00:45",
-        "title": "The 3-Stage Progressive Disclosure Architecture"
-      },
-      {
-        "time": "01:25",
-        "title": "Implementing the Sandboxed Python Runtime"
-      },
-      {
-        "time": "02:05",
-        "title": "Enterprise CI/CD Deployment & Overseer Dashboard"
-      }
-    ],
-    "affiliate_placeholders": [
-      {
-        "tool": "ElevenLabs AI Voice & Conversational AI API",
-        "benefit": "Industry-leading neural voices, streaming TTS & Conversational AI SDK for Python agents",
-        "live_url": "https://try.elevenlabs.io/l7jlmg96e3lb",
-        "commission_rate": "22% Recurring Commission (PartnerStack)"
-      }
-    ],
-    "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/001-autonomous-agent-skills",
+    "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library",
     "studio_upload_url": "https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg",
-    "description": "\ud83d\ude80 Download the Episode 001 code & architecture blueprint:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/001-autonomous-agent-skills\n\n\ud83d\udcda Complete Channel Open-Source Library:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library\n\nIn this episode of Agentic Stack B2B, we break down the complete technical blueprint for building autonomous, monetization-compliant AI agent skills in Python without paying expensive API or cloud infrastructure costs.\n\nLearn how modern agentic platforms use Progressive Disclosure to index metadata first, load detailed instructions strictly on-demand, and execute black-box Python code inside isolated remote sandboxes with zero context bloat.\n\n\u23f1\ufe0f TIMESTAMPS:\n00:00 - The Problem with Brittle AI Wrappers\n00:45 - The 3-Stage Progressive Disclosure Architecture\n01:25 - Implementing the Sandboxed Python Runtime\n02:05 - Enterprise CI/CD Deployment & Overseer Dashboard\n\n\ud83d\udee0\ufe0f ENTERPRISE TOOLS & RESOURCES (VERIFIED IN SANDBOX):\n\u2022 ElevenLabs AI Voice & Agent SDK: https://try.elevenlabs.io/l7jlmg96e3lb\n\n\u2696\ufe0f FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no additional cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n#Python #AIAgents #GoogleAntigravity #LangGraph #FastMCP #DevOps",
-    "pinned_comment": "\ud83d\udccc Grab the Episode 001 code and complete blueprint here:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/001-autonomous-agent-skills\n\n\ud83d\udcac Question for the community: Which agent framework are you currently deploying to production\u2014PydanticAI, LangGraph, or custom FastMCP? Let us know below!",
-    "long_video_file": "assets/video_001_long.mp4",
-    "short_video_file": "assets/video_001_short.mp4",
-    "thumbnail_file": "assets/thumb_001.png"
+    "description": "\ud83c\udf81 [FREE TRIAL] Try ElevenLabs Audio Native & Voice AI:\n\ud83d\udc49 https://try.elevenlabs.io/agentic-reader (Affiliate Partner Link)\n\n\ud83d\ude80 [SOURCE CODE] Download Python Document-to-Podcast Scripts:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/005-doc-to-podcast\n\n\ud83d\udcda [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library\n\nEngineers do not read 40-page technical manuals. In this video, we build an automated document-to-podcast pipeline in Python using PyMuPDF and the ElevenLabs Audio Native API.\n\n\u23f1\ufe0f TIMESTAMPS:\n00:00 - STOP READING 40-PAGE MANUALS\n00:50 - SYSTEM ARCHITECTURE: 3-STAGE AUDIO PIPELINE\n01:54 - PYTHON PDF & MARKDOWN PARSER SETUP\n02:38 - ELEVENLABS AUDIO NATIVE SYNTHESIS\n03:18 - AUDIO QUALITY & DEVELOPER RETENTION\n03:54 - ENTERPRISE DOCUMENTATION ROI\n04:22 - GITHUB BLUEPRINT, FREE TRIAL & NEXT EPISODE\n\n\u2696\ufe0f FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you.\n\n#AudioNative #ElevenLabs #Python #PyMuPDF #PodcastAI #AIAgents",
+    "pinned_comment": "\ud83d\udccc Try ElevenLabs Audio Native Free:\n\ud83d\udc49 https://try.elevenlabs.io/agentic-reader\n\n\ud83d\udcbb Download the complete Python script on GitHub: https://github.com/Johnmannen/Agentic-Stack-Library",
+    "shorts_metadata": {
+      "title": "Turn 40-Page PDFs into AI Podcasts in Python \ud83e\udd2f #Shorts",
+      "description": "Convert any technical PDF or Markdown doc into a two-speaker AI podcast in 40 seconds! \ud83d\ude80\n\n\u2b50 Free ElevenLabs trial: https://try.elevenlabs.io/agentic-reader\n\ud83d\udcbb Code on GitHub: https://github.com/Johnmannen/Agentic-Stack-Library\n\n#Shorts #ElevenLabs #Python #AI #Podcast",
+      "pinned_comment": "Full tutorial & Python blueprint on our channel! Try ElevenLabs free: https://try.elevenlabs.io/agentic-reader",
+      "tags": [
+        "Shorts",
+        "ElevenLabs",
+        "Python",
+        "AI Podcast"
+      ]
+    },
+    "long_video_file": "assets/video_005_long.mp4",
+    "short_video_file": "assets/video_005_short.mp4",
+    "thumbnail_file": "assets/thumb_005.png"
   },
   "pitches": [
     {
@@ -164,6 +137,18 @@
           "role": "Embeddings acceleration instance"
         }
       ]
+    }
+  ],
+  "published_packages": [
+    {
+      "package_id": "001",
+      "title": "Build Autonomous AI Agent Skills in Python (Zero-Cost Production Blueprint 2026)",
+      "status": "PUBLISHED_LIVE",
+      "published_date": "2026-11-13",
+      "format": "16:9 Long",
+      "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/001-autonomous-agent-skills",
+      "affiliate": "https://try.elevenlabs.io/l7jlmg96e3lb",
+      "thumbnail": "assets/thumb_001.png"
     }
   ]
 }
