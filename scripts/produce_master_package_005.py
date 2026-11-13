@@ -15,7 +15,7 @@ import json
 import math
 import asyncio
 import subprocess
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 import edge_tts
 
 PRODUCTION_MANIFEST = {
@@ -79,6 +79,39 @@ def draw_blickledare_pointer(draw, target_x, target_y, label="ACTIVE", color=(34
     draw.text((pill_x1 + 12, pill_y1 + 7), label, fill=color, font=get_font(15, bold=True))
     # Bright pointer arrow
     draw_vector_arrow(draw, pill_x1 + pill_w + 4, target_y, length=26, color=color, width=4, head_size=10)
+
+def draw_glowing_rounded_rect(base_img, box, radius, fill_col, border_col, glow_intensity=1.0, border_width=2):
+    """Draws a unified highlight box with a soft, pulsing outer neon glow in pure RGB."""
+    glow_layer = Image.new("RGB", base_img.size, (0, 0, 0))
+    gdraw = ImageDraw.Draw(glow_layer)
+    # Soft outer halo scaled by glow_intensity (0.35 .. 1.0)
+    halo_col = tuple(min(255, int(c * (0.35 + 0.55 * glow_intensity))) for c in border_col)
+    gdraw.rounded_rectangle(box, radius=radius, outline=halo_col, width=7)
+    blurred = glow_layer.filter(ImageFilter.GaussianBlur(radius=6))
+    base_img.paste(ImageChops.add(base_img, blurred), (0, 0))
+    # Inner fill + crisp pulsing border
+    draw = ImageDraw.Draw(base_img)
+    if fill_col is not None:
+        draw.rounded_rectangle(box, radius=radius, fill=fill_col)
+    crisp_col = tuple(min(255, int(c * (0.72 + 0.28 * glow_intensity))) for c in border_col)
+    draw.rounded_rectangle(box, radius=radius, outline=crisp_col, width=border_width)
+    return draw
+
+def get_contiguous_line_blocks(code_lines, focus_lines):
+    """Groups consecutive focused line indices into unified blocks so multi-line ranges get ONE frame."""
+    blocks = []
+    start_idx = None
+    for idx, (num, _, _) in enumerate(code_lines):
+        if num in focus_lines:
+            if start_idx is None:
+                start_idx = idx
+        else:
+            if start_idx is not None:
+                blocks.append((start_idx, idx - 1))
+                start_idx = None
+    if start_idx is not None:
+        blocks.append((start_idx, len(code_lines) - 1))
+    return blocks
 
 def create_blended_clip(img_a_path, img_b_path, out_clip_path, num_frames=12, fps=25):
     img_a = Image.open(img_a_path).convert("RGB")
@@ -227,8 +260,10 @@ def draw_master_thumbnail(out_png):
 
     # Top accent bar + Hero Title
     draw.rectangle([(0, 0), (width, 10)], fill=(16, 185, 129))
-    draw.rounded_rectangle([(80, 42), (610, 92)], radius=10, fill=(16, 36, 48), outline=(6, 182, 212), width=2)
-    draw.text((100, 54), "EPISODE 005  //  ELEVENLABS AUDIO NATIVE", fill=(34, 211, 238), font=f_badge)
+    badge_txt = "EPISODE 005  //  ELEVENLABS AUDIO NATIVE"
+    tb = draw.textbbox((0, 0), badge_txt, font=f_badge)
+    draw.rounded_rectangle([(80, 42), (80 + (tb[2] - tb[0]) + 44, 92)], radius=10, fill=(16, 36, 48), outline=(6, 182, 212), width=2)
+    draw.text((102, 54), badge_txt, fill=(34, 211, 238), font=f_badge)
 
     draw.text((80, 118), "DOCS TO AI PODCAST", fill=(255, 255, 255), font=f_hero)
     draw.text((80, 210), "TURN 40-PAGE PDFs INTO 2-SPEAKER AUDIO IN PYTHON", fill=(52, 211, 153), font=f_sub)
@@ -341,7 +376,7 @@ def draw_scene_1(out_png):
     draw.text((1070, 810), "Every spec becomes an engaging briefing", fill=(226, 232, 240), font=f_sub)
     img.save(out_png)
 
-def draw_scene_2_highlight(out_png, active_stage=1):
+def draw_scene_2_highlight(out_png, active_stage=1, glow_intensity=1.0):
     img = Image.new("RGB", (1920, 1080), (10, 15, 30))
     draw = ImageDraw.Draw(img)
     draw_base_chrome(draw, "SYSTEM ARCHITECTURE: 3-STAGE AUDIO PIPELINE", "PyMuPDF Parser -> Dialogue Structuring -> ElevenLabs Audio Native")
@@ -355,7 +390,10 @@ def draw_scene_2_highlight(out_png, active_stage=1):
     for i, (tag, title, bullets, col) in enumerate(stages):
         cx = 100 + i * 595
         is_active = (i + 1 == active_stage)
-        draw.rounded_rectangle([(cx, 240), (cx + card_w, 980)], radius=16, fill=(22, 34, 54) if is_active else (14, 20, 34), outline=col if is_active else (51, 65, 85), width=5 if is_active else 1)
+        if is_active:
+            draw = draw_glowing_rounded_rect(img, [(cx, 240), (cx + card_w, 980)], radius=16, fill_col=(22, 34, 54), border_col=col, glow_intensity=glow_intensity, border_width=4)
+        else:
+            draw.rounded_rectangle([(cx, 240), (cx + card_w, 980)], radius=16, fill=(14, 20, 34), outline=(51, 65, 85), width=1)
         draw.rounded_rectangle([(cx + 25, 270), (cx + card_w - 25, 340)], radius=10, fill=(30, 42, 65) if is_active else (20, 28, 48), outline=col, width=2 if is_active else 1)
         draw.text((cx + 40, 285), tag, fill=col, font=f_card_head)
         draw.text((cx + 40, 312), title, fill=(203, 213, 225), font=get_font(16))
@@ -370,7 +408,7 @@ def draw_scene_2_highlight(out_png, active_stage=1):
             draw_vector_arrow(draw, cx + card_w + 18, 560, length=45, color=col if is_active else (100, 116, 139), width=4 if is_active else 2)
     img.save(out_png)
 
-def draw_scene_3_highlight(out_png, focus_lines=("04", "05"), pointer_line="04", label="LINE 4"):
+def draw_scene_3_highlight(out_png, focus_lines=("04", "05"), pointer_line="04", label="LINE 4", glow_intensity=1.0):
     img = Image.new("RGB", (1920, 1080), (10, 15, 30))
     draw = ImageDraw.Draw(img)
     draw_base_chrome(draw, "PYTHON PDF & MARKDOWN PARSER SETUP", "Extracting Clean Semantic Chunks with PyMuPDF")
@@ -406,13 +444,18 @@ def draw_scene_3_highlight(out_png, focus_lines=("04", "05"), pointer_line="04",
         ("15", "    if current: chunks.append(current)", (251, 191, 36)),
         ("16", "    return chunks", (56, 189, 248)),
     ]
+    _, g_top, _, g_bot = f_code.getbbox("Ag_yq|")
+    pad_y = 11
+    for b_start, b_end in get_contiguous_line_blocks(code_lines, focus_lines):
+        y1 = 310 + b_start * 38 + g_top - pad_y
+        y2 = 310 + b_end * 38 + g_bot + pad_y
+        draw = draw_glowing_rounded_rect(img, [(606, y1), (1834, y2)], radius=10, fill_col=(18, 44, 60), border_col=(34, 211, 238), glow_intensity=glow_intensity, border_width=2)
+
     pointer_y = None
     for i, (num, text, col) in enumerate(code_lines):
         cy = 310 + i * 38
-        if num in focus_lines:
-            draw.rounded_rectangle([(604, cy - 3), (1836, cy + 33)], radius=6, fill=(18, 44, 60), outline=(34, 211, 238), width=2)
         if num == pointer_line:
-            pointer_y = cy + 15
+            pointer_y = cy + (g_top + g_bot) // 2
         draw.text((630, cy), num, fill=(148, 163, 184) if num in focus_lines else (71, 85, 105), font=f_code)
         draw.text((690, cy), text, fill=col, font=f_code)
 
@@ -420,7 +463,7 @@ def draw_scene_3_highlight(out_png, focus_lines=("04", "05"), pointer_line="04",
         draw_blickledare_pointer(draw, 600, pointer_y, label=label, color=(34, 211, 238))
     img.save(out_png)
 
-def draw_scene_4_highlight(out_png, focus_lines=("19", "20"), pointer_line="19", label="LINES 19-20"):
+def draw_scene_4_highlight(out_png, focus_lines=("19", "20"), pointer_line="19", label="LINES 19-20", glow_intensity=1.0):
     img = Image.new("RGB", (1920, 1080), (10, 15, 30))
     draw = ImageDraw.Draw(img)
     draw_base_chrome(draw, "ELEVENLABS AUDIO NATIVE SYNTHESIS", "Streaming Two-Speaker Podcast Audio Directly to Disk")
@@ -454,13 +497,18 @@ def draw_scene_4_highlight(out_png, focus_lines=("19", "20"), pointer_line="19",
         ("29", "        for chunk in audio_stream:", (251, 191, 36)),
         ("30", "            out_file.write(chunk)", (52, 211, 153)),
     ]
+    _, g_top, _, g_bot = f_code.getbbox("Ag_yq|")
+    pad_y = 11
+    for b_start, b_end in get_contiguous_line_blocks(code_lines, focus_lines):
+        y1 = 310 + b_start * 38 + g_top - pad_y
+        y2 = 310 + b_end * 38 + g_bot + pad_y
+        draw = draw_glowing_rounded_rect(img, [(606, y1), (1834, y2)], radius=10, fill_col=(16, 42, 34), border_col=(52, 211, 153), glow_intensity=glow_intensity, border_width=2)
+
     pointer_y = None
     for i, (num, text, col) in enumerate(code_lines):
         cy = 310 + i * 38
-        if num in focus_lines:
-            draw.rounded_rectangle([(604, cy - 3), (1836, cy + 33)], radius=6, fill=(16, 42, 34), outline=(52, 211, 153), width=2)
         if num == pointer_line:
-            pointer_y = cy + 15
+            pointer_y = cy + (g_top + g_bot) // 2
         draw.text((630, cy), num, fill=(148, 163, 184) if num in focus_lines else (71, 85, 105), font=f_code)
         draw.text((690, cy), text, fill=col, font=f_code)
 
@@ -560,8 +608,10 @@ def draw_short_frame(out_png):
     f_cta = get_font(30, bold=True)
 
     draw.rounded_rectangle([(60, 180), (width - 60, 430)], radius=20, fill=(14, 20, 34), outline=(6, 182, 212), width=3)
-    draw.rounded_rectangle([(100, 215), (510, 270)], radius=10, fill=(20, 36, 48), outline=(6, 182, 212), width=1)
-    draw.text((120, 230), "// 2026 AUDIO NATIVE BLUEPRINT", fill=(34, 211, 238), font=f_badge_top)
+    badge_txt = "// 2026 AUDIO NATIVE BLUEPRINT"
+    tb_s = draw.textbbox((0, 0), badge_txt, font=f_badge_top)
+    draw.rounded_rectangle([(100, 215), (100 + (tb_s[2] - tb_s[0]) + 44, 270)], radius=10, fill=(20, 36, 48), outline=(6, 182, 212), width=1)
+    draw.text((122, 229), badge_txt, fill=(34, 211, 238), font=f_badge_top)
     draw.text((100, 290), SHORT_SCRIPT["headline"], fill=(255, 255, 255), font=f_hero)
     draw.text((100, 360), SHORT_SCRIPT["sub"], fill=(52, 211, 153), font=f_sub)
 
@@ -603,10 +653,12 @@ def draw_short_frame(out_png):
         ("        )", (52, 211, 153)),
         ("        for b in stream: f.write(b)", (251, 191, 36)),
     ]
+    _, s_top, _, s_bot = f_code.getbbox("Ag_yq|")
+    y1_s = 1075 + 6 * 38 + s_top - 10
+    y2_s = 1075 + 11 * 38 + s_bot + 10
+    draw.rounded_rectangle([(68, y1_s), (width - 68, y2_s)], radius=10, fill=(18, 38, 52), outline=(34, 211, 238), width=2)
     for i, (line, col) in enumerate(code):
         cy = 1075 + i * 38
-        if i in (6, 7, 8, 9, 10, 11):
-            draw.rounded_rectangle([(68, cy - 3), (width - 68, cy + 33)], radius=4, fill=(18, 38, 52))
         draw.text((90, cy), line, fill=col, font=f_code)
 
     draw.rounded_rectangle([(60, 1620), (width - 60, 1840)], radius=20, fill=(16, 32, 28), outline=(16, 185, 129), width=2)
@@ -625,6 +677,35 @@ def make_still_segment(img_path, duration_sec, out_seg_path):
         out_seg_path
     ]
     subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+def make_pulsing_zoom_segment(render_fn, duration_sec, out_seg_path, tag="seg", zoom_amp=0.055, fx=0.5, fy=0.5):
+    """Renders a 30-frame (1.2s) breathing glow loop + smooth 1.00->1+zoom_amp->1.00 section zoom."""
+    pulse_dir = os.path.join(TMP_DIR, f"pulse_{tag}")
+    os.makedirs(pulse_dir, exist_ok=True)
+    num_cycle = 30
+    for i in range(num_cycle):
+        glow = 0.25 + 0.75 * 0.5 * (1.0 - math.cos(2.0 * math.pi * i / num_cycle))
+        render_fn(os.path.join(pulse_dir, f"p_{i:03d}.png"), glow)
+    cycle_mp4 = os.path.join(TMP_DIR, f"cycle_{tag}.mp4")
+    subprocess.run([
+        "ffmpeg", "-y", "-framerate", "25",
+        "-i", os.path.join(pulse_dir, "p_%03d.png"),
+        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "16",
+        cycle_mp4
+    ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+    vf_zoom = (
+        f"scale=w='trunc(iw*(1+{zoom_amp:.4f}*sin(PI*t/{duration_sec:.3f}))/2)*2':"
+        f"h='trunc(ih*(1+{zoom_amp:.4f}*sin(PI*t/{duration_sec:.3f}))/2)*2':eval=frame,"
+        f"crop=1920:1080:x='(iw-1920)*{fx:.3f}':y='(ih-1080)*{fy:.3f}'"
+    )
+    subprocess.run([
+        "ffmpeg", "-y", "-stream_loop", "-1", "-i", cycle_mp4,
+        "-vf", vf_zoom,
+        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "18",
+        "-t", f"{duration_sec:.3f}",
+        out_seg_path
+    ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 async def build_master_package():
     print("=" * 70)
@@ -717,34 +798,54 @@ async def build_master_package():
     make_still_segment(s1_png, max(1.0, durations[0] - 2.50 - BLEND_DUR), seg_s1)
     video_segments.append(seg_s1)
 
-    # Scene 2: Blend (0.48s) + 3 sub-stages
+    # Scene 2: Blend (0.48s) + 3 sub-stages with pulsing glow + section zoom
     blend_1 = os.path.join(TMP_DIR, "blend_01.mp4")
     create_blended_clip(s1_png, s2_p1_png, blend_1)
     video_segments.append(blend_1)
     s2_sub = max(2.0, (durations[1] - BLEND_DUR) / 3.0)
-    for p_idx, s2_img in enumerate([s2_p1_png, s2_p2_png, s2_p3_png]):
+    s2_fx = [0.18, 0.50, 0.82]
+    for p_idx in range(3):
         seg_p = os.path.join(TMP_DIR, f"seg_02_p{p_idx+1}.mp4")
-        make_still_segment(s2_img, s2_sub, seg_p)
+        stage_num = p_idx + 1
+        make_pulsing_zoom_segment(
+            lambda out_p, g, st=stage_num: draw_scene_2_highlight(out_p, active_stage=st, glow_intensity=g),
+            s2_sub, seg_p, tag=f"s2_p{stage_num}", zoom_amp=0.055, fx=s2_fx[p_idx], fy=0.55
+        )
         video_segments.append(seg_p)
 
-    # Scene 3: Blend (0.48s) + 3 timed pointer states (25% / 50% / 25%)
+    # Scene 3: Blend (0.48s) + 3 timed pointer states with unified glowing frame + section zoom
     blend_2 = os.path.join(TMP_DIR, "blend_02.mp4")
     create_blended_clip(s2_p3_png, s3_p1_png, blend_2)
     video_segments.append(blend_2)
     s3_body = max(6.0, durations[2] - BLEND_DUR)
-    for idx_s3, (img_s3, frac) in enumerate([(s3_p1_png, 0.28), (s3_p2_png, 0.47), (s3_p3_png, 0.25)]):
+    s3_specs = [
+        (("04", "05"), "04", "LINE 4", 0.28, 0.42),
+        (("07", "08", "09", "10", "11", "12"), "09", "LINES 7-12", 0.47, 0.56),
+        (("15", "16"), "16", "LINE 16", 0.25, 0.72),
+    ]
+    for idx_s3, (flines, pline, lbl, frac, fy_val) in enumerate(s3_specs):
         seg_s3 = os.path.join(TMP_DIR, f"seg_03_p{idx_s3+1}.mp4")
-        make_still_segment(img_s3, s3_body * frac, seg_s3)
+        make_pulsing_zoom_segment(
+            lambda out_p, g, fl=flines, pl=pline, lb=lbl: draw_scene_3_highlight(out_p, focus_lines=fl, pointer_line=pl, label=lb, glow_intensity=g),
+            s3_body * frac, seg_s3, tag=f"s3_p{idx_s3+1}", zoom_amp=0.06, fx=0.72, fy=fy_val
+        )
         video_segments.append(seg_s3)
 
-    # Scene 4: Blend (0.48s) + 2 distinct pointer states (40% / 60%)
+    # Scene 4: Blend (0.48s) + 2 distinct pointer states with unified glowing frame + section zoom
     blend_3 = os.path.join(TMP_DIR, "blend_03.mp4")
     create_blended_clip(s3_p3_png, s4_p1_png, blend_3)
     video_segments.append(blend_3)
     s4_body = max(4.0, durations[3] - BLEND_DUR)
-    for idx_s4, (img_s4, frac) in enumerate([(s4_p1_png, 0.42), (s4_p2_png, 0.58)]):
+    s4_specs = [
+        (("18", "19", "20"), "20", "LINES 19-20", 0.42, 0.42),
+        (("22", "23", "24", "25", "26", "27", "28", "29", "30"), "24", "LINES 22-30", 0.58, 0.65),
+    ]
+    for idx_s4, (flines, pline, lbl, frac, fy_val) in enumerate(s4_specs):
         seg_s4 = os.path.join(TMP_DIR, f"seg_04_p{idx_s4+1}.mp4")
-        make_still_segment(img_s4, s4_body * frac, seg_s4)
+        make_pulsing_zoom_segment(
+            lambda out_p, g, fl=flines, pl=pline, lb=lbl: draw_scene_4_highlight(out_p, focus_lines=fl, pointer_line=pl, label=lb, glow_intensity=g),
+            s4_body * frac, seg_s4, tag=f"s4_p{idx_s4+1}", zoom_amp=0.06, fx=0.72, fy=fy_val
+        )
         video_segments.append(seg_s4)
 
     # Scene 5: Blend (0.48s) + 2 visual focus states

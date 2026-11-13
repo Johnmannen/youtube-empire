@@ -9,8 +9,9 @@
 | Long Video | YUV420p Color Standard | **PASS** | Pixel format: yuv420p |
 | Long Video | Thumbnail Intro (0.0-2.5s) | **PASS** | Verified frame: docs/assets\audit_frames\frame_01_thumbnail.png |
 | Long Video | Crossfade Transition (0.5s) | **PASS** | Verified blend frame: docs/assets\audit_frames\frame_02_transition.png |
-| Long Video | Architecture Highlight Sync | **PASS** | Stage diff: 6.42 (>0.35 required) |
-| Long Video | IDE Code Highlight Motion | **PASS** | IDE diffs s3=3.43, s4=14.55 (moving=3/3) |
+| Long Video | Architecture Highlight Sync | **PASS** | Stage diff: 8.38 (>0.35 required) |
+| Long Video | IDE Code Highlight Motion | **PASS** | IDE diffs s3=8.07, s4=15.15 (moving=3/3) |
+| Long Video | Intra-Scene Glow & Zoom Motion | **PASS** | 0.6s intra-phase diffs: s2=0.83, s3=0.69 (>0.08 required) |
 | Long Video | Audio Tail No Cutoff | **PASS** | Last 0.35s mean volume: -91.0 dB (<-32 dB required) |
 | Short Video | Duration Window (15-20s) | **PASS** | Duration: 17.80s |
 | Short Video | 9:16 Vertical Aspect Ratio | **PASS** | 1080x1920 |
@@ -27,7 +28,7 @@
 | Metadata | No Duplicate Link Stacks | **PASS** | Zero duplicated links/callout stacks in description |
 | Dashboard | Description HTML No Slop | **PASS** | Affiliate link appears 1 times in textarea (<= 2 allowed) |
 | Dashboard | Shorts Video Poster Attribute | **PASS** | Checks poster="assets/short_preview_005.png" in index.html |
-| Graphics | Thumbnail Visual Uniqueness | **PASS** | Mean diff vs thumb_004.png: 15.36 (>=12.0 required) |
+| Graphics | Thumbnail Visual Uniqueness | **PASS** | Mean diff vs thumb_004.png: 15.37 (>=12.0 required) |
 
 ---
 *Audit executed by Autonomous Quality & Compliance Auditor Agent (Antigravity 2026).*

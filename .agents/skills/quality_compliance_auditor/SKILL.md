@@ -58,3 +58,5 @@ Skriptet genererar automatiskt kontrollbilder från nyckelpunkter (thumbnail-sta
 * **Dynamic Highlight & Pointer Motion:** Verifiera via pixel-diff att kodrader och arkitekturstadier faktiskt rör sig / byter markering med pil och fokusram under scenen (inga frusna IDE-scener).
 * **Shorts Preview Poster:** Verifiera att `docs/assets/short_preview_<id>.png` existerar och är kopplad via `poster=` i `docs/index.html`.
 * **Thumbnail Visual Uniqueness:** Verifiera att varje avsnitts thumbnail skiljer sig visuellt från föregående avsnitt (`mean diff >= 12.0`) och saknar textklippning.
+* **Intra-Scene Glow & Zoom Motion:** Verifiera att det faktiskt sker visuell rörelse *inom* aktiva highlight-block (pulserande glöd och/eller mjuk sektions-zoom) genom att jämföra två bildrutor med 0.60 sekunders mellanrum inuti samma fokusfas (`mean diff > 0.08`).
+* **Unified Multi-Line Framing & Padding:** Flera sammanhängande kodrader ska ramas in av **en sammanhållen fokusram** (ej staplade rader) med generös, symmetrisk luft ovanför och under texten samt dynamisk badge-padding utan överlappning.

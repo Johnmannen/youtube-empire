@@ -162,6 +162,26 @@ def audit_package(pkg_id, base_dir):
             add_check("Long Video", "Architecture Highlight Sync", ok_s2 and d_s2 > 0.35, f"Stage diff: {d_s2:.2f} (>0.35 required)")
             add_check("Long Video", "IDE Code Highlight Motion", ok_s3 and ok_s4 and moving_scenes >= 2, f"IDE diffs s3={d_s3:.2f}, s4={d_s4:.2f} (moving={moving_scenes}/3)")
 
+            # Check 25: Continuous Intra-Scene Visual Motion (glow pulse / section zoom within a single highlight phase)
+            f_intra_s2_a = os.path.join(audit_dir, "frame_intra_s2_a.png")
+            f_intra_s2_b = os.path.join(audit_dir, "frame_intra_s2_b.png")
+            f_intra_s3_a = os.path.join(audit_dir, "frame_intra_s3_a.png")
+            f_intra_s3_b = os.path.join(audit_dir, "frame_intra_s3_b.png")
+            ok_intra = (
+                extract_frame(long_file, "00:01:03.00", f_intra_s2_a)
+                and extract_frame(long_file, "00:01:03.60", f_intra_s2_b)
+                and extract_frame(long_file, "00:02:03.00", f_intra_s3_a)
+                and extract_frame(long_file, "00:02:03.60", f_intra_s3_b)
+            )
+            d_intra_s2 = frames_mean_diff(f_intra_s2_a, f_intra_s2_b)
+            d_intra_s3 = frames_mean_diff(f_intra_s3_a, f_intra_s3_b)
+            add_check(
+                "Long Video",
+                "Intra-Scene Glow & Zoom Motion",
+                ok_intra and d_intra_s2 > 0.08 and d_intra_s3 > 0.08,
+                f"0.6s intra-phase diffs: s2={d_intra_s2:.2f}, s3={d_intra_s3:.2f} (>0.08 required)"
+            )
+
             # Check 21: Audio Tail Silence (prevents mid-sentence cutoff)
             tail_db = get_audio_tail_mean_db(long_file, 0.35)
             add_check("Long Video", "Audio Tail No Cutoff", tail_db < -32.0, f"Last 0.35s mean volume: {tail_db:.1f} dB (<-32 dB required)")

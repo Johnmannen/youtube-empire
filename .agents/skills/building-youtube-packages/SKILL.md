@@ -45,10 +45,10 @@ Executes an end-to-end, zero-cost cloud production pipeline that creates complet
 3. **Arkitektur-teaser inom 15 sekunder:**
    - Visa snabbt terminalen, systemöversikten eller koden så att tittaren ser exakt vad de kommer att behärska vid videons slut.
 4. **Visuell dynamik och tidsstyrd highlighting (Synkroniserad blickledare):**
-   - När berättarrösten nämner en specifik kodrad (t.ex. *"Look at line seven"* eller *"On line eighteen"*), ska den raden omedelbart framhävas med en distinkt, mjukt glödande fokusram eller en subtil vektor-pil.
-   - **Syfte:** Eliminera kognitiv söktid för tittaren så att ögat dras direkt till raden i samma ögonblick som den uttalas.
-   - Balans: Markeringen ska vara ren och distinkt, aldrig överdriven eller flimrig.
-   - Regelbundna in-/utzoomningar, rörliga neon-pilar och progressiva nätverkspulser för att förhindra blicktrötthet.
+   - När berättarrösten nämner en specifik kodrad eller ett kodblock (t.ex. *"Look at lines seven through twelve"*), ska hela det aktuella blocket ramas in som **en sammanhållen ram** (inte separata staplade boxar per rad) med **symmetrisk och generös luft** (minst 10–12 px ovanför högsta versal/ascender och lika mycket under lägsta descender — text får aldrig snudda ramen).
+   - **Levande glöd & puls:** Aktiv fokusram och vektorpil ska ha en **subtil, mjukt pulserande/andas-liknande neon-glöd** (inte statisk och inte skrikande/flimrig) som fångar blicken och flyttar vidare till nästa block när berättarrösten byter fokus.
+   - **Sektions-zoom (Zoom In -> Zoom Out):** När berättarrösten fördjupar sig i en specifik kodsektion eller arkitekturkolumn ska kameran mjukt zooma in mot den aktiva sektionen (`1.00x -> 1.06x`) och mjukt zooma ut till `1.00x` innan nästa sektion eller övergång, för att förhindra statisk blicktrötthet.
+   - **Badge-marginaler:** Alla pill-badges och etiketter måste beräkna bredd/höjd dynamiskt från textens bounding box med generös padding så att text aldrig klipps eller snuddar ramar.
 5. **Mjuka övergångar mellan alla scener:**
    - 0.4–0.5 sekunders mjuk crossfade/dissolve mellan varje scen. Inga abrupta bildklipp.
 6. **Organiska muntliga hänvisningar (Oral CTA):**
