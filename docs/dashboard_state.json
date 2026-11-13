@@ -13,7 +13,7 @@
   },
   "kpis": {
     "channel_age": "Day 1 (Launch)",
-    "videos_produced": "4 (6 publicerade live på kanalen)",
+    "videos_produced": "4 (6 publicerade live p\u00e5 kanalen)",
     "views_30d": "655 visningar (6 videor totalt)",
     "views_growth": "Active Launch",
     "affiliate_clicks": "Active",
@@ -76,86 +76,50 @@
       "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/003-voice-cloning-video-dubbing",
       "affiliate": "ElevenLabs AI Dubbing SDK (https://try.elevenlabs.io/agentic-dubbing)",
       "thumbnail": "assets/thumb_003.png"
+    },
+    {
+      "package_id": "004",
+      "title": "Build an AI Voice Phone Agent in Python (ElevenLabs + Twilio) [EPISODE 004]",
+      "status": "PUBLISHED_LIVE",
+      "published_date": "2026-11-13",
+      "format": "16:9 Long",
+      "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/004-voice-phone-agent",
+      "affiliate": "https://try.elevenlabs.io/agentic-telephony",
+      "thumbnail": "assets/thumb_004.png"
     }
   ],
   "current_package": {
-    "package_id": "004",
-    "title": "Build an AI Voice Phone Agent in Python (ElevenLabs + Twilio) [EPISODE 004]",
-    "alternative_titles": [
-      "Replace Legacy IVR: Sub-Second Voice AI Phone Agent",
-      "Build a Real-Time Voice Phone Agent with ElevenLabs & Twilio",
-      "Kill Phone Menus Forever: Sub-400ms Python Telephony Agent"
-    ],
-    "hook_2s": "Legacy IVR phone menus are dead. Build a sub-400ms conversational AI voice agent in Python.",
-    "duration": "06:41",
+    "package_id": "005",
+    "title": "Turn Any Text Document into Audio Podcasts in Python (ElevenLabs Audio Native) [EPISODE 005]",
     "category_id": "28",
     "category_name": "Science & Technology",
     "altered_content": false,
     "c2pa_status": "VERIFIED_COMPLIANT_2026",
-    "target_audience": "Developers, Full-Stack Engineers, AI Founders, Support Ops",
     "tags": [
-      "voice ai",
-      "elevenlabs",
-      "twilio",
-      "python",
-      "fastapi",
-      "conversational ai",
-      "telephony",
-      "websockets",
-      "agentic stack",
-      "phone agent"
+      "ElevenLabs Audio Native",
+      "Python PDF to Podcast",
+      "PyMuPDF",
+      "AI Podcast Generator",
+      "Developer Documentation AI"
     ],
-    "timestamps": [
-      {
-        "time": "00:00",
-        "title": "KILL LEGACY IVR PHONE MENUS FOREVER"
-      },
-      {
-        "time": "00:58",
-        "title": "SYSTEM ARCHITECTURE: FULL-DUPLEX PHONE BRIDGE"
-      },
-      {
-        "time": "02:18",
-        "title": "TWILIO WEBHOOK & FASTAPI WEBSOCKET BRIDGE"
-      },
-      {
-        "time": "03:28",
-        "title": "LIVE DATABASE TOOL CALLING & CRM ACTIONS"
-      },
-      {
-        "time": "04:22",
-        "title": "LATENCY PROFILING & PACKET BENCHMARKS"
-      },
-      {
-        "time": "05:08",
-        "title": "ENTERPRISE CALL CENTER ECONOMICS & ROI"
-      },
-      {
-        "time": "05:48",
-        "title": "GITHUB BLUEPRINT, FREE TRIAL & NEXT EPISODE"
-      }
-    ],
-    "affiliate_placeholders": [
-      {
-        "tool": "ElevenLabs Conversational Telephony & Voice AI",
-        "benefit": "Sub-400ms conversational telephony & real-time WebSocket voice agents",
-        "live_url": "https://try.elevenlabs.io/agentic-telephony",
-        "commission_rate": "22% Recurring Commission (PartnerStack)"
-      }
-    ],
-    "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/004-voice-phone-agent",
+    "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library",
     "studio_upload_url": "https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg",
-    "description": "🎁 [FREE TRIAL] Try ElevenLabs Conversational Voice AI:\n👉 https://try.elevenlabs.io/agentic-telephony (Affiliate Partner Link)\n\n🚀 [SOURCE CODE] Download Python Telephony Scripts & FastAPI Blueprint:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/004-voice-phone-agent\n\n📚 [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\nLegacy IVR phone menus are dead in enterprise B2B. Forcing high-value customers to dial through press one for sales and press two for support destroys retention and bleeds thousands of dollars on human tier-one call centers.\n\nIn this video, we build an autonomous AI voice phone agent in Python using ElevenLabs Conversational AI and Twilio SIP Media Streams. Our agent answers real inbound telephone calls with sub-400ms full-duplex latency, looks up live customer records in PostgreSQL, and schedules appointments on the fly.\n\n⏱️ TIMESTAMPS:\n00:00 - KILL LEGACY IVR PHONE MENUS FOREVER\n00:58 - SYSTEM ARCHITECTURE: FULL-DUPLEX PHONE BRIDGE\n02:18 - TWILIO WEBHOOK & FASTAPI WEBSOCKET BRIDGE\n03:28 - LIVE DATABASE TOOL CALLING & CRM ACTIONS\n04:22 - LATENCY PROFILING & PACKET BENCHMARKS\n05:08 - ENTERPRISE CALL CENTER ECONOMICS & ROI\n05:48 - GITHUB BLUEPRINT, FREE TRIAL & NEXT EPISODE\n\n🛠️ ENTERPRISE TOOLS (VERIFIED IN SANDBOX):\n👉 Try ElevenLabs Conversational Telephony: https://try.elevenlabs.io/agentic-telephony\n\n⚖️ FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n#VoiceAI #ElevenLabs #Twilio #Python #FastAPI #Telephony #ConversationalAI #AIAgents",
-    "pinned_comment": "📌 Try ElevenLabs Conversational Telephony & Voice AI Free:\n👉 https://try.elevenlabs.io/agentic-telephony\n\n💻 Download the complete FastAPI WebSocket script & database schemas on GitHub above!\n💬 Question: What phone workflows or call center tasks do you want your AI agents to handle first? Drop them below!",
+    "description": "\ud83c\udf81 [FREE TRIAL] Try ElevenLabs Audio Native & Voice AI:\n\ud83d\udc49 https://try.elevenlabs.io/agentic-reader (Affiliate Partner Link)\n\n\ud83d\ude80 [SOURCE CODE] Download Python Document-to-Podcast Scripts:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/005-doc-to-podcast\n\n\ud83d\udcda [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library\n\nEngineers do not read 40-page technical manuals. In this video, we build an automated document-to-podcast pipeline in Python using PyMuPDF and the ElevenLabs Audio Native API.\n\n\u23f1\ufe0f TIMESTAMPS:\n00:00 - STOP READING 40-PAGE MANUALS\n00:52 - SYSTEM ARCHITECTURE: 3-STAGE AUDIO PIPELINE\n01:58 - PYTHON PDF & MARKDOWN PARSER SETUP\n02:48 - ELEVENLABS AUDIO NATIVE SYNTHESIS\n03:35 - AUDIO QUALITY & DEVELOPER RETENTION\n04:12 - ENTERPRISE DOCUMENTATION ROI\n04:48 - GITHUB BLUEPRINT, FREE TRIAL & NEXT EPISODE\n\n\u2696\ufe0f FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you.\n\n#AudioNative #ElevenLabs #Python #PyMuPDF #PodcastAI #AIAgents",
+    "pinned_comment": "\ud83d\udccc Try ElevenLabs Audio Native Free:\n\ud83d\udc49 https://try.elevenlabs.io/agentic-reader\n\n\ud83d\udcbb Download the complete Python script on GitHub: https://github.com/Johnmannen/Agentic-Stack-Library",
     "shorts_metadata": {
-      "title": "Sub-400ms AI Phone Agent in Python 🤯 #Shorts",
-      "description": "Replace legacy 'press 1' phone trees with sub-400ms conversational voice AI in Python! 🚀\n\n🎁 [FREE TRIAL] Try ElevenLabs Conversational Voice:\n👉 https://try.elevenlabs.io/agentic-telephony\n\n📺 Full 6-Min In-Depth Architecture Tutorial:\n👉 Watch Episode #004 on our channel!\n\n💻 Source Code & Telephony Scripts:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\n#Shorts #VoiceAI #ElevenLabs #Twilio #Python #FastAPI #AI",
-      "pinned_comment": "📌 Try ElevenLabs Conversational Voice Free:\n👉 https://try.elevenlabs.io/agentic-telephony\n\n📺 Watch the full 6-minute deep dive tutorial on our channel for complete architecture & code!",
-      "tags": "shorts, voice ai python, elevenlabs telephony, twilio media streams, python tutorial, conversational ai, agentic stack"
+      "title": "Turn 40-Page PDFs into AI Podcasts in Python \ud83e\udd2f #Shorts",
+      "description": "Convert any technical PDF or Markdown doc into a two-speaker AI podcast in 40 seconds! \ud83d\ude80\n\n\u2b50 Free ElevenLabs trial: https://try.elevenlabs.io/agentic-reader\n\ud83d\udcbb Code on GitHub: https://github.com/Johnmannen/Agentic-Stack-Library\n\n#Shorts #ElevenLabs #Python #AI #Podcast",
+      "pinned_comment": "Full tutorial & Python blueprint on our channel! Try ElevenLabs free: https://try.elevenlabs.io/agentic-reader",
+      "tags": [
+        "Shorts",
+        "ElevenLabs",
+        "Python",
+        "AI Podcast"
+      ]
     },
-    "long_video_file": "assets/video_004_long.mp4",
-    "short_video_file": "assets/video_004_short.mp4",
-    "thumbnail_file": "assets/thumb_004.png"
+    "long_video_file": "assets/video_005_long.mp4",
+    "short_video_file": "assets/video_005_short.mp4",
+    "thumbnail_file": "assets/thumb_005.png"
   },
   "pitches": [
     {
@@ -171,7 +135,7 @@
       "affiliate_url": "https://try.elevenlabs.io/agentic-reader",
       "hook": "Engineers do not read 40-page documentation. Here is how to turn technical docs into audio podcasts automatically.",
       "code_demo": "ElevenLabs Audio Native API + Python Markdown Parser",
-      "status": "PITCH_READY_REVIEW"
+      "status": "COMPLETED_AND_READY"
     },
     {
       "episode_id": "006",
@@ -253,7 +217,7 @@
         "video_id": "wjgj1w1bTVs",
         "label": "Short (wjgj1w)",
         "category": "Short / Reel",
-        "title": "Dub ANY Video into 29 Languages in Python 🤯 #shorts",
+        "title": "Dub ANY Video into 29 Languages in Python \ud83e\udd2f #shorts",
         "published_at": "2026-11-12",
         "views": 32,
         "comments": 1,
