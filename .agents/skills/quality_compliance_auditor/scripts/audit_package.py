@@ -182,6 +182,25 @@ def audit_package(pkg_id, base_dir):
                 f"0.6s intra-phase diffs: s2={d_intra_s2:.2f}, s3={d_intra_s3:.2f} (>0.08 required)"
             )
 
+            # Check 26: Active vs Inactive Box Contrast (inactive background cards must be dimmed & non-distracting)
+            try:
+                with Image.open(f_s2_early).convert("RGB") as s2_img:
+                    left_crop = s2_img.crop((100, 240, 610, 980))
+                    right_crop = s2_img.crop((1290, 240, 1800, 980))
+                    l_vals = list(left_crop.getdata())
+                    r_vals = list(right_crop.getdata())
+                    active_luma = sum(r + g + b for r, g, b in l_vals) / (3.0 * len(l_vals))
+                    inactive_luma = sum(r + g + b for r, g, b in r_vals) / (3.0 * len(r_vals))
+                    luma_gap = active_luma - inactive_luma
+            except Exception:
+                active_luma, inactive_luma, luma_gap = 0.0, 0.0, 0.0
+            add_check(
+                "Long Video",
+                "Active vs Inactive Box Contrast",
+                luma_gap >= 8.0,
+                f"Active card luma={active_luma:.1f} vs inactive={inactive_luma:.1f} (gap={luma_gap:.1f} >= 8.0 required)"
+            )
+
             # Check 21: Audio Tail Silence (prevents mid-sentence cutoff)
             tail_db = get_audio_tail_mean_db(long_file, 0.35)
             add_check("Long Video", "Audio Tail No Cutoff", tail_db < -32.0, f"Last 0.35s mean volume: {tail_db:.1f} dB (<-32 dB required)")

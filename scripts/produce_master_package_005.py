@@ -391,21 +391,25 @@ def draw_scene_2_highlight(out_png, active_stage=1, glow_intensity=1.0):
         cx = 100 + i * 595
         is_active = (i + 1 == active_stage)
         if is_active:
-            draw = draw_glowing_rounded_rect(img, [(cx, 240), (cx + card_w, 980)], radius=16, fill_col=(22, 34, 54), border_col=col, glow_intensity=glow_intensity, border_width=4)
-        else:
-            draw.rounded_rectangle([(cx, 240), (cx + card_w, 980)], radius=16, fill=(14, 20, 34), outline=(51, 65, 85), width=1)
-        draw.rounded_rectangle([(cx + 25, 270), (cx + card_w - 25, 340)], radius=10, fill=(30, 42, 65) if is_active else (20, 28, 48), outline=col, width=2 if is_active else 1)
-        draw.text((cx + 40, 285), tag, fill=col, font=f_card_head)
-        draw.text((cx + 40, 312), title, fill=(203, 213, 225), font=get_font(16))
-        if is_active:
+            draw = draw_glowing_rounded_rect(img, [(cx, 240), (cx + card_w, 980)], radius=16, fill_col=(24, 38, 62), border_col=col, glow_intensity=glow_intensity, border_width=4)
+            draw.rounded_rectangle([(cx + 25, 270), (cx + card_w - 25, 340)], radius=10, fill=(32, 48, 76), outline=col, width=2)
+            draw.text((cx + 40, 285), tag, fill=col, font=f_card_head)
+            draw.text((cx + 40, 312), title, fill=(226, 232, 240), font=get_font(16))
             draw.rounded_rectangle([(cx + card_w - 145, 282), (cx + card_w - 40, 318)], radius=6, fill=(16, 185, 129), outline=(52, 211, 153), width=2)
             draw.text((cx + card_w - 135, 292), "ACTIVE NOW", fill=(255, 255, 255), font=get_font(13, bold=True))
-            # Top pointer arrow indicating active focus
             draw.polygon([(cx + card_w // 2, 232), (cx + card_w // 2 - 14, 210), (cx + card_w // 2 + 14, 210)], fill=col)
-        for j, b in enumerate(bullets):
-            draw.text((cx + 35, 380 + j * 65), b, fill=(255, 255, 255) if is_active else (148, 163, 184), font=f_sub)
+            for j, b in enumerate(bullets):
+                draw.text((cx + 35, 380 + j * 65), b, fill=(255, 255, 255), font=f_sub)
+        else:
+            # Inactive background cards stay strictly calm, dimmed, and 2px-bordered (never flickering)
+            draw.rounded_rectangle([(cx, 240), (cx + card_w, 980)], radius=16, fill=(11, 16, 28), outline=(36, 46, 66), width=2)
+            draw.rounded_rectangle([(cx + 25, 270), (cx + card_w - 25, 340)], radius=10, fill=(15, 21, 36), outline=(42, 54, 76), width=2)
+            draw.text((cx + 40, 285), tag, fill=(95, 110, 132), font=f_card_head)
+            draw.text((cx + 40, 312), title, fill=(110, 122, 142), font=get_font(16))
+            for j, b in enumerate(bullets):
+                draw.text((cx + 35, 380 + j * 65), b, fill=(85, 98, 118), font=f_sub)
         if i < 2:
-            draw_vector_arrow(draw, cx + card_w + 18, 560, length=45, color=col if is_active else (100, 116, 139), width=4 if is_active else 2)
+            draw_vector_arrow(draw, cx + card_w + 18, 560, length=45, color=col if is_active else (60, 72, 92), width=4 if is_active else 2)
     img.save(out_png)
 
 def draw_scene_3_highlight(out_png, focus_lines=("04", "05"), pointer_line="04", label="LINE 4", glow_intensity=1.0):
@@ -678,31 +682,31 @@ def make_still_segment(img_path, duration_sec, out_seg_path):
     ]
     subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-def make_pulsing_zoom_segment(render_fn, duration_sec, out_seg_path, tag="seg", zoom_amp=0.055, fx=0.5, fy=0.5):
-    """Renders a 30-frame (1.2s) breathing glow loop + smooth 1.00->1+zoom_amp->1.00 section zoom."""
+def make_pulsing_zoom_segment(render_fn, duration_sec, out_seg_path, tag="seg", zoom_amp=0.045, fx=0.5, fy=0.5):
+    """Renders a calm 60-frame (2.4s) soft breathing glow loop (lossless qp 0) + smooth lanczos section zoom."""
     pulse_dir = os.path.join(TMP_DIR, f"pulse_{tag}")
     os.makedirs(pulse_dir, exist_ok=True)
-    num_cycle = 30
+    num_cycle = 60
     for i in range(num_cycle):
-        glow = 0.25 + 0.75 * 0.5 * (1.0 - math.cos(2.0 * math.pi * i / num_cycle))
+        glow = 0.55 + 0.40 * 0.5 * (1.0 - math.cos(2.0 * math.pi * i / num_cycle))
         render_fn(os.path.join(pulse_dir, f"p_{i:03d}.png"), glow)
     cycle_mp4 = os.path.join(TMP_DIR, f"cycle_{tag}.mp4")
     subprocess.run([
         "ffmpeg", "-y", "-framerate", "25",
         "-i", os.path.join(pulse_dir, "p_%03d.png"),
-        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "16",
+        "-c:v", "libx264", "-qp", "0", "-pix_fmt", "yuv420p",
         cycle_mp4
     ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     vf_zoom = (
         f"scale=w='trunc(iw*(1+{zoom_amp:.4f}*sin(PI*t/{duration_sec:.3f}))/2)*2':"
-        f"h='trunc(ih*(1+{zoom_amp:.4f}*sin(PI*t/{duration_sec:.3f}))/2)*2':eval=frame,"
+        f"h='trunc(ih*(1+{zoom_amp:.4f}*sin(PI*t/{duration_sec:.3f}))/2)*2':eval=frame:flags=lanczos,"
         f"crop=1920:1080:x='(iw-1920)*{fx:.3f}':y='(ih-1080)*{fy:.3f}'"
     )
     subprocess.run([
         "ffmpeg", "-y", "-stream_loop", "-1", "-i", cycle_mp4,
         "-vf", vf_zoom,
-        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "18",
+        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "16",
         "-t", f"{duration_sec:.3f}",
         out_seg_path
     ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
