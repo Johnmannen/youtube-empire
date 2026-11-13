@@ -51,3 +51,10 @@ python .agents/skills/quality_compliance_auditor/scripts/audit_package.py --pack
 ```
 
 Skriptet genererar automatiskt kontrollbilder från nyckelpunkter (thumbnail-start, övergångar, safe-zones) och skapar en sammanfattande granskningsrapport.
+
+
+### Utökade Revisionskrav (Synkroniserade efter Episode #005-granskningen)
+* **Audio Tail / No Mid-Sentence Cutoff:** Kontrollera att sista `0.35s` av både långvideo och Short klingar ut i tystnad (`< -32 dB`) så att ingen mening någonsin klipps av.
+* **Dynamic Highlight & Pointer Motion:** Verifiera via pixel-diff att kodrader och arkitekturstadier faktiskt rör sig / byter markering med pil och fokusram under scenen (inga frusna IDE-scener).
+* **Shorts Preview Poster:** Verifiera att `docs/assets/short_preview_<id>.png` existerar och är kopplad via `poster=` i `docs/index.html`.
+* **Thumbnail Visual Uniqueness:** Verifiera att varje avsnitts thumbnail skiljer sig visuellt från föregående avsnitt (`mean diff >= 12.0`) och saknar textklippning.

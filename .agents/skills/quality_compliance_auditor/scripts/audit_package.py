@@ -7,10 +7,11 @@ Visual Motion/Highlighting, Safe Zones, and Metadata against Master Manifest 202
 
 import os
 import sys
+import re
 import json
 import argparse
 import subprocess
-from PIL import Image
+from PIL import Image, ImageChops, ImageStat
 
 AFFILIATE_REGISTRY = {
     "001": "https://try.elevenlabs.io/agentic-voice",
@@ -46,6 +47,27 @@ def extract_frame(video_path, time_str, out_png):
         return os.path.exists(out_png) and os.path.getsize(out_png) > 1000
     except Exception:
         return False
+
+def get_audio_tail_mean_db(video_path, tail_sec=0.35):
+    cmd = [
+        "ffmpeg", "-sseof", f"-{tail_sec}",
+        "-i", video_path,
+        "-af", "volumedetect",
+        "-f", "null", "-"
+    ]
+    res = subprocess.run(cmd, capture_output=True, text=True)
+    m = re.search(r"mean_volume:\s*([-\d\.]+)\s*dB", res.stderr)
+    if m:
+        return float(m.group(1))
+    return -91.0
+
+def frames_mean_diff(img_a_path, img_b_path):
+    if not (os.path.exists(img_a_path) and os.path.exists(img_b_path)):
+        return 0.0
+    im_a = Image.open(img_a_path).convert("L").resize((160, 90))
+    im_b = Image.open(img_b_path).convert("L").resize((160, 90))
+    diff = ImageChops.difference(im_a, im_b)
+    return ImageStat.Stat(diff).mean[0]
 
 def audit_package(pkg_id, base_dir):
     print("=" * 75)
@@ -120,18 +142,29 @@ def audit_package(pkg_id, base_dir):
             add_check("Long Video", "Thumbnail Intro (0.0-2.5s)", ok_thumb, f"Verified frame: {f_thumb}")
             add_check("Long Video", "Crossfade Transition (0.5s)", ok_trans, f"Verified blend frame: {f_trans}")
 
-            # Punkt 4: Check Timed Highlighting Frames
+            # Punkt 4: Check Timed Highlighting & Real Motion Diff (no frozen scenes)
+            f_s2_early = os.path.join(audit_dir, "frame_s2_early.png")
             f_s2_hl = os.path.join(audit_dir, "frame_s2_highlight.png")
+            f_s3_early = os.path.join(audit_dir, "frame_s3_early.png")
             f_s3_hl = os.path.join(audit_dir, "frame_s3_highlight.png")
+            f_s4_early = os.path.join(audit_dir, "frame_s4_early.png")
             f_s4_hl = os.path.join(audit_dir, "frame_s4_highlight.png")
 
-            ok_s2 = extract_frame(long_file, "00:01:25", f_s2_hl)
-            ok_s3 = extract_frame(long_file, "00:03:05", f_s3_hl)
-            ok_s4 = extract_frame(long_file, "00:04:10", f_s4_hl)
+            ok_s2 = extract_frame(long_file, "00:01:02", f_s2_early) and extract_frame(long_file, "00:01:28", f_s2_hl)
+            ok_s3 = extract_frame(long_file, "00:02:02", f_s3_early) and extract_frame(long_file, "00:02:32", f_s3_hl)
+            ok_s4 = extract_frame(long_file, "00:02:55", f_s4_early) and extract_frame(long_file, "00:03:20", f_s4_hl)
 
-            add_check("Long Video", "Architecture Highlight Sync", ok_s2, "Stage 2 active highlighting verified")
-            add_check("Long Video", "IDE Ingestion Highlight Sync", ok_s3, "Lines 7-13 active focus box verified")
-            add_check("Long Video", "IDE Polling Highlight Sync", ok_s4, "Lines 18-23 active focus box verified")
+            d_s2 = frames_mean_diff(f_s2_early, f_s2_hl)
+            d_s3 = frames_mean_diff(f_s3_early, f_s3_hl)
+            d_s4 = frames_mean_diff(f_s4_early, f_s4_hl)
+            moving_scenes = sum(1 for d in (d_s2, d_s3, d_s4) if d > 0.35)
+
+            add_check("Long Video", "Architecture Highlight Sync", ok_s2 and d_s2 > 0.35, f"Stage diff: {d_s2:.2f} (>0.35 required)")
+            add_check("Long Video", "IDE Code Highlight Motion", ok_s3 and ok_s4 and moving_scenes >= 2, f"IDE diffs s3={d_s3:.2f}, s4={d_s4:.2f} (moving={moving_scenes}/3)")
+
+            # Check 21: Audio Tail Silence (prevents mid-sentence cutoff)
+            tail_db = get_audio_tail_mean_db(long_file, 0.35)
+            add_check("Long Video", "Audio Tail No Cutoff", tail_db < -32.0, f"Last 0.35s mean volume: {tail_db:.1f} dB (<-32 dB required)")
 
     # ==============================================================================
     # 2. PUNKT 7: 9:16 SHORTS CHECKS
@@ -162,6 +195,12 @@ def audit_package(pkg_id, base_dir):
             f_short = os.path.join(audit_dir, "frame_short_01.png")
             extract_frame(short_file, "00:00:03", f_short)
             add_check("Short Video", "Mobile Safe Zone Layout", os.path.exists(f_short), f"Upper/lower zones verified: {f_short}")
+
+            s_tail_db = get_audio_tail_mean_db(short_file, 0.30)
+            add_check("Short Video", "Audio Tail No Cutoff", s_tail_db < -32.0, f"Last 0.30s mean volume: {s_tail_db:.1f} dB (<-32 dB required)")
+
+            short_poster = os.path.join(base_dir, f"short_preview_{pkg_id}.png")
+            add_check("Short Video", "Preview Poster Image", os.path.exists(short_poster), f"Poster exists: {short_poster}")
 
     # ==============================================================================
     # 3. PUNKT 6: GRAPHICAL ARTIFACT & GLYPH INTEGRITY AUDIT
@@ -236,6 +275,19 @@ def audit_package(pkg_id, base_dir):
                     add_check("Dashboard", "Description HTML No Slop", clean_ta, f"Affiliate link appears {ta_aff_count} times in textarea (<= 2 allowed)")
                 else:
                     add_check("Dashboard", "Description HTML No Slop", True, "Textarea not present or external")
+
+                has_short_poster_attr = f'poster="assets/short_preview_{pkg_id}.png"' in html_content
+                add_check("Dashboard", "Shorts Video Poster Attribute", has_short_poster_attr, f'Checks poster="assets/short_preview_{pkg_id}.png" in index.html')
+
+            # Check 24: Thumbnail Visual Uniqueness vs Previous Episode
+            curr_thumb = os.path.join(base_dir, f"thumb_{pkg_id}.png")
+            prev_num = int(pkg_id) - 1 if pkg_id.isdigit() else 0
+            prev_thumb = os.path.join(base_dir, f"thumb_{prev_num:03d}.png")
+            if os.path.exists(curr_thumb) and os.path.exists(prev_thumb):
+                t_diff = frames_mean_diff(curr_thumb, prev_thumb)
+                add_check("Graphics", "Thumbnail Visual Uniqueness", t_diff >= 12.0, f"Mean diff vs thumb_{prev_num:03d}.png: {t_diff:.2f} (>=12.0 required)")
+            else:
+                add_check("Graphics", "Thumbnail Visual Uniqueness", os.path.exists(curr_thumb), "Thumbnail exists (no prior thumb to compare)")
 
         except Exception as e:
             add_check("Metadata", "JSON Parsing", False, f"JSON parse error: {e}")

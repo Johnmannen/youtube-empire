@@ -81,6 +81,7 @@ def deploy_package(pkg_id: str):
         html = html.replace(f"assets/video_{old_id}_long.mp4", f"assets/video_{pkg_id}_long.mp4")
         html = html.replace(f"assets/video_{old_id}_short.mp4", f"assets/video_{pkg_id}_short.mp4")
         html = html.replace(f"assets/thumb_{old_id}.png", f"assets/thumb_{pkg_id}.png")
+        html = html.replace(f"assets/short_preview_{old_id}.png", f"assets/short_preview_{pkg_id}.png")
 
         # Archive old_id card if not already in archive
         archive_header = 'Tidigare färdigställda videopaket, källkodsrepon och direkta YouTube-länkar.</p>\n          </div>\n        </div>\n      </div>'
