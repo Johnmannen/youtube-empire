@@ -346,6 +346,14 @@ def audit_package(pkg_id, base_dir):
                     mismatches.append("shortsPinnedComment")
                 if any(t not in extract_html_elem("shortsTags") for t in short_m.get("tags", [])):
                     mismatches.append("shortsTags")
+                if long_file and dur > 0:
+                    exp_mmss = f"{int(dur // 60):02d}:{int(round(dur % 60)):02d}"
+                    if exp_mmss not in extract_html_elem("longSpecsLabel"):
+                        mismatches.append("longSpecsLabel")
+                if short_file and s_dur > 0:
+                    exp_s = f"{s_dur:.1f}s"
+                    if exp_s not in extract_html_elem("shortSpecsLabel"):
+                        mismatches.append("shortSpecsLabel")
                 add_check(
                     "Dashboard",
                     "Dashboard Metadata Sync",

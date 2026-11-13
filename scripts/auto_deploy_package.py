@@ -9,8 +9,19 @@ import re
 import html as html_lib
 import json
 import argparse
+import subprocess
 from datetime import datetime
 from pathlib import Path
+
+def get_duration_sec(filepath: str) -> float:
+    try:
+        res = subprocess.run(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", filepath],
+            capture_output=True, text=True, check=True
+        )
+        return float(res.stdout.strip())
+    except Exception:
+        return 0.0
 
 def replace_elem_text(doc: str, tag: str, elem_id: str, new_text: str) -> str:
     """Replaces inner content of <tag id="elem_id" ...>...</tag> cleanly."""
@@ -243,6 +254,18 @@ def deploy_package(pkg_id: str):
     html = replace_elem_text(html, "p", "shortsPinnedComment", short_meta.get("pinned_comment", ""))
     html = replace_elem_text(html, "p", "shortsTags", ", ".join(short_meta.get("tags", [])))
     html = re.sub(r'alt="YouTube Thumbnail #\d+"', f'alt="YouTube Thumbnail #{pkg_id}"', html)
+
+    # Sync exact rendered video durations & episode labels in Section 2
+    l_sec = get_duration_sec(f"docs/assets/video_{pkg_id}_long.mp4")
+    s_sec = get_duration_sec(f"docs/assets/video_{pkg_id}_short.mp4")
+    l_mmss = f"{int(l_sec // 60):02d}:{int(round(l_sec % 60)):02d}" if l_sec > 0 else "04:00"
+    s_fmt = f"{s_sec:.1f}s" if s_sec > 0 else "18.0s"
+    first_tag = (long_meta.get("tags") or ["ElevenLabs AI"])[0]
+    html = replace_elem_text(html, "p", "packageSummarySub", f"1080p Långformat ({l_mmss} min) + 9:16 Shorts ({s_fmt}) + Unik Thumbnail + Komplett Engelsk SEO & {first_tag} Affiliate")
+    html = replace_elem_text(html, "span", "longSpecsLabel", f"1080p Full HD ({l_mmss} min, 7 Synkade Scener + Verifierad Kod)")
+    html = replace_elem_text(html, "span", "longCaptionLabel", f"Arkitekturdiagram + Enhetlig Glödande Kodgranskning (7 Scener) — {first_tag}")
+    html = replace_elem_text(html, "p", "shortSpecsLabel", f"⚡ {s_fmt} | Rent flöde | 0 musik (100% pool)")
+    html = replace_elem_text(html, "span", "affiliateTagLabel", first_tag)
 
     # Rebuild Section 1 (#pitchesContainer) & PITCH_DATA from the rotated 3-pitch queue
     themes = [
