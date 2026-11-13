@@ -682,8 +682,8 @@ def make_still_segment(img_path, duration_sec, out_seg_path):
     ]
     subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-def make_pulsing_zoom_segment(render_fn, duration_sec, out_seg_path, tag="seg", zoom_amp=0.045, fx=0.5, fy=0.5):
-    """Renders a calm 60-frame (2.4s) soft breathing glow loop (lossless qp 0) + smooth lanczos section zoom."""
+def make_pulsing_zoom_segment(render_fn, duration_sec, out_seg_path, tag="seg", zoom_amp=0.05, fx=0.5, fy=0.5):
+    """Renders a calm 60-frame (2.4s) soft breathing glow loop + smooth Zoom-In -> STEADY HOLD -> Zoom-Out."""
     pulse_dir = os.path.join(TMP_DIR, f"pulse_{tag}")
     os.makedirs(pulse_dir, exist_ok=True)
     num_cycle = 60
@@ -698,9 +698,14 @@ def make_pulsing_zoom_segment(render_fn, duration_sec, out_seg_path, tag="seg", 
         cycle_mp4
     ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
+    ramp = min(0.65, duration_sec * 0.18)
+    env = (
+        f"if(lt(t,{ramp:.3f}),0.5*(1-cos(PI*t/{ramp:.3f})),"
+        f"if(gt(t,{duration_sec - ramp:.3f}),0.5*(1-cos(PI*({duration_sec:.3f}-t)/{ramp:.3f})),1))"
+    )
     vf_zoom = (
-        f"scale=w='trunc(iw*(1+{zoom_amp:.4f}*sin(PI*t/{duration_sec:.3f}))/2)*2':"
-        f"h='trunc(ih*(1+{zoom_amp:.4f}*sin(PI*t/{duration_sec:.3f}))/2)*2':eval=frame:flags=lanczos,"
+        f"scale=w='trunc(iw*(1+{zoom_amp:.4f}*({env}))/2)*2':"
+        f"h='trunc(ih*(1+{zoom_amp:.4f}*({env}))/2)*2':eval=frame:flags=lanczos,"
         f"crop=1920:1080:x='(iw-1920)*{fx:.3f}':y='(ih-1080)*{fy:.3f}'"
     )
     subprocess.run([
