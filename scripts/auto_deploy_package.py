@@ -208,6 +208,7 @@ def deploy_package(pkg_id: str):
         archive_header = 'Tidigare färdigställda videopaket, källkodsrepon och direkta YouTube-länkar.</p>\n          </div>\n        </div>\n      </div>'
         if archive_header in html and f"AVSNITT #{old_id}" not in html:
             old_title = old_pkg.get("title", f"Episode {old_id}")
+            old_git_url = old_pkg.get("github_code_url", "https://github.com/Johnmannen/Agentic-Stack-Library")
             archive_card = f'''\n\n      <!-- AVSNITT #{old_id} (ARKIVERAD) -->
       <div class="glass-card rounded-2xl p-5 border border-emerald-500/40 bg-slate-900/50 hover:border-emerald-500/70 transition">
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
@@ -225,8 +226,15 @@ def deploy_package(pkg_id: str):
             </div>
           </div>
           <div class="flex items-center gap-2 w-full md:w-auto">
-            <a href="https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg" target="_blank" class="px-3.5 py-2 rounded-lg bg-red-600 hover:bg-red-500 text-white font-bold text-xs transition">Se på YouTube</a>
-            <a href="assets/video_{old_id}_long.mp4" download class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 text-xs transition">⬇ MP4</a>
+            <a href="https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg" target="_blank" class="px-3.5 py-2 rounded-lg bg-red-600 hover:bg-red-500 text-white font-bold text-xs flex items-center gap-1.5 transition shadow-md shadow-red-600/30">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <span>Se på YouTube</span>
+            </a>
+            <a href="{old_git_url}" target="_blank" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-xs flex items-center gap-1.5 transition">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+              <span>GitHub Kod</span>
+            </a>
+            <a href="assets/video_{old_id}_long.mp4" download class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 text-xs transition" title="Ladda ner MP4">⬇ MP4</a>
           </div>
         </div>
       </div>'''
