@@ -318,6 +318,38 @@ def audit_package(pkg_id, base_dir):
                 has_short_poster_attr = f'poster="assets/short_preview_{pkg_id}.png"' in html_content
                 add_check("Dashboard", "Shorts Video Poster Attribute", has_short_poster_attr, f'Checks poster="assets/short_preview_{pkg_id}.png" in index.html')
 
+                # Check 27: Full Dashboard Metadata Sync (Long + Shorts titles, descriptions, pinned comments, tags, affiliateUrl)
+                import html as html_lib
+                def extract_html_elem(elem_id):
+                    m = re.search(rf'id="{re.escape(elem_id)}"[^>]*>(.*?)</(?:p|textarea)>', html_content, flags=re.DOTALL)
+                    return html_lib.unescape(m.group(1)).strip() if m else ""
+
+                long_m = meta.get("long_form", {})
+                short_m = meta.get("short_form", {})
+                mismatches = []
+                if long_m.get("title", "") not in extract_html_elem("videoTitle"):
+                    mismatches.append("videoTitle")
+                if expected_affiliate and extract_html_elem("affiliateUrl") != expected_affiliate:
+                    mismatches.append("affiliateUrl")
+                if extract_html_elem("pinnedComment") != long_m.get("pinned_comment", "").strip():
+                    mismatches.append("pinnedComment")
+                if any(t not in extract_html_elem("videoTags") for t in long_m.get("tags", [])):
+                    mismatches.append("videoTags")
+                if extract_html_elem("shortsTitle") != short_m.get("title", "").strip():
+                    mismatches.append("shortsTitle")
+                if extract_html_elem("shortsDescription") != short_m.get("description", "").strip():
+                    mismatches.append("shortsDescription")
+                if extract_html_elem("shortsPinnedComment") != short_m.get("pinned_comment", "").strip():
+                    mismatches.append("shortsPinnedComment")
+                if any(t not in extract_html_elem("shortsTags") for t in short_m.get("tags", [])):
+                    mismatches.append("shortsTags")
+                add_check(
+                    "Dashboard",
+                    "Dashboard Metadata Sync",
+                    len(mismatches) == 0,
+                    "All 8 Long+Shorts HTML fields match metadata JSON" if not mismatches else f"Stale/mismatched HTML fields: {', '.join(mismatches)}"
+                )
+
             # Check 24: Thumbnail Visual Uniqueness vs Previous Episode
             curr_thumb = os.path.join(base_dir, f"thumb_{pkg_id}.png")
             prev_num = int(pkg_id) - 1 if pkg_id.isdigit() else 0

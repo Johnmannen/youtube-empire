@@ -72,7 +72,7 @@ Executes an end-to-end, zero-cost cloud production pipeline that creates complet
 - [ ] Step 5: Visual Asset Generation (High-contrast 9:16 mobile badges, 1080p slide diagrams, code syntax cards, 1280x720 split-screen thumbnail)
 - [ ] Step 6: Video Assembly & Rendering via FFmpeg (1080p MP4 and 9:16 Short MP4)
 - [ ] Step 7: Local Verification & User Approval in Chat
-- [ ] Step 8: Overseer Dashboard Update (`docs/dashboard_state.json` & `docs/index.html`) upon approval
+- [ ] Step 8: Overseer Dashboard Update (`docs/dashboard_state.json` & `docs/index.html`) upon approval — **samtliga 8 fält** (Långvideo titel, affiliatelänk, beskrivning, fäst kommentar, taggar OCH Shorts titel, beskrivning, fäst kommentar, taggar) måste synkas via `scripts/auto_deploy_package.py` och verifieras mot `metadata_<id>.json`.
 
 ## Script Usage
 

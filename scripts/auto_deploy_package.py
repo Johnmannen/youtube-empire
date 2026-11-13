@@ -6,10 +6,17 @@ after a pitch is produced and audited.
 
 import os
 import re
+import html as html_lib
 import json
 import argparse
 from datetime import datetime
 from pathlib import Path
+
+def replace_elem_text(doc: str, tag: str, elem_id: str, new_text: str) -> str:
+    """Replaces inner content of <tag id="elem_id" ...>...</tag> cleanly."""
+    pattern = rf'(<{tag}\b[^>]*\bid="{re.escape(elem_id)}"[^>]*>)(.*?)(</{tag}>)'
+    escaped = html_lib.escape(new_text, quote=False)
+    return re.sub(pattern, lambda m: m.group(1) + escaped + m.group(3), doc, count=1, flags=re.DOTALL)
 
 def deploy_package(pkg_id: str):
     state_path = Path("docs/dashboard_state.json")
@@ -111,13 +118,28 @@ def deploy_package(pkg_id: str):
       </div>'''
             html = html.replace(archive_header, archive_header + archive_card)
 
-    # Replace description textarea cleanly
-    ta_start = html.find('<textarea id="videoDescription"')
-    if ta_start != -1:
-        content_start = html.find(">", ta_start) + 1
-        content_end = html.find("</textarea>", content_start)
-        if content_end != -1:
-            html = html[:content_start] + long_meta.get("description", "") + html[content_end:]
+    # Replace all long-form & short-form metadata elements cleanly
+    long_desc = long_meta.get("description", "")
+    aff_match = re.search(r"https://try\.elevenlabs\.io/[A-Za-z0-9_-]+", long_desc)
+    aff_url = aff_match.group(0) if aff_match else "https://try.elevenlabs.io/agentic-reader"
+
+    html = replace_elem_text(html, "p", "videoTitle", f"{new_title} [EPISODE {pkg_id}]")
+    html = replace_elem_text(html, "p", "affiliateUrl", aff_url)
+    html = re.sub(
+        r'(<a\s+href=")https://try\.elevenlabs\.io/[A-Za-z0-9_-]+("\s+target="_blank"[^>]*>\s*Testa Länk)',
+        rf'\g<1>{aff_url}\g<2>',
+        html,
+        count=1,
+    )
+    html = replace_elem_text(html, "textarea", "videoDescription", long_desc)
+    html = replace_elem_text(html, "p", "pinnedComment", long_meta.get("pinned_comment", ""))
+    html = replace_elem_text(html, "p", "videoTags", ", ".join(long_meta.get("tags", [])))
+
+    html = replace_elem_text(html, "p", "shortsTitle", short_meta.get("title", ""))
+    html = replace_elem_text(html, "textarea", "shortsDescription", short_meta.get("description", ""))
+    html = replace_elem_text(html, "p", "shortsPinnedComment", short_meta.get("pinned_comment", ""))
+    html = replace_elem_text(html, "p", "shortsTags", ", ".join(short_meta.get("tags", [])))
+    html = re.sub(r'alt="YouTube Thumbnail #\d+"', f'alt="YouTube Thumbnail #{pkg_id}"', html)
 
     # Mark pitch button as completed in Section 1
     html = re.sub(

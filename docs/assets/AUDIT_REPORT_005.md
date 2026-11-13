@@ -29,6 +29,7 @@
 | Metadata | No Duplicate Link Stacks | **PASS** | Zero duplicated links/callout stacks in description |
 | Dashboard | Description HTML No Slop | **PASS** | Affiliate link appears 1 times in textarea (<= 2 allowed) |
 | Dashboard | Shorts Video Poster Attribute | **PASS** | Checks poster="assets/short_preview_005.png" in index.html |
+| Dashboard | Dashboard Metadata Sync | **PASS** | All 8 Long+Shorts HTML fields match metadata JSON |
 | Graphics | Thumbnail Visual Uniqueness | **PASS** | Mean diff vs thumb_004.png: 15.37 (>=12.0 required) |
 
 ---
