@@ -14,7 +14,7 @@
   "kpis": {
     "channel_age": "Day 1 (Launch)",
     "videos_produced": "4 (8 publicerade live på kanalen)",
-    "views_30d": "1082 visningar (8 videor totalt)",
+    "views_30d": "1264 visningar (8 videor totalt)",
     "views_growth": "Active Launch",
     "affiliate_clicks": "Active",
     "active_saas_conversions": "0",
@@ -184,9 +184,9 @@
     }
   ],
   "channel_metrics": {
-    "total_views": 1082,
+    "total_views": 1264,
     "video_count": 8,
-    "last_synced": "2026-11-13 23:16 UTC",
+    "last_synced": "2026-11-14 05:02 UTC",
     "total_comments": 9,
     "total_likes": 13,
     "subscribers": 3,
@@ -196,13 +196,13 @@
       "category": "Short / Reel",
       "title": "Build Real-Time Voice AI Agents in Python",
       "published_at": "2026-11-11",
-      "views": 591,
+      "views": 604,
       "comments": 1,
       "likes": 7,
       "duration_sec": 17,
       "is_short": true
     },
-    "video_breakdown": "Short #002.1 (591 visn) | Short (PAQ4pz) (373 visn) | Short (wjgj1w) (54 visn) | Ep #002.1 (42 visn) | Ep #001 (11 visn) | Video (gsiV4-) (4 visn) | Ep #002 (4 visn) | Video (XtEPck) (3 visn)",
+    "video_breakdown": "Short #002.1 (604 visn) | Short (PAQ4pz) (535 visn) | Short (wjgj1w) (60 visn) | Ep #002.1 (42 visn) | Ep #001 (11 visn) | Video (gsiV4-) (4 visn) | Video (XtEPck) (4 visn) | Ep #002 (4 visn)",
     "videos": [
       {
         "video_id": "GTzZWe9nQaE",
@@ -210,7 +210,7 @@
         "category": "Short / Reel",
         "title": "Build Real-Time Voice AI Agents in Python",
         "published_at": "2026-11-11",
-        "views": 591,
+        "views": 604,
         "comments": 1,
         "likes": 7,
         "duration_sec": 17,
@@ -222,7 +222,7 @@
         "category": "Short / Reel",
         "title": "Sub-400ms AI Voice Phone Agent in Python #shorts #ai",
         "published_at": "2026-11-13",
-        "views": 373,
+        "views": 535,
         "comments": 1,
         "likes": 5,
         "duration_sec": 20,
@@ -234,7 +234,7 @@
         "category": "Short / Reel",
         "title": "Dub ANY Video into 29 Languages in Python 🤯 #shorts",
         "published_at": "2026-11-12",
-        "views": 54,
+        "views": 60,
         "comments": 1,
         "likes": 0,
         "duration_sec": 20,
@@ -277,6 +277,18 @@
         "is_short": false
       },
       {
+        "video_id": "XtEPck0l3ZY",
+        "label": "Video (XtEPck)",
+        "category": "Long",
+        "title": "How to Clone Voices and Dub Videos in Python (ElevenLabs API 2026)",
+        "published_at": "2026-11-12",
+        "views": 4,
+        "comments": 1,
+        "likes": 1,
+        "duration_sec": 377,
+        "is_short": false
+      },
+      {
         "video_id": "3B178ZvPS_s",
         "label": "Ep #002",
         "category": "Long",
@@ -286,18 +298,6 @@
         "comments": 1,
         "likes": 0,
         "duration_sec": 244,
-        "is_short": false
-      },
-      {
-        "video_id": "XtEPck0l3ZY",
-        "label": "Video (XtEPck)",
-        "category": "Long",
-        "title": "How to Clone Voices and Dub Videos in Python (ElevenLabs API 2026)",
-        "published_at": "2026-11-12",
-        "views": 3,
-        "comments": 1,
-        "likes": 1,
-        "duration_sec": 377,
         "is_short": false
       }
     ]
