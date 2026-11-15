@@ -14,7 +14,7 @@
   "kpis": {
     "channel_age": "Day 1 (Launch)",
     "videos_produced": "4 (8 publicerade live på kanalen)",
-    "views_30d": "1567 visningar (8 videor totalt)",
+    "views_30d": "1648 visningar (8 videor totalt)",
     "views_growth": "Active Launch",
     "affiliate_clicks": "Active",
     "active_saas_conversions": "0",
@@ -184,11 +184,11 @@
     }
   ],
   "channel_metrics": {
-    "total_views": 1567,
+    "total_views": 1648,
     "video_count": 8,
-    "last_synced": "2026-11-14 21:59 UTC",
+    "last_synced": "2026-11-15 04:56 UTC",
     "total_comments": 9,
-    "total_likes": 13,
+    "total_likes": 14,
     "subscribers": 4,
     "top_video": {
       "video_id": "PAQ4pzoH0XI",
@@ -196,13 +196,13 @@
       "category": "Short / Reel",
       "title": "Sub-400ms AI Voice Phone Agent in Python #shorts #ai",
       "published_at": "2026-11-13",
-      "views": 810,
+      "views": 887,
       "comments": 1,
-      "likes": 5,
+      "likes": 6,
       "duration_sec": 20,
       "is_short": true
     },
-    "video_breakdown": "Short (PAQ4pz) (810 visn) | Short #002.1 (619 visn) | Short (wjgj1w) (70 visn) | Ep #002.1 (43 visn) | Ep #001 (12 visn) | Video (XtEPck) (5 visn) | Video (gsiV4-) (4 visn) | Ep #002 (4 visn)",
+    "video_breakdown": "Short (PAQ4pz) (887 visn) | Short #002.1 (619 visn) | Short (wjgj1w) (71 visn) | Ep #002.1 (43 visn) | Ep #001 (12 visn) | Ep #002 (6 visn) | Video (gsiV4-) (5 visn) | Video (XtEPck) (5 visn)",
     "videos": [
       {
         "video_id": "PAQ4pzoH0XI",
@@ -210,9 +210,9 @@
         "category": "Short / Reel",
         "title": "Sub-400ms AI Voice Phone Agent in Python #shorts #ai",
         "published_at": "2026-11-13",
-        "views": 810,
+        "views": 887,
         "comments": 1,
-        "likes": 5,
+        "likes": 6,
         "duration_sec": 20,
         "is_short": true
       },
@@ -234,7 +234,7 @@
         "category": "Short / Reel",
         "title": "Dub ANY Video into 29 Languages in Python 🤯 #shorts",
         "published_at": "2026-11-12",
-        "views": 70,
+        "views": 71,
         "comments": 1,
         "likes": 0,
         "duration_sec": 20,
@@ -265,6 +265,30 @@
         "is_short": false
       },
       {
+        "video_id": "3B178ZvPS_s",
+        "label": "Ep #002",
+        "category": "Long",
+        "title": "Build Real-Time Conversational Voice AI Agents in Python (ElevenLabs WebSockets 2026)",
+        "published_at": "2026-11-10",
+        "views": 6,
+        "comments": 1,
+        "likes": 0,
+        "duration_sec": 244,
+        "is_short": false
+      },
+      {
+        "video_id": "gsiV4-znh04",
+        "label": "Video (gsiV4-)",
+        "category": "Long",
+        "title": "Build an AI Voice Phone Agent in Python (ElevenLabs + Twilio)",
+        "published_at": "2026-11-13",
+        "views": 5,
+        "comments": 1,
+        "likes": 0,
+        "duration_sec": 402,
+        "is_short": false
+      },
+      {
         "video_id": "XtEPck0l3ZY",
         "label": "Video (XtEPck)",
         "category": "Long",
@@ -274,30 +298,6 @@
         "comments": 1,
         "likes": 1,
         "duration_sec": 377,
-        "is_short": false
-      },
-      {
-        "video_id": "gsiV4-znh04",
-        "label": "Video (gsiV4-)",
-        "category": "Long",
-        "title": "Build an AI Voice Phone Agent in Python (ElevenLabs + Twilio)",
-        "published_at": "2026-11-13",
-        "views": 4,
-        "comments": 1,
-        "likes": 0,
-        "duration_sec": 402,
-        "is_short": false
-      },
-      {
-        "video_id": "3B178ZvPS_s",
-        "label": "Ep #002",
-        "category": "Long",
-        "title": "Build Real-Time Conversational Voice AI Agents in Python (ElevenLabs WebSockets 2026)",
-        "published_at": "2026-11-10",
-        "views": 4,
-        "comments": 1,
-        "likes": 0,
-        "duration_sec": 244,
         "is_short": false
       }
     ]
