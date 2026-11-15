@@ -13,8 +13,8 @@
   },
   "kpis": {
     "channel_age": "Day 1 (Launch)",
-    "videos_produced": "4 (8 publicerade live på kanalen)",
-    "views_30d": "1722 visningar (8 videor totalt)",
+    "videos_produced": "4 (9 publicerade live på kanalen)",
+    "views_30d": "1728 visningar (9 videor totalt)",
     "views_growth": "Active Launch",
     "affiliate_clicks": "Active",
     "active_saas_conversions": "0",
@@ -184,9 +184,9 @@
     }
   ],
   "channel_metrics": {
-    "total_views": 1722,
-    "video_count": 8,
-    "last_synced": "2026-11-15 13:28 UTC",
+    "total_views": 1728,
+    "video_count": 9,
+    "last_synced": "2026-11-15 22:30 UTC",
     "total_comments": 9,
     "total_likes": 14,
     "subscribers": 4,
@@ -196,13 +196,13 @@
       "category": "Short / Reel",
       "title": "Sub-400ms AI Voice Phone Agent in Python #shorts #ai",
       "published_at": "2026-11-13",
-      "views": 955,
+      "views": 959,
       "comments": 1,
       "likes": 6,
       "duration_sec": 20,
       "is_short": true
     },
-    "video_breakdown": "Short (PAQ4pz) (955 visn) | Short #002.1 (619 visn) | Short (wjgj1w) (74 visn) | Ep #002.1 (43 visn) | Ep #001 (12 visn) | Video (XtEPck) (8 visn) | Ep #002 (6 visn) | Video (gsiV4-) (5 visn)",
+    "video_breakdown": "Short (PAQ4pz) (959 visn) | Short #002.1 (619 visn) | Short (wjgj1w) (75 visn) | Ep #002.1 (43 visn) | Ep #001 (12 visn) | Video (XtEPck) (8 visn) | Ep #002 (7 visn) | Video (gsiV4-) (5 visn) | Video (x-bdJW) (0 visn)",
     "videos": [
       {
         "video_id": "PAQ4pzoH0XI",
@@ -210,7 +210,7 @@
         "category": "Short / Reel",
         "title": "Sub-400ms AI Voice Phone Agent in Python #shorts #ai",
         "published_at": "2026-11-13",
-        "views": 955,
+        "views": 959,
         "comments": 1,
         "likes": 6,
         "duration_sec": 20,
@@ -234,7 +234,7 @@
         "category": "Short / Reel",
         "title": "Dub ANY Video into 29 Languages in Python 🤯 #shorts",
         "published_at": "2026-11-12",
-        "views": 74,
+        "views": 75,
         "comments": 1,
         "likes": 0,
         "duration_sec": 20,
@@ -282,7 +282,7 @@
         "category": "Long",
         "title": "Build Real-Time Conversational Voice AI Agents in Python (ElevenLabs WebSockets 2026)",
         "published_at": "2026-11-10",
-        "views": 6,
+        "views": 7,
         "comments": 1,
         "likes": 0,
         "duration_sec": 244,
@@ -298,6 +298,18 @@
         "comments": 1,
         "likes": 0,
         "duration_sec": 402,
+        "is_short": false
+      },
+      {
+        "video_id": "x-bdJWKEytM",
+        "label": "Video (x-bdJW)",
+        "category": "Long",
+        "title": "Turn Any PDF into AI Podcasts in Python (ElevenLabs Audio)",
+        "published_at": "2026-11-15",
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "duration_sec": 271,
         "is_short": false
       }
     ]
