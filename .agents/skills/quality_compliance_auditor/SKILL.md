@@ -54,6 +54,7 @@ Skriptet genererar automatiskt kontrollbilder från nyckelpunkter (thumbnail-sta
 
 
 ### Utökade Revisionskrav (Synkroniserade efter Episode #005-granskningen)
+* **YouTube Upload Stream Hygiene (No `yuvj420p` / No `ICC Profile`):** Verifiera med `ffprobe` att både Long och Short har `pix_fmt=yuv420p` (`color_range=tv`, `color_space=bt709`) och **inte** innehåller `yuvj420p` (`color_range=pc`, `bt470bg`) eller `side_data_type=ICC Profile` (vilket orsakar YouTube-uppladdningsfel `2888402`).
 * **Audio Tail / No Mid-Sentence Cutoff:** Kontrollera att sista `0.35s` av både långvideo och Short klingar ut i tystnad (`< -32 dB`) så att ingen mening någonsin klipps av.
 * **Dynamic Highlight & Pointer Motion:** Verifiera via pixel-diff att kodrader och arkitekturstadier faktiskt rör sig / byter markering med pil och fokusram under scenen (inga frusna IDE-scener).
 * **Dual-Format Thumbnails (Long 16:9 + Short 9:16) & Dashboard Presence:** Verifiera att varje avsnitt har **både** en Long-form thumbnail (`thumb_<id>.png`, `1280×720`) **och** en separat Short-form thumbnail (`thumb_short_<id>.png`, `1080×1920`) i vertikal design (ej beskuren 16:9), att Shorts-spelaren använder `poster="assets/thumb_short_<id>.png"`, samt att **båda** thumbnails visas och är nedladdningsbara på kontrollpanelen (`docs/index.html`).

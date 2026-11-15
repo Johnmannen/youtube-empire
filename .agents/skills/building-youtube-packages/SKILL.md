@@ -34,6 +34,8 @@ Executes an end-to-end, zero-cost cloud production pipeline that creates complet
 1. **Längd & Format (30–60 sekunder, "Lär dig på under en minut"):**
    - Shorts ska vara **30–60 sekunder** långa och fungera som en komplett, snabb *"Lär dig det här på under en minut"*-lektion med tydlig länk/pekning vidare till den djupare långvideon.
    - **Visuell motor (Fejkad äkta skärminspelning):** Rendera via Playwright/HTML/CSS (eller Remotion) med flytande fönster, rörlig muspekare, klick-ripple, skrivande kod tecken för tecken, live-terminal och subtil royaltyfri bakgrundsmusik under rösten.
+   - **YouTube Upload-kompatibilitet (TVINGANDE — undviker fel 2888402):** När bildrutor kommer från Chromium/Playwright (`jpeg`) bäddar Chromium in en `ICC Profile` (`side_data`) och `yuvj420p` (`pc` range, `bt470bg`) som YouTubes Shorts-uppladdare avvisar. Alla MP4-exporter **måste** tvinga ren `yuv420p` (`tv` range, `bt709`) och `+faststart`:
+     `-vf "scale=out_color_matrix=bt709:out_range=tv,format=yuv420p" -pix_fmt yuv420p -color_range tv -colorspace bt709 -color_primaries bt709 -color_trc bt709 -movflags +faststart -map_metadata -1`.
 2. **0–4 sekunders Live Result Proof ("Show, Don't Just Tell" — TVINGANDE):**
    - `Andrew` (`en-US-AndrewMultilingualNeural`) är alltid kanalens basröst, **men** inom de **första 0–4 sekunderna** (plus/minus 1–2s beroende på innehåll) måste tittaren direkt **höra eller se slutprodukten hända live** i själva öppningen — inte bara höra Andrew prata *om* den:
      - *Podcast-avsnitt:* Andrew inleder, och en **andra röst (t.ex. `Ava`)** tar direkt över nästa fras medan spelaren på skärmen lyser upp `GUEST` live.
