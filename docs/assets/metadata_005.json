@@ -1,10 +1,10 @@
 {
   "episode_id": "005",
-  "expected_speech_duration": 278.38,
+  "expected_speech_duration": 270.38,
   "long_form": {
-    "title": "Turn Any Text Document into Audio Podcasts in Python (ElevenLabs Audio Native)",
-    "description": "\ud83c\udf81 [FREE TRIAL] Try ElevenLabs Audio Native & Voice AI:\n\ud83d\udc49 https://try.elevenlabs.io/agentic-reader (Affiliate Partner Link)\n\n\ud83d\ude80 [SOURCE CODE] Download Python Document-to-Podcast Scripts:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/005-doc-to-podcast\n\n\ud83d\udcda [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library\n\nEngineers do not read 40-page technical manuals. In this video, we build an automated document-to-podcast pipeline in Python using PyMuPDF and the ElevenLabs Audio Native API.\n\n\u23f1\ufe0f TIMESTAMPS:\n00:00 - STOP READING 40-PAGE MANUALS\n00:50 - SYSTEM ARCHITECTURE: 3-STAGE AUDIO PIPELINE\n01:54 - PYTHON PDF & MARKDOWN PARSER SETUP\n02:38 - ELEVENLABS AUDIO NATIVE SYNTHESIS\n03:18 - AUDIO QUALITY & DEVELOPER RETENTION\n03:54 - ENTERPRISE DOCUMENTATION ROI\n04:22 - GITHUB BLUEPRINT, FREE TRIAL & NEXT EPISODE\n\n\u2696\ufe0f FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you.\n\n#AudioNative #ElevenLabs #Python #PyMuPDF #PodcastAI #AIAgents",
-    "pinned_comment": "\ud83d\udccc Try ElevenLabs Audio Native Free:\n\ud83d\udc49 https://try.elevenlabs.io/agentic-reader\n\n\ud83d\udcbb Download the complete Python script on GitHub: https://github.com/Johnmannen/Agentic-Stack-Library",
+    "title": "Turn Any PDF into AI Podcasts in Python (ElevenLabs Audio)",
+    "description": "🎁 [FREE TRIAL] Try ElevenLabs Audio Native & Voice AI:\n👉 https://try.elevenlabs.io/agentic-reader (Affiliate Partner Link)\n\n🚀 [SOURCE CODE] Download Python Document-to-Podcast Scripts:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/005-doc-to-podcast\n\n📚 [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\nEngineers do not read 40-page technical manuals. In this video, we build an automated document-to-podcast pipeline in Python using PyMuPDF and the ElevenLabs Audio Native API.\n\n⏱️ TIMESTAMPS:\n00:00 - PDF TO PODCAST: LIVE 2-SPEAKER RESULT & BOTTLENECK\n00:51 - SYSTEM ARCHITECTURE: 3-STAGE AUDIO PIPELINE\n01:54 - PYTHON PDF & MARKDOWN PARSER (extract_chunks.py)\n02:31 - ELEVENLABS AUDIO NATIVE SYNTHESIS (podcast_engine.py)\n03:03 - AUDIO QUALITY & DEVELOPER RETENTION (12% VS 78%)\n03:33 - ENTERPRISE DOCUMENTATION ROI & LIVE TERMINAL\n04:01 - GITHUB BLUEPRINT, FREE TRIAL & MORE BUILDS\n\n⚖️ FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you.\n\n#AudioNative #ElevenLabs #Python #PyMuPDF #PodcastAI #AIAgents",
+    "pinned_comment": "📌 Try ElevenLabs Audio Native Free:\n👉 https://try.elevenlabs.io/agentic-reader\n\n💻 Grab the exact Python code for Episode #005 on GitHub:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/005-doc-to-podcast\n\n👍 Like & Subscribe for more production builds!",
     "tags": [
       "ElevenLabs Audio Native",
       "Python PDF to Podcast",
@@ -22,14 +22,15 @@
     }
   },
   "short_form": {
-    "title": "Turn 40-Page PDFs into AI Podcasts in Python \ud83e\udd2f #Shorts",
-    "description": "Convert any technical PDF or Markdown doc into a two-speaker AI podcast in 40 seconds! \ud83d\ude80\n\n\u2b50 Free ElevenLabs trial: https://try.elevenlabs.io/agentic-reader\n\ud83d\udcbb Code on GitHub: https://github.com/Johnmannen/Agentic-Stack-Library\n\n#Shorts #ElevenLabs #Python #AI #Podcast",
-    "pinned_comment": "Full tutorial & Python blueprint on our channel! Try ElevenLabs free: https://try.elevenlabs.io/agentic-reader",
+    "title": "PDF to 2-Speaker AI Podcast in 42 Seconds (Python) #Shorts",
+    "description": "Convert any technical PDF or Markdown doc into a live two-speaker AI podcast in under a minute! 🚀\n\n⭐ Free ElevenLabs trial: https://try.elevenlabs.io/agentic-reader\n💻 Exact Episode #005 GitHub Code: https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/005-doc-to-podcast\n\nWatch the full 4:30 breakdown on our channel!\n\n#Shorts #ElevenLabs #Python #AI #Podcast",
+    "pinned_comment": "💻 Grab the exact Episode #005 Python code on GitHub:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/005-doc-to-podcast\n\n⭐ Try ElevenLabs free: https://try.elevenlabs.io/agentic-reader\n👍 Like & Subscribe and watch the full tutorial on our channel!",
     "tags": [
       "Shorts",
       "ElevenLabs",
       "Python",
-      "AI Podcast"
+      "AI Podcast",
+      "PyMuPDF"
     ]
   }
 }

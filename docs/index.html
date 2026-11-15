@@ -602,7 +602,7 @@
             <div class="flex items-center justify-between">
               <span class="text-xs font-bold text-white flex items-center gap-1.5 uppercase tracking-wider">
                 <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">16:9 Långformat</span>
-                <span id="longSpecsLabel">1080p Full HD (04:38 min, 7 Synkade Scener + Verifierad Kod)</span>
+                <span id="longSpecsLabel">1080p Full HD (04:30 min, 7 Synkade Scener + Playwright Kodgenomgång)</span>
               </span>
               <a href="assets/video_005_long.mp4" download class="text-xs text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
@@ -635,32 +635,42 @@
                 <a href="assets/video_005_short.mp4" download class="text-[11px] text-cyan-400 hover:underline">MP4</a>
               </div>
               <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-xl aspect-[9/16] max-h-[340px]">
-                <video controls preload="metadata" poster="assets/short_preview_005.png" class="w-full h-full object-cover">
+                <video controls preload="metadata" poster="assets/thumb_short_005.png" class="w-full h-full object-cover">
                   <source src="assets/video_005_short.mp4" type="video/mp4">
                 </video>
               </div>
-              <p id="shortSpecsLabel" class="text-[10px] text-emerald-400 font-medium">⚡ 17.8s | Rent flöde | 0 musik (100% pool)</p>
+              <p id="shortSpecsLabel" class="text-[10px] text-emerald-400 font-medium">⚡ 41.7s | 0-4s Live 2-Speaker Proof | Playwright UI</p>
             </div>
 
-            <!-- Thumbnail med Lightbox-förhandsvisning -->
+            <!-- Dual Thumbnails (16:9 Long + 9:16 Short) med Lightbox -->
             <div class="space-y-3">
               <div class="flex items-center justify-between">
                 <span class="text-xs font-bold text-white uppercase tracking-wider">
-                  <span class="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/30">Thumbnail</span>
+                  <span class="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/30">Long + Short Thumbnails</span>
                 </span>
-                <button onclick="openThumbnailLightbox()" class="text-[11px] text-amber-400 hover:underline font-semibold flex items-center gap-1">
+                <button onclick="openThumbnailLightbox('assets/thumb_005.png', '1280x720 Long Thumbnail')" class="text-[11px] text-amber-400 hover:underline font-semibold flex items-center gap-1">
                   🔍 Förstora
                 </button>
               </div>
-              <div onclick="openThumbnailLightbox()" class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-xl aspect-video group cursor-pointer hover:border-amber-400/50 transition">
-                <img src="assets/thumb_005.png" alt="YouTube Thumbnail #005" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+              <div onclick="openThumbnailLightbox('assets/thumb_005.png', '1280x720 Long Thumbnail')" class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-xl aspect-video group cursor-pointer hover:border-amber-400/50 transition">
+                <img src="assets/thumb_005.png" alt="YouTube Long Thumbnail #005" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                 <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
-                  <span class="text-xs font-bold text-white bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-700">Klicka för fullskärm</span>
+                  <span class="text-xs font-bold text-white bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-700">16:9 Fullskärm</span>
                 </div>
               </div>
               <div class="flex items-center justify-between">
-                <span class="text-[10px] text-slate-400">1280x720 PNG (High CTR Split)</span>
+                <span class="text-[10px] text-slate-400">16:9 Long (1280x720)</span>
                 <a href="assets/thumb_005.png" download class="text-[10px] text-cyan-400 hover:underline">Ladda ner</a>
+              </div>
+              <div onclick="openThumbnailLightbox('assets/thumb_short_005.png', '1080x1920 Short Thumbnail')" class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-xl h-32 group cursor-pointer hover:border-amber-400/50 transition">
+                <img src="assets/thumb_short_005.png" alt="YouTube Short Thumbnail #005" class="w-full h-full object-contain bg-slate-950 group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                  <span class="text-xs font-bold text-white bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-700">9:16 Fullskärm</span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] text-slate-400">9:16 Short (1080x1920)</span>
+                <a href="assets/thumb_short_005.png" download class="text-[10px] text-cyan-400 hover:underline">Ladda ner</a>
               </div>
             </div>
 
@@ -682,7 +692,7 @@
           <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
             <div class="space-y-1 w-full">
               <span class="text-[10px] uppercase font-bold text-purple-400 tracking-wider">SEO Title (Primary US High-CTR Option)</span>
-              <p id="videoTitle" class="text-sm font-semibold text-white">Turn Any Text Document into Audio Podcasts in Python (ElevenLabs Audio Native) [EPISODE 005]</p>
+              <p id="videoTitle" class="text-sm font-semibold text-white">Turn Any PDF into AI Podcasts in Python (ElevenLabs Audio)</p>
             </div>
             <button onclick="copyText('videoTitle', 'Title copied to clipboard!')" class="shrink-0 px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-cyan-400 border border-slate-700 flex items-center gap-1.5 transition">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
@@ -735,13 +745,13 @@
 Engineers do not read 40-page technical manuals. In this video, we build an automated document-to-podcast pipeline in Python using PyMuPDF and the ElevenLabs Audio Native API.
 
 ⏱️ TIMESTAMPS:
-00:00 - STOP READING 40-PAGE MANUALS
-00:50 - SYSTEM ARCHITECTURE: 3-STAGE AUDIO PIPELINE
-01:54 - PYTHON PDF &amp; MARKDOWN PARSER SETUP
-02:38 - ELEVENLABS AUDIO NATIVE SYNTHESIS
-03:18 - AUDIO QUALITY &amp; DEVELOPER RETENTION
-03:54 - ENTERPRISE DOCUMENTATION ROI
-04:22 - GITHUB BLUEPRINT, FREE TRIAL &amp; NEXT EPISODE
+00:00 - PDF TO PODCAST: LIVE 2-SPEAKER RESULT &amp; BOTTLENECK
+00:51 - SYSTEM ARCHITECTURE: 3-STAGE AUDIO PIPELINE
+01:54 - PYTHON PDF &amp; MARKDOWN PARSER (extract_chunks.py)
+02:31 - ELEVENLABS AUDIO NATIVE SYNTHESIS (podcast_engine.py)
+03:03 - AUDIO QUALITY &amp; DEVELOPER RETENTION (12% VS 78%)
+03:33 - ENTERPRISE DOCUMENTATION ROI &amp; LIVE TERMINAL
+04:01 - GITHUB BLUEPRINT, FREE TRIAL &amp; MORE BUILDS
 
 ⚖️ FTC AFFILIATE DISCLOSURE:
 Some links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you.
@@ -761,7 +771,10 @@ Some links in this description are affiliate links. If you sign up or purchase t
               <p id="pinnedComment" class="text-xs text-slate-300 bg-slate-900 p-2.5 rounded-lg border border-slate-800 font-mono">📌 Try ElevenLabs Audio Native Free:
 👉 https://try.elevenlabs.io/agentic-reader
 
-💻 Download the complete Python script on GitHub: https://github.com/Johnmannen/Agentic-Stack-Library</p>
+💻 Grab the exact Python code for Episode #005 on GitHub:
+👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/005-doc-to-podcast
+
+👍 Like &amp; Subscribe for more production builds!</p>
             </div>
 
             <!-- Tags & Studio Settings -->
@@ -801,7 +814,7 @@ Some links in this description are affiliate links. If you sign up or purchase t
                 <span class="text-[10px] uppercase font-bold text-cyan-400 tracking-wider">Shorts Title (Kort & Slående, &lt;60 tecken med #Shorts)</span>
                 <span class="text-[10px] text-slate-500 font-mono">YouTube Algo Optimerad</span>
               </div>
-              <p id="shortsTitle" class="text-sm font-semibold text-white">Turn 40-Page PDFs into AI Podcasts in Python 🤯 #Shorts</p>
+              <p id="shortsTitle" class="text-sm font-semibold text-white">PDF to 2-Speaker AI Podcast in 42 Seconds (Python) #Shorts</p>
             </div>
             <button onclick="copyText('shortsTitle', 'Shorts Title kopierad till urklipp!')" class="shrink-0 px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-cyan-400 border border-slate-700 flex items-center gap-1.5 transition">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
@@ -821,10 +834,12 @@ Some links in this description are affiliate links. If you sign up or purchase t
                 Copy Shorts Description
               </button>
             </div>
-            <textarea id="shortsDescription" rows="8" readonly class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 text-xs font-mono text-slate-300 leading-relaxed focus:outline-none focus:border-cyan-500">Convert any technical PDF or Markdown doc into a two-speaker AI podcast in 40 seconds! 🚀
+            <textarea id="shortsDescription" rows="8" readonly class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 text-xs font-mono text-slate-300 leading-relaxed focus:outline-none focus:border-cyan-500">Convert any technical PDF or Markdown doc into a live two-speaker AI podcast in under a minute! 🚀
 
 ⭐ Free ElevenLabs trial: https://try.elevenlabs.io/agentic-reader
-💻 Code on GitHub: https://github.com/Johnmannen/Agentic-Stack-Library
+💻 Exact Episode #005 GitHub Code: https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/005-doc-to-podcast
+
+Watch the full 4:30 breakdown on our channel!
 
 #Shorts #ElevenLabs #Python #AI #Podcast</textarea>
           </div>
@@ -837,7 +852,11 @@ Some links in this description are affiliate links. If you sign up or purchase t
                 <span class="text-[10px] uppercase font-bold text-amber-400 tracking-wider">Shorts Pinned Comment (Konvertering & Huvudvideo)</span>
                 <button onclick="copyText('shortsPinnedComment', 'Shorts Pinned comment kopierad!')" class="text-xs text-amber-400 hover:underline font-semibold">Copy</button>
               </div>
-              <p id="shortsPinnedComment" class="text-xs text-slate-300 bg-slate-900 p-2.5 rounded-lg border border-slate-800 font-mono">Full tutorial &amp; Python blueprint on our channel! Try ElevenLabs free: https://try.elevenlabs.io/agentic-reader</p>
+              <p id="shortsPinnedComment" class="text-xs text-slate-300 bg-slate-900 p-2.5 rounded-lg border border-slate-800 font-mono">💻 Grab the exact Episode #005 Python code on GitHub:
+👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/005-doc-to-podcast
+
+⭐ Try ElevenLabs free: https://try.elevenlabs.io/agentic-reader
+👍 Like &amp; Subscribe and watch the full tutorial on our channel!</p>
             </div>
 
             <!-- Shorts Tags -->
@@ -846,7 +865,7 @@ Some links in this description are affiliate links. If you sign up or purchase t
                 <span class="text-[10px] uppercase font-bold text-indigo-400 tracking-wider">Shorts Tags & Format</span>
                 <button onclick="copyText('shortsTags', 'Shorts Tags kopierade!')" class="text-xs text-indigo-400 hover:underline font-semibold">Copy Tags</button>
               </div>
-              <p id="shortsTags" class="text-xs text-slate-300 bg-slate-900 p-2.5 rounded-lg border border-slate-800 font-mono">Shorts, ElevenLabs, Python, AI Podcast</p>
+              <p id="shortsTags" class="text-xs text-slate-300 bg-slate-900 p-2.5 rounded-lg border border-slate-800 font-mono">Shorts, ElevenLabs, Python, AI Podcast, PyMuPDF</p>
               <div class="flex items-center gap-3 text-[11px] text-slate-400 pt-1">
                 <span>Format: <strong class="text-cyan-400">9:16 Vertical Shorts</strong></span>
                 <span>Altered Content: <strong class="text-emerald-400">NO</strong></span>
@@ -1148,11 +1167,11 @@ Some links in this description are affiliate links. If you sign up or purchase t
     <div class="max-w-5xl w-full space-y-4">
       <div class="flex items-center justify-between text-white">
         <div class="flex items-center gap-2">
-          <span class="px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-400 font-bold text-xs border border-amber-500/30">1280x720 PNG FÖRHANDSVISNING</span>
+          <span id="lightboxBadge" class="px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-400 font-bold text-xs border border-amber-500/30">1280x720 PNG FÖRHANDSVISNING</span>
           <span class="text-sm text-slate-300 font-semibold">Garanterat Fri Från Avklippt Text</span>
         </div>
         <div class="flex items-center gap-3">
-          <a href="assets/thumb_002_1.png" download class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-xs font-bold text-white transition flex items-center gap-1">
+          <a id="lightboxDownload" href="assets/thumb_005.png" download class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-xs font-bold text-white transition flex items-center gap-1">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
             Ladda ner PNG
           </a>
@@ -1294,7 +1313,10 @@ Some links in this description are affiliate links. If you sign up or purchase t
       }
 ];
 
-    function openThumbnailLightbox() {
+    function openThumbnailLightbox(src = 'assets/thumb_005.png', label = '1280x720 PNG FÖRHANDSVISNING') {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightboxDownload').href = src;
+      document.getElementById('lightboxBadge').innerText = label;
       document.getElementById('thumbLightbox').classList.remove('hidden');
     }
 
