@@ -1,0 +1,7 @@
+file 'C:/Users/johnr/Documents/AI & Agentic Stack B2B/tmp_perfect_003/s1_hook_problem.mp4'
+file 'C:/Users/johnr/Documents/AI & Agentic Stack B2B/tmp_perfect_003/s2_architecture.mp4'
+file 'C:/Users/johnr/Documents/AI & Agentic Stack B2B/tmp_perfect_003/s3_code_init.mp4'
+file 'C:/Users/johnr/Documents/AI & Agentic Stack B2B/tmp_perfect_003/s4_code_streaming.mp4'
+file 'C:/Users/johnr/Documents/AI & Agentic Stack B2B/tmp_perfect_003/s5_waveform_analysis.mp4'
+file 'C:/Users/johnr/Documents/AI & Agentic Stack B2B/tmp_perfect_003/s6_enterprise_roi.mp4'
+file 'C:/Users/johnr/Documents/AI & Agentic Stack B2B/tmp_perfect_003/s7_outro_cta.mp4'

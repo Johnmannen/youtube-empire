@@ -1,0 +1,7 @@
+file 'C:/Users/johnr/Documents/AI & Agentic Stack B2B/tmp_master_005/s1_hook_problem.mp3'
+file 'C:/Users/johnr/Documents/AI & Agentic Stack B2B/tmp_master_005/s2_architecture.mp3'
+file 'C:/Users/johnr/Documents/AI & Agentic Stack B2B/tmp_master_005/s3_code_ingestion.mp3'
+file 'C:/Users/johnr/Documents/AI & Agentic Stack B2B/tmp_master_005/s4_code_synthesis.mp3'
+file 'C:/Users/johnr/Documents/AI & Agentic Stack B2B/tmp_master_005/s5_waveform_quality.mp3'
+file 'C:/Users/johnr/Documents/AI & Agentic Stack B2B/tmp_master_005/s6_enterprise_roi.mp3'
+file 'C:/Users/johnr/Documents/AI & Agentic Stack B2B/tmp_master_005/s7_outro_cta.mp3'

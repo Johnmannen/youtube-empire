@@ -1,0 +1,28 @@
+{
+  "episode_id": "003",
+  "long_form": {
+    "title": "Automate Video Dubbing & Voice Cloning in Python (ElevenLabs API)",
+    "description": "Learn how to build an end-to-end automated video dubbing pipeline in Python using the ElevenLabs Dubbing API. Translate and re-voice videos into 29 languages while preserving the original speaker's vocal timbre, emotion, and lip-sync cadence.\n\n⭐ Try ElevenLabs Dubbing & Voice Tools (Free Trial):\nhttps://try.elevenlabs.io/agentic-dubbing\n\n💻 Open-Source Python Code & Blueprints:\nhttps://github.com/Johnmannen/Agentic-Stack-Library\n\n⏱️ Timestamps:\n00:00 - The High Cost of Manual Video Localization\n00:57 - Architecture: Audio Separation, Diarization & Zero-Shot Synthesis\n02:16 - Python SDK Setup & Job Submission\n03:26 - Resilient Polling & Zero-RAM Disk Streaming\n04:30 - Acoustic Waveform & Spectral Formant Matching\n05:16 - Enterprise ROI: Agency Costs vs. API Automation\n05:56 - Open-Source GitHub Blueprint & Free Trial\n\nIf this walkthrough helped streamline your localization workflow, like and subscribe for weekly B2B agentic tutorials!\n\n#AI #Python #ElevenLabs #VoiceCloning #SoftwareEngineering",
+    "pinned_comment": "Grab the ElevenLabs free trial here to test video dubbing on your own media catalog: https://try.elevenlabs.io/agentic-dubbing\n\nDownload the complete production-ready Python script on GitHub: https://github.com/Johnmannen/Agentic-Stack-Library",
+    "tags": ["AI Voice Cloning", "ElevenLabs Python", "Video Dubbing API", "Python Automation", "Speech Synthesis", "AI Agents", "B2B Software", "ElevenLabs Dubbing"],
+    "upload_settings": {
+      "category_id": "28",
+      "category_name": "Science & Technology",
+      "default_language": "en",
+      "privacy_status": "public",
+      "made_for_kids": false,
+      "altered_content": false
+    }
+  },
+  "short_form": {
+    "title": "Auto-Dub Videos into 29 Languages with Python #shorts #ai",
+    "description": "Clone any voice and auto-dub videos into 29 languages in under 3 minutes using Python and ElevenLabs API!\n\n⚡ Full 6-min code breakdown & architecture on the channel!\n⭐ Free ElevenLabs trial: https://try.elevenlabs.io/agentic-dubbing\n💻 Code on GitHub: https://github.com/Johnmannen/Agentic-Stack-Library\n\n#Shorts #Python #VoiceCloning #ElevenLabs #CodingTutorial",
+    "pinned_comment": "Full 6-minute deep dive & complete Python source code available on our channel! Grab your ElevenLabs trial: https://try.elevenlabs.io/agentic-dubbing",
+    "tags": ["shorts", "python", "ai", "voice cloning", "elevenlabs", "coding tutorial"],
+    "hook_type": "Result-First (0.0-2.0s)",
+    "loop_type": "Seamless Syntactic Audio Bridge",
+    "safe_zones_verified": true
+  },
+  "affiliate_url": "https://try.elevenlabs.io/agentic-dubbing",
+  "github_url": "https://github.com/Johnmannen/Agentic-Stack-Library"
+}

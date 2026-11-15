@@ -1,0 +1,7 @@
+file 'C:\Users\johnr\Documents\AI & Agentic Stack B2B\tmp_master_003\s1_intro.mp3'
+file 'C:\Users\johnr\Documents\AI & Agentic Stack B2B\tmp_master_003\s2_architecture.mp3'
+file 'C:\Users\johnr\Documents\AI & Agentic Stack B2B\tmp_master_003\s3_code_ingestion.mp3'
+file 'C:\Users\johnr\Documents\AI & Agentic Stack B2B\tmp_master_003\s4_code_streaming.mp3'
+file 'C:\Users\johnr\Documents\AI & Agentic Stack B2B\tmp_master_003\s5_waveform_analysis.mp3'
+file 'C:\Users\johnr\Documents\AI & Agentic Stack B2B\tmp_master_003\s6_enterprise_roi.mp3'
+file 'C:\Users\johnr\Documents\AI & Agentic Stack B2B\tmp_master_003\s7_outro_cta.mp3'
