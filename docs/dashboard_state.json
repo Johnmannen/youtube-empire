@@ -12,13 +12,14 @@
     "altered_content_declaration": "No"
   },
   "kpis": {
-    "views_30d": "84,500",
+    "views_30d": "1783 visningar (10 videor totalt)",
     "views_growth": "+24%",
     "affiliate_clicks": "1,420",
     "active_saas_conversions": "38",
     "estimated_net_profit_usd": "$1,485.00",
     "estimated_net_profit_sek": "15,590 kr",
-    "cloud_running_cost": "$0.00"
+    "cloud_running_cost": "$0.00",
+    "videos_produced": "4 (10 publicerade live på kanalen)"
   },
   "current_package": {
     "package_id": "001",
@@ -74,8 +75,8 @@
     ],
     "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/001-autonomous-agent-skills",
     "studio_upload_url": "https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg",
-    "description": "\ud83d\ude80 Download the Episode 001 code & architecture blueprint:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/001-autonomous-agent-skills\n\n\ud83d\udcda Complete Channel Open-Source Library:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library\n\nIn this episode of Agentic Stack B2B, we break down the complete technical blueprint for building autonomous, monetization-compliant AI agent skills in Python without paying expensive API or cloud infrastructure costs.\n\nLearn how modern agentic platforms use Progressive Disclosure to index metadata first, load detailed instructions strictly on-demand, and execute black-box Python code inside isolated remote sandboxes with zero context bloat.\n\n\u23f1\ufe0f TIMESTAMPS:\n00:00 - The Problem with Brittle AI Wrappers\n00:45 - The 3-Stage Progressive Disclosure Architecture\n01:25 - Implementing the Sandboxed Python Runtime\n02:05 - Enterprise CI/CD Deployment & Overseer Dashboard\n\n\ud83d\udee0\ufe0f ENTERPRISE TOOLS & RESOURCES (VERIFIED IN SANDBOX):\n\u2022 ElevenLabs AI Voice & Agent SDK: https://try.elevenlabs.io/l7jlmg96e3lb\n\n\u2696\ufe0f FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no additional cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n#Python #AIAgents #GoogleAntigravity #LangGraph #FastMCP #DevOps",
-    "pinned_comment": "\ud83d\udccc Grab the Episode 001 code and complete blueprint here:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/001-autonomous-agent-skills\n\n\ud83d\udcac Question for the community: Which agent framework are you currently deploying to production\u2014PydanticAI, LangGraph, or custom FastMCP? Let us know below!",
+    "description": "🚀 Download the Episode 001 code & architecture blueprint:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/001-autonomous-agent-skills\n\n📚 Complete Channel Open-Source Library:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\nIn this episode of Agentic Stack B2B, we break down the complete technical blueprint for building autonomous, monetization-compliant AI agent skills in Python without paying expensive API or cloud infrastructure costs.\n\nLearn how modern agentic platforms use Progressive Disclosure to index metadata first, load detailed instructions strictly on-demand, and execute black-box Python code inside isolated remote sandboxes with zero context bloat.\n\n⏱️ TIMESTAMPS:\n00:00 - The Problem with Brittle AI Wrappers\n00:45 - The 3-Stage Progressive Disclosure Architecture\n01:25 - Implementing the Sandboxed Python Runtime\n02:05 - Enterprise CI/CD Deployment & Overseer Dashboard\n\n🛠️ ENTERPRISE TOOLS & RESOURCES (VERIFIED IN SANDBOX):\n• ElevenLabs AI Voice & Agent SDK: https://try.elevenlabs.io/l7jlmg96e3lb\n\n⚖️ FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no additional cost to you. We strictly test and verify every tool in our cloud sandbox before recommending it.\n\n#Python #AIAgents #GoogleAntigravity #LangGraph #FastMCP #DevOps",
+    "pinned_comment": "📌 Grab the Episode 001 code and complete blueprint here:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/001-autonomous-agent-skills\n\n💬 Question for the community: Which agent framework are you currently deploying to production—PydanticAI, LangGraph, or custom FastMCP? Let us know below!",
     "long_video_file": "assets/video_001_long.mp4",
     "short_video_file": "assets/video_001_short.mp4",
     "thumbnail_file": "assets/thumb_001.png"
@@ -165,5 +166,148 @@
         }
       ]
     }
-  ]
+  ],
+  "channel_metrics": {
+    "total_views": 1783,
+    "total_comments": 9,
+    "total_likes": 17,
+    "subscribers": 5,
+    "video_count": 10,
+    "top_video": {
+      "video_id": "PAQ4pzoH0XI",
+      "label": "Short (PAQ4pz)",
+      "category": "Short / Reel",
+      "title": "Sub-400ms AI Voice Phone Agent in Python #shorts #ai",
+      "published_at": "2026-11-13",
+      "views": 961,
+      "comments": 1,
+      "likes": 6,
+      "duration_sec": 20,
+      "is_short": true
+    },
+    "video_breakdown": "Short (PAQ4pz) (961 visn) | Short #002.1 (623 visn) | Short (wjgj1w) (75 visn) | Ep #002.1 (43 visn) | Short (3TxE--) (39 visn) | Ep #001 (12 visn) | Ep #002 (9 visn) | Video (XtEPck) (8 visn) | Video (x-bdJW) (7 visn) | Video (gsiV4-) (6 visn)",
+    "videos": [
+      {
+        "video_id": "PAQ4pzoH0XI",
+        "label": "Short (PAQ4pz)",
+        "category": "Short / Reel",
+        "title": "Sub-400ms AI Voice Phone Agent in Python #shorts #ai",
+        "published_at": "2026-11-13",
+        "views": 961,
+        "comments": 1,
+        "likes": 6,
+        "duration_sec": 20,
+        "is_short": true
+      },
+      {
+        "video_id": "GTzZWe9nQaE",
+        "label": "Short #002.1",
+        "category": "Short / Reel",
+        "title": "Build Real-Time Voice AI Agents in Python",
+        "published_at": "2026-11-11",
+        "views": 623,
+        "comments": 1,
+        "likes": 7,
+        "duration_sec": 17,
+        "is_short": true
+      },
+      {
+        "video_id": "wjgj1w1bTVs",
+        "label": "Short (wjgj1w)",
+        "category": "Short / Reel",
+        "title": "Dub ANY Video into 29 Languages in Python 🤯 #shorts",
+        "published_at": "2026-11-12",
+        "views": 75,
+        "comments": 1,
+        "likes": 0,
+        "duration_sec": 20,
+        "is_short": true
+      },
+      {
+        "video_id": "kdS-4Oqy6pM",
+        "label": "Ep #002.1",
+        "category": "Remake",
+        "title": "Build Real-Time Voice AI Agents in Python (Sub-400ms WebSockets 2026)",
+        "published_at": "2026-11-11",
+        "views": 43,
+        "comments": 2,
+        "likes": 0,
+        "duration_sec": 193,
+        "is_short": false
+      },
+      {
+        "video_id": "3TxE--zXb8E",
+        "label": "Short (3TxE--)",
+        "category": "Short / Reel",
+        "title": "PDF to 2-Speaker AI Podcast in 42 Seconds (Python) #Shorts #python #elevenlabs #aiagents",
+        "published_at": "2026-11-16",
+        "views": 39,
+        "comments": 0,
+        "likes": 3,
+        "duration_sec": 42,
+        "is_short": true
+      },
+      {
+        "video_id": "NEoqC7BxBqE",
+        "label": "Ep #001",
+        "category": "Long",
+        "title": "Build Autonomous AI Agent Skills in Python (Zero-Cost Production Blueprint 2026)",
+        "published_at": "2026-11-10",
+        "views": 12,
+        "comments": 1,
+        "likes": 0,
+        "duration_sec": 103,
+        "is_short": false
+      },
+      {
+        "video_id": "3B178ZvPS_s",
+        "label": "Ep #002",
+        "category": "Long",
+        "title": "Build Real-Time Conversational Voice AI Agents in Python (ElevenLabs WebSockets 2026)",
+        "published_at": "2026-11-10",
+        "views": 9,
+        "comments": 1,
+        "likes": 0,
+        "duration_sec": 244,
+        "is_short": false
+      },
+      {
+        "video_id": "XtEPck0l3ZY",
+        "label": "Video (XtEPck)",
+        "category": "Long",
+        "title": "How to Clone Voices and Dub Videos in Python (ElevenLabs API 2026)",
+        "published_at": "2026-11-12",
+        "views": 8,
+        "comments": 1,
+        "likes": 1,
+        "duration_sec": 377,
+        "is_short": false
+      },
+      {
+        "video_id": "x-bdJWKEytM",
+        "label": "Video (x-bdJW)",
+        "category": "Long",
+        "title": "Turn Any PDF into AI Podcasts in Python (ElevenLabs Audio)",
+        "published_at": "2026-11-15",
+        "views": 7,
+        "comments": 0,
+        "likes": 0,
+        "duration_sec": 271,
+        "is_short": false
+      },
+      {
+        "video_id": "gsiV4-znh04",
+        "label": "Video (gsiV4-)",
+        "category": "Long",
+        "title": "Build an AI Voice Phone Agent in Python (ElevenLabs + Twilio)",
+        "published_at": "2026-11-13",
+        "views": 6,
+        "comments": 1,
+        "likes": 0,
+        "duration_sec": 402,
+        "is_short": false
+      }
+    ],
+    "last_synced": "2026-11-16 14:52 UTC"
+  }
 }
