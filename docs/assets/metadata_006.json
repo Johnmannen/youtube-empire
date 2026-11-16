@@ -1,0 +1,41 @@
+{
+  "package_id": "006",
+  "generated_at": "2026-11-16T11:30:00Z",
+  "channel": "Agentic Stack B2B",
+  "github_repo": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/006-realtime-voice-translator",
+  "affiliate_placeholders": [
+    {
+      "partner": "ElevenLabs Speech-to-Speech & Flash v2.5 API",
+      "placeholder_tag": "https://try.elevenlabs.io/agentic-translator",
+      "live_url": "https://try.elevenlabs.io/agentic-translator",
+      "commission": "22% Recurring Commission (PartnerStack Verified)"
+    }
+  ],
+  "long_form": {
+    "title": "Build an AI Real-Time Voice Translator in Python (Sub-500ms S2S)",
+    "alternative_title": "Sub-500ms Two-Way Speech Interpreter with ElevenLabs Flash v2.5",
+    "description": "🎁 [FREE TRIAL] Try ElevenLabs Speech-to-Speech & Flash v2.5 Voice AI:\n👉 https://try.elevenlabs.io/agentic-translator (Affiliate Partner Link)\n\n🚀 [SOURCE CODE] Download Episode #006 Real-Time Voice Translator Scripts:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/006-realtime-voice-translator\n\n📚 [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\nLanguage barriers kill global business to business deals. In this video, we build a sub-500ms two-way voice interpreter in Python using low-latency audio stream buffers and the ElevenLabs Flash v2.5 API.\n\n⏱️ TIMESTAMPS:\n00:00 - LIVE ENGLISH TO SPANISH VOICE SWITCH\n00:48 - SYSTEM ARCHITECTURE: 3-STAGE S2S PIPELINE\n01:50 - PYTHON PCM AUDIO STREAM BUFFER SETUP\n02:35 - ELEVENLABS FLASH V2.5 MULTILINGUAL SYNTHESIS\n03:15 - LATENCY BENCHMARK & DEAL CONVERSION METRICS\n03:52 - ENTERPRISE INTERPRETATION ROI & LIVE TERMINAL\n04:20 - GITHUB BLUEPRINT, FREE TRIAL & MORE VIDEOS\n\n⚖️ FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you.\n\n#VoiceTranslator #ElevenLabs #Python #SpeechToSpeech #FlashV25 #AIAgents",
+    "pinned_comment": "📌 Try ElevenLabs Speech-to-Speech & Flash v2.5 Free:\n👉 https://try.elevenlabs.io/agentic-translator\n\n💻 Grab the exact Python code for Episode #006 on GitHub:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/006-realtime-voice-translator\n\n👍 Like & Subscribe for more production builds!",
+    "tags": [
+      "ElevenLabs Speech to Speech",
+      "Python Voice Translator",
+      "ElevenLabs Flash v2.5",
+      "Real-Time AI Interpreter",
+      "Multilingual Voice AI"
+    ],
+    "category_id": "28",
+    "altered_content": false
+  },
+  "short_form": {
+    "title": "Translate Your Voice Live in 500ms with Python 🤯 #Shorts #AI",
+    "description": "Build a real-time English-to-Spanish AI voice translator in Python with sub-500ms latency! 🚀\n\n⭐ Free ElevenLabs trial: https://try.elevenlabs.io/agentic-translator\n💻 Exact Episode #006 GitHub Code: https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/006-realtime-voice-translator\n\nWatch the full step-by-step breakdown on our channel!\n\n#Shorts #ElevenLabs #Python #AI #VoiceTranslator",
+    "pinned_comment": "💻 Grab the exact Episode #006 Python code on GitHub:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/006-realtime-voice-translator\n\n⭐ Try ElevenLabs free: https://try.elevenlabs.io/agentic-translator — and watch the full tutorial on our channel!",
+    "tags": [
+      "Shorts",
+      "ElevenLabs",
+      "Python",
+      "AI Voice Translator",
+      "Speech to Speech"
+    ]
+  }
+}

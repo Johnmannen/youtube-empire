@@ -13,7 +13,7 @@
   },
   "kpis": {
     "channel_age": "Day 1 (Launch)",
-    "videos_produced": "4 (9 publicerade live på kanalen)",
+    "videos_produced": "4 (9 publicerade live p\u00e5 kanalen)",
     "views_30d": "1734 visningar (9 videor totalt)",
     "views_growth": "Active Launch",
     "affiliate_clicks": "Active",
@@ -86,57 +86,53 @@
       "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/004-voice-phone-agent",
       "affiliate": "https://try.elevenlabs.io/agentic-telephony",
       "thumbnail": "assets/thumb_004.png"
+    },
+    {
+      "package_id": "005",
+      "title": "Turn Any Text Document into Audio Podcasts in Python (ElevenLabs Audio Native) [EPISODE 005]",
+      "status": "PUBLISHED_LIVE",
+      "published_date": "2026-11-16",
+      "format": "16:9 Long",
+      "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library",
+      "affiliate": "",
+      "thumbnail": "assets/thumb_005.png"
     }
   ],
   "current_package": {
-    "package_id": "005",
-    "title": "Turn Any Text Document into Audio Podcasts in Python (ElevenLabs Audio Native) [EPISODE 005]",
+    "package_id": "006",
+    "title": "Build an AI Real-Time Voice Translator in Python (Sub-500ms S2S) [EPISODE 006]",
     "category_id": "28",
     "category_name": "Science & Technology",
     "altered_content": false,
     "c2pa_status": "VERIFIED_COMPLIANT_2026",
     "tags": [
-      "ElevenLabs Audio Native",
-      "Python PDF to Podcast",
-      "PyMuPDF",
-      "AI Podcast Generator",
-      "Developer Documentation AI"
+      "ElevenLabs Speech to Speech",
+      "Python Voice Translator",
+      "ElevenLabs Flash v2.5",
+      "Real-Time AI Interpreter",
+      "Multilingual Voice AI"
     ],
     "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library",
     "studio_upload_url": "https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg",
-    "description": "🎁 [FREE TRIAL] Try ElevenLabs Audio Native & Voice AI:\n👉 https://try.elevenlabs.io/agentic-reader (Affiliate Partner Link)\n\n🚀 [SOURCE CODE] Download Python Document-to-Podcast Scripts:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/005-doc-to-podcast\n\n📚 [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\nEngineers do not read 40-page technical manuals. In this video, we build an automated document-to-podcast pipeline in Python using PyMuPDF and the ElevenLabs Audio Native API.\n\n⏱️ TIMESTAMPS:\n00:00 - STOP READING 40-PAGE MANUALS\n00:50 - SYSTEM ARCHITECTURE: 3-STAGE AUDIO PIPELINE\n01:54 - PYTHON PDF & MARKDOWN PARSER SETUP\n02:38 - ELEVENLABS AUDIO NATIVE SYNTHESIS\n03:18 - AUDIO QUALITY & DEVELOPER RETENTION\n03:54 - ENTERPRISE DOCUMENTATION ROI\n04:22 - GITHUB BLUEPRINT, FREE TRIAL & NEXT EPISODE\n\n⚖️ FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you.\n\n#AudioNative #ElevenLabs #Python #PyMuPDF #PodcastAI #AIAgents",
-    "pinned_comment": "📌 Try ElevenLabs Audio Native Free:\n👉 https://try.elevenlabs.io/agentic-reader\n\n💻 Download the complete Python script on GitHub: https://github.com/Johnmannen/Agentic-Stack-Library",
+    "description": "\ud83c\udf81 [FREE TRIAL] Try ElevenLabs Speech-to-Speech & Flash v2.5 Voice AI:\n\ud83d\udc49 https://try.elevenlabs.io/agentic-translator (Affiliate Partner Link)\n\n\ud83d\ude80 [SOURCE CODE] Download Episode #006 Real-Time Voice Translator Scripts:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/006-realtime-voice-translator\n\n\ud83d\udcda [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library\n\nLanguage barriers kill global business to business deals. In this video, we build a sub-500ms two-way voice interpreter in Python using low-latency audio stream buffers and the ElevenLabs Flash v2.5 API.\n\n\u23f1\ufe0f TIMESTAMPS:\n00:00 - LIVE ENGLISH TO SPANISH VOICE SWITCH\n00:48 - SYSTEM ARCHITECTURE: 3-STAGE S2S PIPELINE\n01:50 - PYTHON PCM AUDIO STREAM BUFFER SETUP\n02:35 - ELEVENLABS FLASH V2.5 MULTILINGUAL SYNTHESIS\n03:15 - LATENCY BENCHMARK & DEAL CONVERSION METRICS\n03:52 - ENTERPRISE INTERPRETATION ROI & LIVE TERMINAL\n04:20 - GITHUB BLUEPRINT, FREE TRIAL & MORE VIDEOS\n\n\u2696\ufe0f FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you.\n\n#VoiceTranslator #ElevenLabs #Python #SpeechToSpeech #FlashV25 #AIAgents",
+    "pinned_comment": "\ud83d\udccc Try ElevenLabs Speech-to-Speech & Flash v2.5 Free:\n\ud83d\udc49 https://try.elevenlabs.io/agentic-translator\n\n\ud83d\udcbb Grab the exact Python code for Episode #006 on GitHub:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/006-realtime-voice-translator\n\n\ud83d\udc4d Like & Subscribe for more production builds!",
     "shorts_metadata": {
-      "title": "Turn 40-Page PDFs into AI Podcasts in Python 🤯 #Shorts",
-      "description": "Convert any technical PDF or Markdown doc into a two-speaker AI podcast in 40 seconds! 🚀\n\n⭐ Free ElevenLabs trial: https://try.elevenlabs.io/agentic-reader\n💻 Code on GitHub: https://github.com/Johnmannen/Agentic-Stack-Library\n\n#Shorts #ElevenLabs #Python #AI #Podcast",
-      "pinned_comment": "Full tutorial & Python blueprint on our channel! Try ElevenLabs free: https://try.elevenlabs.io/agentic-reader",
+      "title": "Translate Your Voice Live in 500ms with Python \ud83e\udd2f #Shorts #AI",
+      "description": "Build a real-time English-to-Spanish AI voice translator in Python with sub-500ms latency! \ud83d\ude80\n\n\u2b50 Free ElevenLabs trial: https://try.elevenlabs.io/agentic-translator\n\ud83d\udcbb Exact Episode #006 GitHub Code: https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/006-realtime-voice-translator\n\nWatch the full step-by-step breakdown on our channel!\n\n#Shorts #ElevenLabs #Python #AI #VoiceTranslator",
+      "pinned_comment": "\ud83d\udcbb Grab the exact Episode #006 Python code on GitHub:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/006-realtime-voice-translator\n\n\u2b50 Try ElevenLabs free: https://try.elevenlabs.io/agentic-translator \u2014 and watch the full tutorial on our channel!",
       "tags": [
         "Shorts",
         "ElevenLabs",
         "Python",
-        "AI Podcast"
+        "AI Voice Translator",
+        "Speech to Speech"
       ]
     },
-    "long_video_file": "assets/video_005_long.mp4",
-    "short_video_file": "assets/video_005_short.mp4",
-    "thumbnail_file": "assets/thumb_005.png"
+    "long_video_file": "assets/video_006_long.mp4",
+    "short_video_file": "assets/video_006_short.mp4",
+    "thumbnail_file": "assets/thumb_006.png"
   },
   "pitches": [
-    {
-      "episode_id": "006",
-      "title": "Build an AI Real-Time Voice Translator in Python",
-      "alternative_title": "Sub-500ms Two-Way Speech Interpreter with ElevenLabs S2S",
-      "duration": "04:15",
-      "niche_rpm": ".80",
-      "search_volume_monthly": 31200,
-      "growth_mom": "+88%",
-      "target_audience": "International B2B Teams, Founders & Global Sales",
-      "affiliate_partner": "ElevenLabs Speech-to-Speech & Conversational AI (22% Recurring)",
-      "affiliate_url": "https://try.elevenlabs.io/agentic-voice",
-      "hook": "Language barriers kill global B2B deals. Here is how to build a real-time, two-way speech interpreter in Python.",
-      "code_demo": "ElevenLabs Speech-to-Speech API + PyAudio Stream Buffer",
-      "status": "PITCH_READY_REVIEW"
-    },
     {
       "episode_id": "007",
       "title": "Generate Dynamic AI Game Audio & NPC Voices in Python",
@@ -147,7 +143,7 @@
       "growth_mom": "+73%",
       "target_audience": "Game Developers, Unity/Unreal Devs & AI Creators",
       "affiliate_partner": "ElevenLabs Sound Effects & Voice Design API (22% Recurring)",
-      "affiliate_url": "https://try.elevenlabs.io/agentic-voice",
+      "affiliate_url": "https://try.elevenlabs.io/agentic-sfx",
       "hook": "Static audio assets are obsolete. Build an infinite procedural sound effects and NPC dialogue engine in Python.",
       "code_demo": "ElevenLabs Sound Effects API + Fast WebSocket Audio Player",
       "status": "PITCH_READY_REVIEW"
@@ -156,29 +152,59 @@
       "episode_id": "008",
       "title": "Build an Automated B2B Onboarding Voice & Video Engine in Python",
       "alternative_title": "Personalized Client Walkthroughs at Scale (ElevenLabs Flash v2.5 + FFmpeg)",
-      "duration": "04:00–4:45 min",
+      "duration": "04:00\u20134:45 min",
       "niche_rpm": "$29.40",
       "search_volume_monthly": 22600,
       "growth_mom": "+64%",
-      "pedagogical_goal": "Personaliserade röst- & videoguidas per CRM-kund",
+      "pedagogical_goal": "Personaliserade r\u00f6st- & videoguidas per CRM-kund",
       "target_audience": "B2B SaaS Founders, Growth Engineers & RevOps",
       "affiliate_partner": "ElevenLabs Flash v2.5 & Voice API (22% Rec)",
-      "affiliate_url": "https://try.elevenlabs.io/agentic-voice",
+      "affiliate_url": "https://try.elevenlabs.io/agentic-onboarding",
       "hook": "Generic onboarding emails get ignored. Generate personalized, studio-quality voice and video walkthroughs for every new B2B signup automatically in Python.",
       "code_demo": "ElevenLabs Flash v2.5 + CRM Webhook & FFmpeg",
-      "goal": "Bygg en automatisk B2B onboarding-motor i Python som lyssnar på CRM/Stripe-webhooks, genererar kundanpassad röstsyntes med ElevenLabs Flash v2.5 och renderar en personlig välkomstvideo.",
+      "goal": "Bygg en automatisk B2B onboarding-motor i Python som lyssnar p\u00e5 CRM/Stripe-webhooks, genererar kundanpassad r\u00f6stsyntes med ElevenLabs Flash v2.5 och renderar en personlig v\u00e4lkomstvideo.",
       "script_steps": [
-        "• Scen 1 (00:00 - 00:35): Varför generiska välkomstmejl ger 80% churn-risk första veckan i B2B SaaS.",
-        "• Scen 2 (00:35 - 01:25): Webhook-arkitektur: Stripe/HubSpot-trigger -> ElevenLabs Flash v2.5 -> FFmpeg-komposition.",
-        "• Scen 3 (01:25 - 02:40): Python-kod: Dynamisk variabelinjektion och sub-75ms röstgenerering med Flash v2.5.",
-        "• Scen 4 (02:40 - 03:45): Automatisk MP4-rendering och utskick med spårbar klickkonvertering.",
-        "• Scen 5 (03:45 - 04:20): ROI-kalkyl, GitHub-kod och ElevenLabs gratis provperiod."
+        "\u2022 Scen 1 (00:00 - 00:35): Varf\u00f6r generiska v\u00e4lkomstmejl ger 80% churn-risk f\u00f6rsta veckan i B2B SaaS.",
+        "\u2022 Scen 2 (00:35 - 01:25): Webhook-arkitektur: Stripe/HubSpot-trigger -> ElevenLabs Flash v2.5 -> FFmpeg-komposition.",
+        "\u2022 Scen 3 (01:25 - 02:40): Python-kod: Dynamisk variabelinjektion och sub-75ms r\u00f6stgenerering med Flash v2.5.",
+        "\u2022 Scen 4 (02:40 - 03:45): Automatisk MP4-rendering och utskick med sp\u00e5rbar klickkonvertering.",
+        "\u2022 Scen 5 (03:45 - 04:20): ROI-kalkyl, GitHub-kod och ElevenLabs gratis provperiod."
       ],
-      "trend": "Sökvolym: 22 600 sökningar/månad (+64% MoM). Hyper-personaliserad B2B-onboarding med röst och video växer kraftigt.",
+      "trend": "S\u00f6kvolym: 22 600 s\u00f6kningar/m\u00e5nad (+64% MoM). Hyper-personaliserad B2B-onboarding med r\u00f6st och video v\u00e4xer kraftigt.",
       "code": "ElevenLabs Flash v2.5 API + FastAPI CRM Webhook + FFmpeg Overlay Pipeline.",
       "affiliates": [
-        "• ElevenLabs Flash v2.5 & Voice API: 22% Recurring Commission via PartnerStack",
-        "• FastAPI / HubSpot / FFmpeg Automation Stack"
+        "\u2022 ElevenLabs Flash v2.5 & Voice API: 22% Recurring Commission via PartnerStack",
+        "\u2022 FastAPI / HubSpot / FFmpeg Automation Stack"
+      ],
+      "status": "PITCH_READY_REVIEW"
+    },
+    {
+      "episode_id": "009",
+      "title": "Build a Multi-Character AI Audiobook Studio in Python (ElevenLabs v3)",
+      "alternative_title": "Full-Cast Emotion-Tagged Audio Production with ElevenLabs Projects API",
+      "duration": "04:00\u20135:00 min",
+      "niche_rpm": "$26.80",
+      "search_volume_monthly": 24900,
+      "growth_mom": "+71%",
+      "pedagogical_goal": "Flerr\u00f6stats bok- & kursproduktion med k\u00e4nslotaggar",
+      "target_audience": "EdTech Teams, Creators & Publishing Platforms",
+      "affiliate_partner": "ElevenLabs Voice Design & Projects API (22% Rec)",
+      "affiliate_url": "https://try.elevenlabs.io/agentic-onboarding",
+      "hook": "Single-voice narration puts listeners to sleep. Build an automated multi-character audiobook and course narration pipeline in Python.",
+      "code_demo": "ElevenLabs Multi-Voice + Chapter Mastering",
+      "goal": "Automatisera helautomatisk ljudboks- och kursproduktion i Python med separata karakt\u00e4rsr\u00f6ster, pausstyrning och kapitelmastring.",
+      "script_steps": [
+        "\u2022 Scen 1 (00:00 - 00:35): Varf\u00f6r en-r\u00f6sts AI-uppl\u00e4sning faller platt i l\u00e4ngre utbildningar och b\u00f6cker.",
+        "\u2022 Scen 2 (00:35 - 01:25): Karakt\u00e4rs-parsing i Python: Dela upp manus i ber\u00e4ttare och dialogroller.",
+        "\u2022 Scen 3 (01:25 - 02:45): ElevenLabs API: R\u00f6sttilldelning, stabilitet och naturlig prosodi.",
+        "\u2022 Scen 4 (02:45 - 03:50): FFmpeg loudness-normalisering (-14 LUFS) och kapitel-export.",
+        "\u2022 Scen 5 (03:50 - 04:30): Outro med ElevenLabs gratis provperiod och GitHub-mall."
+      ],
+      "trend": "S\u00f6kvolym: 24 900 s\u00f6kningar/m\u00e5nad (+71% MoM). Efterfr\u00e5gan p\u00e5 automatiserad EdTech- och ljudboksproduktion skjuter i h\u00f6jden.",
+      "code": "Python Script Parser + ElevenLabs Multi-Voice Synthesis + FFmpeg Loudness Mastering.",
+      "affiliates": [
+        "\u2022 ElevenLabs Creator & Pro Tier: 22% Recurring Commission via PartnerStack (https://try.elevenlabs.io/agentic-onboarding)",
+        "\u2022 Python Pydub / FFmpeg Mastering Pipeline"
       ],
       "status": "PITCH_READY_REVIEW"
     }
@@ -232,7 +258,7 @@
         "video_id": "wjgj1w1bTVs",
         "label": "Short (wjgj1w)",
         "category": "Short / Reel",
-        "title": "Dub ANY Video into 29 Languages in Python 🤯 #shorts",
+        "title": "Dub ANY Video into 29 Languages in Python \ud83e\udd2f #shorts",
         "published_at": "2026-11-12",
         "views": 75,
         "comments": 1,

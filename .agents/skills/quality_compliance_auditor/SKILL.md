@@ -37,6 +37,11 @@ Denna skill ger agenten mandat och verktyg att agera som en **oberoende grindvak
   - Ep #002: `https://try.elevenlabs.io/agentic-voice`
   - Ep #004: `https://try.elevenlabs.io/agentic-telephony`
   - Ep #005: `https://try.elevenlabs.io/agentic-reader`
+  - Ep #006: `https://try.elevenlabs.io/agentic-translator`
+  - Ep #007: `https://try.elevenlabs.io/agentic-sfx`
+  - Ep #008: `https://try.elevenlabs.io/agentic-onboarding`
+  - Ep #009: `https://try.elevenlabs.io/agentic-onboarding`
+  - Ep #010: `https://try.elevenlabs.io/agentic-onboarding`
 - [ ] **GitHub-länk:** Korrekt referens till `https://github.com/Johnmannen/Agentic-Stack-Library`.
 - [ ] **Fäst Kommentar:** Separat anpassad kommentar för både lång- och kortvideo med korrekta länkar.
 - [ ] **Tidsstämplar:** Korrekta kapitel från `00:00` i långvideons beskrivning.

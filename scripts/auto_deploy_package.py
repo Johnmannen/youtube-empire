@@ -94,7 +94,7 @@ def deploy_package(pkg_id: str):
             "pedagogical_goal": "Personaliserade röst- & videoguidas per CRM-kund",
             "target_audience": "B2B SaaS Founders, Growth Engineers & RevOps",
             "affiliate_partner": "ElevenLabs Flash v2.5 & Voice API (22% Rec)",
-            "affiliate_url": "https://try.elevenlabs.io/agentic-voice",
+            "affiliate_url": "https://try.elevenlabs.io/agentic-onboarding",
             "hook": "Generic onboarding emails get ignored. Generate personalized, studio-quality voice and video walkthroughs for every new B2B signup automatically in Python.",
             "code_demo": "ElevenLabs Flash v2.5 + CRM Webhook & FFmpeg",
             "goal": "Bygg en automatisk B2B onboarding-motor i Python som lyssnar på CRM/Stripe-webhooks, genererar kundanpassad röstsyntes med ElevenLabs Flash v2.5 och renderar en personlig välkomstvideo.",
@@ -108,7 +108,7 @@ def deploy_package(pkg_id: str):
             "trend": "Sökvolym: 22 600 sökningar/månad (+64% MoM). Hyper-personaliserad B2B-onboarding med röst och video växer kraftigt.",
             "code": "ElevenLabs Flash v2.5 API + FastAPI CRM Webhook + FFmpeg Overlay Pipeline.",
             "affiliates": [
-                "• ElevenLabs Flash v2.5 & Voice API: 22% Recurring Commission via PartnerStack",
+                "• ElevenLabs Flash v2.5 & Voice API: 22% Recurring Commission via PartnerStack (https://try.elevenlabs.io/agentic-onboarding)",
                 "• FastAPI / HubSpot / FFmpeg Automation Stack"
             ],
             "status": "PITCH_READY_REVIEW",
@@ -124,7 +124,7 @@ def deploy_package(pkg_id: str):
             "pedagogical_goal": "Flerröstats bok- & kursproduktion med känslotaggar",
             "target_audience": "EdTech Teams, Creators & Publishing Platforms",
             "affiliate_partner": "ElevenLabs Voice Design & Projects API (22% Rec)",
-            "affiliate_url": "https://try.elevenlabs.io/agentic-reader",
+            "affiliate_url": "https://try.elevenlabs.io/agentic-onboarding",
             "hook": "Single-voice narration puts listeners to sleep. Build an automated multi-character audiobook and course narration pipeline in Python.",
             "code_demo": "ElevenLabs Multi-Voice + Chapter Mastering",
             "goal": "Automatisera helautomatisk ljudboks- och kursproduktion i Python med separata karaktärsröster, pausstyrning och kapitelmastring.",
@@ -138,7 +138,7 @@ def deploy_package(pkg_id: str):
             "trend": "Sökvolym: 24 900 sökningar/månad (+71% MoM). Efterfrågan på automatiserad EdTech- och ljudboksproduktion skjuter i höjden.",
             "code": "Python Script Parser + ElevenLabs Multi-Voice Synthesis + FFmpeg Loudness Mastering.",
             "affiliates": [
-                "• ElevenLabs Creator & Pro Tier: 22% Recurring Commission via PartnerStack",
+                "• ElevenLabs Creator & Pro Tier: 22% Recurring Commission via PartnerStack (https://try.elevenlabs.io/agentic-onboarding)",
                 "• Python Pydub / FFmpeg Mastering Pipeline"
             ],
             "status": "PITCH_READY_REVIEW",
@@ -154,7 +154,7 @@ def deploy_package(pkg_id: str):
             "pedagogical_goal": "Automatisk samtalsanalys & talar-diarisering",
             "target_audience": "FinTech, Enterprise Sales & QA Engineering",
             "affiliate_partner": "ElevenLabs Scribe STT & Voice AI (22% Rec)",
-            "affiliate_url": "https://try.elevenlabs.io/agentic-telephony",
+            "affiliate_url": "https://try.elevenlabs.io/agentic-onboarding",
             "hook": "Manual QA reviews less than 2% of support calls. Build an automated speaker-diarized call auditor in Python using ElevenLabs Scribe.",
             "code_demo": "ElevenLabs Scribe API + Speaker Diarization QA",
             "goal": "Bygg en Python-pipeline som transkriberar kundsamtal med talarseparering (diarization) via ElevenLabs Scribe och flaggar compliance-avvikelser automatiskt.",
@@ -168,7 +168,7 @@ def deploy_package(pkg_id: str):
             "trend": "Sökvolym: 18 400 sökningar/månad (+59% MoM). Högsta B2B-RPM inom FinTech och Enterprise QA.",
             "code": "ElevenLabs Scribe API + Python Diarization & Compliance Scoring Engine.",
             "affiliates": [
-                "• ElevenLabs Scribe & Enterprise Voice AI: 22% Recurring Commission via PartnerStack",
+                "• ElevenLabs Scribe & Enterprise Voice AI: 22% Recurring Commission via PartnerStack (https://try.elevenlabs.io/agentic-onboarding)",
                 "• Python FastAPI / Webhook QA Pipeline"
             ],
             "status": "PITCH_READY_REVIEW",
@@ -198,11 +198,32 @@ def deploy_package(pkg_id: str):
         html,
     )
     if old_id and old_id != pkg_id:
-        html = html.replace(f"Dagens Färdiga Videopaket #{old_id}", f"Dagens Färdiga Videopaket #{pkg_id}")
-        html = html.replace(f"assets/video_{old_id}_long.mp4", f"assets/video_{pkg_id}_long.mp4")
-        html = html.replace(f"assets/video_{old_id}_short.mp4", f"assets/video_{pkg_id}_short.mp4")
-        html = html.replace(f"assets/thumb_{old_id}.png", f"assets/thumb_{pkg_id}.png")
-        html = html.replace(f"assets/short_preview_{old_id}.png", f"assets/short_preview_{pkg_id}.png")
+        # Only replace active package asset paths in Section 2 (before the archive section)
+        archive_split_marker = "<!-- SEKTION 4: PUBLICERADE VIDEOR & ARKIV -->"
+        if archive_split_marker in html:
+            head_part, tail_part = html.split(archive_split_marker, 1)
+        else:
+            head_part, tail_part = html, ""
+        head_part = head_part.replace(f"Dagens Färdiga Videopaket #{old_id}", f"Dagens Färdiga Videopaket #{pkg_id}")
+        head_part = head_part.replace(f"assets/video_{old_id}_long.mp4", f"assets/video_{pkg_id}_long.mp4")
+        head_part = head_part.replace(f"assets/video_{old_id}_short.mp4", f"assets/video_{pkg_id}_short.mp4")
+        head_part = head_part.replace(f"assets/thumb_{old_id}.png", f"assets/thumb_{pkg_id}.png")
+        head_part = head_part.replace(f"assets/thumb_short_{old_id}.png", f"assets/thumb_short_{pkg_id}.png")
+        head_part = head_part.replace(f"assets/short_preview_{old_id}.png", f"assets/short_preview_{pkg_id}.png")
+        head_part = head_part.replace(f"YouTube Long Thumbnail #{old_id}", f"YouTube Long Thumbnail #{pkg_id}")
+        head_part = head_part.replace(f"YouTube Short Thumbnail #{old_id}", f"YouTube Short Thumbnail #{pkg_id}")
+        if tail_part:
+            tail_part = tail_part.replace(
+                f"openThumbnailLightbox(src = 'assets/thumb_{old_id}.png'",
+                f"openThumbnailLightbox(src = 'assets/thumb_{pkg_id}.png'"
+            )
+            tail_part = tail_part.replace(
+                f'id="lightboxDownload" href="assets/thumb_{old_id}.png"',
+                f'id="lightboxDownload" href="assets/thumb_{pkg_id}.png"'
+            )
+            html = head_part + archive_split_marker + tail_part
+        else:
+            html = head_part
 
         # Archive old_id card if not already in archive
         archive_header = 'Tidigare färdigställda videopaket, källkodsrepon och direkta YouTube-länkar.</p>\n          </div>\n        </div>\n      </div>'
