@@ -83,6 +83,22 @@ def deploy_package(pkg_id: str):
 
     # 2b. Remove produced pitch from active 3-pitch queue & replenish with next ElevenLabs pitch
     ELEVENLABS_PITCH_BACKLOG = {
+        "007": {
+            "episode_id": "007",
+            "title": "Generate Dynamic AI Game Audio & NPC Voices in Python",
+            "alternative_title": "Infinite Procedural Soundscapes: ElevenLabs Sound Effects API",
+            "duration": "03:55–04:30 min",
+            "niche_rpm": "$27.50",
+            "search_volume_monthly": 26400,
+            "growth_mom": "+73%",
+            "pedagogical_goal": "Procedurgenererade ljudeffekter & NPC-röster i Python",
+            "target_audience": "Game Developers, Unity/Unreal Devs & AI Creators",
+            "affiliate_partner": "ElevenLabs Sound Effects & Voice Design API (22% Rec)",
+            "affiliate_url": "https://try.elevenlabs.io/agentic-sfx",
+            "hook": "Static audio assets are obsolete. Build an infinite procedural sound effects and NPC dialogue engine in Python.",
+            "code_demo": "ElevenLabs Sound Effects API + Fast WebSocket Audio Player",
+            "status": "PITCH_READY_REVIEW",
+        },
         "008": {
             "episode_id": "008",
             "title": "Build an Automated B2B Onboarding Voice & Video Engine in Python",
@@ -175,7 +191,10 @@ def deploy_package(pkg_id: str):
         },
     }
 
-    pitches = [p for p in state.get("pitches", []) if p.get("episode_id") != pkg_id]
+    pitches = [
+        p for p in state.get("pitches", [])
+        if str(p.get("episode_id", "")).isdigit() and int(p.get("episode_id")) > int(pkg_id)
+    ]
     existing_ids = {p.get("episode_id") for p in pitches}
     while len(pitches) < 3:
         max_num = max([int(p.get("episode_id", 0)) for p in pitches if str(p.get("episode_id", "")).isdigit()] + [int(pkg_id) if pkg_id.isdigit() else 0])
