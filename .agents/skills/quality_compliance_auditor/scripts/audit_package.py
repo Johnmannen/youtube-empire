@@ -19,11 +19,11 @@ AFFILIATE_REGISTRY = {
     "003": "https://try.elevenlabs.io/agentic-dubbing",
     "004": "https://try.elevenlabs.io/agentic-telephony",
     "005": "https://try.elevenlabs.io/agentic-reader",
-    "006": "https://try.elevenlabs.io/agentic-voice",
-    "007": "https://try.elevenlabs.io/agentic-voice",
-    "008": "https://try.elevenlabs.io/agentic-voice",
-    "009": "https://try.elevenlabs.io/agentic-reader",
-    "010": "https://try.elevenlabs.io/agentic-telephony"
+    "006": "https://try.elevenlabs.io/agentic-translator",
+    "007": "https://try.elevenlabs.io/agentic-sfx",
+    "008": "https://try.elevenlabs.io/agentic-onboarding",
+    "009": "https://try.elevenlabs.io/agentic-onboarding",
+    "010": "https://try.elevenlabs.io/agentic-onboarding"
 }
 
 GITHUB_URL = "https://github.com/Johnmannen/Agentic-Stack-Library"
@@ -133,16 +133,18 @@ def audit_package(pkg_id, base_dir):
             # Check Pixel Format
             add_check("Long Video", "YUV420p Color Standard", pix_fmt == "yuv420p", f"Pixel format: {pix_fmt}")
 
-            # Punkt 3: Check Thumbnail Intro & 0.5s Crossfade
+            # Punkt 3: Check Static Thumbnail Intro (0.0-1.8s MUST BE 100% STILL, zero zoom!) & Crossfade
             f_thumb = os.path.join(audit_dir, "frame_01_thumbnail.png")
+            f_thumb_b = os.path.join(audit_dir, "frame_01b_thumbnail.png")
             f_trans = os.path.join(audit_dir, "frame_02_transition.png")
             f_s1 = os.path.join(audit_dir, "frame_03_scene1.png")
 
-            ok_thumb = extract_frame(long_file, "00:00:01", f_thumb)
-            ok_trans = extract_frame(long_file, "00:00:02.8", f_trans)
+            ok_thumb = extract_frame(long_file, "00:00:00.20", f_thumb) and extract_frame(long_file, "00:00:01.40", f_thumb_b)
+            ok_trans = extract_frame(long_file, "00:00:02.05", f_trans)
             ok_s1 = extract_frame(long_file, "00:00:05", f_s1)
 
-            add_check("Long Video", "Thumbnail Intro (0.0-2.5s)", ok_thumb, f"Verified frame: {f_thumb}")
+            thumb_intro_diff = frames_mean_diff(f_thumb, f_thumb_b) if ok_thumb else 99.0
+            add_check("Long Video", "Static Thumbnail Intro (No Zoom)", ok_thumb and thumb_intro_diff < 0.05, f"Intro frame diff (0.2s vs 1.4s): {thumb_intro_diff:.3f} (<0.05 required)")
             add_check("Long Video", "Crossfade Transition (0.5s)", ok_trans, f"Verified blend frame: {f_trans}")
 
             # Punkt 4: Check Timed Highlighting & Real Motion Diff (no frozen scenes)
@@ -229,8 +231,8 @@ def audit_package(pkg_id, base_dir):
             s_w = s_v_stream.get("width", 0)
             s_h = s_v_stream.get("height", 0)
 
-            # Strict 15-20s duration
-            add_check("Short Video", "Duration Window (15-20s)", 15.0 <= s_dur <= 20.0, f"Duration: {s_dur:.2f}s")
+            # Strict 30-60s duration (Master Standard)
+            add_check("Short Video", "Duration Window (30-60s)", 30.0 <= s_dur <= 60.0, f"Duration: {s_dur:.2f}s")
             # 9:16 Vertical
             add_check("Short Video", "9:16 Vertical Aspect Ratio", s_w == 1080 and s_h == 1920, f"{s_w}x{s_h}")
 
@@ -241,8 +243,12 @@ def audit_package(pkg_id, base_dir):
             s_tail_db = get_audio_tail_mean_db(short_file, 0.30)
             add_check("Short Video", "Audio Tail No Cutoff", s_tail_db < -32.0, f"Last 0.30s mean volume: {s_tail_db:.1f} dB (<-32 dB required)")
 
-            short_poster = os.path.join(base_dir, f"short_preview_{pkg_id}.png")
-            add_check("Short Video", "Preview Poster Image", os.path.exists(short_poster), f"Poster exists: {short_poster}")
+            short_poster = os.path.join(base_dir, f"thumb_short_{pkg_id}.png")
+            poster_ok = os.path.exists(short_poster)
+            if poster_ok:
+                with Image.open(short_poster) as sp_im:
+                    poster_ok = (sp_im.size == (1080, 1920))
+            add_check("Short Video", "9:16 Vertical Thumbnail (1080x1920)", poster_ok, f"Poster verified: {short_poster}")
 
     # ==============================================================================
     # 3. PUNKT 6: GRAPHICAL ARTIFACT & GLYPH INTEGRITY AUDIT
@@ -292,8 +298,15 @@ def audit_package(pkg_id, base_dir):
             add_check("Metadata", "Dedicated Shorts Metadata", has_short_meta, "Separate Shorts title, description & comment present")
 
             # Category 28 Science & Tech
-            cat_id = meta.get("long_form", {}).get("upload_settings", {}).get("category_id")
+            cat_id = meta.get("long_form", {}).get("category_id") or meta.get("long_form", {}).get("upload_settings", {}).get("category_id")
             add_check("Metadata", "YouTube Category 28", cat_id == "28", f"Category ID: {cat_id} (Science & Technology)")
+
+            # Check: No ICC Profile side_data in Long or Short (YouTube 2888402 Guard)
+            for lbl, vpath in [("Long Video", long_file), ("Short Video", short_file)]:
+                if vpath and os.path.exists(vpath):
+                    raw_probe = subprocess.run(["ffprobe", "-v", "error", "-show_streams", vpath], capture_output=True, text=True).stdout
+                    no_icc = "ICC Profile" not in raw_probe and "yuvj420p" not in raw_probe
+                    add_check(lbl, "No ICC Profile / Clean BT.709", no_icc, "Zero ICC Profile side_data & clean yuv420p")
 
             # Check 19: No Duplicate Link Blocks in Description
             desc = meta.get("long_form", {}).get("description", "")
@@ -318,8 +331,8 @@ def audit_package(pkg_id, base_dir):
                 else:
                     add_check("Dashboard", "Description HTML No Slop", True, "Textarea not present or external")
 
-                has_short_poster_attr = f'poster="assets/short_preview_{pkg_id}.png"' in html_content
-                add_check("Dashboard", "Shorts Video Poster Attribute", has_short_poster_attr, f'Checks poster="assets/short_preview_{pkg_id}.png" in index.html')
+                has_short_poster_attr = f'poster="assets/thumb_short_{pkg_id}.png"' in html_content
+                add_check("Dashboard", "Shorts Video Poster Attribute", has_short_poster_attr, f'Checks poster="assets/thumb_short_{pkg_id}.png" in index.html')
 
                 # Check 27: Full Dashboard Metadata Sync (Long + Shorts titles, descriptions, pinned comments, tags, affiliateUrl)
                 import html as html_lib
