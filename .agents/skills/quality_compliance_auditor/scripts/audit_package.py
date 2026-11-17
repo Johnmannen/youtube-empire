@@ -285,9 +285,54 @@ def audit_package(pkg_id, base_dir):
             has_aff = expected_affiliate in meta_str
             add_check("Metadata", "Verified Affiliate URL", has_aff, f"Verified exact link: {expected_affiliate}")
 
-            # GitHub link check
+            # GitHub link check + Live GitHub Episode Folder & Root README Sync Audit
             has_git = GITHUB_URL in meta_str
             add_check("Metadata", "GitHub Blueprint URL", has_git, f"Verified repo link: {GITHUB_URL}")
+
+            ep_repo_url = meta.get("github_repo", "")
+            ep_slug = ep_repo_url.split("/tree/main/")[-1].strip("/") if "/tree/main/" in ep_repo_url else ""
+            import urllib.request
+            ep_folder_ok = False
+            root_readme_ok = False
+            ep_readme_ok = False
+            try:
+                if ep_repo_url:
+                    req1 = urllib.request.Request(ep_repo_url, headers={"User-Agent": "Mozilla/5.0"})
+                    with urllib.request.urlopen(req1, timeout=10) as r1:
+                        ep_folder_ok = (r1.status == 200)
+                raw_root_url = "https://raw.githubusercontent.com/Johnmannen/Agentic-Stack-Library/main/README.md"
+                req2 = urllib.request.Request(raw_root_url, headers={"User-Agent": "Mozilla/5.0"})
+                with urllib.request.urlopen(req2, timeout=10) as r2:
+                    root_md = r2.read().decode("utf-8", errors="ignore")
+                    root_readme_ok = (
+                        f"**#{pkg_id}**" in root_md
+                        and (not ep_slug or f"./{ep_slug}/" in root_md)
+                        and f"Episode #{pkg_id}" in root_md
+                    )
+                if ep_slug:
+                    raw_ep_url = f"https://raw.githubusercontent.com/Johnmannen/Agentic-Stack-Library/main/{ep_slug}/README.md"
+                    req3 = urllib.request.Request(raw_ep_url, headers={"User-Agent": "Mozilla/5.0"})
+                    with urllib.request.urlopen(req3, timeout=10) as r3:
+                        ep_md = r3.read().decode("utf-8", errors="ignore")
+                        ep_readme_ok = (
+                            "Architecture Overview" in ep_md
+                            and "Running the Code" in ep_md
+                            and (not expected_affiliate or expected_affiliate in ep_md)
+                        )
+            except Exception as e:
+                print(f"GitHub README live check warning: {e}")
+
+            add_check("GitHub Repo", "Live Episode Folder (HTTP 200)", ep_folder_ok, f"Verified live URL: {ep_repo_url}")
+            add_check("GitHub Repo", "Root README.md Episode & Quickstart", root_readme_ok, f"Root README lists #{pkg_id} in table & Quickstart ({ep_slug})")
+            add_check("GitHub Repo", "Episode README.md Completeness", ep_readme_ok, f"{ep_slug}/README.md has Architecture, Quickstart & Affiliate URL")
+
+            # Also check local factory README.md lists #<pkg_id>
+            local_readme_path = os.path.join(os.path.dirname(os.path.dirname(base_dir)), "README.md")
+            local_readme_ok = False
+            if os.path.exists(local_readme_path):
+                with open(local_readme_path, "r", encoding="utf-8") as lrf:
+                    local_readme_ok = f"**#{pkg_id}**" in lrf.read()
+            add_check("GitHub Repo", "Factory README.md Synced", local_readme_ok, f"Local README.md lists Episode #{pkg_id}")
 
             # Timestamps
             has_ts = "00:00" in meta_str

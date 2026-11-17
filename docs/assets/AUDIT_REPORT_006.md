@@ -1,6 +1,6 @@
 # Quality & Compliance Pre-Flight Audit: Package #006
 
-**Overall Status:** PASS - APPROVED FOR STAGING
+**Overall Status:** FAIL - BLOCKED
 
 | Category | Check Name | Status | Verification Details |
 | :--- | :--- | :---: | :--- |
@@ -23,6 +23,10 @@
 | Graphics | Vector Arrows & ASCII Tokens | **PASS** | No broken box glyphs (□) or emojis detected |
 | Metadata | Verified Affiliate URL | **PASS** | Verified exact link: https://try.elevenlabs.io/agentic-translator |
 | Metadata | GitHub Blueprint URL | **PASS** | Verified repo link: https://github.com/Johnmannen/Agentic-Stack-Library |
+| GitHub Repo | Live Episode Folder (HTTP 200) | **PASS** | Verified live URL: https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/006-realtime-voice-translator |
+| GitHub Repo | Root README.md Episode & Quickstart | **PASS** | Root README lists #006 in table & Quickstart (006-realtime-voice-translator) |
+| GitHub Repo | Episode README.md Completeness | **PASS** | 006-realtime-voice-translator/README.md has Architecture, Quickstart & Affiliate URL |
+| GitHub Repo | Factory README.md Synced | **PASS** | Local README.md lists Episode #006 |
 | Metadata | Chapter Timestamps (00:00) | **PASS** | Standard YouTube chapter markers present |
 | Metadata | Dedicated Shorts Metadata | **PASS** | Separate Shorts title, description & comment present |
 | Metadata | YouTube Category 28 | **PASS** | Category ID: 28 (Science & Technology) |
@@ -32,7 +36,7 @@
 | Dashboard | Description HTML No Slop | **PASS** | Affiliate link appears 1 times in textarea (<= 2 allowed) |
 | Dashboard | Shorts Video Poster Attribute | **PASS** | Checks poster="assets/thumb_short_006.png" in index.html |
 | Dashboard | Dashboard Metadata Sync | **PASS** | All 8 Long+Shorts HTML fields match metadata JSON |
-| Dashboard | Active Pitch Queue Rotated | **PASS** | Active queue=['007', '008', '009'] (produced #006 removed=True) |
+| Dashboard | Active Pitch Queue Rotated | **FAIL** | Active queue=[None, None, None] (produced #006 removed=True) |
 | Graphics | Thumbnail Visual Uniqueness | **PASS** | Mean diff vs thumb_005.png: 33.32 (>=12.0 required) |
 
 ---
