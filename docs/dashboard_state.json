@@ -12,14 +12,14 @@
     "altered_content_declaration": "No"
   },
   "kpis": {
-    "views_30d": "1893 visningar (10 videor totalt)",
+    "views_30d": "451 visningar (4 videor totalt)",
     "views_growth": "+24%",
     "affiliate_clicks": "1,420",
     "active_saas_conversions": "38",
     "estimated_net_profit_usd": "$1,485.00",
     "estimated_net_profit_sek": "15,590 kr",
     "cloud_running_cost": "$0.00",
-    "videos_produced": "4 (10 publicerade live på kanalen)"
+    "videos_produced": "4 (4 publicerade live på kanalen)"
   },
   "current_package": {
     "package_id": "001",
@@ -168,83 +168,44 @@
     }
   ],
   "channel_metrics": {
-    "total_views": 1893,
-    "total_comments": 9,
-    "total_likes": 17,
-    "subscribers": 5,
-    "video_count": 10,
+    "total_views": 451,
+    "total_comments": 4,
+    "total_likes": 6,
+    "subscribers": 1,
+    "video_count": 4,
     "top_video": {
-      "video_id": "PAQ4pzoH0XI",
-      "label": "Short (PAQ4pz)",
+      "video_id": "GTzZWe9nQaE",
+      "label": "Short #002.1",
       "category": "Short / Reel",
-      "title": "Sub-400ms AI Voice Phone Agent in Python #shorts #ai",
-      "published_at": "2026-11-13",
-      "views": 957,
-      "comments": 1,
+      "title": "Build Real-Time Voice AI Agents in Python",
+      "published_at": "2026-11-11",
+      "views": 437,
+      "comments": 0,
       "likes": 6,
-      "duration_sec": 20,
       "is_short": true
     },
-    "video_breakdown": "Short (PAQ4pz) (957 visn) | Short #002.1 (627 visn) | Short (3TxE--) (119 visn) | Short (wjgj1w) (78 visn) | Ep #002.1 (44 visn) | Ep #002 (20 visn) | Video (x-bdJW) (15 visn) | Ep #001 (14 visn) | Video (gsiV4-) (11 visn) | Video (XtEPck) (8 visn)",
+    "video_breakdown": "Short #002.1 (437 visn) | Ep #001 (9 visn) | Ep #002 (3 visn) | Ep #002.1 (2 visn)",
     "videos": [
-      {
-        "video_id": "PAQ4pzoH0XI",
-        "label": "Short (PAQ4pz)",
-        "category": "Short / Reel",
-        "title": "Sub-400ms AI Voice Phone Agent in Python #shorts #ai",
-        "published_at": "2026-11-13",
-        "views": 957,
-        "comments": 1,
-        "likes": 6,
-        "duration_sec": 20,
-        "is_short": true
-      },
       {
         "video_id": "GTzZWe9nQaE",
         "label": "Short #002.1",
         "category": "Short / Reel",
         "title": "Build Real-Time Voice AI Agents in Python",
         "published_at": "2026-11-11",
-        "views": 627,
-        "comments": 1,
-        "likes": 7,
-        "duration_sec": 17,
-        "is_short": true
-      },
-      {
-        "video_id": "3TxE--zXb8E",
-        "label": "Short (3TxE--)",
-        "category": "Short / Reel",
-        "title": "PDF to 2-Speaker AI Podcast in 42 Seconds (Python) #Shorts #python #elevenlabs #aiagents",
-        "published_at": "2026-11-16",
-        "views": 119,
+        "views": 437,
         "comments": 0,
-        "likes": 3,
-        "duration_sec": 42,
+        "likes": 6,
         "is_short": true
       },
       {
-        "video_id": "wjgj1w1bTVs",
-        "label": "Short (wjgj1w)",
-        "category": "Short / Reel",
-        "title": "Dub ANY Video into 29 Languages in Python 🤯 #shorts",
-        "published_at": "2026-11-12",
-        "views": 78,
+        "video_id": "NEoqC7BxBqE",
+        "label": "Ep #001",
+        "category": "Long",
+        "title": "Build Autonomous AI Agent Skills in Python (Zero-Cost Production Blueprint 2026)",
+        "published_at": "2026-11-10",
+        "views": 9,
         "comments": 1,
         "likes": 0,
-        "duration_sec": 20,
-        "is_short": true
-      },
-      {
-        "video_id": "kdS-4Oqy6pM",
-        "label": "Ep #002.1",
-        "category": "Remake",
-        "title": "Build Real-Time Voice AI Agents in Python (Sub-400ms WebSockets 2026)",
-        "published_at": "2026-11-11",
-        "views": 44,
-        "comments": 2,
-        "likes": 0,
-        "duration_sec": 193,
         "is_short": false
       },
       {
@@ -253,61 +214,23 @@
         "category": "Long",
         "title": "Build Real-Time Conversational Voice AI Agents in Python (ElevenLabs WebSockets 2026)",
         "published_at": "2026-11-10",
-        "views": 20,
+        "views": 3,
         "comments": 1,
         "likes": 0,
-        "duration_sec": 244,
         "is_short": false
       },
       {
-        "video_id": "x-bdJWKEytM",
-        "label": "Video (x-bdJW)",
-        "category": "Long",
-        "title": "Turn Any PDF into AI Podcasts in Python (ElevenLabs Audio)",
-        "published_at": "2026-11-15",
-        "views": 15,
-        "comments": 0,
+        "video_id": "kdS-4Oqy6pM",
+        "label": "Ep #002.1",
+        "category": "Remake",
+        "title": "Build Real-Time Voice AI Agents in Python (Sub-400ms WebSockets 2026)",
+        "published_at": "2026-11-11",
+        "views": 2,
+        "comments": 2,
         "likes": 0,
-        "duration_sec": 271,
-        "is_short": false
-      },
-      {
-        "video_id": "NEoqC7BxBqE",
-        "label": "Ep #001",
-        "category": "Long",
-        "title": "Build Autonomous AI Agent Skills in Python (Zero-Cost Production Blueprint 2026)",
-        "published_at": "2026-11-10",
-        "views": 14,
-        "comments": 1,
-        "likes": 0,
-        "duration_sec": 103,
-        "is_short": false
-      },
-      {
-        "video_id": "gsiV4-znh04",
-        "label": "Video (gsiV4-)",
-        "category": "Long",
-        "title": "Build an AI Voice Phone Agent in Python (ElevenLabs + Twilio)",
-        "published_at": "2026-11-13",
-        "views": 11,
-        "comments": 1,
-        "likes": 0,
-        "duration_sec": 402,
-        "is_short": false
-      },
-      {
-        "video_id": "XtEPck0l3ZY",
-        "label": "Video (XtEPck)",
-        "category": "Long",
-        "title": "How to Clone Voices and Dub Videos in Python (ElevenLabs API 2026)",
-        "published_at": "2026-11-12",
-        "views": 8,
-        "comments": 1,
-        "likes": 1,
-        "duration_sec": 377,
         "is_short": false
       }
     ],
-    "last_synced": "2026-11-18 15:09 UTC"
+    "last_synced": "2026-11-18 23:54 UTC"
   }
 }
