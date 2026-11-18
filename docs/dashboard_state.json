@@ -12,7 +12,7 @@
     "altered_content_declaration": "No"
   },
   "kpis": {
-    "views_30d": "1874 visningar (10 videor totalt)",
+    "views_30d": "1883 visningar (10 videor totalt)",
     "views_growth": "+24%",
     "affiliate_clicks": "1,420",
     "active_saas_conversions": "38",
@@ -134,7 +134,7 @@
     }
   ],
   "channel_metrics": {
-    "total_views": 1874,
+    "total_views": 1883,
     "total_comments": 9,
     "total_likes": 17,
     "subscribers": 5,
@@ -151,7 +151,7 @@
       "duration_sec": 20,
       "is_short": true
     },
-    "video_breakdown": "Short (PAQ4pz) (959 visn) | Short #002.1 (623 visn) | Short (3TxE--) (111 visn) | Short (wjgj1w) (76 visn) | Ep #002.1 (44 visn) | Ep #002 (17 visn) | Video (x-bdJW) (15 visn) | Ep #001 (14 visn) | Video (XtEPck) (8 visn) | Video (gsiV4-) (7 visn)",
+    "video_breakdown": "Short (PAQ4pz) (959 visn) | Short #002.1 (624 visn) | Short (3TxE--) (116 visn) | Short (wjgj1w) (77 visn) | Ep #002.1 (44 visn) | Ep #002 (19 visn) | Video (x-bdJW) (15 visn) | Ep #001 (14 visn) | Video (XtEPck) (8 visn) | Video (gsiV4-) (7 visn)",
     "videos": [
       {
         "video_id": "PAQ4pzoH0XI",
@@ -171,7 +171,7 @@
         "category": "Short / Reel",
         "title": "Build Real-Time Voice AI Agents in Python",
         "published_at": "2026-11-11",
-        "views": 623,
+        "views": 624,
         "comments": 1,
         "likes": 7,
         "duration_sec": 17,
@@ -183,7 +183,7 @@
         "category": "Short / Reel",
         "title": "PDF to 2-Speaker AI Podcast in 42 Seconds (Python) #Shorts #python #elevenlabs #aiagents",
         "published_at": "2026-11-16",
-        "views": 111,
+        "views": 116,
         "comments": 0,
         "likes": 3,
         "duration_sec": 42,
@@ -195,7 +195,7 @@
         "category": "Short / Reel",
         "title": "Dub ANY Video into 29 Languages in Python 🤯 #shorts",
         "published_at": "2026-11-12",
-        "views": 76,
+        "views": 77,
         "comments": 1,
         "likes": 0,
         "duration_sec": 20,
@@ -219,7 +219,7 @@
         "category": "Long",
         "title": "Build Real-Time Conversational Voice AI Agents in Python (ElevenLabs WebSockets 2026)",
         "published_at": "2026-11-10",
-        "views": 17,
+        "views": 19,
         "comments": 1,
         "likes": 0,
         "duration_sec": 244,
@@ -274,7 +274,7 @@
         "is_short": false
       }
     ],
-    "last_synced": "2026-11-17 15:32 UTC"
+    "last_synced": "2026-11-18 00:35 UTC"
   },
   "published_packages": [
     {
