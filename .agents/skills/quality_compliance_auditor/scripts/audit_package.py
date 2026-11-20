@@ -155,7 +155,7 @@ def audit_package(pkg_id, base_dir):
             f_s4_early = os.path.join(audit_dir, "frame_s4_early.png")
             f_s4_hl = os.path.join(audit_dir, "frame_s4_highlight.png")
 
-            ok_s2 = extract_frame(long_file, "00:01:02", f_s2_early) and extract_frame(long_file, "00:01:28", f_s2_hl)
+            ok_s2 = extract_frame(long_file, "00:01:08", f_s2_early) and extract_frame(long_file, "00:01:28", f_s2_hl)
             ok_s3 = extract_frame(long_file, "00:02:02", f_s3_early) and extract_frame(long_file, "00:02:32", f_s3_hl)
             ok_s4 = extract_frame(long_file, "00:02:55", f_s4_early) and extract_frame(long_file, "00:03:20", f_s4_hl)
 
@@ -325,6 +325,30 @@ def audit_package(pkg_id, base_dir):
             add_check("GitHub Repo", "Live Episode Folder (HTTP 200)", ep_folder_ok, f"Verified live URL: {ep_repo_url}")
             add_check("GitHub Repo", "Root README.md Episode & Quickstart", root_readme_ok, f"Root README lists #{pkg_id} in table & Quickstart ({ep_slug})")
             add_check("GitHub Repo", "Episode README.md Completeness", ep_readme_ok, f"{ep_slug}/README.md has Architecture, Quickstart & Affiliate URL")
+
+            # Verify that the EXACT episode GitHub folder URL and Affiliate URL appear in ALL 4 texts (Long desc, Long pinned, Short desc, Short pinned)
+            long_m_chk = meta.get("long_form", {})
+            short_m_chk = meta.get("short_form", {})
+            four_texts = [
+                ("long_desc", long_m_chk.get("description", "")),
+                ("long_pin", long_m_chk.get("pinned_comment", "")),
+                ("short_desc", short_m_chk.get("description", "")),
+                ("short_pin", short_m_chk.get("pinned_comment", "")),
+            ]
+            missing_repo_in = [k for k, txt in four_texts if ep_repo_url and ep_repo_url not in txt]
+            missing_aff_in = [k for k, txt in four_texts if expected_affiliate and expected_affiliate not in txt]
+            add_check(
+                "Metadata",
+                "Exact Episode Repo in All 4 Texts",
+                len(missing_repo_in) == 0,
+                f"All 4 Long/Short descriptions & pinned comments contain {ep_repo_url}" if not missing_repo_in else f"Missing in: {missing_repo_in}"
+            )
+            add_check(
+                "Metadata",
+                "Affiliate URL in All 4 Texts",
+                len(missing_aff_in) == 0,
+                f"All 4 Long/Short descriptions & pinned comments contain {expected_affiliate}" if not missing_aff_in else f"Missing in: {missing_aff_in}"
+            )
 
             # Also check local factory README.md lists #<pkg_id>
             local_readme_path = os.path.join(os.path.dirname(os.path.dirname(base_dir)), "README.md")

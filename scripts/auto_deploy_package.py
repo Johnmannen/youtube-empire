@@ -189,6 +189,22 @@ def deploy_package(pkg_id: str):
             ],
             "status": "PITCH_READY_REVIEW",
         },
+        "011": {
+            "episode_id": "011",
+            "title": "Build a Voice-Controlled MCP Coding Agent in Python (ElevenLabs Conversational AI)",
+            "alternative_title": "Hands-Free Git & Terminal Automation with ElevenLabs Voice Agents",
+            "duration": "04:15–05:00 min",
+            "niche_rpm": "$31.20",
+            "search_volume_monthly": 28400,
+            "growth_mom": "+79%",
+            "pedagogical_goal": "Röststyrd MCP-utvecklaragent med verktygsanrop i realtid",
+            "target_audience": "AI Engineers, Full-Stack Developers & DevOps Teams",
+            "affiliate_partner": "ElevenLabs Conversational AI & Voice SDK (22% Rec)",
+            "affiliate_url": "https://try.elevenlabs.io/agentic-onboarding",
+            "hook": "Typing long terminal prompts slows down architecture reviews. Build a sub-400ms voice-controlled MCP coding agent in Python.",
+            "code_demo": "ElevenLabs Conversational AI + FastMCP Tool Router",
+            "status": "PITCH_READY_REVIEW",
+        },
     }
 
     pitches = [
