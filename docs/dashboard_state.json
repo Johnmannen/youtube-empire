@@ -12,14 +12,14 @@
     "altered_content_declaration": "No"
   },
   "kpis": {
-    "views_30d": "1863 visningar (10 videor totalt)",
+    "views_30d": "451 visningar (4 videor totalt)",
     "views_growth": "+24%",
     "affiliate_clicks": "1,420",
     "active_saas_conversions": "38",
     "estimated_net_profit_usd": "$1,485.00",
     "estimated_net_profit_sek": "15,590 kr",
     "cloud_running_cost": "$0.00",
-    "videos_produced": "4 (10 publicerade live p\u00e5 kanalen)"
+    "videos_produced": "4 (4 publicerade live på kanalen)"
   },
   "current_package": {
     "package_id": "007",
@@ -37,12 +37,12 @@
     ],
     "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library",
     "studio_upload_url": "https://studio.youtube.com/channel/UCkphdiVQvc1vvNlcrAorMOg",
-    "description": "\ud83c\udf81 [FREE TRIAL] Try ElevenLabs Sound Effects & NPC Voice AI:\n\ud83d\udc49 https://try.elevenlabs.io/agentic-sfx (Affiliate Partner Link)\n\n\ud83d\ude80 [SOURCE CODE] Download Episode #007 Game Audio & NPC Scripts:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/007-dynamic-game-audio-sfx\n\n\ud83d\udcda [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library\n\nStatic audio assets are obsolete. In this video, we build an automated procedural sound effects and dynamic NPC dialogue engine in Python using the ElevenLabs Text-to-Sound-Effects API and Flash v2.5.\n\n\u23f1\ufe0f TIMESTAMPS:\n00:00 - LIVE PROCEDURAL SFX & NPC BOSS VOICE\n00:52 - SYSTEM ARCHITECTURE: 3-STAGE GAME AUDIO ENGINE\n01:55 - PYTHON TEXT-TO-SOUND-EFFECTS GENERATOR\n02:40 - DYNAMIC NPC DIALOGUE WITH FLASH V2.5\n03:20 - STATIC SOUND PACKS VS PROCEDURAL AUDIO\n03:58 - GAME STUDIO AUDIO ROI & LIVE TERMINAL\n04:28 - GITHUB BLUEPRINT, FREE TRIAL & MORE VIDEOS\n\n\u2696\ufe0f FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you.\n\n#GameAudio #ElevenLabs #Python #SoundEffectsAPI #GameDev #AIAgents",
-    "pinned_comment": "\ud83d\udccc Try ElevenLabs Sound Effects & Voice AI Free:\n\ud83d\udc49 https://try.elevenlabs.io/agentic-sfx\n\n\ud83d\udcbb Grab the exact Python code for Episode #007 on GitHub:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/007-dynamic-game-audio-sfx\n\n\ud83d\udc4d Like & Subscribe for more production builds!",
+    "description": "🎁 [FREE TRIAL] Try ElevenLabs Sound Effects & NPC Voice AI:\n👉 https://try.elevenlabs.io/agentic-sfx (Affiliate Partner Link)\n\n🚀 [SOURCE CODE] Download Episode #007 Game Audio & NPC Scripts:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/007-dynamic-game-audio-sfx\n\n📚 [OPEN SOURCE REPO] All Channel Episodes & Star the Library:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library\n\nStatic audio assets are obsolete. In this video, we build an automated procedural sound effects and dynamic NPC dialogue engine in Python using the ElevenLabs Text-to-Sound-Effects API and Flash v2.5.\n\n⏱️ TIMESTAMPS:\n00:00 - LIVE PROCEDURAL SFX & NPC BOSS VOICE\n00:52 - SYSTEM ARCHITECTURE: 3-STAGE GAME AUDIO ENGINE\n01:55 - PYTHON TEXT-TO-SOUND-EFFECTS GENERATOR\n02:40 - DYNAMIC NPC DIALOGUE WITH FLASH V2.5\n03:20 - STATIC SOUND PACKS VS PROCEDURAL AUDIO\n03:58 - GAME STUDIO AUDIO ROI & LIVE TERMINAL\n04:28 - GITHUB BLUEPRINT, FREE TRIAL & MORE VIDEOS\n\n⚖️ FTC AFFILIATE DISCLOSURE:\nSome links in this description are affiliate links. If you sign up or purchase through them, we may receive a commission at no extra cost to you.\n\n#GameAudio #ElevenLabs #Python #SoundEffectsAPI #GameDev #AIAgents",
+    "pinned_comment": "📌 Try ElevenLabs Sound Effects & Voice AI Free:\n👉 https://try.elevenlabs.io/agentic-sfx\n\n💻 Grab the exact Python code for Episode #007 on GitHub:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/007-dynamic-game-audio-sfx\n\n👍 Like & Subscribe for more production builds!",
     "shorts_metadata": {
-      "title": "Generate Game Sound Effects & NPC Voices in Python \ud83e\udd2f #Shorts #AI",
-      "description": "Turn any text prompt into studio game sound effects and dynamic NPC voices in Python! \ud83d\ude80\n\n\u2b50 Free ElevenLabs trial: https://try.elevenlabs.io/agentic-sfx\n\ud83d\udcbb Exact Episode #007 GitHub Code: https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/007-dynamic-game-audio-sfx\n\nWatch the full step-by-step breakdown on our channel!\n\n#Shorts #ElevenLabs #Python #AI #GameDev",
-      "pinned_comment": "\ud83d\udcbb Grab the exact Episode #007 Python code on GitHub:\n\ud83d\udc49 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/007-dynamic-game-audio-sfx\n\n\u2b50 Try ElevenLabs Sound Effects free: https://try.elevenlabs.io/agentic-sfx \u2014 and watch the full tutorial on our channel!",
+      "title": "Generate Game Sound Effects & NPC Voices in Python 🤯 #Shorts #AI",
+      "description": "Turn any text prompt into studio game sound effects and dynamic NPC voices in Python! 🚀\n\n⭐ Free ElevenLabs trial: https://try.elevenlabs.io/agentic-sfx\n💻 Exact Episode #007 GitHub Code: https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/007-dynamic-game-audio-sfx\n\nWatch the full step-by-step breakdown on our channel!\n\n#Shorts #ElevenLabs #Python #AI #GameDev",
+      "pinned_comment": "💻 Grab the exact Episode #007 Python code on GitHub:\n👉 https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/007-dynamic-game-audio-sfx\n\n⭐ Try ElevenLabs Sound Effects free: https://try.elevenlabs.io/agentic-sfx — and watch the full tutorial on our channel!",
       "tags": [
         "Shorts",
         "ElevenLabs",
@@ -60,29 +60,29 @@
       "episode_id": "008",
       "title": "Build an Automated B2B Onboarding Voice & Video Engine in Python",
       "alternative_title": "Personalized Client Walkthroughs at Scale (ElevenLabs Flash v2.5 + FFmpeg)",
-      "duration": "04:00\u20134:45 min",
+      "duration": "04:00–4:45 min",
       "niche_rpm": "$29.40",
       "search_volume_monthly": 22600,
       "growth_mom": "+64%",
-      "pedagogical_goal": "Personaliserade r\u00f6st- & videoguidas per CRM-kund",
+      "pedagogical_goal": "Personaliserade röst- & videoguidas per CRM-kund",
       "target_audience": "B2B SaaS Founders, Growth Engineers & RevOps",
       "affiliate_partner": "ElevenLabs Flash v2.5 & Voice API (22% Rec)",
       "affiliate_url": "https://try.elevenlabs.io/agentic-onboarding",
       "hook": "Generic onboarding emails get ignored. Generate personalized, studio-quality voice and video walkthroughs for every new B2B signup automatically in Python.",
       "code_demo": "ElevenLabs Flash v2.5 + CRM Webhook & FFmpeg",
-      "goal": "Bygg en automatisk B2B onboarding-motor i Python som lyssnar p\u00e5 CRM/Stripe-webhooks, genererar kundanpassad r\u00f6stsyntes med ElevenLabs Flash v2.5 och renderar en personlig v\u00e4lkomstvideo.",
+      "goal": "Bygg en automatisk B2B onboarding-motor i Python som lyssnar på CRM/Stripe-webhooks, genererar kundanpassad röstsyntes med ElevenLabs Flash v2.5 och renderar en personlig välkomstvideo.",
       "script_steps": [
-        "\u2022 Scen 1 (00:00 - 00:35): Varf\u00f6r generiska v\u00e4lkomstmejl ger 80% churn-risk f\u00f6rsta veckan i B2B SaaS.",
-        "\u2022 Scen 2 (00:35 - 01:25): Webhook-arkitektur: Stripe/HubSpot-trigger -> ElevenLabs Flash v2.5 -> FFmpeg-komposition.",
-        "\u2022 Scen 3 (01:25 - 02:40): Python-kod: Dynamisk variabelinjektion och sub-75ms r\u00f6stgenerering med Flash v2.5.",
-        "\u2022 Scen 4 (02:40 - 03:45): Automatisk MP4-rendering och utskick med sp\u00e5rbar klickkonvertering.",
-        "\u2022 Scen 5 (03:45 - 04:20): ROI-kalkyl, GitHub-kod och ElevenLabs gratis provperiod."
+        "• Scen 1 (00:00 - 00:35): Varför generiska välkomstmejl ger 80% churn-risk första veckan i B2B SaaS.",
+        "• Scen 2 (00:35 - 01:25): Webhook-arkitektur: Stripe/HubSpot-trigger -> ElevenLabs Flash v2.5 -> FFmpeg-komposition.",
+        "• Scen 3 (01:25 - 02:40): Python-kod: Dynamisk variabelinjektion och sub-75ms röstgenerering med Flash v2.5.",
+        "• Scen 4 (02:40 - 03:45): Automatisk MP4-rendering och utskick med spårbar klickkonvertering.",
+        "• Scen 5 (03:45 - 04:20): ROI-kalkyl, GitHub-kod och ElevenLabs gratis provperiod."
       ],
-      "trend": "S\u00f6kvolym: 22 600 s\u00f6kningar/m\u00e5nad (+64% MoM). Hyper-personaliserad B2B-onboarding med r\u00f6st och video v\u00e4xer kraftigt.",
+      "trend": "Sökvolym: 22 600 sökningar/månad (+64% MoM). Hyper-personaliserad B2B-onboarding med röst och video växer kraftigt.",
       "code": "ElevenLabs Flash v2.5 API + FastAPI CRM Webhook + FFmpeg Overlay Pipeline.",
       "affiliates": [
-        "\u2022 ElevenLabs Flash v2.5 & Voice API: 22% Recurring Commission via PartnerStack (https://try.elevenlabs.io/agentic-onboarding)",
-        "\u2022 FastAPI / HubSpot / FFmpeg Automation Stack"
+        "• ElevenLabs Flash v2.5 & Voice API: 22% Recurring Commission via PartnerStack (https://try.elevenlabs.io/agentic-onboarding)",
+        "• FastAPI / HubSpot / FFmpeg Automation Stack"
       ],
       "status": "PITCH_READY_REVIEW"
     },
@@ -90,29 +90,29 @@
       "episode_id": "009",
       "title": "Build a Multi-Character AI Audiobook Studio in Python (ElevenLabs v3)",
       "alternative_title": "Full-Cast Emotion-Tagged Audio Production with ElevenLabs Projects API",
-      "duration": "04:00\u20135:00 min",
+      "duration": "04:00–5:00 min",
       "niche_rpm": "$26.80",
       "search_volume_monthly": 24900,
       "growth_mom": "+71%",
-      "pedagogical_goal": "Flerr\u00f6stats bok- & kursproduktion med k\u00e4nslotaggar",
+      "pedagogical_goal": "Flerröstats bok- & kursproduktion med känslotaggar",
       "target_audience": "EdTech Teams, Creators & Publishing Platforms",
       "affiliate_partner": "ElevenLabs Voice Design & Projects API (22% Rec)",
       "affiliate_url": "https://try.elevenlabs.io/agentic-onboarding",
       "hook": "Single-voice narration puts listeners to sleep. Build an automated multi-character audiobook and course narration pipeline in Python.",
       "code_demo": "ElevenLabs Multi-Voice + Chapter Mastering",
-      "goal": "Automatisera helautomatisk ljudboks- och kursproduktion i Python med separata karakt\u00e4rsr\u00f6ster, pausstyrning och kapitelmastring.",
+      "goal": "Automatisera helautomatisk ljudboks- och kursproduktion i Python med separata karaktärsröster, pausstyrning och kapitelmastring.",
       "script_steps": [
-        "\u2022 Scen 1 (00:00 - 00:35): Varf\u00f6r en-r\u00f6sts AI-uppl\u00e4sning faller platt i l\u00e4ngre utbildningar och b\u00f6cker.",
-        "\u2022 Scen 2 (00:35 - 01:25): Karakt\u00e4rs-parsing i Python: Dela upp manus i ber\u00e4ttare och dialogroller.",
-        "\u2022 Scen 3 (01:25 - 02:45): ElevenLabs API: R\u00f6sttilldelning, stabilitet och naturlig prosodi.",
-        "\u2022 Scen 4 (02:45 - 03:50): FFmpeg loudness-normalisering (-14 LUFS) och kapitel-export.",
-        "\u2022 Scen 5 (03:50 - 04:30): Outro med ElevenLabs gratis provperiod och GitHub-mall."
+        "• Scen 1 (00:00 - 00:35): Varför en-rösts AI-uppläsning faller platt i längre utbildningar och böcker.",
+        "• Scen 2 (00:35 - 01:25): Karaktärs-parsing i Python: Dela upp manus i berättare och dialogroller.",
+        "• Scen 3 (01:25 - 02:45): ElevenLabs API: Rösttilldelning, stabilitet och naturlig prosodi.",
+        "• Scen 4 (02:45 - 03:50): FFmpeg loudness-normalisering (-14 LUFS) och kapitel-export.",
+        "• Scen 5 (03:50 - 04:30): Outro med ElevenLabs gratis provperiod och GitHub-mall."
       ],
-      "trend": "S\u00f6kvolym: 24 900 s\u00f6kningar/m\u00e5nad (+71% MoM). Efterfr\u00e5gan p\u00e5 automatiserad EdTech- och ljudboksproduktion skjuter i h\u00f6jden.",
+      "trend": "Sökvolym: 24 900 sökningar/månad (+71% MoM). Efterfrågan på automatiserad EdTech- och ljudboksproduktion skjuter i höjden.",
       "code": "Python Script Parser + ElevenLabs Multi-Voice Synthesis + FFmpeg Loudness Mastering.",
       "affiliates": [
-        "\u2022 ElevenLabs Creator & Pro Tier: 22% Recurring Commission via PartnerStack (https://try.elevenlabs.io/agentic-onboarding)",
-        "\u2022 Python Pydub / FFmpeg Mastering Pipeline"
+        "• ElevenLabs Creator & Pro Tier: 22% Recurring Commission via PartnerStack (https://try.elevenlabs.io/agentic-onboarding)",
+        "• Python Pydub / FFmpeg Mastering Pipeline"
       ],
       "status": "PITCH_READY_REVIEW"
     },
@@ -120,7 +120,7 @@
       "episode_id": "010",
       "title": "Build an AI Voice Compliance & Call QA Auditor in Python (ElevenLabs Scribe)",
       "alternative_title": "Automated Sales Call Diarization & Policy Scoring in Python",
-      "duration": "04:00\u20134:45 min",
+      "duration": "04:00–4:45 min",
       "niche_rpm": "$33.50",
       "search_volume_monthly": 18400,
       "growth_mom": "+59%",
@@ -132,17 +132,17 @@
       "code_demo": "ElevenLabs Scribe API + Speaker Diarization QA",
       "goal": "Bygg en Python-pipeline som transkriberar kundsamtal med talarseparering (diarization) via ElevenLabs Scribe och flaggar compliance-avvikelser automatiskt.",
       "script_steps": [
-        "\u2022 Scen 1 (00:00 - 00:35): 98% av alla B2B-samtal granskas aldrig \u2014 compliance-risken i enterprise.",
-        "\u2022 Scen 2 (00:35 - 01:25): ElevenLabs Scribe-arkitektur: Ultra-exakt STT med talaridentifiering.",
-        "\u2022 Scen 3 (01:25 - 02:45): Python-integration: Skicka ljudfil, h\u00e4mta tidsst\u00e4mplad dialog per talare.",
-        "\u2022 Scen 4 (02:45 - 03:50): Automatisk QA-po\u00e4ngs\u00e4ttning och Slack-larm vid regelbrott.",
-        "\u2022 Scen 5 (03:50 - 04:25): ROI-kalkyl, GitHub-repo och ElevenLabs gratis provperiod."
+        "• Scen 1 (00:00 - 00:35): 98% av alla B2B-samtal granskas aldrig — compliance-risken i enterprise.",
+        "• Scen 2 (00:35 - 01:25): ElevenLabs Scribe-arkitektur: Ultra-exakt STT med talaridentifiering.",
+        "• Scen 3 (01:25 - 02:45): Python-integration: Skicka ljudfil, hämta tidsstämplad dialog per talare.",
+        "• Scen 4 (02:45 - 03:50): Automatisk QA-poängsättning och Slack-larm vid regelbrott.",
+        "• Scen 5 (03:50 - 04:25): ROI-kalkyl, GitHub-repo och ElevenLabs gratis provperiod."
       ],
-      "trend": "S\u00f6kvolym: 18 400 s\u00f6kningar/m\u00e5nad (+59% MoM). H\u00f6gsta B2B-RPM inom FinTech och Enterprise QA.",
+      "trend": "Sökvolym: 18 400 sökningar/månad (+59% MoM). Högsta B2B-RPM inom FinTech och Enterprise QA.",
       "code": "ElevenLabs Scribe API + Python Diarization & Compliance Scoring Engine.",
       "affiliates": [
-        "\u2022 ElevenLabs Scribe & Enterprise Voice AI: 22% Recurring Commission via PartnerStack (https://try.elevenlabs.io/agentic-onboarding)",
-        "\u2022 Python FastAPI / Webhook QA Pipeline"
+        "• ElevenLabs Scribe & Enterprise Voice AI: 22% Recurring Commission via PartnerStack (https://try.elevenlabs.io/agentic-onboarding)",
+        "• Python FastAPI / Webhook QA Pipeline"
       ],
       "status": "PITCH_READY_REVIEW"
     }
@@ -211,7 +211,7 @@
         "is_short": false
       }
     ],
-    "last_synced": "2026-11-20 00:20 UTC"
+    "last_synced": "2026-11-20 14:55 UTC"
   },
   "published_packages": [
     {
