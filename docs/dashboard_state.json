@@ -237,9 +237,11 @@
     {
       "package_id": "008",
       "title": "Run 9 Local Autonomous AI Agents on Any Old Desktop PC (0 GPU • 100% Free) [EPISODE 008]",
-      "status": "READY_TO_UPLOAD",
+      "status": "PUBLISHED_LIVE",
       "published_date": "2026-11-23",
       "format": "16:9 Long (28:58) + 9:16 Short (2:18)",
+      "youtube_url": "https://www.youtube.com/watch?v=jU2Ej5Cyl0I",
+      "shorts_url": "https://youtube.com/shorts/r8ryFxz1A70",
       "github_code_url": "https://github.com/Johnmannen/antigravity-desktop-agentcore",
       "affiliate": "",
       "thumbnail": "assets/thumb_008.png"
