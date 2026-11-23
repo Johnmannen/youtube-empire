@@ -57,7 +57,7 @@
   },
   "pitches": [
     {
-      "episode_id": "008",
+      "episode_id": "009",
       "title": "Build an Automated B2B Onboarding Voice & Video Engine in Python",
       "alternative_title": "Personalized Client Walkthroughs at Scale (ElevenLabs Flash v2.5 + FFmpeg)",
       "duration": "04:00–4:45 min",
@@ -87,7 +87,7 @@
       "status": "PITCH_READY_REVIEW"
     },
     {
-      "episode_id": "009",
+      "episode_id": "010",
       "title": "Build a Multi-Character AI Audiobook Studio in Python (ElevenLabs v3)",
       "alternative_title": "Full-Cast Emotion-Tagged Audio Production with ElevenLabs Projects API",
       "duration": "04:00–5:00 min",
@@ -117,7 +117,7 @@
       "status": "PITCH_READY_REVIEW"
     },
     {
-      "episode_id": "010",
+      "episode_id": "011",
       "title": "Build an AI Voice Compliance & Call QA Auditor in Python (ElevenLabs Scribe)",
       "alternative_title": "Automated Sales Call Diarization & Policy Scoring in Python",
       "duration": "04:00–4:45 min",
@@ -233,6 +233,16 @@
       "github_code_url": "https://github.com/Johnmannen/Agentic-Stack-Library",
       "affiliate": "",
       "thumbnail": "assets/thumb_006.png"
+    },
+    {
+      "package_id": "008",
+      "title": "Run 9 Local Autonomous AI Agents on Any Old Desktop PC (0 GPU • 100% Free) [EPISODE 008]",
+      "status": "READY_TO_UPLOAD",
+      "published_date": "2026-11-23",
+      "format": "16:9 Long (28:58) + 9:16 Short (2:18)",
+      "github_code_url": "https://github.com/Johnmannen/antigravity-desktop-agentcore",
+      "affiliate": "",
+      "thumbnail": "assets/thumb_008.png"
     }
   ]
 }

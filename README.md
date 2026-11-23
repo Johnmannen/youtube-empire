@@ -45,11 +45,12 @@
 | **#005** | Turn Any Text Document into Audio Podcasts in Python (Audio Native) | [`005-doc-to-podcast`](https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/005-doc-to-podcast) | `https://try.elevenlabs.io/agentic-reader` | ✅ Publicerad |
 | **#006** | Build an AI Real-Time Voice Translator in Python (Sub-500ms S2S) | [`006-realtime-voice-translator`](https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/006-realtime-voice-translator) | `https://try.elevenlabs.io/agentic-translator` | ✅ Publicerad |
 | **#007** | Generate Dynamic AI Game Audio & NPC Voices in Python (SFX API) | [`007-dynamic-game-audio-sfx`](https://github.com/Johnmannen/Agentic-Stack-Library/tree/main/007-dynamic-game-audio-sfx) | `https://try.elevenlabs.io/agentic-sfx` | ✅ Klar i Kontrollpanel |
+| **#008** | Run 9 Local Autonomous AI Agents on Any Old Desktop PC (Google Antigravity + Python, 0 GPU) | [`antigravity-desktop-agentcore`](https://github.com/Johnmannen/antigravity-desktop-agentcore) | 100% Free MIT Open Source | ✅ Klar för uppladdning (`UPLOAD_PACKAGE_008`) |
 
-### Kommande Pitch-kö (`#008` – `#010`)
-- **Pitch `#008` (Automated B2B Onboarding Voice & Video Engine):** `https://try.elevenlabs.io/agentic-onboarding`
-- **Pitch `#009` (Multi-Character AI Audiobook Studio):** `https://try.elevenlabs.io/agentic-onboarding`
-- **Pitch `#010` (AI Voice Compliance & Call QA Auditor — Scribe):** `https://try.elevenlabs.io/agentic-onboarding`
+### Kommande Pitch-kö (`#009` – `#011`)
+- **Pitch `#009` (Automated B2B Onboarding Voice & Video Engine):** `https://try.elevenlabs.io/agentic-onboarding`
+- **Pitch `#010` (Multi-Character AI Audiobook Studio):** `https://try.elevenlabs.io/agentic-onboarding`
+- **Pitch `#011` (AI Voice Compliance & Call QA Auditor — Scribe):** `https://try.elevenlabs.io/agentic-onboarding`
 
 ---
 
